@@ -1,0 +1,16 @@
+bin\Release\MyPocketCal2003.exe
+bin\Release\MyPocketCal2003.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\MyPocketCal2003.Form1.resources
+obj\Release\MyPocketCal2003.Properties.Resources.resources
+obj\Release\MyPocketCal2003.csproj.GenerateResource.Cache
+obj\Release\MyPocketCal2003.exe
+obj\Release\MyPocketCal2003.pdb
+bin\Debug\MyPocketCal2003.exe
+bin\Debug\MyPocketCal2003.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\MyPocketCal2003.Form1.resources
+obj\Debug\MyPocketCal2003.Properties.Resources.resources
+obj\Debug\MyPocketCal2003.csproj.GenerateResource.Cache
+obj\Debug\MyPocketCal2003.exe
+obj\Debug\MyPocketCal2003.pdb

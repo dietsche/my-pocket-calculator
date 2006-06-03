@@ -29,11 +29,13 @@ namespace MyPocketCal2003
         private void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.FinanceTabPage = new System.Windows.Forms.TabPage();
             this.MathTabPage = new System.Windows.Forms.TabPage();
             this.StatisticsTabPage = new System.Windows.Forms.TabPage();
             this.MatrixTabPage = new System.Windows.Forms.TabPage();
+            this.FinanceTabPage = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
+            this.MathTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -48,15 +50,9 @@ namespace MyPocketCal2003
             this.tabControl1.Size = new System.Drawing.Size(240, 291);
             this.tabControl1.TabIndex = 0;
             // 
-            // FinanceTabPage
-            // 
-            this.FinanceTabPage.Location = new System.Drawing.Point(0, 0);
-            this.FinanceTabPage.Name = "FinanceTabPage";
-            this.FinanceTabPage.Size = new System.Drawing.Size(240, 268);
-            this.FinanceTabPage.Text = "Finance";
-            // 
             // MathTabPage
             // 
+            this.MathTabPage.Controls.Add(this.button1);
             this.MathTabPage.Location = new System.Drawing.Point(0, 0);
             this.MathTabPage.Name = "MathTabPage";
             this.MathTabPage.Size = new System.Drawing.Size(240, 268);
@@ -66,15 +62,30 @@ namespace MyPocketCal2003
             // 
             this.StatisticsTabPage.Location = new System.Drawing.Point(0, 0);
             this.StatisticsTabPage.Name = "StatisticsTabPage";
-            this.StatisticsTabPage.Size = new System.Drawing.Size(240, 268);
+            this.StatisticsTabPage.Size = new System.Drawing.Size(232, 265);
             this.StatisticsTabPage.Text = "Statistics";
             // 
             // MatrixTabPage
             // 
             this.MatrixTabPage.Location = new System.Drawing.Point(0, 0);
             this.MatrixTabPage.Name = "MatrixTabPage";
-            this.MatrixTabPage.Size = new System.Drawing.Size(240, 268);
+            this.MatrixTabPage.Size = new System.Drawing.Size(232, 265);
             this.MatrixTabPage.Text = "Matrix";
+            // 
+            // FinanceTabPage
+            // 
+            this.FinanceTabPage.Location = new System.Drawing.Point(0, 0);
+            this.FinanceTabPage.Name = "FinanceTabPage";
+            this.FinanceTabPage.Size = new System.Drawing.Size(232, 265);
+            this.FinanceTabPage.Text = "Finance";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(68, 102);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(72, 20);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
             // 
             // Form1
             // 
@@ -86,6 +97,7 @@ namespace MyPocketCal2003
             this.Name = "Form1";
             this.Text = "MyPocketCal";
             this.tabControl1.ResumeLayout(false);
+            this.MathTabPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -97,6 +109,7 @@ namespace MyPocketCal2003
         private System.Windows.Forms.TabPage MathTabPage;
         private System.Windows.Forms.TabPage StatisticsTabPage;
         private System.Windows.Forms.TabPage MatrixTabPage;
+        private System.Windows.Forms.Button button1;
 
     }
 }

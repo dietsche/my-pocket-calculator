@@ -34,6 +34,11 @@ namespace MyPocketCal2003
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBox5_CheckStateChanged(object sender, EventArgs e)
+        {
+
         } 
     }
 }

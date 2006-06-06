@@ -6,13 +6,15 @@ namespace MyPocketCal2003
 {
     static class Program
     {
+        static public Form activeWindow;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [MTAThread]
         static void Main()
         {
-            Application.Run(new Form1());
+            activeWindow = new MainDisplay();
+            Application.Run(activeWindow);
         }
     }
 }

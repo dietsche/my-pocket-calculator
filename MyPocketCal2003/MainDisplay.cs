@@ -49,5 +49,61 @@ namespace MyPocketCal2003
             Program.activeWindow.Show(); // show the form
             //oldWindow.Dispose();
         }
+
+        private void pictureBox121_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainDisplay_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel7_GotFocus(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox93_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox115_Click(object sender, EventArgs e)
+        {
+            Matrix m = new Matrix();
+            m.Show();
+        }
+
+        private void pictureBox116_Click(object sender, EventArgs e)
+        {
+            Statistic s = new Statistic();
+            s.Show();
+        }
+
+        private void pictureBox113_Click(object sender, EventArgs e)
+        {
+            Conversion c = new Conversion();
+            c.Show();
+        }
+
+        private void pictureBox120_Click(object sender, EventArgs e)
+        {
+            Plot p = new Plot();
+            p.Show();
+        }
+
+        private void pictureBox118_Click(object sender, EventArgs e)
+        {
+            Differentiation d = new Differentiation();
+            d.Show();
+        }
+
+        private void pictureBox119_Click(object sender, EventArgs e)
+        {
+            Integration i = new Integration();
+            i.Show();
+        }
     }
 }

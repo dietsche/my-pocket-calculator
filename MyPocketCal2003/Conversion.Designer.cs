@@ -89,7 +89,7 @@ namespace MyPocketCal2003
             // 
             this.button1.Location = new System.Drawing.Point(3, 170);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(218, 21);
+            this.button1.Size = new System.Drawing.Size(219, 21);
             this.button1.TabIndex = 6;
             this.button1.Text = "Convert";
             // 
@@ -115,7 +115,7 @@ namespace MyPocketCal2003
             this.panel6.Controls.Add(this.pictureBox110);
             this.panel6.Controls.Add(this.pictureBox111);
             this.panel6.Controls.Add(this.pictureBox112);
-            this.panel6.Location = new System.Drawing.Point(0, 244);
+            this.panel6.Location = new System.Drawing.Point(0, 241);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(240, 50);
             // 
@@ -276,7 +276,7 @@ namespace MyPocketCal2003
             // 
             this.textBox2.Location = new System.Drawing.Point(3, 197);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(218, 21);
+            this.textBox2.Size = new System.Drawing.Size(219, 21);
             this.textBox2.TabIndex = 9;
             this.textBox2.Text = "=";
             // 
@@ -323,6 +323,7 @@ namespace MyPocketCal2003
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Conversion";
+            this.Text = "MyPocketCal - Unit & Conversion";
             this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -24,5 +24,10 @@ namespace MyPocketCal2003
         {
 
         }
+
+        private void pictureBox93_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

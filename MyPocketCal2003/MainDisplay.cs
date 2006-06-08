@@ -45,7 +45,7 @@ namespace MyPocketCal2003
             Form oldWindow = Program.activeWindow; // the old window
             oldWindow.Hide(); // hide the window
 
-            Program.activeWindow = new Conversion(); // make the form
+            Program.activeWindow = new Unit(); // make the form
             Program.activeWindow.Show(); // show the form
             //oldWindow.Dispose();
         }
@@ -84,7 +84,7 @@ namespace MyPocketCal2003
 
         private void pictureBox113_Click(object sender, EventArgs e)
         {
-            Conversion c = new Conversion();
+            Unit c = new Unit();
             c.Show();
         }
 
@@ -104,6 +104,18 @@ namespace MyPocketCal2003
         {
             Integration i = new Integration();
             i.Show();
+        }
+
+        private void pictureBox117_Click(object sender, EventArgs e)
+        {
+            Vector v = new Vector();
+            v.Show();
+        }
+
+        private void pictureBox139_Click(object sender, EventArgs e)
+        {
+            Equations ee = new Equations();
+            ee.Show();
         }
     }
 }

@@ -99,6 +99,7 @@ namespace MyPocketCal2003
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Data.SuspendLayout();
             this.Calculations.SuspendLayout();
@@ -125,6 +126,7 @@ namespace MyPocketCal2003
             // 
             // Data
             // 
+            this.Data.Controls.Add(this.button6);
             this.Data.Controls.Add(this.button1);
             this.Data.Controls.Add(this.button5);
             this.Data.Controls.Add(this.listBox2);
@@ -150,9 +152,9 @@ namespace MyPocketCal2003
             // 
             this.button5.Location = new System.Drawing.Point(7, 7);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(93, 17);
+            this.button5.Size = new System.Drawing.Size(49, 21);
             this.button5.TabIndex = 67;
-            this.button5.Text = "New Data";
+            this.button5.Text = "New";
             // 
             // listBox2
             // 
@@ -169,11 +171,11 @@ namespace MyPocketCal2003
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.button4.Location = new System.Drawing.Point(115, 7);
+            this.button4.Location = new System.Drawing.Point(62, 7);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 17);
+            this.button4.Size = new System.Drawing.Size(49, 21);
             this.button4.TabIndex = 65;
-            this.button4.Text = "Save Data";
+            this.button4.Text = "Save";
             // 
             // label2
             // 
@@ -230,7 +232,7 @@ namespace MyPocketCal2003
             this.Calculations.Controls.Add(this.checkBox1);
             this.Calculations.Location = new System.Drawing.Point(0, 0);
             this.Calculations.Name = "Calculations";
-            this.Calculations.Size = new System.Drawing.Size(240, 215);
+            this.Calculations.Size = new System.Drawing.Size(240, 218);
             this.Calculations.Text = "Calculations";
             // 
             // checkBox13
@@ -722,6 +724,15 @@ namespace MyPocketCal2003
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(21, 21);
             // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.button6.Location = new System.Drawing.Point(184, 7);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(49, 21);
+            this.button6.TabIndex = 71;
+            this.button6.Text = "Delete";
+            // 
             // Statistic
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -810,5 +821,6 @@ namespace MyPocketCal2003
         private System.Windows.Forms.PictureBox pictureBox18;
         private System.Windows.Forms.PictureBox pictureBox19;
         private System.Windows.Forms.PictureBox pictureBox20;
+        private System.Windows.Forms.Button button6;
     }
 }

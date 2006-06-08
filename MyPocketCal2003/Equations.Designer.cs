@@ -1,6 +1,6 @@
 namespace MyPocketCal2003
 {
-    partial class Matrix
+    partial class Equations
     {
         /// <summary>
         /// Required designer variable.
@@ -28,28 +28,7 @@ namespace MyPocketCal2003
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Matrix));
-            this.button3 = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.listBox5 = new System.Windows.Forms.ListBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
-            this.checkBox20 = new System.Windows.Forms.CheckBox();
-            this.checkBox21 = new System.Windows.Forms.CheckBox();
-            this.checkBox22 = new System.Windows.Forms.CheckBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Equations));
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox93 = new System.Windows.Forms.PictureBox();
             this.pictureBox94 = new System.Windows.Forms.PictureBox();
@@ -71,202 +50,28 @@ namespace MyPocketCal2003
             this.pictureBox110 = new System.Windows.Forms.PictureBox();
             this.pictureBox111 = new System.Windows.Forms.PictureBox();
             this.pictureBox112 = new System.Windows.Forms.PictureBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.panel6.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(137, 190);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 22);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "Calculate";
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(240, 241);
-            this.tabControl1.TabIndex = 36;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.button8);
-            this.tabPage1.Controls.Add(this.listBox4);
-            this.tabPage1.Controls.Add(this.button9);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.button10);
-            this.tabPage1.Controls.Add(this.button11);
-            this.tabPage1.Controls.Add(this.listBox5);
-            this.tabPage1.Location = new System.Drawing.Point(0, 0);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(240, 218);
-            this.tabPage1.Text = "Data";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(184, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(49, 21);
-            this.button1.TabIndex = 66;
-            this.button1.Text = "Delete";
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(7, 7);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(49, 21);
-            this.button8.TabIndex = 64;
-            this.button8.Text = "New";
-            // 
-            // listBox4
-            // 
-            this.listBox4.Items.Add("A =");
-            this.listBox4.Items.Add("a,b,c");
-            this.listBox4.Items.Add("d,e,f");
-            this.listBox4.Items.Add("g,h,i");
-            this.listBox4.Location = new System.Drawing.Point(7, 30);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(172, 114);
-            this.listBox4.TabIndex = 63;
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.button9.Location = new System.Drawing.Point(62, 7);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(49, 21);
-            this.button9.TabIndex = 62;
-            this.button9.Text = "Save";
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(4, 150);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 14);
-            this.label1.Text = "Row:";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(43, 150);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(191, 21);
-            this.textBox5.TabIndex = 61;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(88, 177);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(71, 21);
-            this.button10.TabIndex = 60;
-            this.button10.Text = "Save Row";
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(43, 177);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(39, 21);
-            this.button11.TabIndex = 59;
-            this.button11.Text = "Clear";
-            // 
-            // listBox5
-            // 
-            this.listBox5.Items.Add("Matrix A");
-            this.listBox5.Items.Add("Matrix B");
-            this.listBox5.Items.Add("Matrix C");
-            this.listBox5.Location = new System.Drawing.Point(184, 30);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(51, 114);
-            this.listBox5.TabIndex = 58;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.comboBox1);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.checkBox17);
-            this.tabPage2.Controls.Add(this.checkBox18);
-            this.tabPage2.Controls.Add(this.checkBox19);
-            this.tabPage2.Controls.Add(this.checkBox20);
-            this.tabPage2.Controls.Add(this.checkBox21);
-            this.tabPage2.Controls.Add(this.checkBox22);
-            this.tabPage2.Controls.Add(this.button3);
-            this.tabPage2.Location = new System.Drawing.Point(0, 0);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(240, 218);
-            this.tabPage2.Text = "Calculations";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Location = new System.Drawing.Point(113, 7);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(118, 22);
-            this.comboBox1.TabIndex = 58;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(7, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 15);
-            this.label2.Text = "Select Matrix:";
-            // 
-            // checkBox17
-            // 
-            this.checkBox17.Location = new System.Drawing.Point(3, 90);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(91, 15);
-            this.checkBox17.TabIndex = 53;
-            this.checkBox17.Text = "Transpose";
-            // 
-            // checkBox18
-            // 
-            this.checkBox18.Location = new System.Drawing.Point(3, 68);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(69, 15);
-            this.checkBox18.TabIndex = 56;
-            this.checkBox18.Text = "Adjoint";
-            // 
-            // checkBox19
-            // 
-            this.checkBox19.Location = new System.Drawing.Point(3, 132);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(91, 15);
-            this.checkBox19.TabIndex = 55;
-            this.checkBox19.Text = "Eigenvector";
-            // 
-            // checkBox20
-            // 
-            this.checkBox20.Location = new System.Drawing.Point(3, 153);
-            this.checkBox20.Name = "checkBox20";
-            this.checkBox20.Size = new System.Drawing.Size(103, 15);
-            this.checkBox20.TabIndex = 54;
-            this.checkBox20.Text = "Eigenvalues";
-            // 
-            // checkBox21
-            // 
-            this.checkBox21.Location = new System.Drawing.Point(3, 111);
-            this.checkBox21.Name = "checkBox21";
-            this.checkBox21.Size = new System.Drawing.Size(78, 15);
-            this.checkBox21.TabIndex = 52;
-            this.checkBox21.Text = "Inverse";
-            // 
-            // checkBox22
-            // 
-            this.checkBox22.Location = new System.Drawing.Point(3, 47);
-            this.checkBox22.Name = "checkBox22";
-            this.checkBox22.Size = new System.Drawing.Size(103, 15);
-            this.checkBox22.TabIndex = 51;
-            this.checkBox22.Text = "Determinant";
             // 
             // panel6
             // 
@@ -456,47 +261,179 @@ namespace MyPocketCal2003
             this.pictureBox112.Name = "pictureBox112";
             this.pictureBox112.Size = new System.Drawing.Size(21, 21);
             // 
-            // Matrix
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(240, 241);
+            this.tabControl1.TabIndex = 2;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.listBox1);
+            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Location = new System.Drawing.Point(0, 0);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(240, 218);
+            this.tabPage1.Text = "Polynomial";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.listBox2);
+            this.tabPage2.Controls.Add(this.button4);
+            this.tabPage2.Controls.Add(this.button3);
+            this.tabPage2.Controls.Add(this.listBox4);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.textBox5);
+            this.tabPage2.Controls.Add(this.button10);
+            this.tabPage2.Controls.Add(this.button11);
+            this.tabPage2.Location = new System.Drawing.Point(0, 0);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(240, 218);
+            this.tabPage2.Text = "Linear Algebra";
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(8, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(222, 44);
+            this.label1.Text = "Enter Coefficients An, An-1,...., A0 for the nth order polynomial AnX^n + An-1X^(" +
+                "n-1)+...+A0=0";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(8, 51);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(222, 21);
+            this.textBox1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(62, 78);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 21);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Calculate";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(7, 78);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(49, 21);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Clear";
+            // 
+            // listBox1
+            // 
+            this.listBox1.Items.Add("1.");
+            this.listBox1.Items.Add("2. ");
+            this.listBox1.Items.Add("3.");
+            this.listBox1.Location = new System.Drawing.Point(7, 129);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(220, 86);
+            this.listBox1.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(7, 106);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 20);
+            this.label2.Text = "Solutions:";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.button3.Location = new System.Drawing.Point(129, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(49, 21);
+            this.button3.TabIndex = 75;
+            this.button3.Text = "Delete";
+            // 
+            // listBox4
+            // 
+            this.listBox4.Items.Add("a,b,c");
+            this.listBox4.Items.Add("d,e,f");
+            this.listBox4.Items.Add("g,h,i");
+            this.listBox4.Location = new System.Drawing.Point(129, 30);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(108, 86);
+            this.listBox4.TabIndex = 73;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(3, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 14);
+            this.label3.Text = "Equation:";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(3, 30);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(122, 21);
+            this.textBox5.TabIndex = 71;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(48, 57);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(49, 21);
+            this.button10.TabIndex = 70;
+            this.button10.Text = "Save";
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(3, 57);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(39, 21);
+            this.button11.TabIndex = 69;
+            this.button11.Text = "Clear";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(3, 95);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(70, 21);
+            this.button4.TabIndex = 77;
+            this.button4.Text = "Calculate";
+            // 
+            // listBox2
+            // 
+            this.listBox2.Items.Add("Solution");
+            this.listBox2.Location = new System.Drawing.Point(3, 134);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(228, 58);
+            this.listBox2.TabIndex = 78;
+            // 
+            // Equations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(240, 294);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Matrix";
-            this.Text = "MyPocketCal - Matrix";
-            this.Load += new System.EventHandler(this.Matrix_Load);
+            this.Controls.Add(this.panel6);
+            this.Name = "Equations";
+            this.Text = "Equations";
+            this.panel6.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.ListBox listBox4;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.ListBox listBox5;
-        private System.Windows.Forms.CheckBox checkBox17;
-        private System.Windows.Forms.CheckBox checkBox18;
-        private System.Windows.Forms.CheckBox checkBox19;
-        private System.Windows.Forms.CheckBox checkBox20;
-        private System.Windows.Forms.CheckBox checkBox21;
-        private System.Windows.Forms.CheckBox checkBox22;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox93;
         private System.Windows.Forms.PictureBox pictureBox94;
@@ -518,6 +455,22 @@ namespace MyPocketCal2003
         private System.Windows.Forms.PictureBox pictureBox110;
         private System.Windows.Forms.PictureBox pictureBox111;
         private System.Windows.Forms.PictureBox pictureBox112;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }

@@ -6,13 +6,14 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace MyPocketCal2003
+namespace BaseFormLibrary
 {
-    public partial class Differentiation : BaseFormLibrary.FunctionsForm
+    public partial class FunctionsForm : BaseFormLibrary.BasicButtonForm
     {
-        public Differentiation()
+        public FunctionsForm()
         {
             InitializeComponent();
         }
     }
 }
+

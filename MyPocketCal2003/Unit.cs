@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace MyPocketCal2003
 {
-    public partial class Unit : Form
+    public partial class Unit : BaseFormLibrary.BasicButtonForm
     {
         public Unit()
         {

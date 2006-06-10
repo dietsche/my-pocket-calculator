@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace MyPocketCal2003
 {
-    public partial class Integration : Form
+    public partial class Integration : BaseFormLibrary.FunctionsForm
     {
         public Integration()
         {

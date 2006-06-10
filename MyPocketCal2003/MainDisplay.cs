@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace MyPocketCal2003
 {
-    public partial class MainDisplay : Form
+    public partial class MainDisplay : BaseFormLibrary.FunctionsForm
     {
         public MainDisplay()
         {
@@ -347,7 +347,7 @@ namespace MyPocketCal2003
             this.inputBox.Text += Constants.NCR;
         }
 
-        private void MainDisplay_Load(object sender, EventArgs e)
+        private void equalButton_Click(object sender, EventArgs e)
         {
 
         }

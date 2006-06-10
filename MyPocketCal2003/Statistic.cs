@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace MyPocketCal2003
 {
-    public partial class Statistic : Form
+    public partial class Statistic : BaseFormLibrary.BasicButtonForm
     {
         public Statistic()
         {

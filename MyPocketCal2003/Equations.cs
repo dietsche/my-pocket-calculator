@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace MyPocketCal2003
 {
-    public partial class Equations : Form
+    public partial class Equations : BaseFormLibrary.BasicButtonForm
     {
         public Equations()
         {

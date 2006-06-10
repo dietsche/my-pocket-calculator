@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace MyPocketCal2003
 {
-    public partial class Plot : Form
+    public partial class Plot : BaseFormLibrary.FunctionsForm
     {
         public Plot()
         {

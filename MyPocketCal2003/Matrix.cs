@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace MyPocketCal2003
 {
-    public partial class Matrix : Form
+    public partial class Matrix : BaseFormLibrary.BasicButtonForm
     {
         public Matrix()
         {

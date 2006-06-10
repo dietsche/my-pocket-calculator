@@ -14,10 +14,5 @@ namespace MyPocketCal2003
         {
             InitializeComponent();
         }
-
-        private void panel5_GotFocus(object sender, EventArgs e)
-        {
-
-        }
     }
 }

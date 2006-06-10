@@ -53,11 +53,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="Equations.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Equations.Designer.cs">
       <DependentUpon>Equations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainDisplay.designer.cs">
+      <DependentUpon>MainDisplay.cs</DependentUpon>
     </Compile>
     <Compile Include="Unit.cs">
       <SubType>Form</SubType>
@@ -83,12 +90,6 @@
     <Compile Include="Integration.Designer.cs">
       <DependentUpon>Integration.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainDisplay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainDisplay.Designer.cs">
-      <DependentUpon>MainDisplay.cs</DependentUpon>
-    </Compile>
     <Compile Include="Matrix.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +108,10 @@
       <SubType>Designer</SubType>
       <DependentUpon>Equations.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainDisplay.resx">
+      <DependentUpon>MainDisplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Unit.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Unit.cs</DependentUpon>
@@ -122,10 +127,6 @@
     <EmbeddedResource Include="Integration.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Integration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainDisplay.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>MainDisplay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Matrix.resx">
       <SubType>Designer</SubType>

@@ -61,6 +61,7 @@ namespace BaseFormLibrary
             this.pictureBox78 = new System.Windows.Forms.PictureBox();
             this.pictureBox79 = new System.Windows.Forms.PictureBox();
             this.pictureBox80 = new System.Windows.Forms.PictureBox();
+            this.basicButtonsPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +69,86 @@ namespace BaseFormLibrary
             // basicButtonsPanel
             // 
             this.basicButtonsPanel.Location = new System.Drawing.Point(0, 244);
+            // 
+            // equalButton
+            // 
+            this.equalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // undoButton
+            // 
+            this.undoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // rightBracketButton
+            // 
+            this.rightBracketButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // nineButton
+            // 
+            this.nineButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // multiplyButton
+            // 
+            this.multiplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // commaButton
+            // 
+            this.commaButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // eightButton
+            // 
+            this.eightButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // sevenButton
+            // 
+            this.sevenButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // leftBracketButton
+            // 
+            this.leftBracketButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // divideButton
+            // 
+            this.divideButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // minusButton
+            // 
+            this.minusButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // plusButton
+            // 
+            this.plusButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // fourButton
+            // 
+            this.fourButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // fiveButton
+            // 
+            this.fiveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // sixButton
+            // 
+            this.sixButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // oneButton
+            // 
+            this.oneButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // twoButton
+            // 
+            this.twoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // threeButton
+            // 
+            this.threeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // decimalButton
+            // 
+            this.decimalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // zeroButton
+            // 
+            this.zeroButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // panel5
             // 
@@ -364,6 +445,7 @@ namespace BaseFormLibrary
             this.Controls.SetChildIndex(this.basicButtonsPanel, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
             this.Controls.SetChildIndex(this.panel4, 0);
+            this.basicButtonsPanel.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -372,37 +454,37 @@ namespace BaseFormLibrary
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox81;
-        private System.Windows.Forms.PictureBox pictureBox82;
-        private System.Windows.Forms.PictureBox pictureBox83;
-        private System.Windows.Forms.PictureBox pictureBox84;
-        private System.Windows.Forms.PictureBox pictureBox85;
-        private System.Windows.Forms.PictureBox pictureBox86;
-        private System.Windows.Forms.PictureBox pictureBox87;
-        private System.Windows.Forms.PictureBox pictureBox88;
-        private System.Windows.Forms.PictureBox pictureBox89;
-        private System.Windows.Forms.PictureBox pictureBox90;
-        private System.Windows.Forms.PictureBox pictureBox91;
-        private System.Windows.Forms.PictureBox pictureBox92;
-        private System.Windows.Forms.PictureBox pictureBox59;
-        private System.Windows.Forms.PictureBox pictureBox60;
-        private System.Windows.Forms.PictureBox pictureBox61;
-        private System.Windows.Forms.PictureBox pictureBox62;
-        private System.Windows.Forms.PictureBox pictureBox63;
-        private System.Windows.Forms.PictureBox pictureBox64;
-        private System.Windows.Forms.PictureBox pictureBox69;
-        private System.Windows.Forms.PictureBox pictureBox70;
-        private System.Windows.Forms.PictureBox pictureBox71;
-        private System.Windows.Forms.PictureBox pictureBox72;
-        private System.Windows.Forms.PictureBox pictureBox73;
-        private System.Windows.Forms.PictureBox pictureBox74;
-        private System.Windows.Forms.PictureBox pictureBox75;
-        private System.Windows.Forms.PictureBox pictureBox76;
-        private System.Windows.Forms.PictureBox pictureBox77;
-        private System.Windows.Forms.PictureBox pictureBox78;
-        private System.Windows.Forms.PictureBox pictureBox79;
-        private System.Windows.Forms.PictureBox pictureBox80;
         protected System.Windows.Forms.Panel panel5;
         protected System.Windows.Forms.Panel panel4;
+        protected System.Windows.Forms.PictureBox pictureBox81;
+        protected System.Windows.Forms.PictureBox pictureBox82;
+        protected System.Windows.Forms.PictureBox pictureBox83;
+        protected System.Windows.Forms.PictureBox pictureBox84;
+        protected System.Windows.Forms.PictureBox pictureBox85;
+        protected System.Windows.Forms.PictureBox pictureBox86;
+        protected System.Windows.Forms.PictureBox pictureBox87;
+        protected System.Windows.Forms.PictureBox pictureBox88;
+        protected System.Windows.Forms.PictureBox pictureBox89;
+        protected System.Windows.Forms.PictureBox pictureBox90;
+        protected System.Windows.Forms.PictureBox pictureBox91;
+        protected System.Windows.Forms.PictureBox pictureBox92;
+        protected System.Windows.Forms.PictureBox pictureBox59;
+        protected System.Windows.Forms.PictureBox pictureBox60;
+        protected System.Windows.Forms.PictureBox pictureBox61;
+        protected System.Windows.Forms.PictureBox pictureBox62;
+        protected System.Windows.Forms.PictureBox pictureBox63;
+        protected System.Windows.Forms.PictureBox pictureBox64;
+        protected System.Windows.Forms.PictureBox pictureBox69;
+        protected System.Windows.Forms.PictureBox pictureBox70;
+        protected System.Windows.Forms.PictureBox pictureBox71;
+        protected System.Windows.Forms.PictureBox pictureBox72;
+        protected System.Windows.Forms.PictureBox pictureBox73;
+        protected System.Windows.Forms.PictureBox pictureBox74;
+        protected System.Windows.Forms.PictureBox pictureBox75;
+        protected System.Windows.Forms.PictureBox pictureBox76;
+        protected System.Windows.Forms.PictureBox pictureBox77;
+        protected System.Windows.Forms.PictureBox pictureBox78;
+        protected System.Windows.Forms.PictureBox pictureBox79;
+        protected System.Windows.Forms.PictureBox pictureBox80;
     }
 }

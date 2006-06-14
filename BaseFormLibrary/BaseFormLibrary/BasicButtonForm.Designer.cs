@@ -258,26 +258,26 @@ namespace BaseFormLibrary
         #endregion
 
         protected System.Windows.Forms.Panel basicButtonsPanel;
-        private System.Windows.Forms.PictureBox undoButton;
-        private System.Windows.Forms.PictureBox rightBracketButton;
-        private System.Windows.Forms.PictureBox nineButton;
-        private System.Windows.Forms.PictureBox multiplyButton;
-        private System.Windows.Forms.PictureBox commaButton;
-        private System.Windows.Forms.PictureBox eightButton;
-        private System.Windows.Forms.PictureBox sevenButton;
-        private System.Windows.Forms.PictureBox leftBracketButton;
-        private System.Windows.Forms.PictureBox divideButton;
-        private System.Windows.Forms.PictureBox minusButton;
-        private System.Windows.Forms.PictureBox plusButton;
-        private System.Windows.Forms.PictureBox fourButton;
-        private System.Windows.Forms.PictureBox fiveButton;
-        private System.Windows.Forms.PictureBox sixButton;
-        private System.Windows.Forms.PictureBox oneButton;
-        private System.Windows.Forms.PictureBox twoButton;
-        private System.Windows.Forms.PictureBox threeButton;
-        private System.Windows.Forms.PictureBox decimalButton;
-        private System.Windows.Forms.PictureBox zeroButton;
         protected System.Windows.Forms.PictureBox equalButton;
+        protected System.Windows.Forms.PictureBox undoButton;
+        protected System.Windows.Forms.PictureBox rightBracketButton;
+        protected System.Windows.Forms.PictureBox nineButton;
+        protected System.Windows.Forms.PictureBox multiplyButton;
+        protected System.Windows.Forms.PictureBox commaButton;
+        protected System.Windows.Forms.PictureBox eightButton;
+        protected System.Windows.Forms.PictureBox sevenButton;
+        protected System.Windows.Forms.PictureBox leftBracketButton;
+        protected System.Windows.Forms.PictureBox divideButton;
+        protected System.Windows.Forms.PictureBox minusButton;
+        protected System.Windows.Forms.PictureBox plusButton;
+        protected System.Windows.Forms.PictureBox fourButton;
+        protected System.Windows.Forms.PictureBox fiveButton;
+        protected System.Windows.Forms.PictureBox sixButton;
+        protected System.Windows.Forms.PictureBox oneButton;
+        protected System.Windows.Forms.PictureBox twoButton;
+        protected System.Windows.Forms.PictureBox threeButton;
+        protected System.Windows.Forms.PictureBox decimalButton;
+        protected System.Windows.Forms.PictureBox zeroButton;
     }
 }
 

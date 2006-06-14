@@ -38,7 +38,7 @@ namespace MyPocketCal2003
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.inputBox = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.Calculations = new System.Windows.Forms.TabPage();
@@ -93,6 +93,100 @@ namespace MyPocketCal2003
             // 
             this.equalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
+            // undoButton
+            // 
+            this.undoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // rightBracketButton
+            // 
+            this.rightBracketButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rightBracketButton.Click += new System.EventHandler(this.rightBracketButton_Click);
+            // 
+            // nineButton
+            // 
+            this.nineButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.nineButton.Click += new System.EventHandler(this.nineButton_Click);
+            // 
+            // multiplyButton
+            // 
+            this.multiplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.multiplyButton.Click += new System.EventHandler(this.multiplyButton_Click);
+            // 
+            // commaButton
+            // 
+            this.commaButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.commaButton.Click += new System.EventHandler(this.commaButton_Click);
+            // 
+            // eightButton
+            // 
+            this.eightButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.eightButton.Click += new System.EventHandler(this.eightButton_Click);
+            // 
+            // sevenButton
+            // 
+            this.sevenButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sevenButton.Click += new System.EventHandler(this.sevenButton_Click);
+            // 
+            // leftBracketButton
+            // 
+            this.leftBracketButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.leftBracketButton.Click += new System.EventHandler(this.leftBracketButton_Click);
+            // 
+            // divideButton
+            // 
+            this.divideButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.divideButton.Click += new System.EventHandler(this.divideButton_Click);
+            // 
+            // minusButton
+            // 
+            this.minusButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.minusButton.Click += new System.EventHandler(this.minusButton_Click);
+            // 
+            // plusButton
+            // 
+            this.plusButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.plusButton.Click += new System.EventHandler(this.plusButton_Click);
+            // 
+            // fourButton
+            // 
+            this.fourButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.fourButton.Click += new System.EventHandler(this.fourButton_Click);
+            // 
+            // fiveButton
+            // 
+            this.fiveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.fiveButton.Click += new System.EventHandler(this.fiveButton_Click);
+            // 
+            // sixButton
+            // 
+            this.sixButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sixButton.Click += new System.EventHandler(this.sixButton_Click);
+            // 
+            // oneButton
+            // 
+            this.oneButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.oneButton.Click += new System.EventHandler(this.oneButton_Click);
+            // 
+            // twoButton
+            // 
+            this.twoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.twoButton.Click += new System.EventHandler(this.twoButton_Click);
+            // 
+            // threeButton
+            // 
+            this.threeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.threeButton.Click += new System.EventHandler(this.threeButton_Click);
+            // 
+            // decimalButton
+            // 
+            this.decimalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.decimalButton.Click += new System.EventHandler(this.decimalButton_Click);
+            // 
+            // zeroButton
+            // 
+            this.zeroButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.zeroButton.Click += new System.EventHandler(this.zeroButton_Click);
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(137, 190);
@@ -119,7 +213,7 @@ namespace MyPocketCal2003
             this.Data.Controls.Add(this.listBox2);
             this.Data.Controls.Add(this.button4);
             this.Data.Controls.Add(this.label2);
-            this.Data.Controls.Add(this.textBox1);
+            this.Data.Controls.Add(this.inputBox);
             this.Data.Controls.Add(this.button2);
             this.Data.Controls.Add(this.listBox1);
             this.Data.Location = new System.Drawing.Point(0, 0);
@@ -181,12 +275,12 @@ namespace MyPocketCal2003
             this.label2.Size = new System.Drawing.Size(44, 14);
             this.label2.Text = "Value:";
             // 
-            // textBox1
+            // inputBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(49, 150);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(71, 21);
-            this.textBox1.TabIndex = 64;
+            this.inputBox.Location = new System.Drawing.Point(49, 150);
+            this.inputBox.Name = "inputBox";
+            this.inputBox.Size = new System.Drawing.Size(71, 21);
+            this.inputBox.TabIndex = 64;
             // 
             // button2
             // 
@@ -228,7 +322,7 @@ namespace MyPocketCal2003
             this.Calculations.Controls.Add(this.checkBox1);
             this.Calculations.Location = new System.Drawing.Point(0, 0);
             this.Calculations.Name = "Calculations";
-            this.Calculations.Size = new System.Drawing.Size(232, 215);
+            this.Calculations.Size = new System.Drawing.Size(240, 218);
             this.Calculations.Text = "Calculations";
             // 
             // checkBox13
@@ -559,7 +653,7 @@ namespace MyPocketCal2003
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox inputBox;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TabPage Calculations;

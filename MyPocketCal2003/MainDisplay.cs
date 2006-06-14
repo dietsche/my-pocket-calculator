@@ -91,6 +91,7 @@ namespace MyPocketCal2003
             ee.Show();
         }
 
+
         //zero pressed on the calculator
         private void zeroButton_Click(object sender, EventArgs e)
         {
@@ -345,11 +346,6 @@ namespace MyPocketCal2003
         private void nCrButton_Click(object sender, EventArgs e)
         {
             this.inputBox.Text += Constants.NCR;
-        }
-
-        private void equalButton_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

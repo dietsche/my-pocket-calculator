@@ -34,7 +34,7 @@ namespace MyPocketCal2003
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.coefficientBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.listBox2 = new System.Windows.Forms.ListBox();
@@ -42,9 +42,10 @@ namespace MyPocketCal2003
             this.button3 = new System.Windows.Forms.Button();
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.equationBox = new System.Windows.Forms.TextBox();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
+            this.basicButtonsPanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -53,6 +54,104 @@ namespace MyPocketCal2003
             // basicButtonsPanel
             // 
             this.basicButtonsPanel.Location = new System.Drawing.Point(0, 244);
+            // 
+            // equalButton
+            // 
+            this.equalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // undoButton
+            // 
+            this.undoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // rightBracketButton
+            // 
+            this.rightBracketButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rightBracketButton.Click += new System.EventHandler(this.rightBracketButton_Click);
+            // 
+            // nineButton
+            // 
+            this.nineButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.nineButton.Click += new System.EventHandler(this.nineButton_Click);
+            // 
+            // multiplyButton
+            // 
+            this.multiplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.multiplyButton.Click += new System.EventHandler(this.multiplyButton_Click);
+            // 
+            // commaButton
+            // 
+            this.commaButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.commaButton.Click += new System.EventHandler(this.commaButton_Click);
+            // 
+            // eightButton
+            // 
+            this.eightButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.eightButton.Click += new System.EventHandler(this.eightButton_Click);
+            // 
+            // sevenButton
+            // 
+            this.sevenButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sevenButton.Click += new System.EventHandler(this.sevenButton_Click);
+            // 
+            // leftBracketButton
+            // 
+            this.leftBracketButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.leftBracketButton.Click += new System.EventHandler(this.leftBracketButton_Click);
+            // 
+            // divideButton
+            // 
+            this.divideButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.divideButton.Click += new System.EventHandler(this.divideButton_Click);
+            // 
+            // minusButton
+            // 
+            this.minusButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.minusButton.Click += new System.EventHandler(this.minusButton_Click);
+            // 
+            // plusButton
+            // 
+            this.plusButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.plusButton.Click += new System.EventHandler(this.plusButton_Click);
+            // 
+            // fourButton
+            // 
+            this.fourButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.fourButton.Click += new System.EventHandler(this.fourButton_Click);
+            // 
+            // fiveButton
+            // 
+            this.fiveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.fiveButton.Click += new System.EventHandler(this.fiveButton_Click);
+            // 
+            // sixButton
+            // 
+            this.sixButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sixButton.Click += new System.EventHandler(this.sixButton_Click);
+            // 
+            // oneButton
+            // 
+            this.oneButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.oneButton.Click += new System.EventHandler(this.oneButton_Click);
+            // 
+            // twoButton
+            // 
+            this.twoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.twoButton.Click += new System.EventHandler(this.twoButton_Click);
+            // 
+            // threeButton
+            // 
+            this.threeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.threeButton.Click += new System.EventHandler(this.threeButton_Click);
+            // 
+            // decimalButton
+            // 
+            this.decimalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.decimalButton.Click += new System.EventHandler(this.decimalButton_Click);
+            // 
+            // zeroButton
+            // 
+            this.zeroButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.zeroButton.Click += new System.EventHandler(this.zeroButton_Click);
             // 
             // tabControl1
             // 
@@ -70,7 +169,7 @@ namespace MyPocketCal2003
             this.tabPage1.Controls.Add(this.listBox1);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.coefficientBox);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(0, 0);
             this.tabPage1.Name = "tabPage1";
@@ -111,12 +210,12 @@ namespace MyPocketCal2003
             this.button1.TabIndex = 2;
             this.button1.Text = "Calculate";
             // 
-            // textBox1
+            // coefficientBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(8, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 21);
-            this.textBox1.TabIndex = 1;
+            this.coefficientBox.Location = new System.Drawing.Point(8, 51);
+            this.coefficientBox.Name = "coefficientBox";
+            this.coefficientBox.Size = new System.Drawing.Size(222, 21);
+            this.coefficientBox.TabIndex = 1;
             // 
             // label1
             // 
@@ -133,12 +232,12 @@ namespace MyPocketCal2003
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.listBox4);
             this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.textBox5);
+            this.tabPage2.Controls.Add(this.equationBox);
             this.tabPage2.Controls.Add(this.button10);
             this.tabPage2.Controls.Add(this.button11);
             this.tabPage2.Location = new System.Drawing.Point(0, 0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(232, 215);
+            this.tabPage2.Size = new System.Drawing.Size(240, 218);
             this.tabPage2.Text = "Linear Algebra";
             // 
             // listBox2
@@ -184,12 +283,12 @@ namespace MyPocketCal2003
             this.label3.Size = new System.Drawing.Size(67, 14);
             this.label3.Text = "Equation:";
             // 
-            // textBox5
+            // equationBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(3, 30);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(122, 21);
-            this.textBox5.TabIndex = 71;
+            this.equationBox.Location = new System.Drawing.Point(3, 30);
+            this.equationBox.Name = "equationBox";
+            this.equationBox.Size = new System.Drawing.Size(122, 21);
+            this.equationBox.TabIndex = 71;
             // 
             // button10
             // 
@@ -217,6 +316,7 @@ namespace MyPocketCal2003
             this.Text = "Equations";
             this.Controls.SetChildIndex(this.basicButtonsPanel, 0);
             this.Controls.SetChildIndex(this.tabControl1, 0);
+            this.basicButtonsPanel.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -231,14 +331,14 @@ namespace MyPocketCal2003
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox coefficientBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox equationBox;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button4;

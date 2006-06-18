@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Quantities>
+  <Quantity>
+    <Name>Acceleration</Name>
+    <Units>
+      <Unit>in/s^2</Unit>
+      <Unit>m/s^2</Unit>
+      <Unit>ft/s^2</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Area</Name>
+    <Units>
+      <Unit>acre US</Unit>
+      <Unit>are</Unit>
+      <Unit>barn</Unit>
+      <Unit>circ mil</Unit>
+      <Unit>cm^2</Unit>
+      <Unit>ft^2</Unit>
+      <Unit>hectare</Unit>
+      <Unit>in^2</Unit>
+      <Unit>km^2</Unit>
+      <Unit>m^2</Unit>
+      <Unit>mm^2</Unit>
+      <Unit>mi^2</Unit>
+      <Unit>yd^2</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Angle</Name>
+    <Units>
+      <Unit>Deg</Unit>
+      <Unit>Rad</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Currency</Name>
+    <Units>
+      <Unit></Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Density</Name>
+    <Units>
+      <Unit>gram/cm^3</Unit>
+      <Unit>kg/m^3</Unit>
+      <Unit>lb/ft^3</Unit>
+      <Unit>lb/gal</Unit>
+      <Unit>lb/yd^3</Unit>
+      <Unit>oz/in^3</Unit>
+      <Unit>slug/ft^3</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Electric Potential</Name>
+    <Units>
+      <Unit>Abvolt</Unit>
+      <Unit>V</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Electric Capacitance</Name>
+    <Units>
+      <Unit>abfarad</Unit>
+      <Unit>F</Unit>
+      <Unit>microfarad</Unit>
+      <Unit>picofarad</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Electric Charge</Name>
+    <Units>
+      <Unit>abcoulomb</Unit>
+      <Unit>apmere hour</Unit>
+      <Unit>C</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Electric Conductance</Name>
+    <Units>
+      <Unit>abmho</Unit>
+      <Unit>siemens</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Electric Current</Name>
+    <Units>
+      <Unit>A</Unit>
+      <Unit>abampere</Unit>
+      <Unit>biot</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Electric Field Strength</Name>
+    <Units>
+      <Unit>V/ft</Unit>
+      <Unit>V/m</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Electric Flux Density</Name>
+    <Units>
+      <Unit>C/ft^2</Unit>
+      <Unit>C/m^2</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Electric Inductance</Name>
+    <Units>
+      <Unit>abhenry</Unit>
+      <Unit>henry</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Electric Resistance</Name>
+    <Units>
+      <Unit>abohm</Unit>
+      <Unit>ohm</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Energy</Name>
+    <Units>
+      <Unit>BTU</Unit>
+      <Unit>Calorie</Unit>
+      <Unit>Erg</Unit>
+      <Unit>eV</Unit>
+      <Unit>Eh</Unit>
+      <Unit>GeV</Unit>
+      <Unit>J</Unit>
+      <Unit>keV</Unit>
+      <Unit>kilocalorie</Unit>
+      <Unit>kW hour</Unit>
+      <Unit>Mev</Unit>
+      <Unit>therm</Unit>
+      <Unit>W hour</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Force</Name>
+    <Units>
+      <Unit>dyne</Unit>
+      <Unit>kgf</Unit>
+      <Unit>kip</Unit>
+      <Unit>ibf</Unit>
+      <Unit>N</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Frequency</Name>
+    <Units>
+      <Unit>Bq</Unit>
+      <Unit>Ci</Unit>
+      <Unit>GBq</Unit>
+      <Unit>Ghz</Unit>
+      <Unit>Hz</Unit>
+      <Unit>KHz</Unit>
+      <Unit>mCi</Unit>
+      <Unit>uCi</Unit>
+      <Unit>MBq</Unit>
+      <Unit>Mhz</Unit>
+      <Unit>TBq</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Heat Capacity</Name>
+    <Units>
+      <Unit>BTU/F</Unit>
+      <Unit>BTU/R</Unit>
+      <Unit>J/K</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Heat Flux</Name>
+    <Units>
+      <Unit>BTU/(ft^2 hr)</Unit>
+      <Unit>kg/s^3</Unit>
+      <Unit>kW/m^2</Unit>
+      <Unit>W/m^2</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Length</Name>
+    <Units>
+      <Unit>angstrom</Unit>
+      <Unit>chain US</Unit>
+      <Unit>cm</Unit>
+      <Unit>ft</Unit>
+      <Unit>in</Unit>
+      <Unit>km</Unit>
+      <Unit>light yr</Unit>
+      <Unit>m</Unit>
+      <Unit>microinch</Unit>
+      <Unit>micron</Unit>
+      <Unit>mil</Unit>
+      <Unit>mile</Unit>
+      <Unit>mm</Unit>
+      <Unit>rod US</Unit>
+      <Unit>yd</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Luminance</Name>
+    <Units>
+      <Unit>cd/in^2</Unit>
+      <Unit>cd/m^2</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Magnetic Flux</Name>
+    <Units>
+      <Unit>Mx</Unit>
+      <Unit>Wb</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Magnetic Flux Density</Name>
+    <Units>
+      <Unit>gauss</Unit>
+      <Unit>kg/(A s^2)</Unit>
+      <Unit>Wb/m^2</Unit>
+      <Unit>T</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Mass</Name>
+    <Units>
+      <Unit>carat</Unit>
+      <Unit>grain</Unit>
+      <Unit>gram</Unit>
+      <Unit>kg</Unit>
+      <Unit>lb</Unit>
+      <Unit>mg</Unit>
+      <Unit>oz</Unit>
+      <Unit>slug</Unit>
+      <Unit>ton</Unit>
+      <Unit>tonne</Unit>
+      <Unit>u</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Mass Flux</Name>
+    <Units>
+      <unit>gram/(cm^2 s)</unit>
+      <unit>kg/(m^2 hr)</unit>
+      <unit>kg/(m^2 min)</unit>
+      <unit>kg/(m^2 s)</unit>
+      <unit>lb(ft^2 hr)</unit>
+      <unit>lb(ft^2 min)</unit>
+      <unit>lb(ft^2 s)</unit>
+      <unit>ton(ft^2 hr)</unit>
+      <unit>tonne(m^2 hr)</unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Mass Rate</Name>
+    <Units>
+      <Unit>gram/s></Unit>
+      <Unit>kg/hr</Unit>
+      <Unit>kg/min</Unit>
+      <Unit>kg/s</Unit>
+      <Unit>lb/hr</Unit>
+      <Unit>lb/min</Unit>
+      <Unit>lb/s</Unit>
+      <Unit>ton/hr</Unit>
+      <Unit>tonne/hr</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Molar Energy</Name>
+    <Units>
+      <Unit>BTU/lbmole</Unit>
+      <Unit>J/kgmole</Unit>
+      <Unit>J/mol</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Molar Heat Capacity</Name>
+    <Units>
+      <Unit>BTU(lbmole R)</Unit>
+      <Unit>J/(kgmole K)</Unit>
+      <Unit>J/(mol K)</Unit>
+      <Unit>kJ(kgmole K)</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Molar Mass</Name>
+    <Units>
+      <Unit>lb/lbmole</Unit>
+      <Unit>kg/mol</Unit>
+      <Unit>gram/mol</Unit>
+      <Unit>kg/kgmole</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Molar Volume</Name>
+    <Units>
+      <Unit>ft^3/lbmole</Unit>
+      <Unit>cm^3/mol</Unit>
+      <Unit>m^3/mol</Unit>
+      <Unit>m^3/kgmole</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Number</Name>
+    <Units>
+      <Unit>Dec</Unit>
+      <Unit>Bin</Unit>
+      <Unit>Oct</Unit>
+      <Unit>Hex</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Permeability</Name>
+    <Units>
+      <Unit>henry/ft</Unit>
+      <Unit>henry/m</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Permittivity</Name>
+    <Units>
+      <Unit>F/ft</Unit>
+      <Unit>F/m</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Power</Name>
+    <Units>
+      <Unit>(ft lbf)/s</Unit>
+      <Unit>erg/s</Unit>
+      <Unit>hp (550 ft lbf/s)</Unit>
+      <Unit>hp (boiler)</Unit>
+      <Unit>hp (electric)</Unit>
+      <Unit>hp (metric)</Unit>
+      <Unit>hp (U.K.)</Unit>
+      <Unit>hp (water)</Unit>
+      <Unit>KW</Unit>
+      <Unit>MW</Unit>
+      <Unit>W</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Pressure</Name>
+    <Units>
+      <Unit>atm</Unit>
+      <Unit>bar</Unit>
+      <Unit>in Hg</Unit>
+      <Unit>kPa</Unit>
+      <Unit>mm Hg</Unit>
+      <Unit>Pa</Unit>
+      <Unit>psi</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Radiance</Name>
+    <Units>
+      <Unit>lb/(s^3 sr)</Unit>
+      <Unit>w/(ft^2 sr)</Unit>
+      <Unit>W(m^2 sr)</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Specific Charge</Name>
+    <Units>
+      <Unit>C/kg</Unit>
+      <Unit>mR</Unit>
+      <Unit>R</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Specific Energy</Name>
+    <Units>
+      <Unit>BTU/lb</Unit>
+      <Unit>cal/g</Unit>
+      <Unit>Cy</Unit>
+      <Unit>J/kg</Unit>
+      <Unit>kJ/kg</Unit>
+      <Unit>rad[dose]</Unit>
+      <Unit>rem</Unit>
+      <Unit>Sv</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Specific Heat Capacity</Name>
+    <Units>
+      <Unit>BTU(lb R)</Unit>
+      <Unit>cal(g K)</Unit>
+      <Unit>J/(kg K)</Unit>
+      <Unit>kJ(kg K)</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Specific Volume</Name>
+    <Units>
+      <Unit>cm^3/g</Unit>
+      <Unit>ft^3/lb</Unit>
+      <Unit>ft^3/slug</Unit>
+      <Unit>gal/lb</Unit>
+      <Unit>in^3/lb</Unit>
+      <Unit>in^3/oz</Unit>
+      <Unit>m^3/kg</Unit>
+      <Unit>yd^3/lb</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Speed</Name>
+    <Units>
+      <Unit>cm/s</Unit>
+      <Unit>ft/min</Unit>
+      <Unit>ft/s</Unit>
+      <Unit>in/s</Unit>
+      <Unit>km/hr</Unit>
+      <Unit>m/s</Unit>
+      <Unit>mi/hr</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Substance Amount</Name>
+    <Units>
+      <Unit>gmole</Unit>
+      <Unit>kgmole</Unit>
+      <Unit>lbmole</Unit>
+      <Unit>mol</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Surface Tension</Name>
+    <Units>
+      <Unit>lbf/ft</Unit>
+      <Unit>N/m</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Temperature</Name>
+    <Units>
+      <Unit>C</Unit>
+      <Unit>F</Unit>
+      <Unit>K</Unit>
+      <Unit>R</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Thermal Conductivity</Name>
+    <Units>
+      <Unit>BTU/(hr ft R)</Unit>
+      <Unit>lbf/(s R)</Unit>
+      <Unit>W/(m K)</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Time</Name>
+    <Units>
+      <Unit>day</Unit>
+      <Unit>hr</Unit>
+      <Unit>min</Unit>
+      <Unit>s</Unit>
+      <Unit>yr</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Viscosity (Dynamic)</Name>
+    <Units>
+      <Unit>(lbf s)ft^2</Unit>
+      <Unit>centipose</Unit>
+      <Unit>Pa s</Unit>
+      <Unit>poise</Unit>
+      <Unit>slug/(ft s)</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Viscosity (Kinematics)</Name>
+    <Units>
+      <Unit>centistokes</Unit>
+      <Unit>ft^2/s</Unit>
+      <Unit>stokes</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Volume</Name>
+    <Units>
+      <Unit>barrel</Unit>
+      <Unit>board ft</Unit>
+      <Unit>bushel</Unit>
+      <Unit>cm^3</Unit>
+      <Unit>cord</Unit>
+      <Unit>cup</Unit>
+      <Unit>fl oz</Unit>
+      <Unit>ft^3</Unit>
+      <Unit>gal US</Unit>
+      <Unit>in^3</Unit>
+      <Unit>liter</Unit>
+      <Unit>m^3</Unit>
+      <Unit>ml</Unit>
+      <Unit>peck</Unit>
+      <Unit>pint</Unit>
+      <Unit>quart</Unit>
+      <Unit>Tbls</Unit>
+      <Unit>tsp</Unit>
+      <Unit>yd^3</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Volume Rate</Name>
+    <Units>
+      <Unit>ft^3/hr</Unit>
+      <Unit>ft^3/min</Unit>
+      <Unit>ft^3/s</Unit>
+      <Unit>gal/hr</Unit>
+      <Unit>gal/min</Unit>
+      <Unit>in^3/min</Unit>
+      <Unit>m^3/s</Unit>
+      <Unit>yd^3/min</Unit>
+    </Units>
+  </Quantity>  
+</Quantities>

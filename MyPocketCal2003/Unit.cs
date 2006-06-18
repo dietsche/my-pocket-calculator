@@ -6,17 +6,18 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections;
+using System.Xml;
 
 namespace MyPocketCal2003
 {
     public partial class Unit : BaseFormLibrary.BasicButtonForm
     {
-        Hashtable quantitiesUnits;
 
+        XmlDocument docXMLFile; //the XmlDocument object which reads all the Quantities and their respective units from an xml file
         public Unit()
         {
             InitializeComponent();
-            populateHashTable();
+            loadQuantities(); 
         }
         //zero pressed on the calculator
         private void zeroButton_Click(object sender, EventArgs e)
@@ -114,30 +115,50 @@ namespace MyPocketCal2003
         {
             String quantityName = quantitiesListBox.SelectedItem.ToString(); //get the selected item into a String
             unitListbox.Items.Clear(); //clear the unit listbox from any previous entries
+            convertToComboBox.Items.Clear(); //clear the combo box from any previous entries
             ArrayList units = getUnits(quantityName); //get the corresponding units for the quantity selected
             for (int i = 0; i < units.Count; ++i) //populate the unit listbox with the corresponding units for the quantity selected
             {
                 String unit = (String)units[i];
-                unitListbox.Items.Add(unit); //add unit to listbox    
+                unitListbox.Items.Add(unit); //add unit to listbox
+                convertToComboBox.Items.Add(unit); //add unit to combo box
             }
         }
-        //populating hashtable for corresponding quantities and their units
-        private void populateHashTable()
+        //loads the Quantity Names & Units XML file into an XmlDocument object
+        private void loadQuantities()
         {
-            quantitiesUnits = new Hashtable(); //a new hashtable
-            ArrayList unitsList = new ArrayList(); //a new arraylist
-            unitsList.Add("ft/s2");
-            unitsList.Add("in/s2");
-            unitsList.Add("m/s2");
-            quantitiesUnits.Add("Acceleration", unitsList);
-            unitsList.Clear();
-
-
-
+            this.docXMLFile = new XmlDocument();
+            //String path = Environment.GetFolderPath(Environment.SpecialFolder.Programs) + "\\MyPocketCal2003\\QuantitiesUnits.xml";
+            String path = "E:\\SOC\\MyPocketCal2003\\MyPocketCal2003\\QuantitiesUnits.xml";
+            this.docXMLFile.Load(path);
+            this.populateQuantities(); //load quantities name in the listbox
         }
+        //get the units of a Quantity=quantityName and returns them in an ArrayList
         private ArrayList getUnits(String quantityName)
         {
-            return new ArrayList();
+            XmlNode quantityNode; //the XmlNode to hold the returned Quantity Node
+            ArrayList unitsList = new ArrayList(); //the ArrayList to hold the quantity units name
+            
+            //get the Quantity node which has its Name = quantityName in the XmlDocument object
+            quantityNode = docXMLFile.SelectSingleNode("/Quantities/Quantity[Name='" + quantityName + "']");
+            
+            foreach (XmlNode unit in quantityNode.LastChild) //retreiving each unit name
+            {
+                unitsList.Add(unit.InnerText);
+            }
+            return unitsList; 
+        }
+        //populate the Quantities Listbox will all the quantities name
+        private void populateQuantities()
+        {
+            XmlNodeList nodeList;
+
+            //get the Name of all the quantities
+            nodeList = docXMLFile.SelectNodes("/Quantities/descendant::Name");
+            foreach (XmlNode node in nodeList)
+            {
+                this.quantitiesListBox.Items.Add(node.InnerText); //adding quantity name of the listbox
+            }
         }
     }
 }

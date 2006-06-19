@@ -171,6 +171,7 @@ namespace MyPocketCal2003
             this.unitListbox.Name = "unitListbox";
             this.unitListbox.Size = new System.Drawing.Size(64, 128);
             this.unitListbox.TabIndex = 18;
+            this.unitListbox.SelectedIndexChanged += new System.EventHandler(this.unitListbox_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -194,6 +195,7 @@ namespace MyPocketCal2003
             this.convertToComboBox.Name = "convertToComboBox";
             this.convertToComboBox.Size = new System.Drawing.Size(100, 22);
             this.convertToComboBox.TabIndex = 22;
+            this.convertToComboBox.SelectedIndexChanged += new System.EventHandler(this.convertToComboBox_SelectedIndexChanged);
             // 
             // label2
             // 

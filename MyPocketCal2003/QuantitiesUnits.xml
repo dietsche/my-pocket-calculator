@@ -2,10 +2,47 @@
 <Quantities>
   <Quantity>
     <Name>Acceleration</Name>
+    <Conversion>
+      <FromUnit>ft/s^2</FromUnit>
+      <ToUnit>in/s^2</ToUnit>
+      <Ratio>12</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>ft/s^2</FromUnit>
+      <ToUnit>m/s^2</ToUnit>
+      <Ratio>0.3048</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>in/s^2</FromUnit>
+      <ToUnit>ft/s^2</ToUnit>
+      <Ratio>0.0833</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>m/s^2</FromUnit>
+      <ToUnit>ft/s^2</ToUnit>
+      <Ratio>3.2808</Ratio>
+    </Conversion>
     <Units>
+      <Unit>ft/s^2</Unit>
       <Unit>in/s^2</Unit>
       <Unit>m/s^2</Unit>
-      <Unit>ft/s^2</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Angle</Name>
+    <Conversion>
+      <FromUnit>Deg</FromUnit>
+      <ToUnit>Rad</ToUnit>
+      <Ratio>0.0174532925</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>Rad</FromUnit>
+      <ToUnit>Deg</ToUnit>
+      <Ratio>57.2957795</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>Deg</Unit>
+      <Unit>Rad</Unit>
     </Units>
   </Quantity>
   <Quantity>
@@ -24,13 +61,6 @@
       <Unit>mm^2</Unit>
       <Unit>mi^2</Unit>
       <Unit>yd^2</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Angle</Name>
-    <Units>
-      <Unit>Deg</Unit>
-      <Unit>Rad</Unit>
     </Units>
   </Quantity>
   <Quantity>

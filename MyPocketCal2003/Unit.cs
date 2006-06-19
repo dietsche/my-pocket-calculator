@@ -14,6 +14,9 @@ namespace MyPocketCal2003
     {
 
         XmlDocument docXMLFile; //the XmlDocument object which reads all the Quantities and their respective units from an xml file
+        String inputUnit; //the string to hold the user input unit choice
+        String outputUnit;  //the string to hold the user output unit choice
+        String quantityName; //the string to hold the user quantity choice
         public Unit()
         {
             InitializeComponent();
@@ -113,7 +116,7 @@ namespace MyPocketCal2003
         //event handler for the quantity listbox called whenever a user select an item in the listbox
         private void quantitiesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String quantityName = quantitiesListBox.SelectedItem.ToString(); //get the selected item into a String
+            quantityName = quantitiesListBox.SelectedItem.ToString(); //get the selected item into a String
             unitListbox.Items.Clear(); //clear the unit listbox from any previous entries
             convertToComboBox.Items.Clear(); //clear the combo box from any previous entries
             ArrayList units = getUnits(quantityName); //get the corresponding units for the quantity selected
@@ -142,9 +145,9 @@ namespace MyPocketCal2003
             //get the Quantity node which has its Name = quantityName in the XmlDocument object
             quantityNode = docXMLFile.SelectSingleNode("/Quantities/Quantity[Name='" + quantityName + "']");
             
-            foreach (XmlNode unit in quantityNode.LastChild) //retreiving each unit name
+            foreach (XmlNode unit in quantityNode.LastChild) //last child is the <Units> node
             {
-                unitsList.Add(unit.InnerText);
+                unitsList.Add(unit.InnerText); //retreiving each <unit> inside the <Units> node
             }
             return unitsList; 
         }
@@ -159,6 +162,18 @@ namespace MyPocketCal2003
             {
                 this.quantitiesListBox.Items.Add(node.InnerText); //adding quantity name of the listbox
             }
+        }
+        //event handler for the units lixtbox called whenever the user selects an item in the unit listbox
+        private void unitListbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            inputUnit = unitListbox.SelectedItem.ToString(); //user input unit choice
+        } 
+        //event handler for the convertTo combobox called whenever the user selects an item out of the combo box
+        private void convertToComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            outputUnit = convertToComboBox.SelectedItem.ToString(); //user output unit choice
+            UnitConversion unitConvert = new UnitConversion();
+            outputBox.Text = unitConvert.convert(inputBox.Text, quantityName, inputUnit, outputUnit, docXMLFile); //set output
         }
     }
 }

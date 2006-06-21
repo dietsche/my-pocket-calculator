@@ -47,11 +47,16 @@
   </Quantity>
   <Quantity>
     <Name>Area</Name>
+    <Converion>
+      <FromUnit>acre</FromUnit>
+      <ToUnit>are</ToUnit>
+      <Ratio>40.4685642</Ratio>
+    </Converion>
     <Units>
-      <Unit>acre US</Unit>
+      <Unit>acre</Unit>
       <Unit>are</Unit>
       <Unit>barn</Unit>
-      <Unit>circ mil</Unit>
+      <Unit>Circ mil</Unit>
       <Unit>cm^2</Unit>
       <Unit>ft^2</Unit>
       <Unit>hectare</Unit>

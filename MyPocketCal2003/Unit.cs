@@ -7,6 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Collections;
 using System.Xml;
+using System.Reflection;
+using System.IO;
 
 namespace MyPocketCal2003
 {
@@ -131,10 +133,13 @@ namespace MyPocketCal2003
         private void loadQuantities()
         {
             this.docXMLFile = new XmlDocument();
-            //String path = Environment.GetFolderPath(Environment.SpecialFolder.Programs) + "\\MyPocketCal2003\\QuantitiesUnits.xml";
-            String path = "E:\\SOC\\MyPocketCal2003\\MyPocketCal2003\\QuantitiesUnits.xml";
-            //String path = "QuantitiesUnits.xml";
-            this.docXMLFile.Load(path);
+            
+            Assembly thisAssembly = Assembly.GetExecutingAssembly();
+            StreamReader strmReader = new StreamReader(thisAssembly.GetManifestResourceStream("MyPocketCal2003.QuantitiesUnits.xml"));
+             
+            String strXML = strmReader.ReadToEnd();
+            this.docXMLFile.LoadXml(strXML);
+
             this.populateQuantities(); //load quantities name in the listbox
         }
         //get the units of a Quantity=quantityName and returns them in an ArrayList

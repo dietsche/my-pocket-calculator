@@ -1520,6 +1520,31 @@
       <ToUnit>mi/hr</ToUnit>
       <Ratio></Ratio>
     </Conversion>
+    <Conversion>
+      <FromUnit>ft/min</FromUnit>
+      <ToUnit>cm/s</ToUnit>
+      <Ratio></Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>ft/s</FromUnit>
+      <ToUnit>cm/s</ToUnit>
+      <Ratio></Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>in/s</FromUnit>
+      <ToUnit>cm/s</ToUnit>
+      <Ratio></Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>km/hr</FromUnit>
+      <ToUnit>cm/s</ToUnit>
+      <Ratio></Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>m/s</FromUnit>
+      <ToUnit>cm/s</ToUnit>
+      <Ratio></Ratio>
+    </Conversion>
     <Units>
       <Unit>cm/s</Unit>
       <Unit>ft/min</Unit>

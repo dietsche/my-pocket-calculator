@@ -134,13 +134,13 @@ namespace MyPocketCal2003
         {
             this.docXMLFile = new XmlDocument();
             
-            Assembly thisAssembly = Assembly.GetExecutingAssembly();
+            /*Assembly thisAssembly = Assembly.GetExecutingAssembly();
             StreamReader strmReader = new StreamReader(thisAssembly.GetManifestResourceStream("MyPocketCal2003.QuantitiesUnits.xml"));
              
             String strXML = strmReader.ReadToEnd();
             this.docXMLFile.LoadXml(strXML);
 
-            this.populateQuantities(); //load quantities name in the listbox
+            this.populateQuantities(); //load quantities name in the listbox*/
         }
         //get the units of a Quantity=quantityName and returns them in an ArrayList
         private ArrayList getUnits(String quantityName)

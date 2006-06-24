@@ -1493,57 +1493,62 @@
     <Conversion>
       <FromUnit>cm/s</FromUnit>
       <ToUnit>ft/min</ToUnit>
-      <Ratio></Ratio>
+      <Ratio>0.000546806649</Ratio>
     </Conversion>
     <Conversion>
       <FromUnit>cm/s</FromUnit>
       <ToUnit>ft/s</ToUnit>
-      <Ratio></Ratio>
+      <Ratio>0.032808399</Ratio>
     </Conversion>
     <Conversion>
       <FromUnit>cm/s</FromUnit>
       <ToUnit>in/s</ToUnit>
-      <Ratio></Ratio>
+      <Ratio>0.393700787</Ratio>
     </Conversion>
     <Conversion>
       <FromUnit>cm/s</FromUnit>
       <ToUnit>km/hr</ToUnit>
-      <Ratio></Ratio>
+      <Ratio>2.77777778e-9</Ratio>
     </Conversion>
     <Conversion>
       <FromUnit>cm/s</FromUnit>
       <ToUnit>m/s</ToUnit>
-      <Ratio></Ratio>
+      <Ratio>0.01</Ratio>
     </Conversion>
     <Conversion>
       <FromUnit>cm/s</FromUnit>
       <ToUnit>mi/hr</ToUnit>
-      <Ratio></Ratio>
+      <Ratio>1.72603109e-9</Ratio>
     </Conversion>
     <Conversion>
       <FromUnit>ft/min</FromUnit>
       <ToUnit>cm/s</ToUnit>
-      <Ratio></Ratio>
+      <Ratio>1828.8</Ratio>
     </Conversion>
     <Conversion>
       <FromUnit>ft/s</FromUnit>
       <ToUnit>cm/s</ToUnit>
-      <Ratio></Ratio>
+      <Ratio>30.48</Ratio>
     </Conversion>
     <Conversion>
       <FromUnit>in/s</FromUnit>
       <ToUnit>cm/s</ToUnit>
-      <Ratio></Ratio>
+      <Ratio>2.54</Ratio>
     </Conversion>
     <Conversion>
       <FromUnit>km/hr</FromUnit>
       <ToUnit>cm/s</ToUnit>
-      <Ratio></Ratio>
+      <Ratio>360000000</Ratio>
     </Conversion>
     <Conversion>
       <FromUnit>m/s</FromUnit>
       <ToUnit>cm/s</ToUnit>
-      <Ratio></Ratio>
+      <Ratio>100 centimeters</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>mi/hr</FromUnit>
+      <ToUnit>cm/s</ToUnit>
+      <Ratio>579363840</Ratio>
     </Conversion>
     <Units>
       <Unit>cm/s</Unit>

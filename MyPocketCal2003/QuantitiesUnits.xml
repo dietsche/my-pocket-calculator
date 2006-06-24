@@ -1180,6 +1180,106 @@
   </Quantity>
   <Quantity>
     <Name>Power</Name>
+    <Conversion>
+      <FromUnit>(ft lbf)/s</FromUnit>
+      <ToUnit>erg/s</ToUnit>
+      <Ratio>13558179.483294</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>(ft lbf)/s</FromUnit>
+      <ToUnit>hp (550 ft lbf/s)</ToUnit>
+      <Ratio>0.001818182</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>(ft lbf)/s</FromUnit>
+      <ToUnit>hp (boiler)</ToUnit>
+      <Ratio>0.000138215</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>(ft lbf)/s</FromUnit>
+      <ToUnit>hp (electric)</ToUnit>
+      <Ratio>0.00181745</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>(ft lbf)/s</FromUnit>
+      <ToUnit>hp (metric)</ToUnit>
+      <Ratio>0.001843399</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>(ft lbf)/s</FromUnit>
+      <ToUnit>hp (U.K.)</ToUnit>
+      <Ratio>0.001818182</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>(ft lbf)/s</FromUnit>
+      <ToUnit>hp (water)</ToUnit>
+      <Ratio>0.001817346</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>(ft lbf)/s</FromUnit>
+      <ToUnit>KW</ToUnit>
+      <Ratio>0.001355818</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>(ft lbf)/s</FromUnit>
+      <ToUnit>MW</ToUnit>
+      <Ratio>1355.817948329</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>(ft lbf)/s</FromUnit>
+      <ToUnit>W</ToUnit>
+      <Ratio>1.355817948</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>erg/s</FromUnit>
+      <ToUnit>(ft lbf)/s</ToUnit>
+      <Ratio>0.000000074</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>hp (550 ft lbf/s)</FromUnit>
+      <ToUnit>(ft lbf)/s</ToUnit>
+      <Ratio>550.000000001</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>hp (boiler)</FromUnit>
+      <ToUnit>(ft lbf)/s</ToUnit>
+      <Ratio>7235.115903346</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>hp (electric)</FromUnit>
+      <ToUnit>(ft lbf)/s</ToUnit>
+      <Ratio>550.221363362</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>hp (metric)</FromUnit>
+      <ToUnit>(ft lbf)/s</ToUnit>
+      <Ratio>542.476038842</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>hp (U.K.)</FromUnit>
+      <ToUnit>(ft lbf)/s</ToUnit>
+      <Ratio>550.000000001</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>hp (water)</FromUnit>
+      <ToUnit>(ft lbf)/s</ToUnit>
+      <Ratio>550.253078534</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>KW</FromUnit>
+      <ToUnit>(ft lbf)/s</ToUnit>
+      <Ratio>737.562149278</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>MW</FromUnit>
+      <ToUnit>(ft lbf)/s</ToUnit>
+      <Ratio>737562.14927833</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>W</FromUnit>
+      <ToUnit>(ft lbf)/s</ToUnit>
+      <Ratio>0.737562149</Ratio>
+    </Conversion>
     <Units>
       <Unit>(ft lbf)/s</Unit>
       <Unit>erg/s</Unit>
@@ -1196,56 +1296,187 @@
   </Quantity>
   <Quantity>
     <Name>Pressure</Name>
+    <Conversion>
+      <FromUnit>bar</FromUnit>
+      <ToUnit>in Hg(32 F)</ToUnit>
+      <Ratio>29.530058647</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>bar</FromUnit>
+      <ToUnit>kPa</ToUnit>
+      <Ratio>100</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>bar</FromUnit>
+      <ToUnit>mm Hg</ToUnit>
+      <Ratio>750.063755419</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>bar</FromUnit>
+      <ToUnit>Pa</ToUnit>
+      <Ratio>100000</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>bar</FromUnit>
+      <ToUnit>psi</ToUnit>
+      <Ratio>14.503773773</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>bar</FromUnit>
+      <ToUnit>atm</ToUnit>
+      <Ratio>0.986923267</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>in Hg(32 F)</FromUnit>
+      <ToUnit>bar</ToUnit>
+      <Ratio>0.0338638</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>kPa</FromUnit>
+      <ToUnit>bar</ToUnit>
+      <Ratio>0.01</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>mm Hg</FromUnit>
+      <ToUnit>bar</ToUnit>
+      <Ratio>0.00133322</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>Pa</FromUnit>
+      <ToUnit>bar</ToUnit>
+      <Ratio>0.00001</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>psi</FromUnit>
+      <ToUnit>bar</ToUnit>
+      <Ratio>0.068947573</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>atm</FromUnit>
+      <ToUnit>bar</ToUnit>
+      <Ratio>1.01325</Ratio>
+    </Conversion>
     <Units>
-      <Unit>atm</Unit>
       <Unit>bar</Unit>
-      <Unit>in Hg</Unit>
+      <Unit>in Hg(32 F)</Unit>
       <Unit>kPa</Unit>
       <Unit>mm Hg</Unit>
       <Unit>Pa</Unit>
       <Unit>psi</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Radiance</Name>
-    <Units>
-      <Unit>lb/(s^3 sr)</Unit>
-      <Unit>w/(ft^2 sr)</Unit>
-      <Unit>W(m^2 sr)</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Specific Charge</Name>
-    <Units>
-      <Unit>C/kg</Unit>
-      <Unit>mR</Unit>
-      <Unit>R</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Specific Energy</Name>
-    <Units>
-      <Unit>BTU/lb</Unit>
-      <Unit>cal/g</Unit>
-      <Unit>Cy</Unit>
-      <Unit>J/kg</Unit>
-      <Unit>kJ/kg</Unit>
-      <Unit>rad[dose]</Unit>
-      <Unit>rem</Unit>
-      <Unit>Sv</Unit>
+      <Unit>atm</Unit>
     </Units>
   </Quantity>
   <Quantity>
     <Name>Specific Heat Capacity</Name>
+    <Conversion>
+      <FromUnit>BTU(lb R)</FromUnit>
+      <ToUnit>cal(g K)</ToUnit>
+      <Ratio>63544.3601</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>BTU(lb R)</FromUnit>
+      <ToUnit>J(kg K)</ToUnit>
+      <Ratio>265.869603</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>BTU(lb R)</FromUnit>
+      <ToUnit>kJ(kg K)</ToUnit>
+      <Ratio>0.265869603</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cal(g K)</FromUnit>
+      <ToUnit>BTU(lb R)</ToUnit>
+      <Ratio>1.57370379e-5</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>J(kg K)</FromUnit>
+      <ToUnit>BTU(lb R)</ToUnit>
+      <Ratio>0.00376124232</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>kJ(kg K)</FromUnit>
+      <ToUnit>BTU(lb R)</ToUnit>
+      <Ratio>3.76124232</Ratio>
+    </Conversion>
     <Units>
       <Unit>BTU(lb R)</Unit>
       <Unit>cal(g K)</Unit>
-      <Unit>J/(kg K)</Unit>
+      <Unit>J(kg K)</Unit>
       <Unit>kJ(kg K)</Unit>
     </Units>
   </Quantity>
   <Quantity>
     <Name>Specific Volume</Name>
+    <Conversion>
+      <FromUnit>cm^3/g</FromUnit>
+      <ToUnit>ft^3/lb</ToUnit>
+      <Ratio>7.78555131e-8</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cm^3/g</FromUnit>
+      <ToUnit>ft^3/slug</ToUnit>
+      <Ratio>2.41982332e-9</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cm^3/g</FromUnit>
+      <ToUnit>gal/lb</ToUnit>
+      <Ratio>5.8239968e-7</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cm^3/g</FromUnit>
+      <ToUnit>in^3/lb</ToUnit>
+      <Ratio>0.000134534327</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cm^3/g</FromUnit>
+      <ToUnit>in^3/oz</ToUnit>
+      <Ratio>0.00215254923</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cm^3/g</FromUnit>
+      <ToUnit>m^3/kg</ToUnit>
+      <Ratio>1.0e-9</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cm^3/g</FromUnit>
+      <ToUnit>yd^3/lb</ToUnit>
+      <Ratio>2.88353752e-9</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>ft^3/lb</FromUnit>
+      <ToUnit>cm^3/g</ToUnit>
+      <Ratio>12844305.6</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>ft^3/slug</FromUnit>
+      <ToUnit>cm^3/g</ToUnit>
+      <Ratio>413253311</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>gal/lb</FromUnit>
+      <ToUnit>cm^3/g</ToUnit>
+      <Ratio>1717033.91</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>in^3/lb</FromUnit>
+      <ToUnit>cm^3/g</ToUnit>
+      <Ratio>7433.0472</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>in^3/oz</FromUnit>
+      <ToUnit>cm^3/g</ToUnit>
+      <Ratio>464.56545</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>m^3/kg</FromUnit>
+      <ToUnit>cm^3/g</ToUnit>
+      <Ratio>1000000000</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>yd^3/lb</FromUnit>
+      <ToUnit>cm^3/g</ToUnit>
+      <Ratio>346796250</Ratio>
+    </Conversion>
     <Units>
       <Unit>cm^3/g</Unit>
       <Unit>ft^3/lb</Unit>
@@ -1439,6 +1670,35 @@
       <Unit>Bin</Unit>
       <Unit>Oct</Unit>
       <Unit>Hex</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Radiance</Name>
+    <Units>
+      <Unit>lb/(s^3 sr)</Unit>
+      <Unit>w/(ft^2 sr)</Unit>
+      <Unit>W(m^2 sr)</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Specific Charge</Name>
+    <Units>
+      <Unit>C/kg</Unit>
+      <Unit>mR</Unit>
+      <Unit>R</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Specific Energy</Name>
+    <Units>
+      <Unit>BTU/lb</Unit>
+      <Unit>cal/g</Unit>
+      <Unit>Cy</Unit>
+      <Unit>J/kg</Unit>
+      <Unit>kJ/kg</Unit>
+      <Unit>rad[dose]</Unit>
+      <Unit>rem</Unit>
+      <Unit>Sv</Unit>
     </Units>
   </Quantity>
 </Quantities>

@@ -133,6 +133,7 @@ namespace MyPocketCal2003
             this.docXMLFile = new XmlDocument();
             //String path = Environment.GetFolderPath(Environment.SpecialFolder.Programs) + "\\MyPocketCal2003\\QuantitiesUnits.xml";
             String path = "E:\\SOC\\MyPocketCal2003\\MyPocketCal2003\\QuantitiesUnits.xml";
+            //String path = "QuantitiesUnits.xml";
             this.docXMLFile.Load(path);
             this.populateQuantities(); //load quantities name in the listbox
         }

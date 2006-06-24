@@ -1561,15 +1561,6 @@
     </Units>
   </Quantity>
   <Quantity>
-    <Name>Substance Amount</Name>
-    <Units>
-      <Unit>gmole</Unit>
-      <Unit>kgmole</Unit>
-      <Unit>lbmole</Unit>
-      <Unit>mol</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
     <Name>Surface Tension</Name>
     <Units>
       <Unit>lbf/ft</Unit>
@@ -1759,6 +1750,15 @@
       <Unit>rad[dose]</Unit>
       <Unit>rem</Unit>
       <Unit>Sv</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Substance Amount</Name>
+    <Units>
+      <Unit>gmole</Unit>
+      <Unit>kgmole</Unit>
+      <Unit>lbmole</Unit>
+      <Unit>mol</Unit>
     </Units>
   </Quantity>
 </Quantities>

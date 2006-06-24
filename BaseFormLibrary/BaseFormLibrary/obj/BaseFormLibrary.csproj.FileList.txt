@@ -7,3 +7,12 @@ obj\Debug\BaseFormLibrary.Properties.Resources.resources
 obj\Debug\BaseFormLibrary.csproj.GenerateResource.Cache
 obj\Debug\BaseFormLibrary.dll
 obj\Debug\BaseFormLibrary.pdb
+bin\Release\BaseFormLibrary.dll
+bin\Release\BaseFormLibrary.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\BaseFormLibrary.BasicButtonForm.resources
+obj\Release\BaseFormLibrary.FunctionsForm.resources
+obj\Release\BaseFormLibrary.Properties.Resources.resources
+obj\Release\BaseFormLibrary.csproj.GenerateResource.Cache
+obj\Release\BaseFormLibrary.dll
+obj\Release\BaseFormLibrary.pdb

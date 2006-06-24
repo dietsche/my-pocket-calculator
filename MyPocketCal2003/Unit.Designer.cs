@@ -153,6 +153,7 @@ namespace MyPocketCal2003
             // 
             this.outputBox.Location = new System.Drawing.Point(4, 217);
             this.outputBox.Name = "outputBox";
+            this.outputBox.ReadOnly = true;
             this.outputBox.Size = new System.Drawing.Size(219, 21);
             this.outputBox.TabIndex = 9;
             this.outputBox.Text = "=";

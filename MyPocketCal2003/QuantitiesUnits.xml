@@ -1490,6 +1490,36 @@
   </Quantity>
   <Quantity>
     <Name>Speed</Name>
+    <Conversion>
+      <FromUnit>cm/s</FromUnit>
+      <ToUnit>ft/min</ToUnit>
+      <Ratio></Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cm/s</FromUnit>
+      <ToUnit>ft/s</ToUnit>
+      <Ratio></Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cm/s</FromUnit>
+      <ToUnit>in/s</ToUnit>
+      <Ratio></Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cm/s</FromUnit>
+      <ToUnit>km/hr</ToUnit>
+      <Ratio></Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cm/s</FromUnit>
+      <ToUnit>m/s</ToUnit>
+      <Ratio></Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cm/s</FromUnit>
+      <ToUnit>mi/hr</ToUnit>
+      <Ratio></Ratio>
+    </Conversion>
     <Units>
       <Unit>cm/s</Unit>
       <Unit>ft/min</Unit>

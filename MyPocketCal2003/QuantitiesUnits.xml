@@ -1543,7 +1543,7 @@
     <Conversion>
       <FromUnit>m/s</FromUnit>
       <ToUnit>cm/s</ToUnit>
-      <Ratio>100 centimeters</Ratio>
+      <Ratio>100</Ratio>
     </Conversion>
     <Conversion>
       <FromUnit>mi/hr</FromUnit>
@@ -1562,30 +1562,63 @@
   </Quantity>
   <Quantity>
     <Name>Surface Tension</Name>
+    <Conversion>
+      <FromUnit>N/m</FromUnit>
+      <ToUnit>lbf/in</ToUnit>
+      <Ratio>0.005710147</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>lbf/in</FromUnit>
+      <ToUnit>N/m</ToUnit>
+      <Ratio>175.126836986</Ratio>
+    </Conversion>
     <Units>
-      <Unit>lbf/ft</Unit>
+      <Unit>lbf/in</Unit>
       <Unit>N/m</Unit>
     </Units>
   </Quantity>
   <Quantity>
-    <Name>Temperature</Name>
-    <Units>
-      <Unit>C</Unit>
-      <Unit>F</Unit>
-      <Unit>K</Unit>
-      <Unit>R</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Thermal Conductivity</Name>
-    <Units>
-      <Unit>BTU/(hr ft R)</Unit>
-      <Unit>lbf/(s R)</Unit>
-      <Unit>W/(m K)</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
     <Name>Time</Name>
+    <Conversion>
+      <FromUnit>day</FromUnit>
+      <ToUnit>hr</ToUnit>
+      <Ratio>24</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>day</FromUnit>
+      <ToUnit>min</ToUnit>
+      <Ratio>1440</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>day</FromUnit>
+      <ToUnit>s</ToUnit>
+      <Ratio>86400</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>day</FromUnit>
+      <ToUnit>yr</ToUnit>
+      <Ratio>0.00273790926</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>hr</FromUnit>
+      <ToUnit>day</ToUnit>
+      <Ratio>0.0416666667</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>min</FromUnit>
+      <ToUnit>day</ToUnit>
+      <Ratio>0.000694444444</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>s</FromUnit>
+      <ToUnit>day</ToUnit>
+      <Ratio>1.15740741e-5</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>yr</FromUnit>
+      <ToUnit>day</ToUnit>
+      <Ratio>365.242199</Ratio>
+    </Conversion>
     <Units>
       <Unit>day</Unit>
       <Unit>hr</Unit>
@@ -1596,6 +1629,46 @@
   </Quantity>
   <Quantity>
     <Name>Viscosity (Dynamic)</Name>
+    <Conversion>
+      <FromUnit>(lbf s)ft^2</FromUnit>
+      <ToUnit>centipose</ToUnit>
+      <Ratio>47880.258980222</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>(lbf s)ft^2</FromUnit>
+      <ToUnit>Pa s</ToUnit>
+      <Ratio>47.88025898</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>(lbf s)ft^2</FromUnit>
+      <ToUnit>poise</ToUnit>
+      <Ratio>478.802589802</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>(lbf s)ft^2</FromUnit>
+      <ToUnit>slug/(ft s)</ToUnit>
+      <Ratio>1</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>centipose</FromUnit>
+      <ToUnit>(lbf s)ft^2</ToUnit>
+      <Ratio>0.000020885</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>Pa s</FromUnit>
+      <ToUnit>(lbf s)ft^2</ToUnit>
+      <Ratio>0.020885434</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>poise</FromUnit>
+      <ToUnit>(lbf s)ft^2</ToUnit>
+      <Ratio>0.002088543</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>slug/(ft s)</FromUnit>
+      <ToUnit>(lbf s)ft^2</ToUnit>
+      <Ratio>1</Ratio>
+    </Conversion>
     <Units>
       <Unit>(lbf s)ft^2</Unit>
       <Unit>centipose</Unit>
@@ -1606,6 +1679,26 @@
   </Quantity>
   <Quantity>
     <Name>Viscosity (Kinematics)</Name>
+    <Conversion>
+      <FromUnit>centistokes</FromUnit>
+      <ToUnit>ft^2/s</ToUnit>
+      <Ratio>0.000010764</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>centistokes</FromUnit>
+      <ToUnit>stokes</ToUnit>
+      <Ratio>0.01</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>ft^2/s</FromUnit>
+      <ToUnit>centistokes</ToUnit>
+      <Ratio>92903.040000084</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>stokes</FromUnit>
+      <ToUnit>centistokes</ToUnit>
+      <Ratio>100</Ratio>
+    </Conversion>
     <Units>
       <Unit>centistokes</Unit>
       <Unit>ft^2/s</Unit>
@@ -1614,13 +1707,171 @@
   </Quantity>
   <Quantity>
     <Name>Volume</Name>
+    <Conversion>
+      <FromUnit>cup</FromUnit>
+      <ToUnit>bushel</ToUnit>
+      <Ratio>0.00671380442</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cup</FromUnit>
+      <ToUnit>cm^3</ToUnit>
+      <Ratio>236.588237</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cup</FromUnit>
+      <ToUnit>cord</ToUnit>
+      <Ratio>6.5273709e-5</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cup</FromUnit>
+      <ToUnit>fl oz</ToUnit>
+      <Ratio>8</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cup</FromUnit>
+      <ToUnit>ft^3</ToUnit>
+      <Ratio>0.00835503476</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cup</FromUnit>
+      <ToUnit>gal US</ToUnit>
+      <Ratio>0.0625</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cup</FromUnit>
+      <ToUnit>in^3</ToUnit>
+      <Ratio>14.4375001</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cup</FromUnit>
+      <ToUnit>liter</ToUnit>
+      <Ratio>0.236588237</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cup</FromUnit>
+      <ToUnit>m^3</ToUnit>
+      <Ratio>0.000236588238</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cup</FromUnit>
+      <ToUnit>ml</ToUnit>
+      <Ratio>236.588238</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cup</FromUnit>
+      <ToUnit>peck</ToUnit>
+      <Ratio>0.0268552177</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cup</FromUnit>
+      <ToUnit>pint</ToUnit>
+      <Ratio>0.5</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cup</FromUnit>
+      <ToUnit>quart</ToUnit>
+      <Ratio>0.25</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cup</FromUnit>
+      <ToUnit>tbls</ToUnit>
+      <Ratio>16</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cup</FromUnit>
+      <ToUnit>tsp</ToUnit>
+      <Ratio>48</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cup</FromUnit>
+      <ToUnit>yd^3</ToUnit>
+      <Ratio>0.000309445732</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>bushel</FromUnit>
+      <ToUnit>cup</ToUnit>
+      <Ratio>148.946847</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cm^3</FromUnit>
+      <ToUnit>cup</ToUnit>
+      <Ratio>0.00422675282</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cord</FromUnit>
+      <ToUnit>cup</ToUnit>
+      <Ratio>15320.1038</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>fl oz</FromUnit>
+      <ToUnit>cup</ToUnit>
+      <Ratio>0.125</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>ft^3</FromUnit>
+      <ToUnit>cup</ToUnit>
+      <Ratio>119.688311</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>gal US</FromUnit>
+      <ToUnit>cup</ToUnit>
+      <Ratio>16</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>in^3</FromUnit>
+      <ToUnit>cup</ToUnit>
+      <Ratio>0.069264069</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>liter</FromUnit>
+      <ToUnit>cup</ToUnit>
+      <Ratio>4.22675282</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>m^3</FromUnit>
+      <ToUnit>cup</ToUnit>
+      <Ratio>4226.75282</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>ml</FromUnit>
+      <ToUnit>cup</ToUnit>
+      <Ratio>0.00422675282</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>peck</FromUnit>
+      <ToUnit>cup</ToUnit>
+      <Ratio>37.2367117</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>pint</FromUnit>
+      <ToUnit>cup</ToUnit>
+      <Ratio>2</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>quart</FromUnit>
+      <ToUnit>cup</ToUnit>
+      <Ratio>4</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>tbls</FromUnit>
+      <ToUnit>cup</ToUnit>
+      <Ratio>0.0625</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>tsp</FromUnit>
+      <ToUnit>cup</ToUnit>
+      <Ratio>0.0208333333</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>yd^3</FromUnit>
+      <ToUnit>cup</ToUnit>
+      <Ratio>3231.5844</Ratio>
+    </Conversion>
     <Units>
-      <Unit>barrel</Unit>
-      <Unit>board ft</Unit>
-      <Unit>bushel</Unit>
+      <Unit>cup</Unit>
+      <Unit>bushel</Unit>      
       <Unit>cm^3</Unit>
       <Unit>cord</Unit>
-      <Unit>cup</Unit>
       <Unit>fl oz</Unit>
       <Unit>ft^3</Unit>
       <Unit>gal US</Unit>
@@ -1631,13 +1882,83 @@
       <Unit>peck</Unit>
       <Unit>pint</Unit>
       <Unit>quart</Unit>
-      <Unit>Tbls</Unit>
+      <Unit>tbls</Unit>
       <Unit>tsp</Unit>
       <Unit>yd^3</Unit>
     </Units>
   </Quantity>
   <Quantity>
     <Name>Volume Rate</Name>
+    <Conversion>
+      <FromUnit>ft^3/hr</FromUnit>
+      <ToUnit>ft^3/min</ToUnit>
+      <Ratio>60</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>ft^3/hr</FromUnit>
+      <ToUnit>ft^3/s</ToUnit>
+      <Ratio>3600</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>ft^3/hr</FromUnit>
+      <ToUnit>gal/hr</ToUnit>
+      <Ratio>7.48051945</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>ft^3/hr</FromUnit>
+      <ToUnit>gal/min</ToUnit>
+      <Ratio>448.831167</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>ft^3/hr</FromUnit>
+      <ToUnit>in^3/min</ToUnit>
+      <Ratio>103680</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>ft^3/hr</FromUnit>
+      <ToUnit>m^3/s</ToUnit>
+      <Ratio>101.940648</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>ft^3/hr</FromUnit>
+      <ToUnit>yd^3/min</ToUnit>
+      <Ratio>2.22222222</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>ft^3/min</FromUnit>
+      <ToUnit>ft^3/hr</ToUnit>
+      <Ratio>0.0166666667</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>ft^3/s</FromUnit>
+      <ToUnit>ft^3/hr</ToUnit>
+      <Ratio>0.000277777778</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>gal/hr</FromUnit>
+      <ToUnit>ft^3/hr</ToUnit>
+      <Ratio>0.133680556</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>gal/min</FromUnit>
+      <ToUnit>ft^3/hr</ToUnit>
+      <Ratio>0.00222800927</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>in^3/min</FromUnit>
+      <ToUnit>ft^3/hr</ToUnit>
+      <Ratio>9.64506173e-6</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>m^3/s</FromUnit>
+      <ToUnit>ft^3/hr</ToUnit>
+      <Ratio>0.00980962964</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>yd^3/min</FromUnit>
+      <ToUnit>ft^3/hr</ToUnit>
+      <Ratio>0.45</Ratio>
+    </Conversion>
     <Units>
       <Unit>ft^3/hr</Unit>
       <Unit>ft^3/min</Unit>
@@ -1759,6 +2080,23 @@
       <Unit>kgmole</Unit>
       <Unit>lbmole</Unit>
       <Unit>mol</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Thermal Conductivity</Name>
+    <Units>
+      <Unit>BTU/(hr ft R)</Unit>
+      <Unit>lbf/(s R)</Unit>
+      <Unit>W/(m K)</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Temperature</Name>
+    <Units>
+      <Unit>C</Unit>
+      <Unit>F</Unit>
+      <Unit>K</Unit>
+      <Unit>R</Unit>
     </Units>
   </Quantity>
 </Quantities>

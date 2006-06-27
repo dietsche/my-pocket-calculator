@@ -49,18 +49,20 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.DataGrid" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="CurrencyConversion.cs" />
     <Compile Include="Equations.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Equations.Designer.cs">
       <DependentUpon>Equations.cs</DependentUpon>
     </Compile>
+    <Compile Include="InternetCS.cs" />
     <Compile Include="MainDisplay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,7 +70,6 @@
       <DependentUpon>MainDisplay.cs</DependentUpon>
     </Compile>
     <Compile Include="Statistic.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Statistic.designer.cs">
       <DependentUpon>Statistic.cs</DependentUpon>
@@ -92,19 +93,16 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Integration.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Integration.Designer.cs">
       <DependentUpon>Integration.cs</DependentUpon>
     </Compile>
     <Compile Include="Matrix.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Matrix.Designer.cs">
       <DependentUpon>Matrix.cs</DependentUpon>
     </Compile>
     <Compile Include="Plot.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Plot.Designer.cs">
       <DependentUpon>Plot.cs</DependentUpon>
@@ -162,10 +160,14 @@
     </Compile>
     <Compile Include="UnitConversion.cs" />
     <Compile Include="Vector.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vector.Designer.cs">
       <DependentUpon>Vector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CurrencyWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -176,6 +178,34 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="QuantitiesUnits.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://www.webservicex.net/CurrencyConvertor.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\CurrencyWebService\</RelPath>
+      <UpdateFromURL>http://www.webservicex.net/CurrencyConvertor.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\CurrencyWebService\CurrencyConvertor.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\CurrencyWebService\CurrencyConvertor.disco" />
+    <None Include="Web References\CurrencyWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />
   <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />

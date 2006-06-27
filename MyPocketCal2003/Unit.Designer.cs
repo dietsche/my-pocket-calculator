@@ -162,15 +162,15 @@ namespace MyPocketCal2003
             // 
             this.quantitiesListBox.Location = new System.Drawing.Point(4, 19);
             this.quantitiesListBox.Name = "quantitiesListBox";
-            this.quantitiesListBox.Size = new System.Drawing.Size(149, 128);
+            this.quantitiesListBox.Size = new System.Drawing.Size(135, 128);
             this.quantitiesListBox.TabIndex = 16;
             this.quantitiesListBox.SelectedIndexChanged += new System.EventHandler(this.quantitiesListBox_SelectedIndexChanged);
             // 
             // unitListbox
             // 
-            this.unitListbox.Location = new System.Drawing.Point(159, 19);
+            this.unitListbox.Location = new System.Drawing.Point(145, 19);
             this.unitListbox.Name = "unitListbox";
-            this.unitListbox.Size = new System.Drawing.Size(64, 128);
+            this.unitListbox.Size = new System.Drawing.Size(92, 128);
             this.unitListbox.TabIndex = 18;
             this.unitListbox.SelectedIndexChanged += new System.EventHandler(this.unitListbox_SelectedIndexChanged);
             // 

@@ -184,6 +184,162 @@
     </Units>
   </Quantity>
   <Quantity>
+    <Name>Currency</Name>
+    <Units>
+      <Unit>AFA-Afghanistan Afghani</Unit>
+      <Unit>ALL-Albanian Lek</Unit>
+      <Unit>DZD-Algerian Dinar</Unit>
+      <Unit>ARS-Argentine Peso</Unit>
+      <Unit>AWG-Aruba Florin</Unit>
+      <Unit>AUD-Australian Dollar</Unit>
+      <Unit>BSD-Bahamian Dollar</Unit>
+      <Unit>BHD-Bahraini Dinar</Unit>
+      <Unit>BDT-Bangladesh Taka</Unit>
+      <Unit>BBD-Barbados Dollar</Unit>
+      <Unit>BZD-Belize Dollar</Unit>
+      <Unit>BMD-Bermuda Dollar</Unit>
+      <Unit>BTN-Bhutan Ngultrum</Unit>
+      <Unit>BOB-Bolivian Boliviano</Unit>
+      <Unit>BWP-Botswana Pula</Unit>
+      <Unit>BRL-Brazilian Real</Unit>
+      <Unit>GBP-British Pound</Unit>
+      <Unit>BND-Brunei Dollar</Unit>
+      <Unit>BIF-Burundi Franc</Unit>
+      <Unit>XOF-CFA Franc</Unit>
+      <Unit>XAF-CFA Franc</Unit>
+      <Unit>KHR-Cambodia Riel</Unit>
+      <Unit>CAD-Canadian Dollar</Unit>
+      <Unit>CVE-Cape Verde Escudo</Unit>
+      <Unit>KYD-Cayman Islands Dollar</Unit>
+      <Unit>CLP-Chilean Peso</Unit>
+      <Unit>CNY-Chinese Yuan</Unit>
+      <Unit>COP-Colombian Peso</Unit>
+      <Unit>KMF-Comoros Franc</Unit>
+      <Unit>CRC-Costa Rica Colon</Unit>
+      <Unit>HRK-Croatian Kuna</Unit>
+      <Unit>CUP-Cuban Peso</Unit>
+      <Unit>CYP-Cyprus Pound</Unit>
+      <Unit>CZK-Czech Koruna</Unit>
+      <Unit>DKK-Danish Krone</Unit>
+      <Unit>DJF-Dijibouti Franc</Unit>
+      <Unit>DOP-Dominican Peso</Unit>
+      <Unit>XCD-East Caribbean Dollar</Unit>
+      <Unit>EGP-Egyptian Pound</Unit>
+      <Unit>SVC-El Salvador Colon</Unit>
+      <Unit>EEK-Estonian Kroon</Unit>
+      <Unit>ETB-Ethiopian Birr</Unit>
+      <Unit>EUR-Euro</Unit>
+      <Unit>FKP-Falkland Islands Pound</Unit>
+      <Unit>GMD-Gambian Dalasi</Unit>
+      <Unit>GHC-Ghanian Cedi</Unit>
+      <Unit>GIP-Gibraltar Pound</Unit>
+      <Unit>XAU-Gold Ounces</Unit>
+      <Unit>GTQ-Guatemala Quetzal</Unit>
+      <Unit>GNF-Guinea Franc</Unit>
+      <Unit>GYD-Guyana Dollar</Unit>
+      <Unit>HTG-Haiti Gourde</Unit>
+      <Unit>HNL-Honduras Lempira</Unit>
+      <Unit>HKD-Hong Kong Dollar</Unit>
+      <Unit>HUF-Hungarian Forint</Unit>
+      <Unit>ISK-Iceland Krona</Unit>
+      <Unit>INR-Indian Rupee</Unit>
+      <Unit>IDR-Indonesian Rupiah</Unit>
+      <Unit>IQD-Iraqi Dinar</Unit>
+      <Unit>ILS-Israeli Shekel</Unit>
+      <Unit>JMD-Jamaican Dollar</Unit>
+      <Unit>JPY-Japanese Yen</Unit>
+      <Unit>JOD-Jordanian Dinar</Unit>
+      <Unit>KZT-Kazakhstan Tenge</Unit>
+      <Unit>KES-Kenyan Shilling</Unit>
+      <Unit>KRW-Korean Won</Unit>
+      <Unit>KWD-Kuwaiti Dinar</Unit>
+      <Unit>LAK-Lao Kip</Unit>
+      <Unit>LVL-Latvian Lat</Unit>
+      <Unit>LBP-Lebanese Pound</Unit>
+      <Unit>LSL-Lesotho Loti</Unit>
+      <Unit>LRD-Liberian Dollar</Unit>
+      <Unit>LYD-Libyan Dinar</Unit>
+      <Unit>LTL-Lithuanian Lita</Unit>
+      <Unit>MOP-Macau Pataca</Unit>
+      <Unit>MKD-Macedonian Denar</Unit>
+      <Unit>MGF-Malagasy Franc</Unit>
+      <Unit>MWK-Malawi Kwacha</Unit>
+      <Unit>MYR-Malaysian Ringgit</Unit>
+      <Unit>MVR-Maldives Rufiyaa</Unit>
+      <Unit>MTL-Maltese Lira</Unit>
+      <Unit>MRO-Mauritania Ougulya</Unit>
+      <Unit>MUR-Mauritius Rupee</Unit>
+      <Unit>MXN-Mexican Peso</Unit>
+      <Unit>MDL-Moldovan Leu</Unit>
+      <Unit>MNT-Mongolian Tugrik</Unit>
+      <Unit>MAD-Moroccan Dirham</Unit>
+      <Unit>MZM-Mozambique Metical</Unit>
+      <Unit>MMK-Myanmar Kyat</Unit>
+      <Unit>NAD-Namibian Dollar</Unit>
+      <Unit>NPR-Nepalese Rupee</Unit>
+      <Unit>ANG-Neth Antilles Guilder</Unit>
+      <Unit>NZD-New Zealand Dollar</Unit>
+      <Unit>NIO-Nicaragua Cordoba</Unit>
+      <Unit>NGN-Nigerian Naira</Unit>
+      <Unit>KPW-North Korean Won</Unit>
+      <Unit>NOK-Norwegian Krone</Unit>
+      <Unit>OMR-Omani Rial</Unit>
+      <Unit>XPF-Pacific Franc</Unit>
+      <Unit>PKR-Pakistani Rupee</Unit>
+      <Unit>XPD-Palladium Ounces</Unit>
+      <Unit>PAB-Panama Balboa</Unit>
+      <Unit>PGK-Papua New Guinea Kina</Unit>
+      <Unit>PYG-Paraguayan Guarani</Unit>
+      <Unit>PEN-Peruvian Nuevo Sol</Unit>
+      <Unit>PHP-Philippine Peso</Unit>
+      <Unit>XPT-Platinum Ounces</Unit>
+      <Unit>PLN-Polish Zloty</Unit>
+      <Unit>QAR-Qatar Rial</Unit>
+      <Unit>ROL-Romanian Leu</Unit>
+      <Unit>RUB-Russian Rouble</Unit>
+      <Unit>WST-Samoa Tala</Unit>
+      <Unit>STD-Sao Tome Dobra</Unit>
+      <Unit>SAR-Saudi Arabian Riyal</Unit>
+      <Unit>SCR-Seychelles Rupee</Unit>
+      <Unit>SLL-Sierra Leone Leone</Unit>
+      <Unit>XAG-Silver Ounces</Unit>
+      <Unit>SGD-Singapore Dollar</Unit>
+      <Unit>SKK-Slovak Koruna</Unit>
+      <Unit>SIT-Slovenian Tolar</Unit>
+      <Unit>SBD-Solomon Islands Dollar</Unit>
+      <Unit>SOS-Somali Shilling</Unit>
+      <Unit>ZAR-South African Rand</Unit>
+      <Unit>LKR-Sri Lanka Rupee</Unit>
+      <Unit>SHP-St Helena Pound</Unit>
+      <Unit>SDD-Sudanese Dinar</Unit>
+      <Unit>SRG-Surinam Guilder</Unit>
+      <Unit>SZL-Swaziland Lilageni</Unit>
+      <Unit>SEK-Swedish Krona</Unit>
+      <Unit>TRY-Turkey Lira</Unit>
+      <Unit>CHF-Swiss Franc</Unit>
+      <Unit>SYP-Syrian Pound</Unit>
+      <Unit>TWD-Taiwan Dollar</Unit>
+      <Unit>TZS-Tanzanian Shilling</Unit>
+      <Unit>THB-Thai Baht</Unit>
+      <Unit>TOP-Tonga Pa'anga</Unit>
+      <Unit>TTD-Tobago Dollar</Unit>
+      <Unit>TND-Tunisian Dinar</Unit>
+      <Unit>TRL-Turkish Lira</Unit>
+      <Unit>USD-U.S. Dollar</Unit>
+      <Unit>AED-UAE Dirham</Unit>
+      <Unit>UGX-Ugandan Shilling</Unit>
+      <Unit>UAH-Ukraine Hryvnia</Unit>
+      <Unit>UYU-Uruguayan New Peso</Unit>
+      <Unit>VUV-Vanuatu Vatu</Unit>
+      <Unit>VEB-Venezuelan Bolivar</Unit>
+      <Unit>VND-Vietnam Dong</Unit>
+      <Unit>YER-Yemen Riyal</Unit>
+      <Unit>YUM-Yugoslav Dinar</Unit>
+      <Unit>ZMK-Zambian Kwacha</Unit>
+      <Unit>ZWD-Zimbabwe Dollar</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
     <Name>Density</Name>
     <Conversion>
       <FromUnit>gram/cm^3</FromUnit>
@@ -1145,6 +1301,15 @@
     </Units>
   </Quantity>
   <Quantity>
+    <Name>Number</Name>
+    <Units>
+      <Unit>Dec</Unit>
+      <Unit>Bin</Unit>
+      <Unit>Oct</Unit>
+      <Unit>Hex</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
     <Name>Permeability</Name>
     <Conversion>
       <FromUnit>henry/ft</FromUnit>
@@ -1628,6 +1793,15 @@
     </Units>
   </Quantity>
   <Quantity>
+    <Name>Temperature</Name>
+    <Units>
+      <Unit>C</Unit>
+      <Unit>F</Unit>
+      <Unit>K</Unit>
+      <Unit>R</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
     <Name>Viscosity (Dynamic)</Name>
     <Conversion>
       <FromUnit>(lbf s)ft^2</FromUnit>
@@ -1968,135 +2142,6 @@
       <Unit>in^3/min</Unit>
       <Unit>m^3/s</Unit>
       <Unit>yd^3/min</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Currency</Name>
-    <Units>
-      <Unit></Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Electric Flux Density</Name>
-    <Units>
-      <Unit>C/ft^2</Unit>
-      <Unit>C/m^2</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Heat Capacity</Name>
-    <Units>
-      <Unit>BTU/F</Unit>
-      <Unit>BTU/R</Unit>
-      <Unit>J/K</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Heat Flux</Name>
-    <Units>
-      <Unit>BTU/(ft^2 hr)</Unit>
-      <Unit>kg/s^3</Unit>
-      <Unit>kW/m^2</Unit>
-      <Unit>W/m^2</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Molar Energy</Name>
-    <Units>
-      <Unit>BTU/lbmole</Unit>
-      <Unit>J/kgmole</Unit>
-      <Unit>J/mol</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Molar Heat Capacity</Name>
-    <Units>
-      <Unit>BTU(lbmole R)</Unit>
-      <Unit>J/(kgmole K)</Unit>
-      <Unit>J/(mol K)</Unit>
-      <Unit>kJ(kgmole K)</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Molar Mass</Name>
-    <Units>
-      <Unit>lb/lbmole</Unit>
-      <Unit>kg/mol</Unit>
-      <Unit>gram/mol</Unit>
-      <Unit>kg/kgmole</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Molar Volume</Name>
-    <Units>
-      <Unit>ft^3/lbmole</Unit>
-      <Unit>cm^3/mol</Unit>
-      <Unit>m^3/mol</Unit>
-      <Unit>m^3/kgmole</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Number</Name>
-    <Units>
-      <Unit>Dec</Unit>
-      <Unit>Bin</Unit>
-      <Unit>Oct</Unit>
-      <Unit>Hex</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Radiance</Name>
-    <Units>
-      <Unit>lb/(s^3 sr)</Unit>
-      <Unit>w/(ft^2 sr)</Unit>
-      <Unit>W(m^2 sr)</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Specific Charge</Name>
-    <Units>
-      <Unit>C/kg</Unit>
-      <Unit>mR</Unit>
-      <Unit>R</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Specific Energy</Name>
-    <Units>
-      <Unit>BTU/lb</Unit>
-      <Unit>cal/g</Unit>
-      <Unit>Cy</Unit>
-      <Unit>J/kg</Unit>
-      <Unit>kJ/kg</Unit>
-      <Unit>rad[dose]</Unit>
-      <Unit>rem</Unit>
-      <Unit>Sv</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Substance Amount</Name>
-    <Units>
-      <Unit>gmole</Unit>
-      <Unit>kgmole</Unit>
-      <Unit>lbmole</Unit>
-      <Unit>mol</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Thermal Conductivity</Name>
-    <Units>
-      <Unit>BTU/(hr ft R)</Unit>
-      <Unit>lbf/(s R)</Unit>
-      <Unit>W/(m K)</Unit>
-    </Units>
-  </Quantity>
-  <Quantity>
-    <Name>Temperature</Name>
-    <Units>
-      <Unit>C</Unit>
-      <Unit>F</Unit>
-      <Unit>K</Unit>
-      <Unit>R</Unit>
     </Units>
   </Quantity>
 </Quantities>

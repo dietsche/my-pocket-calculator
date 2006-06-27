@@ -1,12 +1,3 @@
-bin\Debug\BaseFormLibrary.dll
-bin\Debug\BaseFormLibrary.pdb
-obj\Debug\ResolveAssemblyReference.cache
-obj\Debug\BaseFormLibrary.BasicButtonForm.resources
-obj\Debug\BaseFormLibrary.FunctionsForm.resources
-obj\Debug\BaseFormLibrary.Properties.Resources.resources
-obj\Debug\BaseFormLibrary.csproj.GenerateResource.Cache
-obj\Debug\BaseFormLibrary.dll
-obj\Debug\BaseFormLibrary.pdb
 bin\Release\BaseFormLibrary.dll
 bin\Release\BaseFormLibrary.pdb
 obj\Release\ResolveAssemblyReference.cache
@@ -16,3 +7,12 @@ obj\Release\BaseFormLibrary.Properties.Resources.resources
 obj\Release\BaseFormLibrary.csproj.GenerateResource.Cache
 obj\Release\BaseFormLibrary.dll
 obj\Release\BaseFormLibrary.pdb
+bin\Debug\BaseFormLibrary.dll
+bin\Debug\BaseFormLibrary.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\BaseFormLibrary.BasicButtonForm.resources
+obj\Debug\BaseFormLibrary.FunctionsForm.resources
+obj\Debug\BaseFormLibrary.Properties.Resources.resources
+obj\Debug\BaseFormLibrary.csproj.GenerateResource.Cache
+obj\Debug\BaseFormLibrary.dll
+obj\Debug\BaseFormLibrary.pdb

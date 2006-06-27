@@ -114,7 +114,6 @@ namespace MyPocketCal2003
         {
             this.inputBox.Text += Constants.LEFT_BRACKET;
         }
-
         //event handler for the quantity listbox called whenever a user select an item in the listbox
         private void quantitiesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -178,8 +177,32 @@ namespace MyPocketCal2003
         private void convertToComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             outputUnit = convertToComboBox.SelectedItem.ToString(); //user output unit choice
-            UnitConversion unitConvert = new UnitConversion();
-            outputBox.Text = unitConvert.convert(inputBox.Text, quantityName, inputUnit, outputUnit, docXMLFile); //set output
+            if (this.ratioQuantity(quantityName)) //if ratios required for conversion
+            {
+                UnitConversion unitConvert = new UnitConversion(); //the UnitConversion Class which reads ratios from xml file
+                outputBox.Text = unitConvert.convert(inputBox.Text, quantityName, inputUnit, outputUnit, docXMLFile); //set output
+            }
+            else if (quantityName.Equals("Currency"))
+            {
+                CurrencyConversion currencyConv = new CurrencyConversion(); //the CurrencyConversion class which connects with the webservice
+                outputBox.Text = currencyConv.convertCurrency(inputBox.Text, inputUnit.Substring(0, 3), outputUnit.Substring(0, 3)); //pass the first 3 characters of the String           
+            }
+            else if (quantityName.Equals("Number"))
+            {
+
+            }
+            else if (quantityName.Equals("Temperature"))
+            {
+
+            }
+        }
+        //function which returns true if a quantity requires ratios for conversions otherwise false
+        public bool ratioQuantity(String quantityName)
+        {
+            //quantity is not (currency or number or temperature)
+            if (!(quantityName.Equals("Currency") || quantityName.Equals("Number") || quantityName.Equals("Temperature")) )
+                return true;
+            return false; //quantity would not need ratios for conversions
         }
     }
 }

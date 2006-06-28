@@ -12,14 +12,15 @@ using System.IO;
 
 namespace MyPocketCal2003
 {
-    public partial class Unit : BaseFormLibrary.BasicButtonForm
+    public partial class CUnit : Form
     {
 
         XmlDocument docXMLFile; //the XmlDocument object which reads all the Quantities and their respective units from an xml file
         String inputUnit; //the string to hold the user input unit choice
         String outputUnit;  //the string to hold the user output unit choice
         String quantityName; //the string to hold the user quantity choice
-        public Unit()
+        
+        public CUnit()
         {
             InitializeComponent();
             loadQuantities(); 
@@ -74,45 +75,10 @@ namespace MyPocketCal2003
         {
             this.inputBox.Text += Constants.NINE;
         }
-        //, pressed on the calculator
-        private void commaButton_Click(object sender, EventArgs e)
-        {
-            this.inputBox.Text += Constants.COMMA;
-        }
-        //+ pressed on the calculator
-        private void plusButton_Click(object sender, EventArgs e)
-        {
-            this.inputBox.Text += Constants.PLUS;
-        }
-        //- pressed on the calculator
-        private void minusButton_Click(object sender, EventArgs e)
-        {
-            this.inputBox.Text += Constants.MINUS;
-        }
-        //x pressed on the calculator
-        private void multiplyButton_Click(object sender, EventArgs e)
-        {
-            this.inputBox.Text += Constants.MULTIPLY;
-        }
-        //division pressed on the calculator
-        private void divideButton_Click(object sender, EventArgs e)
-        {
-            this.inputBox.Text += Constants.DIVIDE;
-        }
         //. pressed on the calculator
         private void decimalButton_Click(object sender, EventArgs e)
         {
             this.inputBox.Text += Constants.DECIMAL;
-        }
-        //( pressed on the calculator
-        private void leftBracketButton_Click(object sender, EventArgs e)
-        {
-            this.inputBox.Text += Constants.RIGHT_BRACKET;
-        }
-        //) pressed on the calculator
-        private void rightBracketButton_Click(object sender, EventArgs e)
-        {
-            this.inputBox.Text += Constants.LEFT_BRACKET;
         }
         //event handler for the quantity listbox called whenever a user select an item in the listbox
         private void quantitiesListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -137,7 +103,7 @@ namespace MyPocketCal2003
             StreamReader strmReader = new StreamReader(thisAssembly.GetManifestResourceStream("MyPocketCal2003.QuantitiesUnits.xml"));
              
             String strXML = strmReader.ReadToEnd();
-            this.docXMLFile.LoadXml(strXML);
+            this.docXMLFile.LoadXml(strXML); //loading the xml file in the XmlDocument object
 
             this.populateQuantities(); //load quantities name in the listbox
         }
@@ -185,15 +151,17 @@ namespace MyPocketCal2003
             else if (quantityName.Equals("Currency"))
             {
                 CurrencyConversion currencyConv = new CurrencyConversion(); //the CurrencyConversion class which connects with the webservice
-                outputBox.Text = currencyConv.convertCurrency(inputBox.Text, inputUnit.Substring(0, 3), outputUnit.Substring(0, 3)); //pass the first 3 characters of the String           
+                outputBox.Text = currencyConv.convertCurrency(inputBox.Text, inputUnit.Substring(0, 3), outputUnit.Substring(0, 3)); //pass the first 3 characters of the String & set output
             }
             else if (quantityName.Equals("Number"))
             {
-
+                NumberConversion numberConvert = new NumberConversion(); //the NumberConversion class which does the number system conversion
+                outputBox.Text = numberConvert.convert(inputBox.Text, inputUnit, outputUnit); //set output
             }
             else if (quantityName.Equals("Temperature"))
             {
-
+                TemperatureConversion tempConvert = new TemperatureConversion(); //the TemperatureConversion class which does the temperature conversion
+                outputBox.Text = tempConvert.convert(inputBox.Text, inputUnit, outputUnit); //set output
             }
         }
         //function which returns true if a quantity requires ratios for conversions otherwise false

@@ -39,7 +39,7 @@ namespace MyPocketCal2003
             Form oldWindow = Program.activeWindow; // the old window
             oldWindow.Hide(); // hide the window
 
-            Program.activeWindow = new Unit(); // make the form
+            Program.activeWindow = new CUnit(); // make the form
             Program.activeWindow.Show(); // show the form
             //oldWindow.Dispose();
         }
@@ -57,7 +57,7 @@ namespace MyPocketCal2003
 
         private void pictureBox113_Click(object sender, EventArgs e)
         {
-            Unit c = new Unit();
+            CUnit c = new CUnit();
             c.Show();
         }
 

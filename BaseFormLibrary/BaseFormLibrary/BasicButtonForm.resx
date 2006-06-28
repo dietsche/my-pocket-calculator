@@ -132,6 +132,12 @@
         iA0MSAspCIWwgcMHIhIHjDgoFEKCiQiIJAwJiInQiIoYM2rcWDEQADs=
 </value>
   </data>
+  <data name="commaButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhFQAVAPMAAAAAAP///zo3M1dSTdnNwUhEQIJ7dHRtZ////wAAAAAAAAAAAAAAAAAAAAAAAAAA
+        ACH5BAEAAAgALAAAAAAVABUAAAQdkMhJq7046827/2AojmSZGcAhFsAIDKNgznRthxEAOw==
+</value>
+  </data>
   <data name="rightBracketButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhFQAVAPMAAAAAAP///zo3M7yyp1dSTdnNwUhEQIJ7dJ+Wjv///wAAAAAAAAAAAAAAAAAAAAAA
@@ -151,12 +157,6 @@
         R0lGODlhFQAVAPMAAAAAAP///w4ODTo3M2VgWryyp1dSTdnNwUhEQIJ7dCspJ5+WjnRtZx0bGv///wAA
         ACH5BAEAAA4ALAAAAAAVABUAAAQy8MhJq7046827/2AoUggiEUPhEYCxAArYALT6FXQSMvQA4gIEgPER
         ABaH2mjJbDqflAgAOw==
-</value>
-  </data>
-  <data name="commaButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        R0lGODlhFQAVAPMAAAAAAP///zo3M1dSTdnNwUhEQIJ7dHRtZ////wAAAAAAAAAAAAAAAAAAAAAAAAAA
-        ACH5BAEAAAgALAAAAAAVABUAAAQdkMhJq7046827/2AojmSZGcAhFsAIDKNgznRthxEAOw==
 </value>
   </data>
   <data name="eightButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

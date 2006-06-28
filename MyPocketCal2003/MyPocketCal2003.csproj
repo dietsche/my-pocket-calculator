@@ -56,34 +56,37 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
-    <Compile Include="CurrencyConversion.cs" />
-    <Compile Include="Equations.cs">
+    <Compile Include="Class Files\CurrencyConversion.cs" />
+    <Compile Include="Class Files\NumberConversion.cs" />
+    <Compile Include="Class Files\TemperatureConversion.cs" />
+    <Compile Include="Windows Forms\Equations.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Equations.Designer.cs">
+    <Compile Include="Windows Forms\Equations.Designer.cs">
       <DependentUpon>Equations.cs</DependentUpon>
     </Compile>
-    <Compile Include="InternetCS.cs" />
-    <Compile Include="MainDisplay.cs">
+    <Compile Include="Windows Forms\MainDisplay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainDisplay.designer.cs">
+    <Compile Include="Windows Forms\MainDisplay.designer.cs">
       <DependentUpon>MainDisplay.cs</DependentUpon>
     </Compile>
-    <Compile Include="Statistic.cs">
+    <Compile Include="Windows Forms\Statistic.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Statistic.designer.cs">
+    <Compile Include="Windows Forms\Statistic.designer.cs">
       <DependentUpon>Statistic.cs</DependentUpon>
     </Compile>
-    <Compile Include="Unit.cs">
+    <Compile Include="Windows Forms\Unit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Unit.Designer.cs">
+    <Compile Include="Windows Forms\Unit.Designer.cs">
       <DependentUpon>Unit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Differentiation.cs">
+    <Compile Include="Windows Forms\Differentiation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Differentiation.Designer.cs">
+    <Compile Include="Windows Forms\Differentiation.Designer.cs">
       <DependentUpon>Differentiation.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -92,40 +95,43 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Integration.cs">
+    <Compile Include="Windows Forms\Integration.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Integration.Designer.cs">
+    <Compile Include="Windows Forms\Integration.Designer.cs">
       <DependentUpon>Integration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Matrix.cs">
+    <Compile Include="Windows Forms\Matrix.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Matrix.Designer.cs">
+    <Compile Include="Windows Forms\Matrix.Designer.cs">
       <DependentUpon>Matrix.cs</DependentUpon>
     </Compile>
-    <Compile Include="Plot.cs">
+    <Compile Include="Windows Forms\Plot.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Plot.Designer.cs">
+    <Compile Include="Windows Forms\Plot.Designer.cs">
       <DependentUpon>Plot.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Equations.resx">
+    <EmbeddedResource Include="Windows Forms\Equations.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Equations.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainDisplay.resx">
+    <EmbeddedResource Include="Windows Forms\MainDisplay.resx">
       <DependentUpon>MainDisplay.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Statistic.resx">
+    <EmbeddedResource Include="Windows Forms\Statistic.resx">
       <DependentUpon>Statistic.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Unit.resx">
+    <EmbeddedResource Include="Windows Forms\Unit.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Unit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Differentiation.resx">
+    <EmbeddedResource Include="Windows Forms\Differentiation.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Differentiation.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,15 +139,15 @@
       <SubType>Designer</SubType>
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Integration.resx">
+    <EmbeddedResource Include="Windows Forms\Integration.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Integration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Matrix.resx">
+    <EmbeddedResource Include="Windows Forms\Matrix.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Matrix.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Plot.resx">
+    <EmbeddedResource Include="Windows Forms\Plot.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Plot.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,18 +156,20 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vector.resx">
+    <EmbeddedResource Include="Windows Forms\Vector.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Vector.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="UnitConversion.cs" />
-    <Compile Include="Vector.cs">
+    <Compile Include="Class Files\UnitConversion.cs" />
+    <Compile Include="Windows Forms\Vector.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vector.Designer.cs">
+    <Compile Include="Windows Forms\Vector.Designer.cs">
       <DependentUpon>Vector.cs</DependentUpon>
     </Compile>
     <Compile Include="Web References\CurrencyWebService\Reference.cs">

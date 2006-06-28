@@ -57,10 +57,10 @@ namespace BaseFormLibrary
             // 
             this.basicButtonsPanel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.basicButtonsPanel.Controls.Add(this.undoButton);
+            this.basicButtonsPanel.Controls.Add(this.commaButton);
             this.basicButtonsPanel.Controls.Add(this.rightBracketButton);
             this.basicButtonsPanel.Controls.Add(this.nineButton);
             this.basicButtonsPanel.Controls.Add(this.multiplyButton);
-            this.basicButtonsPanel.Controls.Add(this.commaButton);
             this.basicButtonsPanel.Controls.Add(this.eightButton);
             this.basicButtonsPanel.Controls.Add(this.sevenButton);
             this.basicButtonsPanel.Controls.Add(this.leftBracketButton);
@@ -116,7 +116,7 @@ namespace BaseFormLibrary
             // 
             this.commaButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.commaButton.Image = ((System.Drawing.Image)(resources.GetObject("commaButton.Image")));
-            this.commaButton.Location = new System.Drawing.Point(3, 3);
+            this.commaButton.Location = new System.Drawing.Point(118, 3);
             this.commaButton.Name = "commaButton";
             this.commaButton.Size = new System.Drawing.Size(21, 21);
             // 
@@ -229,7 +229,7 @@ namespace BaseFormLibrary
             // 
             this.decimalButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.decimalButton.Image = ((System.Drawing.Image)(resources.GetObject("decimalButton.Image")));
-            this.decimalButton.Location = new System.Drawing.Point(118, 3);
+            this.decimalButton.Location = new System.Drawing.Point(3, 3);
             this.decimalButton.Name = "decimalButton";
             this.decimalButton.Size = new System.Drawing.Size(21, 21);
             // 

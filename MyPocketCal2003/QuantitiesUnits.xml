@@ -569,6 +569,23 @@
     </Units>
   </Quantity>
   <Quantity>
+    <Name>Electric Flux Density</Name>
+    <Conversion>
+      <FromUnit>c/ft^2</FromUnit>
+      <ToUnit>c/m^2</ToUnit>
+      <Ratio>0.09290304</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>c/m^2</FromUnit>
+      <ToUnit>c/ft^2</ToUnit>
+      <Ratio>10.7639104</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>c/ft^2</Unit>
+      <Unit>c/m^2</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
     <Name>Electric Inductance</Name>
     <Conversion>
       <FromUnit>abhenry</FromUnit>
@@ -797,6 +814,62 @@
     </Units>
   </Quantity>
   <Quantity>
+    <Name>Heat Capacity</Name>
+    <Conversion>
+      <FromUnit>BTU/F</FromUnit>
+      <ToUnit>BTU/R</ToUnit>
+      <Ratio>1</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>BTU/F</FromUnit>
+      <ToUnit>J/K</ToUnit>
+      <Ratio>1899.1009999999999</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>BTU/R</FromUnit>
+      <ToUnit>BTU/F</ToUnit>
+      <Ratio>1</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>J/K</FromUnit>
+      <ToUnit>BTU/F</ToUnit>
+      <Ratio>5.265649e-4</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>BTU/F</Unit>
+      <Unit>BTU/R</Unit>
+      <Unit>J/K</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Heat Flux</Name>
+    <Conversion>
+      <FromUnit>W/m^2</FromUnit>
+      <ToUnit>BTU/(ft^2 hr)</ToUnit>
+      <Ratio>0.317</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>W/m^2</FromUnit>
+      <ToUnit>kW/m^2</ToUnit>
+      <Ratio>0.001</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>BTU/(ft^2 hr)</FromUnit>
+      <ToUnit>W/m^2</ToUnit>
+      <Ratio>3.154590745</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>kW/m^2</FromUnit>
+      <ToUnit>W/m^2</ToUnit>
+      <Ratio>1000</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>W/m^2</Unit>
+      <Unit>BTU/(ft^2 hr)</Unit>
+      <Unit>kW/m^2</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
     <Name>Length</Name>
     <Conversion>
       <FromUnit>angstrom</FromUnit>
@@ -949,6 +1022,23 @@
     <Units>
       <Unit>cd/in^2</Unit>
       <Unit>cd/m^2</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Luminous Field Strength</Name>
+    <Conversion>
+      <FromUnit>A/ft</FromUnit>
+      <ToUnit>A/m</ToUnit>
+      <Ratio>0.3048</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>A/m</FromUnit>
+      <ToUnit>A/ft</ToUnit>
+      <Ratio>3.2808399</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>A/ft</Unit>
+      <Unit>A/m</Unit>
     </Units>
   </Quantity>
   <Quantity>
@@ -1301,6 +1391,151 @@
     </Units>
   </Quantity>
   <Quantity>
+    <Name>Molar Energy</Name>
+    <Conversion>
+      <FromUnit>BTU/lbmole</FromUnit>
+      <ToUnit>J/kgmole</ToUnit>
+      <Ratio>2326.0</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>BTU/lbmole</FromUnit>
+      <ToUnit>J/mol</ToUnit>
+      <Ratio>2.3260</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>J/kgmole</FromUnit>
+      <ToUnit>BTU/lbmole</ToUnit>
+      <Ratio>0.000429922614</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>J/mol</FromUnit>
+      <ToUnit>BTU/lbmole</ToUnit>
+      <Ratio>0.429922614</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>BTU/lbmole</Unit>
+      <Unit>J/kgmole</Unit>
+      <Unit>J/mol</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Molar Heat Capacity</Name>
+    <Conversion>
+      <FromUnit>BTU(lbmole R)</FromUnit>
+      <ToUnit>J/(kgmole K)</ToUnit>
+      <Ratio>1</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>BTU(lbmole R)</FromUnit>
+      <ToUnit>J/(mol K)</ToUnit>
+      <Ratio>4.1868</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>BTU(lbmole R)</FromUnit>
+      <ToUnit>kJ(kgmole K)</ToUnit>
+      <Ratio>4.1868</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>J/(kgmole K)</FromUnit>
+      <ToUnit>BTU(lbmole R)</ToUnit>
+      <Ratio>1</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>J/(mol K)</FromUnit>
+      <ToUnit>BTU(lbmole R)</ToUnit>
+      <Ratio>0.238845897</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>kJ(kgmole K)</FromUnit>
+      <ToUnit>BTU(lbmole R)</ToUnit>
+      <Ratio>0.238845897</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>BTU(lbmole R)</Unit>
+      <Unit>J/(kgmole K)</Unit>
+      <Unit>J/(mol K)</Unit>
+      <Unit>kJ(kgmole K)</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Molar Mass</Name>
+    <Conversion>
+      <FromUnit>lb/lbmole</FromUnit>
+      <ToUnit>kg/mol</ToUnit>
+      <Ratio>0.0010</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>lb/lbmole</FromUnit>
+      <ToUnit>gram/mol</ToUnit>
+      <Ratio>1</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>lb/lbmole</FromUnit>
+      <ToUnit>kg/kgmole</ToUnit>
+      <Ratio>1</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>kg/mol</FromUnit>
+      <ToUnit>lb/lbmole</ToUnit>
+      <Ratio>1000</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>gram/mol</FromUnit>
+      <ToUnit>lb/lbmole</ToUnit>
+      <Ratio>1</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>kg/kgmole</FromUnit>
+      <ToUnit>lb/lbmole</ToUnit>
+      <Ratio>1</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>lb/lbmole</Unit>
+      <Unit>kg/mol</Unit>
+      <Unit>gram/mol</Unit>
+      <Unit>kg/kgmole</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Molar Volume</Name>
+    <Conversion>
+      <FromUnit>ft^3/lbmole</FromUnit>
+      <ToUnit>cm^3/mol</ToUnit>
+      <Ratio>62.4280</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>ft^3/lbmole</FromUnit>
+      <ToUnit>m^3/mol</ToUnit>
+      <Ratio>0.01</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>ft^3/lbmole</FromUnit>
+      <ToUnit>m^3/kgmole</ToUnit>
+      <Ratio>0.0624</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cm^3/mol</FromUnit>
+      <ToUnit>ft^3/lbmole</ToUnit>
+      <Ratio>0.0160184533</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>m^3/mol</FromUnit>
+      <ToUnit>ft^3/lbmole</ToUnit>
+      <Ratio>100</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>m^3/kgmole</FromUnit>
+      <ToUnit>ft^3/lbmole</ToUnit>
+      <Ratio>16.025641</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>ft^3/lbmole</Unit>
+      <Unit>cm^3/mol</Unit>
+      <Unit>m^3/mol</Unit>
+      <Unit>m^3/kgmole</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
     <Name>Number</Name>
     <Units>
       <Unit>Dec</Unit>
@@ -1532,6 +1767,145 @@
     </Units>
   </Quantity>
   <Quantity>
+    <Name>Radiance</Name>
+    <Conversion>
+      <FromUnit>lb/(s^3 sr)</FromUnit>
+      <ToUnit>w/(ft^2 sr)</ToUnit>
+      <Ratio>0.0421</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>lb/(s^3 sr)</FromUnit>
+      <ToUnit>W(m^2 sr)</ToUnit>
+      <Ratio>0.4536</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>w/(ft^2 sr)</FromUnit>
+      <ToUnit>lb/(s^3 sr)</ToUnit>
+      <Ratio>23.7529691</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>W(m^2 sr)</FromUnit>
+      <ToUnit>lb/(s^3 sr)</ToUnit>
+      <Ratio>2.20458554</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>lb/(s^3 sr)</Unit>
+      <Unit>w/(ft^2 sr)</Unit>
+      <Unit>W(m^2 sr)</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Specific Charge</Name>
+    <Conversion>
+      <FromUnit>C/kg</FromUnit>
+      <ToUnit>mR</ToUnit>
+      <Ratio>3875968.9922</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>C/kg</FromUnit>
+      <ToUnit>R</ToUnit>
+      <Ratio>3875.9690</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>mR</FromUnit>
+      <ToUnit>C/kg</ToUnit>
+      <Ratio>2.58e-7</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>R</FromUnit>
+      <ToUnit>C/kg</ToUnit>
+      <Ratio>0.000257999999</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>C/kg</Unit>
+      <Unit>mR</Unit>
+      <Unit>R</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Specific Energy</Name>
+    <Conversion>
+      <FromUnit>BTU/lb</FromUnit>
+      <ToUnit>cal/g</ToUnit>
+      <Ratio>0.5556</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>BTU/lb</FromUnit>
+      <ToUnit>Cy</ToUnit>
+      <Ratio>2326</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>BTU/lb</FromUnit>
+      <ToUnit>J/kg</ToUnit>
+      <Ratio>2326</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>BTU/lb</FromUnit>
+      <ToUnit>kJ/kg</ToUnit>
+      <Ratio>2.3260</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>BTU/lb</FromUnit>
+      <ToUnit>rad[dose]</ToUnit>
+      <Ratio>232600</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>BTU/lb</FromUnit>
+      <ToUnit>rem</ToUnit>
+      <Ratio>232600</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>BTU/lb</FromUnit>
+      <ToUnit>Sv</ToUnit>
+      <Ratio>2326</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>cal/g</FromUnit>
+      <ToUnit>BTU/lb</ToUnit>
+      <Ratio>1.79985601</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>Cy</FromUnit>
+      <ToUnit>BTU/lb</ToUnit>
+      <Ratio>0.000429922614</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>J/kg</FromUnit>
+      <ToUnit>BTU/lb</ToUnit>
+      <Ratio>0.000429922614</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>kJ/kg</FromUnit>
+      <ToUnit>BTU/lb</ToUnit>
+      <Ratio>0.429922614</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>rad[dose]</FromUnit>
+      <ToUnit>BTU/lb</ToUnit>
+      <Ratio>4.29922614e-6</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>rem</FromUnit>
+      <ToUnit>BTU/lb</ToUnit>
+      <Ratio>4.29922614e-6</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>Sv</FromUnit>
+      <ToUnit>BTU/lb</ToUnit>
+      <Ratio>0.000429922614</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>BTU/lb</Unit>
+      <Unit>cal/g</Unit>
+      <Unit>Cy</Unit>
+      <Unit>J/kg</Unit>
+      <Unit>kJ/kg</Unit>
+      <Unit>rad[dose]</Unit>
+      <Unit>rem</Unit>
+      <Unit>Sv</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
     <Name>Specific Heat Capacity</Name>
     <Conversion>
       <FromUnit>BTU(lb R)</FromUnit>
@@ -1726,6 +2100,45 @@
     </Units>
   </Quantity>
   <Quantity>
+    <Name>Substance Amount</Name>
+    <Conversion>
+      <FromUnit>gmole</FromUnit>
+      <ToUnit>kgmole</ToUnit>
+      <Ratio>0.0010</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>gmole</FromUnit>
+      <ToUnit>lbmole</ToUnit>
+      <Ratio>0.0022</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>gmole</FromUnit>
+      <ToUnit>mol</ToUnit>
+      <Ratio>1</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>kgmole</FromUnit>
+      <ToUnit>gmole</ToUnit>
+      <Ratio>1000</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>lbmole</FromUnit>
+      <ToUnit>gmole</ToUnit>
+      <Ratio>454.545455</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>mol</FromUnit>
+      <ToUnit>gmole</ToUnit>
+      <Ratio>1</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>gmole</Unit>
+      <Unit>kgmole</Unit>
+      <Unit>lbmole</Unit>
+      <Unit>mol</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
     <Name>Surface Tension</Name>
     <Conversion>
       <FromUnit>N/m</FromUnit>
@@ -1797,6 +2210,34 @@
     <Units>
       <Unit>C</Unit>
       <Unit>F</Unit>
+    </Units>
+  </Quantity>
+  <Quantity>
+    <Name>Thermal Conductivity</Name>
+    <Conversion>
+      <FromUnit>BTU/(hr ft R)</FromUnit>
+      <ToUnit>lbf/(s R)</ToUnit>
+      <Ratio>0.2162</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>BTU/(hr ft R)</FromUnit>
+      <ToUnit>W/(m K)</ToUnit>
+      <Ratio>1.7307</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>lbf/(s R)</FromUnit>
+      <ToUnit>BTU/(hr ft R)</ToUnit>
+      <Ratio>4.6253469</Ratio>
+    </Conversion>
+    <Conversion>
+      <FromUnit>W/(m K)</FromUnit>
+      <ToUnit>BTU/(hr ft R)</ToUnit>
+      <Ratio>0.57780089</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>BTU/(hr ft R)</Unit>
+      <Unit>lbf/(s R)</Unit>
+      <Unit>W/(m K)</Unit>
     </Units>
   </Quantity>
   <Quantity>

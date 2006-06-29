@@ -12,7 +12,7 @@ using System.IO;
 
 namespace MyPocketCal2003
 {
-    public partial class CUnit : Form
+    public partial class Unit : Form
     {
 
         XmlDocument docXMLFile; //the XmlDocument object which reads all the Quantities and their respective units from an xml file
@@ -20,7 +20,7 @@ namespace MyPocketCal2003
         String outputUnit;  //the string to hold the user output unit choice
         String quantityName; //the string to hold the user quantity choice
         
-        public CUnit()
+        public Unit()
         {
             InitializeComponent();
             loadQuantities(); 
@@ -171,6 +171,12 @@ namespace MyPocketCal2003
             if (!(quantityName.Equals("Currency") || quantityName.Equals("Number") || quantityName.Equals("Temperature")) )
                 return true;
             return false; //quantity would not need ratios for conversions
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EditQuantities ed = new EditQuantities();
+            ed.Show();
         }
     }
 }

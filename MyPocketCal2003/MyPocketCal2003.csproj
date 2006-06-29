@@ -59,6 +59,12 @@
     <Compile Include="Class Files\CurrencyConversion.cs" />
     <Compile Include="Class Files\NumberConversion.cs" />
     <Compile Include="Class Files\TemperatureConversion.cs" />
+    <Compile Include="Windows Forms\EditQuantities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows Forms\EditQuantities.Designer.cs">
+      <DependentUpon>EditQuantities.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows Forms\Equations.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Windows Forms\EditQuantities.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EditQuantities.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuantitiesUnits.xml" />
   </ItemGroup>
   <ItemGroup>

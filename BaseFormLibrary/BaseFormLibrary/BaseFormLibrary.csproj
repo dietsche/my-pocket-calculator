@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlphaNumeric.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlphaNumeric.Designer.cs">
+      <DependentUpon>AlphaNumeric.cs</DependentUpon>
+    </Compile>
     <Compile Include="BasicButtonForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AlphaNumeric.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AlphaNumeric.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BasicButtonForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>BasicButtonForm.cs</DependentUpon>

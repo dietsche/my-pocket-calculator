@@ -1,6 +1,6 @@
 namespace MyPocketCal2003
 {
-    partial class CUnit
+    partial class Unit
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@ namespace MyPocketCal2003
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CUnit));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Unit));
             this.label1 = new System.Windows.Forms.Label();
             this.outputBox = new System.Windows.Forms.TextBox();
             this.quantitiesListBox = new System.Windows.Forms.ListBox();
@@ -58,6 +58,7 @@ namespace MyPocketCal2003
             this.equalButton = new System.Windows.Forms.PictureBox();
             this.decimalButton = new System.Windows.Forms.PictureBox();
             this.zeroButton = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.basicButtonsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,18 +72,18 @@ namespace MyPocketCal2003
             // 
             // outputBox
             // 
-            this.outputBox.Location = new System.Drawing.Point(4, 217);
+            this.outputBox.Location = new System.Drawing.Point(3, 194);
             this.outputBox.Name = "outputBox";
             this.outputBox.ReadOnly = true;
-            this.outputBox.Size = new System.Drawing.Size(233, 21);
+            this.outputBox.Size = new System.Drawing.Size(234, 21);
             this.outputBox.TabIndex = 9;
             this.outputBox.Text = "=";
             // 
             // quantitiesListBox
             // 
-            this.quantitiesListBox.Location = new System.Drawing.Point(1, 19);
+            this.quantitiesListBox.Location = new System.Drawing.Point(3, 19);
             this.quantitiesListBox.Name = "quantitiesListBox";
-            this.quantitiesListBox.Size = new System.Drawing.Size(135, 128);
+            this.quantitiesListBox.Size = new System.Drawing.Size(133, 114);
             this.quantitiesListBox.TabIndex = 16;
             this.quantitiesListBox.SelectedIndexChanged += new System.EventHandler(this.quantitiesListBox_SelectedIndexChanged);
             // 
@@ -90,7 +91,7 @@ namespace MyPocketCal2003
             // 
             this.unitListbox.Location = new System.Drawing.Point(137, 19);
             this.unitListbox.Name = "unitListbox";
-            this.unitListbox.Size = new System.Drawing.Size(100, 128);
+            this.unitListbox.Size = new System.Drawing.Size(100, 114);
             this.unitListbox.TabIndex = 18;
             this.unitListbox.SelectedIndexChanged += new System.EventHandler(this.unitListbox_SelectedIndexChanged);
             // 
@@ -104,15 +105,15 @@ namespace MyPocketCal2003
             // 
             // inputBox
             // 
-            this.inputBox.Location = new System.Drawing.Point(4, 153);
+            this.inputBox.Location = new System.Drawing.Point(3, 139);
             this.inputBox.Name = "inputBox";
-            this.inputBox.Size = new System.Drawing.Size(233, 21);
+            this.inputBox.Size = new System.Drawing.Size(234, 21);
             this.inputBox.TabIndex = 21;
             // 
             // convertToComboBox
             // 
             this.convertToComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.convertToComboBox.Location = new System.Drawing.Point(72, 186);
+            this.convertToComboBox.Location = new System.Drawing.Point(72, 166);
             this.convertToComboBox.Name = "convertToComboBox";
             this.convertToComboBox.Size = new System.Drawing.Size(165, 22);
             this.convertToComboBox.TabIndex = 22;
@@ -121,7 +122,7 @@ namespace MyPocketCal2003
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(4, 186);
+            this.label2.Location = new System.Drawing.Point(4, 166);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 22);
             this.label2.Text = "Convert To:";
@@ -331,10 +332,20 @@ namespace MyPocketCal2003
             this.zeroButton.Size = new System.Drawing.Size(21, 21);
             this.zeroButton.Click += new System.EventHandler(this.zeroButton_Click);
             // 
-            // CUnit
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 221);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 20);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Edit Quantities";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Unit
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(240, 294);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.basicButtonsPanel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.convertToComboBox);
@@ -344,7 +355,7 @@ namespace MyPocketCal2003
             this.Controls.Add(this.outputBox);
             this.Controls.Add(this.quantitiesListBox);
             this.Controls.Add(this.label1);
-            this.Name = "CUnit";
+            this.Name = "Unit";
             this.Text = "MyPocketCal - Unit & Conversion";
             this.basicButtonsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -382,5 +393,6 @@ namespace MyPocketCal2003
         protected System.Windows.Forms.PictureBox equalButton;
         protected System.Windows.Forms.PictureBox decimalButton;
         protected System.Windows.Forms.PictureBox zeroButton;
+        private System.Windows.Forms.Button button1;
     }
 }

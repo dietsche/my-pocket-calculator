@@ -16,3 +16,4 @@ obj\Debug\BaseFormLibrary.Properties.Resources.resources
 obj\Debug\BaseFormLibrary.csproj.GenerateResource.Cache
 obj\Debug\BaseFormLibrary.dll
 obj\Debug\BaseFormLibrary.pdb
+obj\Debug\BaseFormLibrary.AlphaNumeric.resources

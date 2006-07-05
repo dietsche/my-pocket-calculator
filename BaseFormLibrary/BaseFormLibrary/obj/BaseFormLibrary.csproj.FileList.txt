@@ -10,10 +10,11 @@ obj\Release\BaseFormLibrary.pdb
 bin\Debug\BaseFormLibrary.dll
 bin\Debug\BaseFormLibrary.pdb
 obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\BaseFormLibrary.AlphaNumeric.resources
 obj\Debug\BaseFormLibrary.BasicButtonForm.resources
 obj\Debug\BaseFormLibrary.FunctionsForm.resources
 obj\Debug\BaseFormLibrary.Properties.Resources.resources
 obj\Debug\BaseFormLibrary.csproj.GenerateResource.Cache
 obj\Debug\BaseFormLibrary.dll
 obj\Debug\BaseFormLibrary.pdb
-obj\Debug\BaseFormLibrary.AlphaNumeric.resources
+obj\Release\BaseFormLibrary.AlphaNumeric.resources

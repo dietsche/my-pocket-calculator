@@ -59,11 +59,11 @@
     <Compile Include="Class Files\CurrencyConversion.cs" />
     <Compile Include="Class Files\NumberConversion.cs" />
     <Compile Include="Class Files\TemperatureConversion.cs" />
-    <Compile Include="Windows Forms\EditQuantities.cs">
+    <Compile Include="Windows Forms\AddDeleteQuantity.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows Forms\EditQuantities.Designer.cs">
-      <DependentUpon>EditQuantities.cs</DependentUpon>
+    <Compile Include="Windows Forms\AddDeleteQuantity.Designer.cs">
+      <DependentUpon>AddDeleteQuantity.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows Forms\Equations.cs">
       <SubType>Form</SubType>
@@ -191,9 +191,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Windows Forms\EditQuantities.resx">
+    <EmbeddedResource Include="Windows Forms\AddDeleteQuantity.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>EditQuantities.cs</DependentUpon>
+      <DependentUpon>AddDeleteQuantity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuantitiesUnits.xml" />
   </ItemGroup>

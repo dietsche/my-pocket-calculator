@@ -28,7 +28,6 @@ namespace MyPocketCal2003
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Unit));
             this.label1 = new System.Windows.Forms.Label();
             this.outputBox = new System.Windows.Forms.TextBox();
             this.quantitiesListBox = new System.Windows.Forms.ListBox();
@@ -37,30 +36,93 @@ namespace MyPocketCal2003
             this.inputBox = new System.Windows.Forms.TextBox();
             this.convertToComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.basicButtonsPanel = new System.Windows.Forms.Panel();
-            this.undoButton = new System.Windows.Forms.PictureBox();
-            this.EButton = new System.Windows.Forms.PictureBox();
-            this.rightBracketButton = new System.Windows.Forms.PictureBox();
-            this.nineButton = new System.Windows.Forms.PictureBox();
-            this.CButton = new System.Windows.Forms.PictureBox();
-            this.eightButton = new System.Windows.Forms.PictureBox();
-            this.sevenButton = new System.Windows.Forms.PictureBox();
-            this.FButton = new System.Windows.Forms.PictureBox();
-            this.DButton = new System.Windows.Forms.PictureBox();
-            this.BButton = new System.Windows.Forms.PictureBox();
-            this.AButton = new System.Windows.Forms.PictureBox();
-            this.fourButton = new System.Windows.Forms.PictureBox();
-            this.fiveButton = new System.Windows.Forms.PictureBox();
-            this.sixButton = new System.Windows.Forms.PictureBox();
-            this.oneButton = new System.Windows.Forms.PictureBox();
-            this.twoButton = new System.Windows.Forms.PictureBox();
-            this.threeButton = new System.Windows.Forms.PictureBox();
-            this.equalButton = new System.Windows.Forms.PictureBox();
-            this.decimalButton = new System.Windows.Forms.PictureBox();
-            this.zeroButton = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.basicButtonsPanel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // zeroButton
+            // 
+            this.zeroButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // decimalButton
+            // 
+            this.decimalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // equalButton
+            // 
+            this.equalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // threeButton
+            // 
+            this.threeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // twoButton
+            // 
+            this.twoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // oneButton
+            // 
+            this.oneButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // sixButton
+            // 
+            this.sixButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // fiveButton
+            // 
+            this.fiveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // fourButton
+            // 
+            this.fourButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // AButton
+            // 
+            this.AButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // BButton
+            // 
+            this.BButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // DButton
+            // 
+            this.DButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // FButton
+            // 
+            this.FButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // sevenButton
+            // 
+            this.sevenButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // eightButton
+            // 
+            this.eightButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // CButton
+            // 
+            this.CButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // nineButton
+            // 
+            this.nineButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // rightBracketButton
+            // 
+            this.rightBracketButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // EButton
+            // 
+            this.EButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // undoButton
+            // 
+            this.undoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // basicButtonsPanel
+            // 
+            this.basicButtonsPanel.Location = new System.Drawing.Point(0, 247);
             // 
             // label1
             // 
@@ -127,227 +189,21 @@ namespace MyPocketCal2003
             this.label2.Size = new System.Drawing.Size(68, 22);
             this.label2.Text = "Convert To:";
             // 
-            // basicButtonsPanel
-            // 
-            this.basicButtonsPanel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.basicButtonsPanel.Controls.Add(this.undoButton);
-            this.basicButtonsPanel.Controls.Add(this.EButton);
-            this.basicButtonsPanel.Controls.Add(this.rightBracketButton);
-            this.basicButtonsPanel.Controls.Add(this.nineButton);
-            this.basicButtonsPanel.Controls.Add(this.CButton);
-            this.basicButtonsPanel.Controls.Add(this.eightButton);
-            this.basicButtonsPanel.Controls.Add(this.sevenButton);
-            this.basicButtonsPanel.Controls.Add(this.FButton);
-            this.basicButtonsPanel.Controls.Add(this.DButton);
-            this.basicButtonsPanel.Controls.Add(this.BButton);
-            this.basicButtonsPanel.Controls.Add(this.AButton);
-            this.basicButtonsPanel.Controls.Add(this.fourButton);
-            this.basicButtonsPanel.Controls.Add(this.fiveButton);
-            this.basicButtonsPanel.Controls.Add(this.sixButton);
-            this.basicButtonsPanel.Controls.Add(this.oneButton);
-            this.basicButtonsPanel.Controls.Add(this.twoButton);
-            this.basicButtonsPanel.Controls.Add(this.threeButton);
-            this.basicButtonsPanel.Controls.Add(this.equalButton);
-            this.basicButtonsPanel.Controls.Add(this.decimalButton);
-            this.basicButtonsPanel.Controls.Add(this.zeroButton);
-            this.basicButtonsPanel.Location = new System.Drawing.Point(0, 244);
-            this.basicButtonsPanel.Name = "basicButtonsPanel";
-            this.basicButtonsPanel.Size = new System.Drawing.Size(240, 50);
-            // 
-            // undoButton
-            // 
-            this.undoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.undoButton.Image = ((System.Drawing.Image)(resources.GetObject("undoButton.Image")));
-            this.undoButton.Location = new System.Drawing.Point(187, 3);
-            this.undoButton.Name = "undoButton";
-            this.undoButton.Size = new System.Drawing.Size(21, 21);
-            // 
-            // EButton
-            // 
-            this.EButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.EButton.Enabled = false;
-            this.EButton.Image = ((System.Drawing.Image)(resources.GetObject("EButton.Image")));
-            this.EButton.Location = new System.Drawing.Point(118, 3);
-            this.EButton.Name = "EButton";
-            this.EButton.Size = new System.Drawing.Size(21, 21);
-            // 
-            // rightBracketButton
-            // 
-            this.rightBracketButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.rightBracketButton.Image = ((System.Drawing.Image)(resources.GetObject("rightBracketButton.Image")));
-            this.rightBracketButton.Location = new System.Drawing.Point(164, 3);
-            this.rightBracketButton.Name = "rightBracketButton";
-            this.rightBracketButton.Size = new System.Drawing.Size(21, 21);
-            // 
-            // nineButton
-            // 
-            this.nineButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.nineButton.Image = ((System.Drawing.Image)(resources.GetObject("nineButton.Image")));
-            this.nineButton.Location = new System.Drawing.Point(210, 26);
-            this.nineButton.Name = "nineButton";
-            this.nineButton.Size = new System.Drawing.Size(21, 21);
-            this.nineButton.Click += new System.EventHandler(this.nineButton_Click);
-            // 
-            // CButton
-            // 
-            this.CButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CButton.Enabled = false;
-            this.CButton.Image = ((System.Drawing.Image)(resources.GetObject("CButton.Image")));
-            this.CButton.Location = new System.Drawing.Point(72, 3);
-            this.CButton.Name = "CButton";
-            this.CButton.Size = new System.Drawing.Size(21, 21);
-            // 
-            // eightButton
-            // 
-            this.eightButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.eightButton.Image = ((System.Drawing.Image)(resources.GetObject("eightButton.Image")));
-            this.eightButton.Location = new System.Drawing.Point(187, 26);
-            this.eightButton.Name = "eightButton";
-            this.eightButton.Size = new System.Drawing.Size(21, 21);
-            this.eightButton.Click += new System.EventHandler(this.eightButton_Click);
-            // 
-            // sevenButton
-            // 
-            this.sevenButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.sevenButton.Image = ((System.Drawing.Image)(resources.GetObject("sevenButton.Image")));
-            this.sevenButton.Location = new System.Drawing.Point(164, 26);
-            this.sevenButton.Name = "sevenButton";
-            this.sevenButton.Size = new System.Drawing.Size(21, 21);
-            this.sevenButton.Click += new System.EventHandler(this.sevenButton_Click);
-            // 
-            // FButton
-            // 
-            this.FButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.FButton.Enabled = false;
-            this.FButton.Image = ((System.Drawing.Image)(resources.GetObject("FButton.Image")));
-            this.FButton.Location = new System.Drawing.Point(141, 3);
-            this.FButton.Name = "FButton";
-            this.FButton.Size = new System.Drawing.Size(21, 21);
-            // 
-            // DButton
-            // 
-            this.DButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DButton.Enabled = false;
-            this.DButton.Image = ((System.Drawing.Image)(resources.GetObject("DButton.Image")));
-            this.DButton.Location = new System.Drawing.Point(95, 3);
-            this.DButton.Name = "DButton";
-            this.DButton.Size = new System.Drawing.Size(21, 21);
-            // 
-            // BButton
-            // 
-            this.BButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BButton.Enabled = false;
-            this.BButton.Image = ((System.Drawing.Image)(resources.GetObject("BButton.Image")));
-            this.BButton.Location = new System.Drawing.Point(48, 3);
-            this.BButton.Name = "BButton";
-            this.BButton.Size = new System.Drawing.Size(21, 21);
-            // 
-            // AButton
-            // 
-            this.AButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.AButton.Enabled = false;
-            this.AButton.Image = ((System.Drawing.Image)(resources.GetObject("AButton.Image")));
-            this.AButton.Location = new System.Drawing.Point(25, 3);
-            this.AButton.Name = "AButton";
-            this.AButton.Size = new System.Drawing.Size(21, 21);
-            // 
-            // fourButton
-            // 
-            this.fourButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.fourButton.Image = ((System.Drawing.Image)(resources.GetObject("fourButton.Image")));
-            this.fourButton.Location = new System.Drawing.Point(95, 26);
-            this.fourButton.Name = "fourButton";
-            this.fourButton.Size = new System.Drawing.Size(21, 21);
-            this.fourButton.Click += new System.EventHandler(this.fourButton_Click);
-            // 
-            // fiveButton
-            // 
-            this.fiveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.fiveButton.Image = ((System.Drawing.Image)(resources.GetObject("fiveButton.Image")));
-            this.fiveButton.Location = new System.Drawing.Point(118, 26);
-            this.fiveButton.Name = "fiveButton";
-            this.fiveButton.Size = new System.Drawing.Size(21, 21);
-            this.fiveButton.Click += new System.EventHandler(this.fiveButton_Click);
-            // 
-            // sixButton
-            // 
-            this.sixButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.sixButton.Image = ((System.Drawing.Image)(resources.GetObject("sixButton.Image")));
-            this.sixButton.Location = new System.Drawing.Point(141, 26);
-            this.sixButton.Name = "sixButton";
-            this.sixButton.Size = new System.Drawing.Size(21, 21);
-            this.sixButton.Click += new System.EventHandler(this.sixButton_Click);
-            // 
-            // oneButton
-            // 
-            this.oneButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.oneButton.Image = ((System.Drawing.Image)(resources.GetObject("oneButton.Image")));
-            this.oneButton.Location = new System.Drawing.Point(26, 26);
-            this.oneButton.Name = "oneButton";
-            this.oneButton.Size = new System.Drawing.Size(21, 21);
-            this.oneButton.Click += new System.EventHandler(this.oneButton_Click);
-            // 
-            // twoButton
-            // 
-            this.twoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.twoButton.Image = ((System.Drawing.Image)(resources.GetObject("twoButton.Image")));
-            this.twoButton.Location = new System.Drawing.Point(49, 26);
-            this.twoButton.Name = "twoButton";
-            this.twoButton.Size = new System.Drawing.Size(21, 21);
-            this.twoButton.Click += new System.EventHandler(this.twoButton_Click);
-            // 
-            // threeButton
-            // 
-            this.threeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.threeButton.Image = ((System.Drawing.Image)(resources.GetObject("threeButton.Image")));
-            this.threeButton.Location = new System.Drawing.Point(72, 26);
-            this.threeButton.Name = "threeButton";
-            this.threeButton.Size = new System.Drawing.Size(21, 21);
-            this.threeButton.Click += new System.EventHandler(this.threeButton_Click);
-            // 
-            // equalButton
-            // 
-            this.equalButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.equalButton.Image = ((System.Drawing.Image)(resources.GetObject("equalButton.Image")));
-            this.equalButton.Location = new System.Drawing.Point(210, 3);
-            this.equalButton.Name = "equalButton";
-            this.equalButton.Size = new System.Drawing.Size(21, 21);
-            this.equalButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            // 
-            // decimalButton
-            // 
-            this.decimalButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.decimalButton.Image = ((System.Drawing.Image)(resources.GetObject("decimalButton.Image")));
-            this.decimalButton.Location = new System.Drawing.Point(3, 3);
-            this.decimalButton.Name = "decimalButton";
-            this.decimalButton.Size = new System.Drawing.Size(21, 21);
-            this.decimalButton.Click += new System.EventHandler(this.decimalButton_Click);
-            // 
-            // zeroButton
-            // 
-            this.zeroButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.zeroButton.Image = ((System.Drawing.Image)(resources.GetObject("zeroButton.Image")));
-            this.zeroButton.Location = new System.Drawing.Point(3, 26);
-            this.zeroButton.Name = "zeroButton";
-            this.zeroButton.Size = new System.Drawing.Size(21, 21);
-            this.zeroButton.Click += new System.EventHandler(this.zeroButton_Click);
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(3, 221);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 20);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Edit Quantities";
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Size = new System.Drawing.Size(136, 20);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Add/Delete Quantity";
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Unit
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(240, 294);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.basicButtonsPanel);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.convertToComboBox);
             this.Controls.Add(this.inputBox);
             this.Controls.Add(this.label3);
@@ -357,6 +213,16 @@ namespace MyPocketCal2003
             this.Controls.Add(this.label1);
             this.Name = "Unit";
             this.Text = "MyPocketCal - Unit & Conversion";
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.quantitiesListBox, 0);
+            this.Controls.SetChildIndex(this.outputBox, 0);
+            this.Controls.SetChildIndex(this.unitListbox, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.inputBox, 0);
+            this.Controls.SetChildIndex(this.convertToComboBox, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.basicButtonsPanel, 0);
             this.basicButtonsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -372,27 +238,6 @@ namespace MyPocketCal2003
         private System.Windows.Forms.TextBox inputBox;
         private System.Windows.Forms.ComboBox convertToComboBox;
         private System.Windows.Forms.Label label2;
-        protected System.Windows.Forms.Panel basicButtonsPanel;
-        protected System.Windows.Forms.PictureBox undoButton;
-        protected System.Windows.Forms.PictureBox EButton;
-        protected System.Windows.Forms.PictureBox rightBracketButton;
-        protected System.Windows.Forms.PictureBox nineButton;
-        protected System.Windows.Forms.PictureBox CButton;
-        protected System.Windows.Forms.PictureBox eightButton;
-        protected System.Windows.Forms.PictureBox sevenButton;
-        protected System.Windows.Forms.PictureBox FButton;
-        protected System.Windows.Forms.PictureBox DButton;
-        protected System.Windows.Forms.PictureBox BButton;
-        protected System.Windows.Forms.PictureBox AButton;
-        protected System.Windows.Forms.PictureBox fourButton;
-        protected System.Windows.Forms.PictureBox fiveButton;
-        protected System.Windows.Forms.PictureBox sixButton;
-        protected System.Windows.Forms.PictureBox oneButton;
-        protected System.Windows.Forms.PictureBox twoButton;
-        protected System.Windows.Forms.PictureBox threeButton;
-        protected System.Windows.Forms.PictureBox equalButton;
-        protected System.Windows.Forms.PictureBox decimalButton;
-        protected System.Windows.Forms.PictureBox zeroButton;
         private System.Windows.Forms.Button button1;
     }
 }

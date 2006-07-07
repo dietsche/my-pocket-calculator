@@ -12,7 +12,7 @@ using System.IO;
 
 namespace MyPocketCal2003
 {
-    public partial class Unit : Form
+    public partial class Unit : BaseFormLibrary.AlphaNumeric
     {
 
         XmlDocument docXMLFile; //the XmlDocument object which reads all the Quantities and their respective units from an xml file
@@ -172,11 +172,10 @@ namespace MyPocketCal2003
                 return true;
             return false; //quantity would not need ratios for conversions
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            EditQuantities ed = new EditQuantities();
-            ed.Show();
+            AddQuantity addQuantity = new AddQuantity(this.docXMLFile);
+            addQuantity.Show();
         }
     }
 }

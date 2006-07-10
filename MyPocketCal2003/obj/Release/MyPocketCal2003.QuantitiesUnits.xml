@@ -1,0 +1,1530 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Quantities>
+  
+  <Quantity>
+    <Name>Acceleration</Name>
+    <BaseUnit>ft/s^2</BaseUnit>
+    <Conversion>
+      <ToUnit>in/s^2</ToUnit>
+      <Ratio>12</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>m/s^2</ToUnit>
+      <Ratio>0.3048</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>ft/s^2</Unit>
+      <Unit>in/s^2</Unit>
+      <Unit>m/s^2</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Angle</Name>
+    <BaseUnit>Deg</BaseUnit>
+    <Conversion>
+      <ToUnit>Rad</ToUnit>
+      <Ratio>0.0174532925</Ratio>
+    </Conversion>    
+    <Units>
+      <Unit>Deg</Unit>
+      <Unit>Rad</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Area</Name>
+    <BaseUnit>acre</BaseUnit>
+    <Conversion>      
+      <ToUnit>are</ToUnit>
+      <Ratio>40.4685642</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>barn</ToUnit>
+      <Ratio>4.04685642e31</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>circ mil</ToUnit>
+      <Ratio>7.9866e12</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>cm^2</ToUnit>
+      <Ratio>40468564</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>ft^2</ToUnit>
+      <Ratio>43560</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>hectare</ToUnit>
+      <Ratio>0.404685642</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>in^2</ToUnit>
+      <Ratio>6270000</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>km^2</ToUnit>
+      <Ratio>0.00405</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>m^2</ToUnit>
+      <Ratio>4046.85642</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>mm^2</ToUnit>
+      <Ratio>4050000000</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>mi^2</ToUnit>
+      <Ratio>0.00156</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>yd^2</ToUnit>
+      <Ratio>4840</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>acre</Unit>
+      <Unit>are</Unit>
+      <Unit>barn</Unit>
+      <Unit>circ mil</Unit>
+      <Unit>cm^2</Unit>
+      <Unit>ft^2</Unit>
+      <Unit>hectare</Unit>
+      <Unit>in^2</Unit>
+      <Unit>km^2</Unit>
+      <Unit>m^2</Unit>
+      <Unit>mm^2</Unit>
+      <Unit>mi^2</Unit>
+      <Unit>yd^2</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Currency</Name>
+    <Units>
+      <Unit>AFA-Afghanistan Afghani</Unit>
+      <Unit>ALL-Albanian Lek</Unit>
+      <Unit>DZD-Algerian Dinar</Unit>
+      <Unit>ARS-Argentine Peso</Unit>
+      <Unit>AWG-Aruba Florin</Unit>
+      <Unit>AUD-Australian Dollar</Unit>
+      <Unit>BSD-Bahamian Dollar</Unit>
+      <Unit>BHD-Bahraini Dinar</Unit>
+      <Unit>BDT-Bangladesh Taka</Unit>
+      <Unit>BBD-Barbados Dollar</Unit>
+      <Unit>BZD-Belize Dollar</Unit>
+      <Unit>BMD-Bermuda Dollar</Unit>
+      <Unit>BTN-Bhutan Ngultrum</Unit>
+      <Unit>BOB-Bolivian Boliviano</Unit>
+      <Unit>BWP-Botswana Pula</Unit>
+      <Unit>BRL-Brazilian Real</Unit>
+      <Unit>GBP-British Pound</Unit>
+      <Unit>BND-Brunei Dollar</Unit>
+      <Unit>BIF-Burundi Franc</Unit>
+      <Unit>XOF-CFA Franc</Unit>
+      <Unit>XAF-CFA Franc</Unit>
+      <Unit>KHR-Cambodia Riel</Unit>
+      <Unit>CAD-Canadian Dollar</Unit>
+      <Unit>CVE-Cape Verde Escudo</Unit>
+      <Unit>KYD-Cayman Islands Dollar</Unit>
+      <Unit>CLP-Chilean Peso</Unit>
+      <Unit>CNY-Chinese Yuan</Unit>
+      <Unit>COP-Colombian Peso</Unit>
+      <Unit>KMF-Comoros Franc</Unit>
+      <Unit>CRC-Costa Rica Colon</Unit>
+      <Unit>HRK-Croatian Kuna</Unit>
+      <Unit>CUP-Cuban Peso</Unit>
+      <Unit>CYP-Cyprus Pound</Unit>
+      <Unit>CZK-Czech Koruna</Unit>
+      <Unit>DKK-Danish Krone</Unit>
+      <Unit>DJF-Dijibouti Franc</Unit>
+      <Unit>DOP-Dominican Peso</Unit>
+      <Unit>XCD-East Caribbean Dollar</Unit>
+      <Unit>EGP-Egyptian Pound</Unit>
+      <Unit>SVC-El Salvador Colon</Unit>
+      <Unit>EEK-Estonian Kroon</Unit>
+      <Unit>ETB-Ethiopian Birr</Unit>
+      <Unit>EUR-Euro</Unit>
+      <Unit>FKP-Falkland Islands Pound</Unit>
+      <Unit>GMD-Gambian Dalasi</Unit>
+      <Unit>GHC-Ghanian Cedi</Unit>
+      <Unit>GIP-Gibraltar Pound</Unit>
+      <Unit>XAU-Gold Ounces</Unit>
+      <Unit>GTQ-Guatemala Quetzal</Unit>
+      <Unit>GNF-Guinea Franc</Unit>
+      <Unit>GYD-Guyana Dollar</Unit>
+      <Unit>HTG-Haiti Gourde</Unit>
+      <Unit>HNL-Honduras Lempira</Unit>
+      <Unit>HKD-Hong Kong Dollar</Unit>
+      <Unit>HUF-Hungarian Forint</Unit>
+      <Unit>ISK-Iceland Krona</Unit>
+      <Unit>INR-Indian Rupee</Unit>
+      <Unit>IDR-Indonesian Rupiah</Unit>
+      <Unit>IQD-Iraqi Dinar</Unit>
+      <Unit>ILS-Israeli Shekel</Unit>
+      <Unit>JMD-Jamaican Dollar</Unit>
+      <Unit>JPY-Japanese Yen</Unit>
+      <Unit>JOD-Jordanian Dinar</Unit>
+      <Unit>KZT-Kazakhstan Tenge</Unit>
+      <Unit>KES-Kenyan Shilling</Unit>
+      <Unit>KRW-Korean Won</Unit>
+      <Unit>KWD-Kuwaiti Dinar</Unit>
+      <Unit>LAK-Lao Kip</Unit>
+      <Unit>LVL-Latvian Lat</Unit>
+      <Unit>LBP-Lebanese Pound</Unit>
+      <Unit>LSL-Lesotho Loti</Unit>
+      <Unit>LRD-Liberian Dollar</Unit>
+      <Unit>LYD-Libyan Dinar</Unit>
+      <Unit>LTL-Lithuanian Lita</Unit>
+      <Unit>MOP-Macau Pataca</Unit>
+      <Unit>MKD-Macedonian Denar</Unit>
+      <Unit>MGF-Malagasy Franc</Unit>
+      <Unit>MWK-Malawi Kwacha</Unit>
+      <Unit>MYR-Malaysian Ringgit</Unit>
+      <Unit>MVR-Maldives Rufiyaa</Unit>
+      <Unit>MTL-Maltese Lira</Unit>
+      <Unit>MRO-Mauritania Ougulya</Unit>
+      <Unit>MUR-Mauritius Rupee</Unit>
+      <Unit>MXN-Mexican Peso</Unit>
+      <Unit>MDL-Moldovan Leu</Unit>
+      <Unit>MNT-Mongolian Tugrik</Unit>
+      <Unit>MAD-Moroccan Dirham</Unit>
+      <Unit>MZM-Mozambique Metical</Unit>
+      <Unit>MMK-Myanmar Kyat</Unit>
+      <Unit>NAD-Namibian Dollar</Unit>
+      <Unit>NPR-Nepalese Rupee</Unit>
+      <Unit>ANG-Neth Antilles Guilder</Unit>
+      <Unit>NZD-New Zealand Dollar</Unit>
+      <Unit>NIO-Nicaragua Cordoba</Unit>
+      <Unit>NGN-Nigerian Naira</Unit>
+      <Unit>KPW-North Korean Won</Unit>
+      <Unit>NOK-Norwegian Krone</Unit>
+      <Unit>OMR-Omani Rial</Unit>
+      <Unit>XPF-Pacific Franc</Unit>
+      <Unit>PKR-Pakistani Rupee</Unit>
+      <Unit>XPD-Palladium Ounces</Unit>
+      <Unit>PAB-Panama Balboa</Unit>
+      <Unit>PGK-Papua New Guinea Kina</Unit>
+      <Unit>PYG-Paraguayan Guarani</Unit>
+      <Unit>PEN-Peruvian Nuevo Sol</Unit>
+      <Unit>PHP-Philippine Peso</Unit>
+      <Unit>XPT-Platinum Ounces</Unit>
+      <Unit>PLN-Polish Zloty</Unit>
+      <Unit>QAR-Qatar Rial</Unit>
+      <Unit>ROL-Romanian Leu</Unit>
+      <Unit>RUB-Russian Rouble</Unit>
+      <Unit>WST-Samoa Tala</Unit>
+      <Unit>STD-Sao Tome Dobra</Unit>
+      <Unit>SAR-Saudi Arabian Riyal</Unit>
+      <Unit>SCR-Seychelles Rupee</Unit>
+      <Unit>SLL-Sierra Leone Leone</Unit>
+      <Unit>XAG-Silver Ounces</Unit>
+      <Unit>SGD-Singapore Dollar</Unit>
+      <Unit>SKK-Slovak Koruna</Unit>
+      <Unit>SIT-Slovenian Tolar</Unit>
+      <Unit>SBD-Solomon Islands Dollar</Unit>
+      <Unit>SOS-Somali Shilling</Unit>
+      <Unit>ZAR-South African Rand</Unit>
+      <Unit>LKR-Sri Lanka Rupee</Unit>
+      <Unit>SHP-St Helena Pound</Unit>
+      <Unit>SDD-Sudanese Dinar</Unit>
+      <Unit>SRG-Surinam Guilder</Unit>
+      <Unit>SZL-Swaziland Lilageni</Unit>
+      <Unit>SEK-Swedish Krona</Unit>
+      <Unit>TRY-Turkey Lira</Unit>
+      <Unit>CHF-Swiss Franc</Unit>
+      <Unit>SYP-Syrian Pound</Unit>
+      <Unit>TWD-Taiwan Dollar</Unit>
+      <Unit>TZS-Tanzanian Shilling</Unit>
+      <Unit>THB-Thai Baht</Unit>
+      <Unit>TOP-Tonga Pa'anga</Unit>
+      <Unit>TTD-Tobago Dollar</Unit>
+      <Unit>TND-Tunisian Dinar</Unit>
+      <Unit>TRL-Turkish Lira</Unit>
+      <Unit>USD-U.S. Dollar</Unit>
+      <Unit>AED-UAE Dirham</Unit>
+      <Unit>UGX-Ugandan Shilling</Unit>
+      <Unit>UAH-Ukraine Hryvnia</Unit>
+      <Unit>UYU-Uruguayan New Peso</Unit>
+      <Unit>VUV-Vanuatu Vatu</Unit>
+      <Unit>VEB-Venezuelan Bolivar</Unit>
+      <Unit>VND-Vietnam Dong</Unit>
+      <Unit>YER-Yemen Riyal</Unit>
+      <Unit>YUM-Yugoslav Dinar</Unit>
+      <Unit>ZMK-Zambian Kwacha</Unit>
+      <Unit>ZWD-Zimbabwe Dollar</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Density</Name>
+    <BaseUnit>gram/cm^3</BaseUnit>
+    <Conversion>
+      <ToUnit>kg/m^3</ToUnit>
+      <Ratio>1.0e-9</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>lb/ft^3</ToUnit>
+      <Ratio>7.78555131e-8</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>lb/gal</ToUnit>
+      <Ratio>5.8239968e-7</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>lb/yd^3</ToUnit>
+      <Ratio>2.88353752e-9</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>oz/in^3</ToUnit>
+      <Ratio>0.00215254923</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>slug/ft^3</ToUnit>
+      <Ratio>2.41982332e-9</Ratio>
+    </Conversion>    
+    <Units>
+      <Unit>gram/cm^3</Unit>
+      <Unit>kg/m^3</Unit>
+      <Unit>lb/ft^3</Unit>
+      <Unit>lb/gal</Unit>
+      <Unit>lb/yd^3</Unit>
+      <Unit>oz/in^3</Unit>
+      <Unit>slug/ft^3</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Electric Potential</Name>
+    <BaseUnit>Abvolt</BaseUnit>
+    <Conversion>
+      <ToUnit>V</ToUnit>
+      <Ratio>0.00000001</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>Abvolt</Unit>
+      <Unit>V</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Electric Conductance</Name>
+    <BaseUnit>abmho</BaseUnit>
+    <Conversion>
+      <ToUnit>siemens</ToUnit>
+      <Ratio>1000000000</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>abmho</Unit>
+      <Unit>siemens</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Electric Capacitance</Name>
+    <BaseUnit>farad(F)</BaseUnit>
+    <Conversion>
+      <ToUnit>abfarad</ToUnit>
+      <Ratio>0.000000001</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>microfarad</ToUnit>
+      <Ratio>1000000</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>picofarad</ToUnit>
+      <Ratio>1e+12</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>farad(F)</Unit>
+      <Unit>abfarad</Unit>
+      <Unit>microfarad</Unit>
+      <Unit>picofarad</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Electric Charge</Name>
+    <BaseUnit>abcoulomb</BaseUnit>
+    <Conversion>
+      <ToUnit>ampere-hour</ToUnit>
+      <Ratio>0.002777778</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>coulomb(C)</ToUnit>
+      <Ratio>10</Ratio>
+    </Conversion>
+  <Units>
+    <Unit>abcoulomb</Unit>
+    <Unit>coulomb(C)</Unit>
+    <Unit>ampere-hour</Unit>
+  </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Electric Current</Name>
+    <BaseUnit>ampere(A)</BaseUnit>
+    <Conversion>
+      <ToUnit>abampere</ToUnit>
+      <Ratio>0.1</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>biot</ToUnit>
+      <Ratio>0.1</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>ampere(A)</Unit>
+      <Unit>abampere</Unit>
+      <Unit>biot</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Electric Field Strength</Name>
+    <BaseUnit>V/m</BaseUnit>
+    <Conversion>
+      <ToUnit>V/cm</ToUnit>
+      <Ratio>0.01</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>V/inch</ToUnit>
+      <Ratio>0.0254</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>V/m</Unit>
+      <Unit>V/cm</Unit>
+      <Unit>V/inch</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Electric Flux Density</Name>
+    <BaseUnit>c/ft^2</BaseUnit>
+    <Conversion>
+      <ToUnit>c/m^2</ToUnit>
+      <Ratio>0.09290304</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>c/ft^2</Unit>
+      <Unit>c/m^2</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Electric Inductance</Name>
+    <BaseUnit>abhenry</BaseUnit>
+    <Conversion>
+      <FromUnit>abhenry</FromUnit>
+      <ToUnit>henry</ToUnit>
+      <Ratio>0.000000001</Ratio>
+    </Conversion>    
+    <Units>
+      <Unit>abhenry</Unit>
+      <Unit>henry</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Electric Resistance</Name>
+    <BaseUnit>ohm</BaseUnit>
+    <Conversion>
+      <FromUnit>ohm</FromUnit>
+      <ToUnit>abohm</ToUnit>
+      <Ratio>1000000000</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>ohm</Unit>
+      <Unit>abohm</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Energy</Name>
+    <BaseUnit>calorie</BaseUnit>
+    <Conversion>
+      <ToUnit>BTU</ToUnit>
+      <Ratio>0.00396566683</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>erg</ToUnit>
+      <Ratio>41840000</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>eV</ToUnit>
+      <Ratio>2.61144768e19</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>J</ToUnit>
+      <Ratio>4.18400</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>kilocalorie</ToUnit>
+      <Ratio>0.001</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>kW hour</ToUnit>
+      <Ratio>1.16222222e-6</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>Mev</ToUnit>
+      <Ratio>2.61144768e13</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>W hour</ToUnit>
+      <Ratio>0.00116222222</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>therm</ToUnit>
+      <Ratio>0.00000004</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>keV</ToUnit>
+      <Ratio>2.611446262e16</Ratio>
+    </Conversion>    
+    <Units>
+      <Unit>calorie</Unit>
+      <Unit>BTU</Unit>
+      <Unit>erg</Unit>
+      <Unit>eV</Unit>
+      <Unit>J</Unit>
+      <Unit>kilocalorie</Unit>
+      <Unit>kW hour</Unit>
+      <Unit>Mev</Unit>
+      <Unit>W hour</Unit>
+      <Unit>therm</Unit>
+      <Unit>keV</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Force</Name>
+    <BaseUnit>dyne</BaseUnit>
+    <Conversion>
+      <ToUnit>kgf</ToUnit>
+      <Ratio>0.00000102</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>kip</ToUnit>
+      <Ratio>0.000000002</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>N</ToUnit>
+      <Ratio>0.00001</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>dyne</Unit>
+      <Unit>kgf</Unit>
+      <Unit>kip</Unit>
+      <Unit>N</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Frequency</Name>
+    <BaseUnit>Hz</BaseUnit>
+    <Conversion>
+      <ToUnit>Mhz</ToUnit>
+      <Ratio>0.000001</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>Khz</ToUnit>
+      <Ratio>0.001</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>Ghz</ToUnit>
+      <Ratio>0.000000001</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>Hz</Unit>
+      <Unit>Mhz</Unit>
+      <Unit>Khz</Unit>
+      <Unit>Ghz</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Heat Capacity</Name>
+    <BaseUnit>BTU/F</BaseUnit>
+    <Conversion>
+      <ToUnit>BTU/R</ToUnit>
+      <Ratio>1</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>J/K</ToUnit>
+      <Ratio>1899.1009999999999</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>BTU/F</Unit>
+      <Unit>BTU/R</Unit>
+      <Unit>J/K</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Heat Flux</Name>
+    <BaseUnit>W/m^2</BaseUnit>
+    <Conversion>
+      <ToUnit>BTU/(ft^2 hr)</ToUnit>
+      <Ratio>0.317</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>kW/m^2</ToUnit>
+      <Ratio>0.001</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>W/m^2</Unit>
+      <Unit>BTU/(ft^2 hr)</Unit>
+      <Unit>kW/m^2</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Length</Name>
+    <BaseUnit>angstrom</BaseUnit>
+    <Conversion>      
+      <ToUnit>cm</ToUnit>
+      <Ratio>1.0e-8</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>ft</ToUnit>
+      <Ratio>3.2808399e-10</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>in</ToUnit>
+      <Ratio>3.93700787e-9</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>km</ToUnit>
+      <Ratio>1.0e-13</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>light yr</ToUnit>
+      <Ratio>1.05702341e-26</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>m</ToUnit>
+      <Ratio>1.0e-10</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>micron</ToUnit>
+      <Ratio>0.0001</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>mil</ToUnit>
+      <Ratio>3.93700787e-6</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>mile</ToUnit>
+      <Ratio>6.21371192e-14</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>mm</ToUnit>
+      <Ratio>1.0e-7</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>rod</ToUnit>
+      <Ratio>1.98838782e-11</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>yd</ToUnit>
+      <Ratio>1.0936133e-10</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>angstrom</Unit>
+      <Unit>cm</Unit>
+      <Unit>ft</Unit>
+      <Unit>in</Unit>
+      <Unit>km</Unit>
+      <Unit>light yr</Unit>
+      <Unit>m</Unit>
+      <Unit>micron</Unit>
+      <Unit>mil</Unit>
+      <Unit>mile</Unit>
+      <Unit>mm</Unit>
+      <Unit>rod</Unit>
+      <Unit>yd</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Luminance</Name>    
+    <BaseUnit>cd/in^2</BaseUnit>
+    <Conversion>
+      <ToUnit>cd/m^2</ToUnit>
+      <Ratio>0.00064516</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>cd/in^2</Unit>
+      <Unit>cd/m^2</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Luminous Field Strength</Name>
+    <BaseUnit>A/ft</BaseUnit>
+    <Conversion>      
+      <ToUnit>A/m</ToUnit>
+      <Ratio>0.3048</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>A/ft</Unit>
+      <Unit>A/m</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Magnetic Flux</Name>
+    <BaseUnit>Mx</BaseUnit>
+    <Conversion>      
+      <ToUnit>Wb</ToUnit>
+      <Ratio>0.00000001</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>Mx</Unit>
+      <Unit>Wb</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Magnetic Flux Density</Name>
+    <BaseUnit>gauss</BaseUnit>
+    <Conversion>    
+      <ToUnit>Wb/m^2</ToUnit>
+      <Ratio>0.0001</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>Wb/cm^2</ToUnit>
+      <Ratio>0.00000001</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>tesla(T)</ToUnit>
+      <Ratio>0.0001</Ratio>
+    </Conversion>    
+    <Units>
+      <Unit>gauss</Unit>
+      <Unit>Wb/m^2</Unit>
+      <Unit>Wb/cm^2</Unit>
+      <Unit>tesla(T)</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Mass</Name>
+    <BaseUnit>carat</BaseUnit>
+    <Conversion>
+      <ToUnit>grain</ToUnit>
+      <Ratio>3.08647167</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>gram</ToUnit>
+      <Ratio>0.2</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>kg</ToUnit>
+      <Ratio>0.0002</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>lb</ToUnit>
+      <Ratio>0.000440924524</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>mg</ToUnit>
+      <Ratio>200</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>oz</ToUnit>
+      <Ratio>0.00705479239</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>slug</ToUnit>
+      <Ratio>1.37043532e-5</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>ton</ToUnit>
+      <Ratio>2.20462262e-7</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>tonne</ToUnit>
+      <Ratio>2.0e-7</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>carat</Unit>
+      <Unit>grain</Unit>
+      <Unit>gram</Unit>
+      <Unit>kg</Unit>
+      <Unit>lb</Unit>
+      <Unit>mg</Unit>
+      <Unit>oz</Unit>
+      <Unit>slug</Unit>
+      <Unit>ton</Unit>
+      <Unit>tonne</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Mass Flux</Name>
+    <BaseUnit>gram(cm^2 s)</BaseUnit>
+    <Conversion>
+      <ToUnit>kg(ft^2 hr)</ToUnit>
+      <Ratio>2.77777778e-11</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>kg(ft^2 min)</ToUnit>
+      <Ratio>1.66666667e-9</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>kg(ft^2 s)</ToUnit>
+      <Ratio>1.0e-7</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>lb(ft^2 hr)</ToUnit>
+      <Ratio>6.59176678e-10</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>lb(ft^2 min)</ToUnit>
+      <Ratio>3.95506007e-8</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>lb(ft^2 s)</ToUnit>
+      <Ratio>2.37303604e-6</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>ton(ft^2 hr)</ToUnit>
+      <Ratio>3.29588339e-13</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>tonne(m^2 hr)</ToUnit>
+      <Ratio>2.77777778e-14</Ratio>
+    </Conversion>
+    <Units>
+      <unit>gram(cm^2 s)</unit>
+      <unit>kg(ft^2 hr)</unit>
+      <unit>kg(ft^2 min)</unit>
+      <unit>kg(ft^2 s)</unit>
+      <unit>lb(ft^2 hr)</unit>
+      <unit>lb(ft^2 min)</unit>
+      <unit>lb(ft^2 s)</unit>
+      <unit>ton(ft^2 hr)</unit>
+      <unit>tonne(m^2 hr)</unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Mass Rate</Name>
+    <BaseUnit>gram/s</BaseUnit>
+    <Conversion>
+      <ToUnit>kg/hr</ToUnit>
+      <Ratio>2.77777778e-7</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>kg/min</ToUnit>
+      <Ratio>1.66666667e-5</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>kg/s</ToUnit>
+      <Ratio>0.001</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>lb/hr</ToUnit>
+      <Ratio>6.12395173e-7</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>lb/min</ToUnit>
+      <Ratio>3.67437104e-5</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>lb/s</ToUnit>
+      <Ratio>0.00220462262</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>ton/hr</ToUnit>
+      <Ratio>3.06197586e-10</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>tonne/hr</ToUnit>
+      <Ratio>2.77777778e-10</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>gram/s></Unit>
+      <Unit>kg/hr</Unit>
+      <Unit>kg/min</Unit>
+      <Unit>kg/s</Unit>
+      <Unit>lb/hr</Unit>
+      <Unit>lb/min</Unit>
+      <Unit>lb/s</Unit>
+      <Unit>ton/hr</Unit>
+      <Unit>tonne/hr</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Molar Energy</Name>
+    <BaseUnit>BTU/lbmole</BaseUnit>
+    <Conversion>  
+      <ToUnit>J/kgmole</ToUnit>
+      <Ratio>2326.0</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>J/mol</ToUnit>
+      <Ratio>2.3260</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>BTU/lbmole</Unit>
+      <Unit>J/kgmole</Unit>
+      <Unit>J/mol</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Molar Heat Capacity</Name>
+    <BaseUnit>BTU(lbmole R)</BaseUnit>
+    <Conversion>
+      <ToUnit>J/(kgmole K)</ToUnit>
+      <Ratio>1</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>J/(mol K)</ToUnit>
+      <Ratio>4.1868</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>kJ(kgmole K)</ToUnit>
+      <Ratio>4.1868</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>BTU(lbmole R)</Unit>
+      <Unit>J/(kgmole K)</Unit>
+      <Unit>J/(mol K)</Unit>
+      <Unit>kJ(kgmole K)</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Molar Mass</Name>
+    <BaseUnit>lb/lbmole</BaseUnit>
+    <Conversion>  
+      <ToUnit>kg/mol</ToUnit>
+      <Ratio>0.0010</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>gram/mol</ToUnit>
+      <Ratio>1</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>kg/kgmole</ToUnit>
+      <Ratio>1</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>lb/lbmole</Unit>
+      <Unit>kg/mol</Unit>
+      <Unit>gram/mol</Unit>
+      <Unit>kg/kgmole</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Molar Volume</Name>
+    <BaseUnit>ft^3/lbmole</BaseUnit>
+    <Conversion>      
+      <ToUnit>cm^3/mol</ToUnit>
+      <Ratio>62.4280</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>m^3/mol</ToUnit>
+      <Ratio>0.01</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>m^3/kgmole</ToUnit>
+      <Ratio>0.0624</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>ft^3/lbmole</Unit>
+      <Unit>cm^3/mol</Unit>
+      <Unit>m^3/mol</Unit>
+      <Unit>m^3/kgmole</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Number</Name>
+    <Units>
+      <Unit>Dec</Unit>
+      <Unit>Bin</Unit>
+      <Unit>Oct</Unit>
+      <Unit>Hex</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Permeability</Name>
+    <BaseUnit>henry/ft</BaseUnit>
+    <Conversion>
+      <ToUnit>henry/m</ToUnit>
+      <Ratio>0.3048</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>henry/ft</Unit>
+      <Unit>henry/m</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Permittivity</Name>
+    <BaseUnit>F/ft</BaseUnit>
+    <Conversion>      
+      <ToUnit>F/m</ToUnit>
+      <Ratio>0.3048</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>F/ft</Unit>
+      <Unit>F/m</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Power</Name>
+    <BaseUnit>(ft lbf)/s</BaseUnit>
+    <Conversion>  
+      <ToUnit>erg/s</ToUnit>
+      <Ratio>13558179.483294</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>hp (550 ft lbf/s)</ToUnit>
+      <Ratio>0.001818182</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>hp (boiler)</ToUnit>
+      <Ratio>0.000138215</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>hp (electric)</ToUnit>
+      <Ratio>0.00181745</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>hp (metric)</ToUnit>
+      <Ratio>0.001843399</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>hp (U.K.)</ToUnit>
+      <Ratio>0.001818182</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>hp (water)</ToUnit>
+      <Ratio>0.001817346</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>KW</ToUnit>
+      <Ratio>0.001355818</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>MW</ToUnit>
+      <Ratio>1355.817948329</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>W</ToUnit>
+      <Ratio>1.355817948</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>(ft lbf)/s</Unit>
+      <Unit>erg/s</Unit>
+      <Unit>hp (550 ft lbf/s)</Unit>
+      <Unit>hp (boiler)</Unit>
+      <Unit>hp (electric)</Unit>
+      <Unit>hp (metric)</Unit>
+      <Unit>hp (U.K.)</Unit>
+      <Unit>hp (water)</Unit>
+      <Unit>KW</Unit>
+      <Unit>MW</Unit>
+      <Unit>W</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Pressure</Name>
+    <BaseUnit>bar</BaseUnit>
+    <Conversion>  
+      <ToUnit>in Hg(32 F)</ToUnit>
+      <Ratio>29.530058647</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>kPa</ToUnit>
+      <Ratio>100</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>mm Hg</ToUnit>
+      <Ratio>750.063755419</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>Pa</ToUnit>
+      <Ratio>100000</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>psi</ToUnit>
+      <Ratio>14.503773773</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>atm</ToUnit>
+      <Ratio>0.986923267</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>bar</Unit>
+      <Unit>in Hg(32 F)</Unit>
+      <Unit>kPa</Unit>
+      <Unit>mm Hg</Unit>
+      <Unit>Pa</Unit>
+      <Unit>psi</Unit>
+      <Unit>atm</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Radiance</Name>
+    <BaseUnit>lb/(s^3 sr)</BaseUnit>
+    <Conversion>  
+      <ToUnit>w/(ft^2 sr)</ToUnit>
+      <Ratio>0.0421</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>W(m^2 sr)</ToUnit>
+      <Ratio>0.4536</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>lb/(s^3 sr)</Unit>
+      <Unit>w/(ft^2 sr)</Unit>
+      <Unit>W(m^2 sr)</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Specific Charge</Name>
+    <BaseUnit>C/kg</BaseUnit>
+    <Conversion>      
+      <ToUnit>mR</ToUnit>
+      <Ratio>3875968.9922</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>R</ToUnit>
+      <Ratio>3875.9690</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>C/kg</Unit>
+      <Unit>mR</Unit>
+      <Unit>R</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Specific Energy</Name>
+    <BaseUnit>BTU/lb</BaseUnit>
+    <Conversion>  
+      <ToUnit>cal/g</ToUnit>
+      <Ratio>0.5556</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>Cy</ToUnit>
+      <Ratio>2326</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>J/kg</ToUnit>
+      <Ratio>2326</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>kJ/kg</ToUnit>
+      <Ratio>2.3260</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>rad[dose]</ToUnit>
+      <Ratio>232600</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>rem</ToUnit>
+      <Ratio>232600</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>Sv</ToUnit>
+      <Ratio>2326</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>BTU/lb</Unit>
+      <Unit>cal/g</Unit>
+      <Unit>Cy</Unit>
+      <Unit>J/kg</Unit>
+      <Unit>kJ/kg</Unit>
+      <Unit>rad[dose]</Unit>
+      <Unit>rem</Unit>
+      <Unit>Sv</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Specific Heat Capacity</Name>
+    <BaseUnit>BTU(lb R)</BaseUnit>
+    <Conversion>
+      <ToUnit>cal(g K)</ToUnit>
+      <Ratio>63544.3601</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>J(kg K)</ToUnit>
+      <Ratio>265.869603</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>kJ(kg K)</ToUnit>
+      <Ratio>0.265869603</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>BTU(lb R)</Unit>
+      <Unit>cal(g K)</Unit>
+      <Unit>J(kg K)</Unit>
+      <Unit>kJ(kg K)</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Specific Volume</Name>
+    <BaseUnit>cm^3/g</BaseUnit>
+    <Conversion> 
+      <ToUnit>ft^3/lb</ToUnit>
+      <Ratio>7.78555131e-8</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>ft^3/slug</ToUnit>
+      <Ratio>2.41982332e-9</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>gal/lb</ToUnit>
+      <Ratio>5.8239968e-7</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>in^3/lb</ToUnit>
+      <Ratio>0.000134534327</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>in^3/oz</ToUnit>
+      <Ratio>0.00215254923</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>m^3/kg</ToUnit>
+      <Ratio>1.0e-9</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>yd^3/lb</ToUnit>
+      <Ratio>2.88353752e-9</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>cm^3/g</Unit>
+      <Unit>ft^3/lb</Unit>
+      <Unit>ft^3/slug</Unit>
+      <Unit>gal/lb</Unit>
+      <Unit>in^3/lb</Unit>
+      <Unit>in^3/oz</Unit>
+      <Unit>m^3/kg</Unit>
+      <Unit>yd^3/lb</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Speed</Name>
+    <BaseUnit>cm/s</BaseUnit>
+    <Conversion>  
+      <ToUnit>ft/min</ToUnit>
+      <Ratio>0.000546806649</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>ft/s</ToUnit>
+      <Ratio>0.032808399</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>in/s</ToUnit>
+      <Ratio>0.393700787</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>km/hr</ToUnit>
+      <Ratio>2.77777778e-9</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>m/s</ToUnit>
+      <Ratio>0.01</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>mi/hr</ToUnit>
+      <Ratio>1.72603109e-9</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>cm/s</Unit>
+      <Unit>ft/min</Unit>
+      <Unit>ft/s</Unit>
+      <Unit>in/s</Unit>
+      <Unit>km/hr</Unit>
+      <Unit>m/s</Unit>
+      <Unit>mi/hr</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Substance Amount</Name>
+    <BaseUnit>gmole</BaseUnit>
+    <Conversion>  
+      <ToUnit>kgmole</ToUnit>
+      <Ratio>0.0010</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>lbmole</ToUnit>
+      <Ratio>0.0022</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>mol</ToUnit>
+      <Ratio>1</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>gmole</Unit>
+      <Unit>kgmole</Unit>
+      <Unit>lbmole</Unit>
+      <Unit>mol</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Surface Tension</Name>
+    <BaseUnit>N/m</BaseUnit>
+    <Conversion>  
+      <ToUnit>lbf/in</ToUnit>
+      <Ratio>0.005710147</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>lbf/in</Unit>
+      <Unit>N/m</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Time</Name>
+    <BaseUnit>day</BaseUnit>
+    <Conversion>     
+      <ToUnit>hr</ToUnit>
+      <Ratio>24</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>min</ToUnit>
+      <Ratio>1440</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>s</ToUnit>
+      <Ratio>86400</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>yr</ToUnit>
+      <Ratio>0.00273790926</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>day</Unit>
+      <Unit>hr</Unit>
+      <Unit>min</Unit>
+      <Unit>s</Unit>
+      <Unit>yr</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Temperature</Name>
+    <Units>
+      <Unit>C</Unit>
+      <Unit>F</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Thermal Conductivity</Name>
+    <BaseUnit>BTU/(hr ft R)</BaseUnit>
+    <Conversion>  
+      <ToUnit>lbf/(s R)</ToUnit>
+      <Ratio>0.2162</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>W/(m K)</ToUnit>
+      <Ratio>1.7307</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>BTU/(hr ft R)</Unit>
+      <Unit>lbf/(s R)</Unit>
+      <Unit>W/(m K)</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Viscosity (Dynamic)</Name>
+    <BaseUnit>(lbf s)ft^2</BaseUnit>
+    <Conversion>  
+      <ToUnit>centipose</ToUnit>
+      <Ratio>47880.258980222</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>Pa s</ToUnit>
+      <Ratio>47.88025898</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>poise</ToUnit>
+      <Ratio>478.802589802</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>slug/(ft s)</ToUnit>
+      <Ratio>1</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>(lbf s)ft^2</Unit>
+      <Unit>centipose</Unit>
+      <Unit>Pa s</Unit>
+      <Unit>poise</Unit>
+      <Unit>slug/(ft s)</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Viscosity (Kinematics)</Name>
+    <BaseUnit>centistokes</BaseUnit>
+    <Conversion>  
+      <ToUnit>ft^2/s</ToUnit>
+      <Ratio>0.000010764</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>stokes</ToUnit>
+      <Ratio>0.01</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>centistokes</Unit>
+      <Unit>ft^2/s</Unit>
+      <Unit>stokes</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Volume</Name>
+    <BaseUnit>cup</BaseUnit>
+    <Conversion>  
+      <ToUnit>bushel</ToUnit>
+      <Ratio>0.00671380442</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>cm^3</ToUnit>
+      <Ratio>236.588237</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>cord</ToUnit>
+      <Ratio>6.5273709e-5</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>fl oz</ToUnit>
+      <Ratio>8</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>ft^3</ToUnit>
+      <Ratio>0.00835503476</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>gal US</ToUnit>
+      <Ratio>0.0625</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>in^3</ToUnit>
+      <Ratio>14.4375001</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>liter</ToUnit>
+      <Ratio>0.236588237</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>m^3</ToUnit>
+      <Ratio>0.000236588238</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>ml</ToUnit>
+      <Ratio>236.588238</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>peck</ToUnit>
+      <Ratio>0.0268552177</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>pint</ToUnit>
+      <Ratio>0.5</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>quart</ToUnit>
+      <Ratio>0.25</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>tbls</ToUnit>
+      <Ratio>16</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>tsp</ToUnit>
+      <Ratio>48</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>yd^3</ToUnit>
+      <Ratio>0.000309445732</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>cup</Unit>
+      <Unit>bushel</Unit>      
+      <Unit>cm^3</Unit>
+      <Unit>cord</Unit>
+      <Unit>fl oz</Unit>
+      <Unit>ft^3</Unit>
+      <Unit>gal US</Unit>
+      <Unit>in^3</Unit>
+      <Unit>liter</Unit>
+      <Unit>m^3</Unit>
+      <Unit>ml</Unit>
+      <Unit>peck</Unit>
+      <Unit>pint</Unit>
+      <Unit>quart</Unit>
+      <Unit>tbls</Unit>
+      <Unit>tsp</Unit>
+      <Unit>yd^3</Unit>
+    </Units>
+  </Quantity>
+  
+  <Quantity>
+    <Name>Volume Rate</Name>
+    <BaseUnit>ft^3/hr</BaseUnit>
+    <Conversion>      
+      <ToUnit>ft^3/min</ToUnit>
+      <Ratio>60</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>ft^3/s</ToUnit>
+      <Ratio>3600</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>gal/hr</ToUnit>
+      <Ratio>7.48051945</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>gal/min</ToUnit>
+      <Ratio>448.831167</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>in^3/min</ToUnit>
+      <Ratio>103680</Ratio>
+    </Conversion>
+    <Conversion>      
+      <ToUnit>m^3/s</ToUnit>
+      <Ratio>101.940648</Ratio>
+    </Conversion>
+    <Conversion>
+      <ToUnit>yd^3/min</ToUnit>
+      <Ratio>2.22222222</Ratio>
+    </Conversion>
+    <Units>
+      <Unit>ft^3/hr</Unit>
+      <Unit>ft^3/min</Unit>
+      <Unit>ft^3/s</Unit>
+      <Unit>gal/hr</Unit>
+      <Unit>gal/min</Unit>
+      <Unit>in^3/min</Unit>
+      <Unit>m^3/s</Unit>
+      <Unit>yd^3/min</Unit>
+    </Units>
+  </Quantity>
+  
+</Quantities>

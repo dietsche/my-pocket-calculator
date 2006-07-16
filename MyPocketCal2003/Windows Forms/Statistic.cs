@@ -5,14 +5,18 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace MyPocketCal2003
 {
     public partial class Statistic : BaseFormLibrary.BasicButtonForm
     {
+        private Hashtable dataMap;
+
         public Statistic()
         {
             InitializeComponent();
+            dataMap = new Hashtable();
         }
         //zero pressed on the calculator
         private void zeroButton_Click(object sender, EventArgs e)
@@ -103,6 +107,160 @@ namespace MyPocketCal2003
         private void rightBracketButton_Click(object sender, EventArgs e)
         {
             this.inputBox.Text += Constants.LEFT_BRACKET;
+        }
+
+        private void addValueButton_Click(object sender, EventArgs e)
+        {
+            inputBox.Text.Trim();
+            if (inputBox.Text.Length == 0)
+            {
+                MessageBox.Show("Write a value to add");
+                inputBox.Focus();
+                return;
+            }
+            valuesListBox.Items.Add(inputBox.Text);
+            inputBox.Text = "";   
+            
+            //# of values 
+            lbNoOfValues.Text = "Count: " + Convert.ToString(valuesListBox.Items.Count);
+        }
+
+        private void newDataButton_Click(object sender, EventArgs e)
+        {
+            valuesListBox.Items.Clear(); //clear the values listbox
+            txtDataName.Text = ""; //clear the data name textbox
+            //# of values 
+            lbNoOfValues.Text = "Count: " + Convert.ToString(valuesListBox.Items.Count);
+        }
+
+        private void deleteValueButton_Click(object sender, EventArgs e)
+        {
+            valuesListBox.Items.Remove(valuesListBox.SelectedItem);
+            //# of values 
+            lbNoOfValues.Text = "Count: " + Convert.ToString(valuesListBox.Items.Count);
+        }
+
+        private void saveDataButton_Click(object sender, EventArgs e)
+        {
+            txtDataName.Text.Trim(); //remove white spaces
+            if (txtDataName.Text.Length == 0)
+            {
+                MessageBox.Show("Enter a name for the data");
+                txtDataName.Focus(); //set data name text box focus
+                return;
+            }
+            if (valuesListBox.Items.Count == 0)
+            {
+                MessageBox.Show("Enter values to store as Data");
+                inputBox.Focus(); //set inputbox focus
+                return;
+            }
+            
+            //if data name already present
+            if (dataMap.Contains(txtDataName.Text))
+            {
+                //yesno dialog box
+                DialogResult result = MessageBox.Show("This name is already present in the list. Yes to overwrite, No to choose another name", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                
+                if (result == DialogResult.Yes) //yes overwrite
+                {
+                    ArrayList dataOver = new ArrayList();
+                    dataOver.AddRange(valuesListBox.Items); //convert to ArrayList
+                    dataMap[txtDataName.Text] = dataOver; //set the existing key to new value 
+                    //clear valueslist box
+                    valuesListBox.Items.Clear();
+                    //clear dataname listbox
+                    txtDataName.Text = "";
+                    return;
+                }
+                else if (result == DialogResult.No) //no choose another name
+                {
+                    txtDataName.Focus(); //set data name text box focus
+                    return;
+                }
+            }
+
+            ArrayList data = new ArrayList();
+            data.AddRange(valuesListBox.Items); //convert to ArrayList
+
+            dataMap.Add(txtDataName.Text, data); //add dataname & data to hashtable as Arraylist
+            dataListBox.Items.Add(txtDataName.Text); //add dataname to listbox
+
+            //clear valueslist box
+            valuesListBox.Items.Clear();
+            //clear dataname listbox
+            txtDataName.Text = "";
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            dataMap.Remove(dataListBox.SelectedItem); //remove from hashtable
+            dataListBox.Items.Remove(dataListBox.SelectedItem); //remove from listbox
+        }
+        private void independentComboBox_GotFocus_1(object sender, EventArgs e)
+        {
+            dataComboBox.Items.Clear(); //clear any last entries
+            foreach (String item in dataListBox.Items)
+            {
+                dataComboBox.Items.Add(item); //add each data name
+            }
+        }
+        private void dependentComboBox_GotFocus(object sender, EventArgs e)
+        {
+            dependentComboBox.Items.Clear(); //clear any last entries
+            foreach (String item in dataListBox.Items)
+            {
+                dependentComboBox.Items.Add(item); //add each data name
+            }
+        }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            listBoxAnswers.Items.Clear(); //clear any previous entries
+            tabControl1.SelectedIndex = 3; //display the answers tabpage
+            
+            if (dataComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Choose a data from dropdown box");
+                tabControl1.SelectedIndex = 2; //display the basic tabpage
+                dataComboBox.Focus();
+                return;
+            }
+
+            //get data from hashtable
+            ArrayList data = (ArrayList)this.dataMap[dataComboBox.SelectedItem.ToString()];
+            
+            StatsBasic statsAnswers = new StatsBasic(data); //populate the object with the data
+
+            if (checkBoxMin.Checked) //minimum value
+            {
+                listBoxAnswers.Items.Add("Min = " + statsAnswers.getMin());
+            }
+            if (checkBoxMax.Checked) //maximum value
+            {
+                listBoxAnswers.Items.Add("Max = " + statsAnswers.getMax());
+            }
+            if (checkBoxMedian.Checked) //Median
+            {
+                listBoxAnswers.Items.Add("Median = " + statsAnswers.getMedian());
+            }
+            if (checkBoxAMean.Checked) //arithematic mean
+            {
+                listBoxAnswers.Items.Add("A. Mean = " + statsAnswers.getAM());
+            }
+        }
+        private void dataListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //set the data name
+            txtDataName.Text = dataListBox.SelectedItem.ToString();
+
+            //get values arraylist against specified data
+            ArrayList values = (ArrayList)dataMap[dataListBox.SelectedItem.ToString()];
+            valuesListBox.Items.Clear(); //clear any previous entries
+            foreach (String value in values)
+            {
+                valuesListBox.Items.Add(value); //add each value to listbox
+            }
         }
     }
 }

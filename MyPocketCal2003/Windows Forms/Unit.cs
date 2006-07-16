@@ -103,7 +103,10 @@ namespace MyPocketCal2003
             StreamReader strmReader = new StreamReader(thisAssembly.GetManifestResourceStream("MyPocketCal2003.QuantitiesUnits.xml"));
              
             String strXML = strmReader.ReadToEnd();
+       
             this.docXMLFile.LoadXml(strXML); //loading the xml file in the XmlDocument object
+
+            strmReader.Close();
 
             this.populateQuantities(); //load quantities name in the listbox
         }
@@ -174,7 +177,7 @@ namespace MyPocketCal2003
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-            AddQuantity addQuantity = new AddQuantity(this.docXMLFile);
+            AddDeleteQuantity addQuantity = new AddDeleteQuantity(this.docXMLFile, this.quantitiesListBox.Items);
             addQuantity.Show();
         }
     }

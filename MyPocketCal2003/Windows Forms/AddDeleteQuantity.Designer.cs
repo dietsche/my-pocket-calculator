@@ -1,6 +1,6 @@
 namespace MyPocketCal2003
 {
-    partial class AddQuantity
+    partial class AddDeleteQuantity
     {
         /// <summary>
         /// Required designer variable.
@@ -32,20 +32,20 @@ namespace MyPocketCal2003
             this.addUnitButton = new System.Windows.Forms.Button();
             this.saveQuantityButton = new System.Windows.Forms.Button();
             this.unitRatioTextBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.baseUnitLabel = new System.Windows.Forms.Label();
             this.unitTextBox = new System.Windows.Forms.TextBox();
             this.unitsListBox = new System.Windows.Forms.ListBox();
             this.baseUnitTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.quantityNameTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.oneLabel = new System.Windows.Forms.Label();
             this.deleteQuantityComboBox = new System.Windows.Forms.ComboBox();
             this.deleteQuantityButton = new System.Windows.Forms.Button();
             this.registerHelpButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.deleteUnitButton = new System.Windows.Forms.Button();
+            this.ratioLabel = new System.Windows.Forms.Label();
+            this.unitLabel = new System.Windows.Forms.Label();
             this.basicButtonsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,30 +160,29 @@ namespace MyPocketCal2003
             this.saveQuantityButton.TabIndex = 54;
             this.saveQuantityButton.Text = "Save Quantity";
             this.saveQuantityButton.Visible = false;
+            this.saveQuantityButton.Click += new System.EventHandler(this.saveQuantityButton_Click);
             // 
             // unitRatioTextBox
             // 
             this.unitRatioTextBox.Location = new System.Drawing.Point(72, 114);
             this.unitRatioTextBox.Name = "unitRatioTextBox";
-            this.unitRatioTextBox.ReadOnly = true;
             this.unitRatioTextBox.Size = new System.Drawing.Size(75, 21);
             this.unitRatioTextBox.TabIndex = 53;
             this.unitRatioTextBox.Visible = false;
             // 
-            // label6
+            // baseUnitLabel
             // 
-            this.label6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(82, 77);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 20);
-            this.label6.Text = "Base Unit =";
-            this.label6.Visible = false;
+            this.baseUnitLabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.baseUnitLabel.Location = new System.Drawing.Point(82, 77);
+            this.baseUnitLabel.Name = "baseUnitLabel";
+            this.baseUnitLabel.Size = new System.Drawing.Size(82, 20);
+            this.baseUnitLabel.Text = "Base Unit =";
+            this.baseUnitLabel.Visible = false;
             // 
             // unitTextBox
             // 
             this.unitTextBox.Location = new System.Drawing.Point(149, 114);
             this.unitTextBox.Name = "unitTextBox";
-            this.unitTextBox.ReadOnly = true;
             this.unitTextBox.Size = new System.Drawing.Size(88, 21);
             this.unitTextBox.TabIndex = 52;
             this.unitTextBox.Visible = false;
@@ -226,14 +225,14 @@ namespace MyPocketCal2003
             this.quantityNameTextBox.Size = new System.Drawing.Size(128, 21);
             this.quantityNameTextBox.TabIndex = 49;
             // 
-            // label4
+            // oneLabel
             // 
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(72, 77);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(9, 16);
-            this.label4.Text = "1";
-            this.label4.Visible = false;
+            this.oneLabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.oneLabel.Location = new System.Drawing.Point(72, 77);
+            this.oneLabel.Name = "oneLabel";
+            this.oneLabel.Size = new System.Drawing.Size(9, 16);
+            this.oneLabel.Text = "1";
+            this.oneLabel.Visible = false;
             // 
             // deleteQuantityComboBox
             // 
@@ -259,43 +258,42 @@ namespace MyPocketCal2003
             this.registerHelpButton.Text = "?";
             this.registerHelpButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button1
+            // deleteUnitButton
             // 
-            this.button1.Location = new System.Drawing.Point(3, 137);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(58, 20);
-            this.button1.TabIndex = 78;
-            this.button1.Text = "Delete";
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.deleteUnitButton.Location = new System.Drawing.Point(3, 137);
+            this.deleteUnitButton.Name = "deleteUnitButton";
+            this.deleteUnitButton.Size = new System.Drawing.Size(58, 20);
+            this.deleteUnitButton.TabIndex = 78;
+            this.deleteUnitButton.Text = "Delete";
+            this.deleteUnitButton.Visible = false;
+            this.deleteUnitButton.Click += new System.EventHandler(this.deleteUnitButton_Click);
             // 
-            // label3
+            // ratioLabel
             // 
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(72, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 20);
-            this.label3.Text = "Ratio:";
-            this.label3.Visible = false;
+            this.ratioLabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.ratioLabel.Location = new System.Drawing.Point(72, 93);
+            this.ratioLabel.Name = "ratioLabel";
+            this.ratioLabel.Size = new System.Drawing.Size(42, 20);
+            this.ratioLabel.Text = "Ratio:";
+            this.ratioLabel.Visible = false;
             // 
-            // label5
+            // unitLabel
             // 
-            this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(149, 93);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 20);
-            this.label5.Text = "Unit:";
-            this.label5.Visible = false;
-            this.label5.ParentChanged += new System.EventHandler(this.label5_ParentChanged);
+            this.unitLabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.unitLabel.Location = new System.Drawing.Point(149, 93);
+            this.unitLabel.Name = "unitLabel";
+            this.unitLabel.Size = new System.Drawing.Size(42, 20);
+            this.unitLabel.Text = "Unit:";
+            this.unitLabel.Visible = false;
             // 
             // AddQuantity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(240, 294);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.unitLabel);
+            this.Controls.Add(this.ratioLabel);
+            this.Controls.Add(this.deleteUnitButton);
             this.Controls.Add(this.deleteQuantityButton);
             this.Controls.Add(this.registerHelpButton);
             this.Controls.Add(this.deleteQuantityComboBox);
@@ -303,24 +301,24 @@ namespace MyPocketCal2003
             this.Controls.Add(this.saveQuantityButton);
             this.Controls.Add(this.addUnitButton);
             this.Controls.Add(this.unitRatioTextBox);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.baseUnitLabel);
             this.Controls.Add(this.unitTextBox);
             this.Controls.Add(this.unitsListBox);
             this.Controls.Add(this.baseUnitTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.quantityNameTextBox);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.oneLabel);
             this.Name = "AddQuantity";
             this.Text = "AddDeleteQuantity";
-            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.oneLabel, 0);
             this.Controls.SetChildIndex(this.quantityNameTextBox, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.baseUnitTextBox, 0);
             this.Controls.SetChildIndex(this.unitsListBox, 0);
             this.Controls.SetChildIndex(this.unitTextBox, 0);
-            this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.baseUnitLabel, 0);
             this.Controls.SetChildIndex(this.unitRatioTextBox, 0);
             this.Controls.SetChildIndex(this.addUnitButton, 0);
             this.Controls.SetChildIndex(this.saveQuantityButton, 0);
@@ -329,9 +327,9 @@ namespace MyPocketCal2003
             this.Controls.SetChildIndex(this.registerHelpButton, 0);
             this.Controls.SetChildIndex(this.deleteQuantityButton, 0);
             this.Controls.SetChildIndex(this.basicButtonsPanel, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.deleteUnitButton, 0);
+            this.Controls.SetChildIndex(this.ratioLabel, 0);
+            this.Controls.SetChildIndex(this.unitLabel, 0);
             this.basicButtonsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -343,20 +341,20 @@ namespace MyPocketCal2003
         private System.Windows.Forms.Button addUnitButton;
         private System.Windows.Forms.Button saveQuantityButton;
         private System.Windows.Forms.TextBox unitRatioTextBox;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label baseUnitLabel;
         private System.Windows.Forms.TextBox unitTextBox;
         private System.Windows.Forms.ListBox unitsListBox;
         private System.Windows.Forms.TextBox baseUnitTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox quantityNameTextBox;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label oneLabel;
         private System.Windows.Forms.ComboBox deleteQuantityComboBox;
         private System.Windows.Forms.Button deleteQuantityButton;
         private System.Windows.Forms.Button registerHelpButton;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button deleteUnitButton;
+        private System.Windows.Forms.Label ratioLabel;
+        private System.Windows.Forms.Label unitLabel;
 
 
 

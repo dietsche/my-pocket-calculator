@@ -59,6 +59,8 @@
     <Compile Include="Class Files\CurrencyConversion.cs" />
     <Compile Include="Class Files\NumberConversion.cs" />
     <Compile Include="Class Files\TemperatureConversion.cs" />
+    <Compile Include="Class Files\QuantityNode.cs" />
+    <Compile Include="Class Files\StatsBasic.cs" />
     <Compile Include="Windows Forms\AddDeleteQuantity.cs">
       <SubType>Form</SubType>
     </Compile>

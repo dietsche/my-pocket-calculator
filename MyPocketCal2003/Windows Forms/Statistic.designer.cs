@@ -29,36 +29,42 @@ namespace MyPocketCal2003
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Statistic));
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnCalculateBasic = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.Data = new System.Windows.Forms.TabPage();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.DataTabPage = new System.Windows.Forms.TabPage();
+            this.txtDataName = new System.Windows.Forms.TextBox();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.addValueButton = new System.Windows.Forms.Button();
+            this.newDataButton = new System.Windows.Forms.Button();
+            this.valuesListBox = new System.Windows.Forms.ListBox();
+            this.saveDataButton = new System.Windows.Forms.Button();
             this.inputBox = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.Calculations = new System.Windows.Forms.TabPage();
+            this.deleteValueButton = new System.Windows.Forms.Button();
+            this.lbNoOfValues = new System.Windows.Forms.Label();
+            this.basicTabPage = new System.Windows.Forms.TabPage();
+            this.dataComboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.checkBoxSD = new System.Windows.Forms.CheckBox();
+            this.checkBoxVar = new System.Windows.Forms.CheckBox();
+            this.checkBoxHMean = new System.Windows.Forms.CheckBox();
+            this.checkBoxAMean = new System.Windows.Forms.CheckBox();
+            this.checkBoxGMean = new System.Windows.Forms.CheckBox();
+            this.checkBoxMedian = new System.Windows.Forms.CheckBox();
+            this.checkBoxMode = new System.Windows.Forms.CheckBox();
+            this.checkBoxRange = new System.Windows.Forms.CheckBox();
+            this.checkBoxMax = new System.Windows.Forms.CheckBox();
+            this.checkBoxMin = new System.Windows.Forms.CheckBox();
+            this.advanceTabPage = new System.Windows.Forms.TabPage();
+            this.btnCalculateAdvance = new System.Windows.Forms.Button();
+            this.dependentComboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.independentComboBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.checkBox13 = new System.Windows.Forms.CheckBox();
             this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.answersTabPage = new System.Windows.Forms.TabPage();
+            this.listBoxAnswers = new System.Windows.Forms.ListBox();
             this.pictureBox93 = new System.Windows.Forms.PictureBox();
             this.pictureBox94 = new System.Windows.Forms.PictureBox();
             this.pictureBox95 = new System.Windows.Forms.PictureBox();
@@ -79,10 +85,13 @@ namespace MyPocketCal2003
             this.pictureBox110 = new System.Windows.Forms.PictureBox();
             this.pictureBox111 = new System.Windows.Forms.PictureBox();
             this.pictureBox112 = new System.Windows.Forms.PictureBox();
+            this.dataListBox = new System.Windows.Forms.ListBox();
             this.basicButtonsPanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.Data.SuspendLayout();
-            this.Calculations.SuspendLayout();
+            this.DataTabPage.SuspendLayout();
+            this.basicTabPage.SuspendLayout();
+            this.advanceTabPage.SuspendLayout();
+            this.answersTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // basicButtonsPanel
@@ -187,283 +196,327 @@ namespace MyPocketCal2003
             this.zeroButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.zeroButton.Click += new System.EventHandler(this.zeroButton_Click);
             // 
-            // button3
+            // btnCalculateBasic
             // 
-            this.button3.Location = new System.Drawing.Point(137, 190);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 22);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "Calculate";
+            this.btnCalculateBasic.Location = new System.Drawing.Point(132, 188);
+            this.btnCalculateBasic.Name = "btnCalculateBasic";
+            this.btnCalculateBasic.Size = new System.Drawing.Size(100, 22);
+            this.btnCalculateBasic.TabIndex = 32;
+            this.btnCalculateBasic.Text = "Calculate";
+            this.btnCalculateBasic.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.Data);
-            this.tabControl1.Controls.Add(this.Calculations);
+            this.tabControl1.Controls.Add(this.DataTabPage);
+            this.tabControl1.Controls.Add(this.basicTabPage);
+            this.tabControl1.Controls.Add(this.advanceTabPage);
+            this.tabControl1.Controls.Add(this.answersTabPage);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(240, 241);
             this.tabControl1.TabIndex = 2;
             // 
-            // Data
+            // DataTabPage
             // 
-            this.Data.Controls.Add(this.button6);
-            this.Data.Controls.Add(this.button1);
-            this.Data.Controls.Add(this.button5);
-            this.Data.Controls.Add(this.listBox2);
-            this.Data.Controls.Add(this.button4);
-            this.Data.Controls.Add(this.label2);
-            this.Data.Controls.Add(this.inputBox);
-            this.Data.Controls.Add(this.button2);
-            this.Data.Controls.Add(this.listBox1);
-            this.Data.Location = new System.Drawing.Point(0, 0);
-            this.Data.Name = "Data";
-            this.Data.Size = new System.Drawing.Size(240, 218);
-            this.Data.Text = "Data";
+            this.DataTabPage.Controls.Add(this.txtDataName);
+            this.DataTabPage.Controls.Add(this.deleteButton);
+            this.DataTabPage.Controls.Add(this.addValueButton);
+            this.DataTabPage.Controls.Add(this.newDataButton);
+            this.DataTabPage.Controls.Add(this.valuesListBox);
+            this.DataTabPage.Controls.Add(this.saveDataButton);
+            this.DataTabPage.Controls.Add(this.inputBox);
+            this.DataTabPage.Controls.Add(this.deleteValueButton);
+            this.DataTabPage.Controls.Add(this.dataListBox);
+            this.DataTabPage.Controls.Add(this.lbNoOfValues);
+            this.DataTabPage.Location = new System.Drawing.Point(0, 0);
+            this.DataTabPage.Name = "DataTabPage";
+            this.DataTabPage.Size = new System.Drawing.Size(240, 218);
+            this.DataTabPage.Text = "Data";
             // 
-            // button6
+            // txtDataName
             // 
-            this.button6.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.button6.Location = new System.Drawing.Point(184, 7);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(49, 21);
-            this.button6.TabIndex = 71;
-            this.button6.Text = "Delete";
+            this.txtDataName.Location = new System.Drawing.Point(84, 7);
+            this.txtDataName.Name = "txtDataName";
+            this.txtDataName.Size = new System.Drawing.Size(70, 21);
+            this.txtDataName.TabIndex = 72;
             // 
-            // button1
+            // deleteButton
             // 
-            this.button1.Location = new System.Drawing.Point(49, 182);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 21);
-            this.button1.TabIndex = 69;
-            this.button1.Text = "Add";
+            this.deleteButton.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.deleteButton.Location = new System.Drawing.Point(182, 150);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(49, 21);
+            this.deleteButton.TabIndex = 71;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
-            // button5
+            // addValueButton
             // 
-            this.button5.Location = new System.Drawing.Point(7, 7);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(49, 21);
-            this.button5.TabIndex = 67;
-            this.button5.Text = "New";
+            this.addValueButton.Location = new System.Drawing.Point(84, 182);
+            this.addValueButton.Name = "addValueButton";
+            this.addValueButton.Size = new System.Drawing.Size(71, 21);
+            this.addValueButton.TabIndex = 69;
+            this.addValueButton.Text = "Add Value";
+            this.addValueButton.Click += new System.EventHandler(this.addValueButton_Click);
             // 
-            // listBox2
+            // newDataButton
             // 
-            this.listBox2.Items.Add("A =");
-            this.listBox2.Items.Add("1. a");
-            this.listBox2.Items.Add("2. b");
-            this.listBox2.Items.Add("3. c");
-            this.listBox2.Items.Add("4. d");
-            this.listBox2.Location = new System.Drawing.Point(7, 30);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(172, 114);
-            this.listBox2.TabIndex = 66;
+            this.newDataButton.Location = new System.Drawing.Point(7, 7);
+            this.newDataButton.Name = "newDataButton";
+            this.newDataButton.Size = new System.Drawing.Size(71, 21);
+            this.newDataButton.TabIndex = 67;
+            this.newDataButton.Text = "New Data";
+            this.newDataButton.Click += new System.EventHandler(this.newDataButton_Click);
             // 
-            // button4
+            // valuesListBox
             // 
-            this.button4.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.button4.Location = new System.Drawing.Point(62, 7);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(49, 21);
-            this.button4.TabIndex = 65;
-            this.button4.Text = "Save";
+            this.valuesListBox.Location = new System.Drawing.Point(7, 30);
+            this.valuesListBox.Name = "valuesListBox";
+            this.valuesListBox.Size = new System.Drawing.Size(172, 114);
+            this.valuesListBox.TabIndex = 66;
             // 
-            // label2
+            // saveDataButton
             // 
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(4, 150);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 14);
-            this.label2.Text = "Value:";
+            this.saveDataButton.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.saveDataButton.Location = new System.Drawing.Point(160, 7);
+            this.saveDataButton.Name = "saveDataButton";
+            this.saveDataButton.Size = new System.Drawing.Size(72, 21);
+            this.saveDataButton.TabIndex = 65;
+            this.saveDataButton.Text = "Save Data";
+            this.saveDataButton.Click += new System.EventHandler(this.saveDataButton_Click);
             // 
             // inputBox
             // 
-            this.inputBox.Location = new System.Drawing.Point(49, 150);
+            this.inputBox.Location = new System.Drawing.Point(7, 182);
             this.inputBox.Name = "inputBox";
             this.inputBox.Size = new System.Drawing.Size(71, 21);
             this.inputBox.TabIndex = 64;
             // 
-            // button2
+            // deleteValueButton
             // 
-            this.button2.Location = new System.Drawing.Point(138, 182);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(71, 21);
-            this.button2.TabIndex = 63;
-            this.button2.Text = "Delete";
+            this.deleteValueButton.Location = new System.Drawing.Point(7, 150);
+            this.deleteValueButton.Name = "deleteValueButton";
+            this.deleteValueButton.Size = new System.Drawing.Size(86, 21);
+            this.deleteValueButton.TabIndex = 63;
+            this.deleteValueButton.Text = "Delete Value";
+            this.deleteValueButton.Click += new System.EventHandler(this.deleteValueButton_Click);
             // 
-            // listBox1
+            // lbNoOfValues
             // 
-            this.listBox1.Items.Add("Data A");
-            this.listBox1.Items.Add("Data B");
-            this.listBox1.Items.Add("Data C");
-            this.listBox1.Location = new System.Drawing.Point(184, 30);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(49, 114);
-            this.listBox1.TabIndex = 62;
+            this.lbNoOfValues.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.lbNoOfValues.Location = new System.Drawing.Point(95, 151);
+            this.lbNoOfValues.Name = "lbNoOfValues";
+            this.lbNoOfValues.Size = new System.Drawing.Size(84, 20);
+            this.lbNoOfValues.Text = "Count: 0";
             // 
-            // Calculations
+            // basicTabPage
             // 
-            this.Calculations.Controls.Add(this.checkBox13);
-            this.Calculations.Controls.Add(this.checkBox12);
-            this.Calculations.Controls.Add(this.checkBox11);
-            this.Calculations.Controls.Add(this.comboBox2);
-            this.Calculations.Controls.Add(this.label3);
-            this.Calculations.Controls.Add(this.comboBox1);
-            this.Calculations.Controls.Add(this.button3);
-            this.Calculations.Controls.Add(this.label1);
-            this.Calculations.Controls.Add(this.checkBox10);
-            this.Calculations.Controls.Add(this.checkBox9);
-            this.Calculations.Controls.Add(this.checkBox8);
-            this.Calculations.Controls.Add(this.checkBox7);
-            this.Calculations.Controls.Add(this.checkBox6);
-            this.Calculations.Controls.Add(this.checkBox5);
-            this.Calculations.Controls.Add(this.checkBox4);
-            this.Calculations.Controls.Add(this.checkBox3);
-            this.Calculations.Controls.Add(this.checkBox2);
-            this.Calculations.Controls.Add(this.checkBox1);
-            this.Calculations.Location = new System.Drawing.Point(0, 0);
-            this.Calculations.Name = "Calculations";
-            this.Calculations.Size = new System.Drawing.Size(240, 218);
-            this.Calculations.Text = "Calculations";
+            this.basicTabPage.Controls.Add(this.dataComboBox);
+            this.basicTabPage.Controls.Add(this.btnCalculateBasic);
+            this.basicTabPage.Controls.Add(this.label1);
+            this.basicTabPage.Controls.Add(this.checkBoxSD);
+            this.basicTabPage.Controls.Add(this.checkBoxVar);
+            this.basicTabPage.Controls.Add(this.checkBoxHMean);
+            this.basicTabPage.Controls.Add(this.checkBoxAMean);
+            this.basicTabPage.Controls.Add(this.checkBoxGMean);
+            this.basicTabPage.Controls.Add(this.checkBoxMedian);
+            this.basicTabPage.Controls.Add(this.checkBoxMode);
+            this.basicTabPage.Controls.Add(this.checkBoxRange);
+            this.basicTabPage.Controls.Add(this.checkBoxMax);
+            this.basicTabPage.Controls.Add(this.checkBoxMin);
+            this.basicTabPage.Location = new System.Drawing.Point(0, 0);
+            this.basicTabPage.Name = "basicTabPage";
+            this.basicTabPage.Size = new System.Drawing.Size(232, 215);
+            this.basicTabPage.Text = "Basic";
             // 
-            // checkBox13
+            // dataComboBox
             // 
-            this.checkBox13.Location = new System.Drawing.Point(8, 146);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(180, 15);
-            this.checkBox13.TabIndex = 79;
-            this.checkBox13.Text = "Coefficient of Determination";
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.Location = new System.Drawing.Point(8, 125);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(151, 15);
-            this.checkBox12.TabIndex = 78;
-            this.checkBox12.Text = "Correlation Coefficient";
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.Location = new System.Drawing.Point(8, 167);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(180, 15);
-            this.checkBox11.TabIndex = 77;
-            this.checkBox11.Text = "Linear Regression Model";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Items.Add("Data A");
-            this.comboBox2.Items.Add("Data B");
-            this.comboBox2.Items.Add("Data C");
-            this.comboBox2.Location = new System.Drawing.Point(144, 31);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(88, 22);
-            this.comboBox2.TabIndex = 75;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(7, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 18);
-            this.label3.Text = "Dependant Data:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Items.Add("Data A");
-            this.comboBox1.Items.Add("Data B");
-            this.comboBox1.Items.Add("Data C");
-            this.comboBox1.Location = new System.Drawing.Point(144, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(88, 22);
-            this.comboBox1.TabIndex = 73;
+            this.dataComboBox.Location = new System.Drawing.Point(66, 7);
+            this.dataComboBox.Name = "dataComboBox";
+            this.dataComboBox.Size = new System.Drawing.Size(88, 22);
+            this.dataComboBox.TabIndex = 73;
+            this.dataComboBox.GotFocus += new System.EventHandler(this.independentComboBox_GotFocus_1);
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(7, 4);
+            this.label1.Location = new System.Drawing.Point(7, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 18);
-            this.label1.Text = "Independent Data:";
+            this.label1.Size = new System.Drawing.Size(62, 18);
+            this.label1.Text = "Data:";
             // 
-            // checkBox10
+            // checkBoxSD
             // 
-            this.checkBox10.Location = new System.Drawing.Point(66, 104);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(43, 15);
-            this.checkBox10.TabIndex = 71;
-            this.checkBox10.Text = "SD";
+            this.checkBoxSD.Location = new System.Drawing.Point(89, 104);
+            this.checkBoxSD.Name = "checkBoxSD";
+            this.checkBoxSD.Size = new System.Drawing.Size(43, 21);
+            this.checkBoxSD.TabIndex = 71;
+            this.checkBoxSD.Text = "SD";
             // 
-            // checkBox9
+            // checkBoxVar
             // 
-            this.checkBox9.Location = new System.Drawing.Point(8, 104);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(46, 15);
-            this.checkBox9.TabIndex = 70;
-            this.checkBox9.Text = "Var";
+            this.checkBoxVar.Location = new System.Drawing.Point(7, 104);
+            this.checkBoxVar.Name = "checkBoxVar";
+            this.checkBoxVar.Size = new System.Drawing.Size(46, 21);
+            this.checkBoxVar.TabIndex = 70;
+            this.checkBoxVar.Text = "Var";
             // 
-            // checkBox8
+            // checkBoxHMean
             // 
-            this.checkBox8.Location = new System.Drawing.Point(159, 125);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(73, 15);
-            this.checkBox8.TabIndex = 69;
-            this.checkBox8.Text = "H. Mean";
+            this.checkBoxHMean.Location = new System.Drawing.Point(158, 134);
+            this.checkBoxHMean.Name = "checkBoxHMean";
+            this.checkBoxHMean.Size = new System.Drawing.Size(73, 21);
+            this.checkBoxHMean.TabIndex = 69;
+            this.checkBoxHMean.Text = "H. Mean";
             // 
-            // checkBox7
+            // checkBoxAMean
             // 
-            this.checkBox7.Location = new System.Drawing.Point(159, 80);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(79, 15);
-            this.checkBox7.TabIndex = 68;
-            this.checkBox7.Text = "A. Mean";
+            this.checkBoxAMean.Location = new System.Drawing.Point(158, 74);
+            this.checkBoxAMean.Name = "checkBoxAMean";
+            this.checkBoxAMean.Size = new System.Drawing.Size(74, 21);
+            this.checkBoxAMean.TabIndex = 68;
+            this.checkBoxAMean.Text = "A. Mean";
             // 
-            // checkBox6
+            // checkBoxGMean
             // 
-            this.checkBox6.Location = new System.Drawing.Point(159, 101);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(79, 15);
-            this.checkBox6.TabIndex = 67;
-            this.checkBox6.Text = "G. Mean";
+            this.checkBoxGMean.Location = new System.Drawing.Point(158, 104);
+            this.checkBoxGMean.Name = "checkBoxGMean";
+            this.checkBoxGMean.Size = new System.Drawing.Size(73, 21);
+            this.checkBoxGMean.TabIndex = 67;
+            this.checkBoxGMean.Text = "G. Mean";
             // 
-            // checkBox5
+            // checkBoxMedian
             // 
-            this.checkBox5.Location = new System.Drawing.Point(159, 59);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(67, 15);
-            this.checkBox5.TabIndex = 66;
-            this.checkBox5.Text = "Median";
+            this.checkBoxMedian.Location = new System.Drawing.Point(158, 44);
+            this.checkBoxMedian.Name = "checkBoxMedian";
+            this.checkBoxMedian.Size = new System.Drawing.Size(67, 21);
+            this.checkBoxMedian.TabIndex = 66;
+            this.checkBoxMedian.Text = "Median";
             // 
-            // checkBox4
+            // checkBoxMode
             // 
-            this.checkBox4.Location = new System.Drawing.Point(66, 83);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(57, 15);
-            this.checkBox4.TabIndex = 65;
-            this.checkBox4.Text = "Mode";
+            this.checkBoxMode.Location = new System.Drawing.Point(89, 74);
+            this.checkBoxMode.Name = "checkBoxMode";
+            this.checkBoxMode.Size = new System.Drawing.Size(57, 21);
+            this.checkBoxMode.TabIndex = 65;
+            this.checkBoxMode.Text = "Mode";
             // 
-            // checkBox3
+            // checkBoxRange
             // 
-            this.checkBox3.Location = new System.Drawing.Point(8, 83);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(62, 15);
-            this.checkBox3.TabIndex = 64;
-            this.checkBox3.Text = "Range";
+            this.checkBoxRange.Location = new System.Drawing.Point(7, 74);
+            this.checkBoxRange.Name = "checkBoxRange";
+            this.checkBoxRange.Size = new System.Drawing.Size(62, 21);
+            this.checkBoxRange.TabIndex = 64;
+            this.checkBoxRange.Text = "Range";
             // 
-            // checkBox2
+            // checkBoxMax
             // 
-            this.checkBox2.Location = new System.Drawing.Point(66, 62);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(50, 15);
-            this.checkBox2.TabIndex = 63;
-            this.checkBox2.Text = "Max";
+            this.checkBoxMax.Location = new System.Drawing.Point(89, 44);
+            this.checkBoxMax.Name = "checkBoxMax";
+            this.checkBoxMax.Size = new System.Drawing.Size(50, 21);
+            this.checkBoxMax.TabIndex = 63;
+            this.checkBoxMax.Text = "Max";
             // 
-            // checkBox1
+            // checkBoxMin
             // 
-            this.checkBox1.Location = new System.Drawing.Point(8, 62);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(48, 15);
-            this.checkBox1.TabIndex = 62;
-            this.checkBox1.Text = "Min";
+            this.checkBoxMin.Location = new System.Drawing.Point(7, 44);
+            this.checkBoxMin.Name = "checkBoxMin";
+            this.checkBoxMin.Size = new System.Drawing.Size(48, 21);
+            this.checkBoxMin.TabIndex = 62;
+            this.checkBoxMin.Text = "Min";
+            // 
+            // advanceTabPage
+            // 
+            this.advanceTabPage.Controls.Add(this.btnCalculateAdvance);
+            this.advanceTabPage.Controls.Add(this.dependentComboBox);
+            this.advanceTabPage.Controls.Add(this.label2);
+            this.advanceTabPage.Controls.Add(this.independentComboBox);
+            this.advanceTabPage.Controls.Add(this.label4);
+            this.advanceTabPage.Controls.Add(this.checkBox13);
+            this.advanceTabPage.Controls.Add(this.checkBox12);
+            this.advanceTabPage.Controls.Add(this.checkBox11);
+            this.advanceTabPage.Location = new System.Drawing.Point(0, 0);
+            this.advanceTabPage.Name = "advanceTabPage";
+            this.advanceTabPage.Size = new System.Drawing.Size(232, 215);
+            this.advanceTabPage.Text = "Advanced";
+            // 
+            // btnCalculateAdvance
+            // 
+            this.btnCalculateAdvance.Location = new System.Drawing.Point(132, 188);
+            this.btnCalculateAdvance.Name = "btnCalculateAdvance";
+            this.btnCalculateAdvance.Size = new System.Drawing.Size(100, 22);
+            this.btnCalculateAdvance.TabIndex = 89;
+            this.btnCalculateAdvance.Text = "Calculate";
+            // 
+            // dependentComboBox
+            // 
+            this.dependentComboBox.Location = new System.Drawing.Point(141, 34);
+            this.dependentComboBox.Name = "dependentComboBox";
+            this.dependentComboBox.Size = new System.Drawing.Size(88, 22);
+            this.dependentComboBox.TabIndex = 86;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(4, 34);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 18);
+            this.label2.Text = "Dependant Data:";
+            // 
+            // independentComboBox
+            // 
+            this.independentComboBox.Location = new System.Drawing.Point(141, 7);
+            this.independentComboBox.Name = "independentComboBox";
+            this.independentComboBox.Size = new System.Drawing.Size(88, 22);
+            this.independentComboBox.TabIndex = 85;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(4, 7);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 18);
+            this.label4.Text = "Independent Data:";
+            // 
+            // checkBox13
+            // 
+            this.checkBox13.Location = new System.Drawing.Point(4, 92);
+            this.checkBox13.Name = "checkBox13";
+            this.checkBox13.Size = new System.Drawing.Size(180, 15);
+            this.checkBox13.TabIndex = 82;
+            this.checkBox13.Text = "Coefficient of Determination";
+            // 
+            // checkBox12
+            // 
+            this.checkBox12.Location = new System.Drawing.Point(4, 71);
+            this.checkBox12.Name = "checkBox12";
+            this.checkBox12.Size = new System.Drawing.Size(151, 15);
+            this.checkBox12.TabIndex = 81;
+            this.checkBox12.Text = "Correlation Coefficient";
+            // 
+            // checkBox11
+            // 
+            this.checkBox11.Location = new System.Drawing.Point(4, 113);
+            this.checkBox11.Name = "checkBox11";
+            this.checkBox11.Size = new System.Drawing.Size(180, 15);
+            this.checkBox11.TabIndex = 80;
+            this.checkBox11.Text = "Linear Regression Model";
+            // 
+            // answersTabPage
+            // 
+            this.answersTabPage.Controls.Add(this.listBoxAnswers);
+            this.answersTabPage.Location = new System.Drawing.Point(0, 0);
+            this.answersTabPage.Name = "answersTabPage";
+            this.answersTabPage.Size = new System.Drawing.Size(232, 215);
+            this.answersTabPage.Text = "Answers";
+            // 
+            // listBoxAnswers
+            // 
+            this.listBoxAnswers.Location = new System.Drawing.Point(7, 7);
+            this.listBoxAnswers.Name = "listBoxAnswers";
+            this.listBoxAnswers.Size = new System.Drawing.Size(201, 198);
+            this.listBoxAnswers.TabIndex = 0;
             // 
             // pictureBox93
             // 
@@ -626,6 +679,14 @@ namespace MyPocketCal2003
             this.pictureBox112.Name = "pictureBox112";
             this.pictureBox112.Size = new System.Drawing.Size(21, 21);
             // 
+            // dataListBox
+            // 
+            this.dataListBox.Location = new System.Drawing.Point(183, 30);
+            this.dataListBox.Name = "dataListBox";
+            this.dataListBox.Size = new System.Drawing.Size(49, 114);
+            this.dataListBox.TabIndex = 62;
+            this.dataListBox.SelectedIndexChanged += new System.EventHandler(this.dataListBox_SelectedIndexChanged);
+            // 
             // Statistic
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -637,42 +698,37 @@ namespace MyPocketCal2003
             this.Controls.SetChildIndex(this.tabControl1, 0);
             this.basicButtonsPanel.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.Data.ResumeLayout(false);
-            this.Calculations.ResumeLayout(false);
+            this.DataTabPage.ResumeLayout(false);
+            this.basicTabPage.ResumeLayout(false);
+            this.advanceTabPage.ResumeLayout(false);
+            this.answersTabPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnCalculateBasic;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage Data;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TabPage DataTabPage;
+        private System.Windows.Forms.Button addValueButton;
+        private System.Windows.Forms.Button newDataButton;
+        private System.Windows.Forms.ListBox valuesListBox;
+        private System.Windows.Forms.Button saveDataButton;
         private System.Windows.Forms.TextBox inputBox;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TabPage Calculations;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button deleteValueButton;
+        private System.Windows.Forms.TabPage basicTabPage;
+        private System.Windows.Forms.CheckBox checkBoxSD;
+        private System.Windows.Forms.CheckBox checkBoxVar;
+        private System.Windows.Forms.CheckBox checkBoxHMean;
+        private System.Windows.Forms.CheckBox checkBoxAMean;
+        private System.Windows.Forms.CheckBox checkBoxGMean;
+        private System.Windows.Forms.CheckBox checkBoxMedian;
+        private System.Windows.Forms.CheckBox checkBoxMode;
+        private System.Windows.Forms.CheckBox checkBoxRange;
+        private System.Windows.Forms.CheckBox checkBoxMax;
+        private System.Windows.Forms.CheckBox checkBoxMin;
+        private System.Windows.Forms.ComboBox dataComboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox93;
         private System.Windows.Forms.PictureBox pictureBox94;
@@ -694,6 +750,20 @@ namespace MyPocketCal2003
         private System.Windows.Forms.PictureBox pictureBox110;
         private System.Windows.Forms.PictureBox pictureBox111;
         private System.Windows.Forms.PictureBox pictureBox112;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.TabPage answersTabPage;
+        private System.Windows.Forms.Label lbNoOfValues;
+        private System.Windows.Forms.TextBox txtDataName;
+        private System.Windows.Forms.ListBox listBoxAnswers;
+        private System.Windows.Forms.TabPage advanceTabPage;
+        private System.Windows.Forms.Button btnCalculateAdvance;
+        private System.Windows.Forms.ComboBox dependentComboBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox independentComboBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox checkBox13;
+        private System.Windows.Forms.CheckBox checkBox12;
+        private System.Windows.Forms.CheckBox checkBox11;
+        private System.Windows.Forms.ListBox dataListBox;
     }
 }

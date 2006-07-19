@@ -194,8 +194,11 @@ namespace MyPocketCal2003
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            dataMap.Remove(dataListBox.SelectedItem); //remove from hashtable
-            dataListBox.Items.Remove(dataListBox.SelectedItem); //remove from listbox
+            if (dataListBox.SelectedItem != null)
+            {
+                dataMap.Remove(dataListBox.SelectedItem.ToString()); //remove from hashtable
+                dataListBox.Items.Remove(dataListBox.SelectedItem.ToString()); //remove from listbox
+            }
         }
         private void independentComboBox_GotFocus_1(object sender, EventArgs e)
         {
@@ -222,7 +225,7 @@ namespace MyPocketCal2003
             if (dataComboBox.SelectedItem == null)
             {
                 MessageBox.Show("Choose a data from dropdown box");
-                tabControl1.SelectedIndex = 2; //display the basic tabpage
+                tabControl1.SelectedIndex = 1; //display the basic tabpage
                 dataComboBox.Focus();
                 return;
             }
@@ -244,22 +247,54 @@ namespace MyPocketCal2003
             {
                 listBoxAnswers.Items.Add("Median = " + statsAnswers.getMedian());
             }
+            if (checkBoxRange.Checked) //range
+            {
+                listBoxAnswers.Items.Add("Range = " + statsAnswers.getRange());
+            }
+            if (checkBoxMode.Checked) //mode
+            {
+                listBoxAnswers.Items.Add("Mode = " + statsAnswers.getMode());
+            }
             if (checkBoxAMean.Checked) //arithematic mean
             {
                 listBoxAnswers.Items.Add("A. Mean = " + statsAnswers.getAM());
             }
+            if (checkBoxGMean.Checked) //geometric mean
+            {
+                listBoxAnswers.Items.Add("G. Mean = " + statsAnswers.getGM());
+            }
+            if (checkBoxHMean.Checked) //hm
+            {
+                listBoxAnswers.Items.Add("H. Mean = " + statsAnswers.getHM());
+            }
+            if (checkBoxVar.Checked) //variance
+            {
+                listBoxAnswers.Items.Add("Variance = " + statsAnswers.getVar());
+            }
+            if (checkBoxSD.Checked) // sd
+            {
+                listBoxAnswers.Items.Add("S.D. = " + statsAnswers.getSD());
+            }
         }
         private void dataListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //set the data name
-            txtDataName.Text = dataListBox.SelectedItem.ToString();
-
-            //get values arraylist against specified data
-            ArrayList values = (ArrayList)dataMap[dataListBox.SelectedItem.ToString()];
-            valuesListBox.Items.Clear(); //clear any previous entries
-            foreach (String value in values)
+            if (dataListBox.Items.Count != 0) //if count==0 then there is nothing to display so an exceptiion would occur
             {
-                valuesListBox.Items.Add(value); //add each value to listbox
+                //set the data name
+                txtDataName.Text = dataListBox.SelectedItem.ToString();
+
+                //get values arraylist against specified data
+                ArrayList values = (ArrayList)dataMap[dataListBox.SelectedItem.ToString()];
+                valuesListBox.Items.Clear(); //clear any previous entries
+                foreach (String value in values)
+                {
+                    valuesListBox.Items.Add(value); //add each value to listbox
+                }
+            }
+            else
+            {
+                txtDataName.Text = "";
+                valuesListBox.Items.Clear();
             }
         }
     }

@@ -40,6 +40,7 @@ namespace MyPocketCal2003
             this.saveDataButton = new System.Windows.Forms.Button();
             this.inputBox = new System.Windows.Forms.TextBox();
             this.deleteValueButton = new System.Windows.Forms.Button();
+            this.dataListBox = new System.Windows.Forms.ListBox();
             this.lbNoOfValues = new System.Windows.Forms.Label();
             this.basicTabPage = new System.Windows.Forms.TabPage();
             this.dataComboBox = new System.Windows.Forms.ComboBox();
@@ -60,9 +61,9 @@ namespace MyPocketCal2003
             this.label2 = new System.Windows.Forms.Label();
             this.independentComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.checkBoxCoefficientDetermination = new System.Windows.Forms.CheckBox();
+            this.checkBoxCorrelationCoefficient = new System.Windows.Forms.CheckBox();
+            this.checkBoxLinearRegression = new System.Windows.Forms.CheckBox();
             this.answersTabPage = new System.Windows.Forms.TabPage();
             this.listBoxAnswers = new System.Windows.Forms.ListBox();
             this.pictureBox93 = new System.Windows.Forms.PictureBox();
@@ -85,7 +86,6 @@ namespace MyPocketCal2003
             this.pictureBox110 = new System.Windows.Forms.PictureBox();
             this.pictureBox111 = new System.Windows.Forms.PictureBox();
             this.pictureBox112 = new System.Windows.Forms.PictureBox();
-            this.dataListBox = new System.Windows.Forms.ListBox();
             this.basicButtonsPanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.DataTabPage.SuspendLayout();
@@ -302,6 +302,14 @@ namespace MyPocketCal2003
             this.deleteValueButton.Text = "Delete Value";
             this.deleteValueButton.Click += new System.EventHandler(this.deleteValueButton_Click);
             // 
+            // dataListBox
+            // 
+            this.dataListBox.Location = new System.Drawing.Point(183, 30);
+            this.dataListBox.Name = "dataListBox";
+            this.dataListBox.Size = new System.Drawing.Size(49, 114);
+            this.dataListBox.TabIndex = 62;
+            this.dataListBox.SelectedIndexChanged += new System.EventHandler(this.dataListBox_SelectedIndexChanged);
+            // 
             // lbNoOfValues
             // 
             this.lbNoOfValues.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
@@ -327,7 +335,7 @@ namespace MyPocketCal2003
             this.basicTabPage.Controls.Add(this.checkBoxMin);
             this.basicTabPage.Location = new System.Drawing.Point(0, 0);
             this.basicTabPage.Name = "basicTabPage";
-            this.basicTabPage.Size = new System.Drawing.Size(232, 215);
+            this.basicTabPage.Size = new System.Drawing.Size(240, 218);
             this.basicTabPage.Text = "Basic";
             // 
             // dataComboBox
@@ -433,12 +441,12 @@ namespace MyPocketCal2003
             this.advanceTabPage.Controls.Add(this.label2);
             this.advanceTabPage.Controls.Add(this.independentComboBox);
             this.advanceTabPage.Controls.Add(this.label4);
-            this.advanceTabPage.Controls.Add(this.checkBox13);
-            this.advanceTabPage.Controls.Add(this.checkBox12);
-            this.advanceTabPage.Controls.Add(this.checkBox11);
+            this.advanceTabPage.Controls.Add(this.checkBoxCoefficientDetermination);
+            this.advanceTabPage.Controls.Add(this.checkBoxCorrelationCoefficient);
+            this.advanceTabPage.Controls.Add(this.checkBoxLinearRegression);
             this.advanceTabPage.Location = new System.Drawing.Point(0, 0);
             this.advanceTabPage.Name = "advanceTabPage";
-            this.advanceTabPage.Size = new System.Drawing.Size(232, 215);
+            this.advanceTabPage.Size = new System.Drawing.Size(240, 218);
             this.advanceTabPage.Text = "Advanced";
             // 
             // btnCalculateAdvance
@@ -448,6 +456,7 @@ namespace MyPocketCal2003
             this.btnCalculateAdvance.Size = new System.Drawing.Size(100, 22);
             this.btnCalculateAdvance.TabIndex = 89;
             this.btnCalculateAdvance.Text = "Calculate";
+            this.btnCalculateAdvance.Click += new System.EventHandler(this.btnCalculateAdvance_Click);
             // 
             // dependentComboBox
             // 
@@ -455,6 +464,7 @@ namespace MyPocketCal2003
             this.dependentComboBox.Name = "dependentComboBox";
             this.dependentComboBox.Size = new System.Drawing.Size(88, 22);
             this.dependentComboBox.TabIndex = 86;
+            this.dependentComboBox.GotFocus += new System.EventHandler(this.dependentComboBox_GotFocus_1);
             // 
             // label2
             // 
@@ -470,6 +480,7 @@ namespace MyPocketCal2003
             this.independentComboBox.Name = "independentComboBox";
             this.independentComboBox.Size = new System.Drawing.Size(88, 22);
             this.independentComboBox.TabIndex = 85;
+            this.independentComboBox.GotFocus += new System.EventHandler(this.independentComboBox_GotFocus);
             // 
             // label4
             // 
@@ -479,36 +490,36 @@ namespace MyPocketCal2003
             this.label4.Size = new System.Drawing.Size(132, 18);
             this.label4.Text = "Independent Data:";
             // 
-            // checkBox13
+            // checkBoxCoefficientDetermination
             // 
-            this.checkBox13.Location = new System.Drawing.Point(4, 92);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(180, 15);
-            this.checkBox13.TabIndex = 82;
-            this.checkBox13.Text = "Coefficient of Determination";
+            this.checkBoxCoefficientDetermination.Location = new System.Drawing.Point(4, 92);
+            this.checkBoxCoefficientDetermination.Name = "checkBoxCoefficientDetermination";
+            this.checkBoxCoefficientDetermination.Size = new System.Drawing.Size(180, 15);
+            this.checkBoxCoefficientDetermination.TabIndex = 82;
+            this.checkBoxCoefficientDetermination.Text = "Coefficient of Determination";
             // 
-            // checkBox12
+            // checkBoxCorrelationCoefficient
             // 
-            this.checkBox12.Location = new System.Drawing.Point(4, 71);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(151, 15);
-            this.checkBox12.TabIndex = 81;
-            this.checkBox12.Text = "Correlation Coefficient";
+            this.checkBoxCorrelationCoefficient.Location = new System.Drawing.Point(4, 71);
+            this.checkBoxCorrelationCoefficient.Name = "checkBoxCorrelationCoefficient";
+            this.checkBoxCorrelationCoefficient.Size = new System.Drawing.Size(151, 15);
+            this.checkBoxCorrelationCoefficient.TabIndex = 81;
+            this.checkBoxCorrelationCoefficient.Text = "Correlation Coefficient";
             // 
-            // checkBox11
+            // checkBoxLinearRegression
             // 
-            this.checkBox11.Location = new System.Drawing.Point(4, 113);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(180, 15);
-            this.checkBox11.TabIndex = 80;
-            this.checkBox11.Text = "Linear Regression Model";
+            this.checkBoxLinearRegression.Location = new System.Drawing.Point(4, 113);
+            this.checkBoxLinearRegression.Name = "checkBoxLinearRegression";
+            this.checkBoxLinearRegression.Size = new System.Drawing.Size(180, 15);
+            this.checkBoxLinearRegression.TabIndex = 80;
+            this.checkBoxLinearRegression.Text = "Linear Regression Model";
             // 
             // answersTabPage
             // 
             this.answersTabPage.Controls.Add(this.listBoxAnswers);
             this.answersTabPage.Location = new System.Drawing.Point(0, 0);
             this.answersTabPage.Name = "answersTabPage";
-            this.answersTabPage.Size = new System.Drawing.Size(232, 215);
+            this.answersTabPage.Size = new System.Drawing.Size(240, 218);
             this.answersTabPage.Text = "Answers";
             // 
             // listBoxAnswers
@@ -679,14 +690,6 @@ namespace MyPocketCal2003
             this.pictureBox112.Name = "pictureBox112";
             this.pictureBox112.Size = new System.Drawing.Size(21, 21);
             // 
-            // dataListBox
-            // 
-            this.dataListBox.Location = new System.Drawing.Point(183, 30);
-            this.dataListBox.Name = "dataListBox";
-            this.dataListBox.Size = new System.Drawing.Size(49, 114);
-            this.dataListBox.TabIndex = 62;
-            this.dataListBox.SelectedIndexChanged += new System.EventHandler(this.dataListBox_SelectedIndexChanged);
-            // 
             // Statistic
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -761,9 +764,9 @@ namespace MyPocketCal2003
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox independentComboBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.CheckBox checkBox11;
+        private System.Windows.Forms.CheckBox checkBoxCoefficientDetermination;
+        private System.Windows.Forms.CheckBox checkBoxCorrelationCoefficient;
+        private System.Windows.Forms.CheckBox checkBoxLinearRegression;
         private System.Windows.Forms.ListBox dataListBox;
     }
 }

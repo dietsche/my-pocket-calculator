@@ -61,6 +61,7 @@
     <Compile Include="Class Files\TemperatureConversion.cs" />
     <Compile Include="Class Files\QuantityNode.cs" />
     <Compile Include="Class Files\StatsBasic.cs" />
+    <Compile Include="Class Files\StatsAdvance.cs" />
     <Compile Include="Windows Forms\AddDeleteQuantity.cs">
       <SubType>Form</SubType>
     </Compile>

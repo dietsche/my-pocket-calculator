@@ -11,12 +11,13 @@ namespace MyPocketCal2003
 {
     public partial class Statistic : BaseFormLibrary.BasicButtonForm
     {
-        private Hashtable dataMap;
-
+        private Hashtable dataMap; //hashtable to hold data lists
+        bool existingDataSelected;
         public Statistic()
         {
             InitializeComponent();
             dataMap = new Hashtable();
+            this.existingDataSelected = false;
         }
         //zero pressed on the calculator
         private void zeroButton_Click(object sender, EventArgs e)
@@ -118,11 +119,18 @@ namespace MyPocketCal2003
                 inputBox.Focus();
                 return;
             }
+
+            if (this.existingDataSelected == true)
+            {
+                MessageBox.Show("You are making changes to an existing data, make sure to save it before switching tabs");
+                this.existingDataSelected = false;
+            }
             valuesListBox.Items.Add(inputBox.Text);
             inputBox.Text = "";   
             
             //# of values 
             lbNoOfValues.Text = "Count: " + Convert.ToString(valuesListBox.Items.Count);
+            inputBox.Focus();
         }
 
         private void newDataButton_Click(object sender, EventArgs e)
@@ -171,13 +179,12 @@ namespace MyPocketCal2003
                     valuesListBox.Items.Clear();
                     //clear dataname listbox
                     txtDataName.Text = "";
-                    return;
                 }
                 else if (result == DialogResult.No) //no choose another name
                 {
                     txtDataName.Focus(); //set data name text box focus
-                    return;
                 }
+                return;
             }
 
             ArrayList data = new ArrayList();
@@ -283,18 +290,86 @@ namespace MyPocketCal2003
                 //set the data name
                 txtDataName.Text = dataListBox.SelectedItem.ToString();
 
-                //get values arraylist against specified data
+                //get values arraylist against specified data name
                 ArrayList values = (ArrayList)dataMap[dataListBox.SelectedItem.ToString()];
                 valuesListBox.Items.Clear(); //clear any previous entries
                 foreach (String value in values)
                 {
                     valuesListBox.Items.Add(value); //add each value to listbox
                 }
+                //to flag that some data was selected 
+                this.existingDataSelected = true;
             }
             else
             {
                 txtDataName.Text = "";
                 valuesListBox.Items.Clear();
+            }
+        }
+
+        private void independentComboBox_GotFocus(object sender, EventArgs e)
+        {
+            independentComboBox.Items.Clear(); //clear any last entries
+            foreach (String item in dataListBox.Items)
+            {
+                independentComboBox.Items.Add(item); //add each data name
+            }
+        }
+
+        private void dependentComboBox_GotFocus_1(object sender, EventArgs e)
+        {
+            dependentComboBox.Items.Clear(); //clear any last entries
+            foreach (String item in dataListBox.Items)
+            {
+                dependentComboBox.Items.Add(item); //add each data name
+            }
+        }
+
+        private void btnCalculateAdvance_Click(object sender, EventArgs e)
+        {
+            listBoxAnswers.Items.Clear(); //clear any previous entries
+            tabControl1.SelectedIndex = 3; //display the answers tabpage
+
+            if (independentComboBox.SelectedItem == null) //if no independent data selected
+            {
+                MessageBox.Show("Choose an independent data");
+                tabControl1.SelectedIndex = 2; //display the basic tabpage
+                independentComboBox.Focus();
+                return;
+            }
+            if (dependentComboBox.SelectedItem == null) //if no dependent data selected
+            {
+                MessageBox.Show("Choose a dependent data");
+                tabControl1.SelectedIndex = 2; //display the basic tabpage
+                dependentComboBox.Focus();
+                return;
+            }
+            
+            //get the independent data from hashtable
+            ArrayList independentData = (ArrayList)this.dataMap[independentComboBox.SelectedItem.ToString()];
+            
+            //get the dependent data from hashtable
+            ArrayList dependentData = (ArrayList)this.dataMap[dependentComboBox.SelectedItem.ToString()];
+
+            //both data size should be equal otherwise:
+            if (independentData.Count != dependentData.Count)
+            {
+                MessageBox.Show("Choose equal size data");
+                independentComboBox.Focus();
+            }
+            StatsAdvance statAdvance = new StatsAdvance(independentData, dependentData);
+
+            if (checkBoxCoefficientDetermination.Checked)
+            {
+                listBoxAnswers.Items.Add("Coeff. of Deter.: " + statAdvance.coeffDetermination());
+            }
+            if (checkBoxCorrelationCoefficient.Checked)
+            {
+                listBoxAnswers.Items.Add("Correlation Coeff: " + statAdvance.correlationCoeff());
+            }
+            if (checkBoxLinearRegression.Checked)
+            {
+                listBoxAnswers.Items.Add(statAdvance.linearFit());
             }
         }
     }

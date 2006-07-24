@@ -335,7 +335,7 @@ namespace MyPocketCal2003
             this.basicTabPage.Controls.Add(this.checkBoxMin);
             this.basicTabPage.Location = new System.Drawing.Point(0, 0);
             this.basicTabPage.Name = "basicTabPage";
-            this.basicTabPage.Size = new System.Drawing.Size(240, 218);
+            this.basicTabPage.Size = new System.Drawing.Size(232, 215);
             this.basicTabPage.Text = "Basic";
             // 
             // dataComboBox
@@ -446,7 +446,7 @@ namespace MyPocketCal2003
             this.advanceTabPage.Controls.Add(this.checkBoxLinearRegression);
             this.advanceTabPage.Location = new System.Drawing.Point(0, 0);
             this.advanceTabPage.Name = "advanceTabPage";
-            this.advanceTabPage.Size = new System.Drawing.Size(240, 218);
+            this.advanceTabPage.Size = new System.Drawing.Size(232, 215);
             this.advanceTabPage.Text = "Advanced";
             // 
             // btnCalculateAdvance
@@ -519,7 +519,7 @@ namespace MyPocketCal2003
             this.answersTabPage.Controls.Add(this.listBoxAnswers);
             this.answersTabPage.Location = new System.Drawing.Point(0, 0);
             this.answersTabPage.Name = "answersTabPage";
-            this.answersTabPage.Size = new System.Drawing.Size(240, 218);
+            this.answersTabPage.Size = new System.Drawing.Size(232, 215);
             this.answersTabPage.Text = "Answers";
             // 
             // listBoxAnswers

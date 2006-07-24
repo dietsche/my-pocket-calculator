@@ -112,7 +112,7 @@ namespace MyPocketCal2003
 
         private void addValueButton_Click(object sender, EventArgs e)
         {
-            inputBox.Text.Trim();
+            inputBox.Text = inputBox.Text.Trim();
             if (inputBox.Text.Length == 0)
             {
                 MessageBox.Show("Write a value to add");
@@ -150,7 +150,7 @@ namespace MyPocketCal2003
 
         private void saveDataButton_Click(object sender, EventArgs e)
         {
-            txtDataName.Text.Trim(); //remove white spaces
+            txtDataName.Text = txtDataName.Text.Trim(); //remove white spaces
             if (txtDataName.Text.Length == 0)
             {
                 MessageBox.Show("Enter a name for the data");

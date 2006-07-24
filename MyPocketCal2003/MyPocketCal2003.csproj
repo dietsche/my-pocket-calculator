@@ -62,6 +62,7 @@
     <Compile Include="Class Files\QuantityNode.cs" />
     <Compile Include="Class Files\StatsBasic.cs" />
     <Compile Include="Class Files\StatsAdvance.cs" />
+    <Compile Include="Class Files\Matrix.cs" />
     <Compile Include="Windows Forms\AddDeleteQuantity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,11 +111,11 @@
     <Compile Include="Windows Forms\Integration.Designer.cs">
       <DependentUpon>Integration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows Forms\Matrix.cs">
+    <Compile Include="Windows Forms\MatrixForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows Forms\Matrix.Designer.cs">
-      <DependentUpon>Matrix.cs</DependentUpon>
+    <Compile Include="Windows Forms\MatrixForm.Designer.cs">
+      <DependentUpon>MatrixForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows Forms\Plot.cs">
       <SubType>Form</SubType>
@@ -152,9 +153,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>Integration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows Forms\Matrix.resx">
+    <EmbeddedResource Include="Windows Forms\MatrixForm.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>Matrix.cs</DependentUpon>
+      <DependentUpon>MatrixForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows Forms\Plot.resx">
       <SubType>Designer</SubType>

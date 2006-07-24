@@ -11,7 +11,6 @@ obj\Debug\MyPocketCal2003.Unit.resources
 obj\Debug\MyPocketCal2003.Differentiation.resources
 obj\Debug\MyPocketCal2003.Form1.resources
 obj\Debug\MyPocketCal2003.Integration.resources
-obj\Debug\MyPocketCal2003.Matrix.resources
 obj\Debug\MyPocketCal2003.Plot.resources
 obj\Debug\MyPocketCal2003.Properties.Resources.resources
 obj\Debug\MyPocketCal2003.Vector.resources
@@ -40,3 +39,4 @@ obj\Release\MyPocketCal2003.exe
 obj\Release\MyPocketCal2003.pdb
 obj\Release\MyPocketCal2003.AddQuantity.resources
 obj\Debug\MyPocketCal2003.AddDeleteQuantity.resources
+obj\Debug\MyPocketCal2003.MatrixForm.resources

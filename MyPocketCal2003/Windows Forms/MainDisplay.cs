@@ -19,7 +19,7 @@ namespace MyPocketCal2003
             Form oldWindow = Program.activeWindow; // the old window
             oldWindow.Hide(); // hide the window
 
-            Program.activeWindow = new Matrix(); // make the form
+            Program.activeWindow = new MatrixForm(); // make the form
             Program.activeWindow.Show(); // show the form
             //oldWindow.Dispose();
         }
@@ -45,7 +45,7 @@ namespace MyPocketCal2003
         }
         private void pictureBox115_Click(object sender, EventArgs e)
         {
-            Matrix m = new Matrix();
+            MatrixForm m = new MatrixForm();
             m.Show();
         }
 

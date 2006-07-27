@@ -63,6 +63,7 @@
     <Compile Include="Class Files\StatsBasic.cs" />
     <Compile Include="Class Files\StatsAdvance.cs" />
     <Compile Include="Class Files\Matrix.cs" />
+    <Compile Include="Class Files\MatrixPostFix.cs" />
     <Compile Include="Windows Forms\AddDeleteQuantity.cs">
       <SubType>Form</SubType>
     </Compile>

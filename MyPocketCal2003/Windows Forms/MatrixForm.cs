@@ -206,7 +206,7 @@ namespace MyPocketCal2003
                 if (result == DialogResult.Yes) //yes overwrite
                 {
                     //create a Matrix with the passed dimension and data
-                    Matrix matrixOver = new Matrix(listBoxMatrix.Items, listBoxMatrix.Items.Count, this.columnDim);
+                    Matrix matrixOver = new Matrix(listBoxMatrix.Items, listBoxMatrix.Items.Count, this.columnDim,txtMatrixName.Text);
                     dataMap[txtMatrixName.Text] = matrixOver; //set the existing key to new value 
                     ////clear matrix list box
                     listBoxMatrix.Items.Clear();
@@ -220,10 +220,10 @@ namespace MyPocketCal2003
                 return;
             }
 
-            //create a Matrix with the passed dimension and data
-            Matrix matrix = new Matrix(listBoxMatrix.Items, listBoxMatrix.Items.Count, this.columnDim);
+            //create a Matrix with the passed dimension,data,name
+            Matrix matrix = new Matrix(listBoxMatrix.Items, listBoxMatrix.Items.Count, this.columnDim, txtMatrixName.Text);
             
-            dataMap.Add(txtMatrixName.Text, matrix); //add dataname & data to hashtable as Arraylist
+            dataMap.Add(txtMatrixName.Text, matrix); //add dataname & data to hashtable
             listBoxMatrixName.Items.Add(txtMatrixName.Text); //add matrix name to listbox
 
             //clear valueslist box
@@ -309,6 +309,9 @@ namespace MyPocketCal2003
                 {
                     listBoxMatrix.Items.Add(matrix.nextRow()); //add each row to listbox
                 }
+
+                txtRowDim.Text = Convert.ToString(matrix.getRows()); //set row dimension
+                txtColumnDim.Text = Convert.ToString(matrix.getColumns()); //set column dimension
             }
             else
             {
@@ -324,10 +327,64 @@ namespace MyPocketCal2003
                 comboOperationMatrix.Items.Add(item); //add each matrix name
             }
         }
-
         private void comboOperationMatrix_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtOperation.Text += comboOperationMatrix.SelectedItem.ToString();
+        }
+        private void btnAnswer_Click(object sender, EventArgs e)
+        {
+            MatrixPostFix postFix = new MatrixPostFix();
+            String rpn = postFix.Convert(txtOperation.Text); //convert the expression to RPN Notation
+            Matrix result = postFix.Solve(rpn,dataMap); //solve the RPN expression
+            if (result != null)
+            {
+                listBoxAnswers.Items.Clear(); //clear any previous entries
+                result.splitRows(); //prepare the matrix for receiving individual rows
+                while (result.hasNext()) //get next row untill the matrix end
+                {
+                    listBoxAnswers.Items.Add(result.nextRow()); //add each row to answer listbox
+                }
+            }
+            else
+                MessageBox.Show("Result is null"); //88888888888888888888888888888888888888888888888888888888
+            tabControl1.SelectedIndex = 2; //show the answers tabpage
+        }
+
+        private void comboMatrix_GotFocus(object sender, EventArgs e)
+        {
+            comboOperationMatrix.Items.Clear(); //clear any last entries
+            foreach (String item in listBoxMatrixName.Items)
+            {
+                comboOperationMatrix.Items.Add(item); //add each matrix name
+            }
+        }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            if (checkBoxDeterminant.Checked) //find determinant
+            {
+
+            }
+            if (checkBoxInverse.Checked) //find inverse
+            {
+
+            }
+            if (checkBoxTranspose.Checked) //find transpose
+            {
+
+            }
+            if (checkBoxAdjoing.Checked) //find adjoint
+            {
+
+            }
+            if (checkBoxEigenvalues.Checked) //find eigenvalues
+            {
+
+            }
+            if (checkBoxEigenvector.Checked) //find eigenvector
+            {
+
+            }
         }
     }
 }

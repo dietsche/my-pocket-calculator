@@ -53,13 +53,14 @@ namespace MyPocketCal2003
             this.comboMatrix = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.checkBoxTranspose = new System.Windows.Forms.CheckBox();
-            this.checkBoxAdjoing = new System.Windows.Forms.CheckBox();
+            this.checkBoxAdjoint = new System.Windows.Forms.CheckBox();
             this.checkBoxEigenvector = new System.Windows.Forms.CheckBox();
             this.checkBoxEigenvalues = new System.Windows.Forms.CheckBox();
             this.checkBoxInverse = new System.Windows.Forms.CheckBox();
             this.checkBoxDeterminant = new System.Windows.Forms.CheckBox();
             this.tabPageAnswers = new System.Windows.Forms.TabPage();
             this.listBoxAnswers = new System.Windows.Forms.ListBox();
+            this.checkBoxRoots = new System.Windows.Forms.CheckBox();
             this.basicButtonsPanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageData.SuspendLayout();
@@ -325,6 +326,7 @@ namespace MyPocketCal2003
             // 
             // tabPageCalculation
             // 
+            this.tabPageCalculation.Controls.Add(this.checkBoxRoots);
             this.tabPageCalculation.Controls.Add(this.btnAnswer);
             this.tabPageCalculation.Controls.Add(this.comboOperationMatrix);
             this.tabPageCalculation.Controls.Add(this.txtOperation);
@@ -332,7 +334,7 @@ namespace MyPocketCal2003
             this.tabPageCalculation.Controls.Add(this.comboMatrix);
             this.tabPageCalculation.Controls.Add(this.label2);
             this.tabPageCalculation.Controls.Add(this.checkBoxTranspose);
-            this.tabPageCalculation.Controls.Add(this.checkBoxAdjoing);
+            this.tabPageCalculation.Controls.Add(this.checkBoxAdjoint);
             this.tabPageCalculation.Controls.Add(this.checkBoxEigenvector);
             this.tabPageCalculation.Controls.Add(this.checkBoxEigenvalues);
             this.tabPageCalculation.Controls.Add(this.checkBoxInverse);
@@ -381,7 +383,7 @@ namespace MyPocketCal2003
             // 
             // comboMatrix
             // 
-            this.comboMatrix.Location = new System.Drawing.Point(115, 86);
+            this.comboMatrix.Location = new System.Drawing.Point(115, 73);
             this.comboMatrix.Name = "comboMatrix";
             this.comboMatrix.Size = new System.Drawing.Size(118, 22);
             this.comboMatrix.TabIndex = 58;
@@ -390,30 +392,30 @@ namespace MyPocketCal2003
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(3, 86);
+            this.label2.Location = new System.Drawing.Point(3, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 15);
             this.label2.Text = "Select Matrix:";
             // 
             // checkBoxTranspose
             // 
-            this.checkBoxTranspose.Location = new System.Drawing.Point(118, 121);
+            this.checkBoxTranspose.Location = new System.Drawing.Point(118, 107);
             this.checkBoxTranspose.Name = "checkBoxTranspose";
             this.checkBoxTranspose.Size = new System.Drawing.Size(91, 15);
             this.checkBoxTranspose.TabIndex = 53;
             this.checkBoxTranspose.Text = "Transpose";
             // 
-            // checkBoxAdjoing
+            // checkBoxAdjoint
             // 
-            this.checkBoxAdjoing.Location = new System.Drawing.Point(3, 142);
-            this.checkBoxAdjoing.Name = "checkBoxAdjoing";
-            this.checkBoxAdjoing.Size = new System.Drawing.Size(69, 15);
-            this.checkBoxAdjoing.TabIndex = 56;
-            this.checkBoxAdjoing.Text = "Adjoint";
+            this.checkBoxAdjoint.Location = new System.Drawing.Point(3, 128);
+            this.checkBoxAdjoint.Name = "checkBoxAdjoint";
+            this.checkBoxAdjoint.Size = new System.Drawing.Size(69, 15);
+            this.checkBoxAdjoint.TabIndex = 56;
+            this.checkBoxAdjoint.Text = "Adjoint";
             // 
             // checkBoxEigenvector
             // 
-            this.checkBoxEigenvector.Location = new System.Drawing.Point(3, 163);
+            this.checkBoxEigenvector.Location = new System.Drawing.Point(3, 149);
             this.checkBoxEigenvector.Name = "checkBoxEigenvector";
             this.checkBoxEigenvector.Size = new System.Drawing.Size(91, 15);
             this.checkBoxEigenvector.TabIndex = 55;
@@ -421,7 +423,7 @@ namespace MyPocketCal2003
             // 
             // checkBoxEigenvalues
             // 
-            this.checkBoxEigenvalues.Location = new System.Drawing.Point(118, 163);
+            this.checkBoxEigenvalues.Location = new System.Drawing.Point(118, 149);
             this.checkBoxEigenvalues.Name = "checkBoxEigenvalues";
             this.checkBoxEigenvalues.Size = new System.Drawing.Size(103, 15);
             this.checkBoxEigenvalues.TabIndex = 54;
@@ -429,7 +431,7 @@ namespace MyPocketCal2003
             // 
             // checkBoxInverse
             // 
-            this.checkBoxInverse.Location = new System.Drawing.Point(118, 142);
+            this.checkBoxInverse.Location = new System.Drawing.Point(118, 128);
             this.checkBoxInverse.Name = "checkBoxInverse";
             this.checkBoxInverse.Size = new System.Drawing.Size(78, 15);
             this.checkBoxInverse.TabIndex = 52;
@@ -437,7 +439,7 @@ namespace MyPocketCal2003
             // 
             // checkBoxDeterminant
             // 
-            this.checkBoxDeterminant.Location = new System.Drawing.Point(3, 121);
+            this.checkBoxDeterminant.Location = new System.Drawing.Point(3, 107);
             this.checkBoxDeterminant.Name = "checkBoxDeterminant";
             this.checkBoxDeterminant.Size = new System.Drawing.Size(103, 15);
             this.checkBoxDeterminant.TabIndex = 51;
@@ -448,7 +450,7 @@ namespace MyPocketCal2003
             this.tabPageAnswers.Controls.Add(this.listBoxAnswers);
             this.tabPageAnswers.Location = new System.Drawing.Point(0, 0);
             this.tabPageAnswers.Name = "tabPageAnswers";
-            this.tabPageAnswers.Size = new System.Drawing.Size(232, 215);
+            this.tabPageAnswers.Size = new System.Drawing.Size(240, 218);
             this.tabPageAnswers.Text = "Answers";
             // 
             // listBoxAnswers
@@ -457,6 +459,14 @@ namespace MyPocketCal2003
             this.listBoxAnswers.Name = "listBoxAnswers";
             this.listBoxAnswers.Size = new System.Drawing.Size(201, 198);
             this.listBoxAnswers.TabIndex = 0;
+            // 
+            // checkBoxRoots
+            // 
+            this.checkBoxRoots.Location = new System.Drawing.Point(3, 170);
+            this.checkBoxRoots.Name = "checkBoxRoots";
+            this.checkBoxRoots.Size = new System.Drawing.Size(103, 15);
+            this.checkBoxRoots.TabIndex = 122;
+            this.checkBoxRoots.Text = "Roots";
             // 
             // MatrixForm
             // 
@@ -491,7 +501,7 @@ namespace MyPocketCal2003
         private System.Windows.Forms.Button btnAddRow;
         private System.Windows.Forms.ListBox listBoxMatrixName;
         private System.Windows.Forms.CheckBox checkBoxTranspose;
-        private System.Windows.Forms.CheckBox checkBoxAdjoing;
+        private System.Windows.Forms.CheckBox checkBoxAdjoint;
         private System.Windows.Forms.CheckBox checkBoxEigenvector;
         private System.Windows.Forms.CheckBox checkBoxEigenvalues;
         private System.Windows.Forms.CheckBox checkBoxInverse;
@@ -511,5 +521,6 @@ namespace MyPocketCal2003
         private System.Windows.Forms.Button btnAnswer;
         private System.Windows.Forms.TabPage tabPageAnswers;
         private System.Windows.Forms.ListBox listBoxAnswers;
+        private System.Windows.Forms.CheckBox checkBoxRoots;
     }
 }

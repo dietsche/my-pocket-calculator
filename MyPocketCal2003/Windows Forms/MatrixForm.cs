@@ -352,30 +352,60 @@ namespace MyPocketCal2003
 
         private void comboMatrix_GotFocus(object sender, EventArgs e)
         {
-            comboOperationMatrix.Items.Clear(); //clear any last entries
+            comboMatrix.Items.Clear(); //clear any last entries
             foreach (String item in listBoxMatrixName.Items)
             {
-                comboOperationMatrix.Items.Add(item); //add each matrix name
+                comboMatrix.Items.Add(item); //add each matrix name
             }
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
+            Matrix matrix = (Matrix)dataMap[comboMatrix.SelectedItem.ToString()];
+            listBoxAnswers.Items.Clear(); //clear any previous entries
+
             if (checkBoxDeterminant.Checked) //find determinant
             {
-
+                listBoxAnswers.Items.Add("Determinant: " + Convert.ToString(matrix.determinant()));
             }
             if (checkBoxInverse.Checked) //find inverse
             {
-
+                Matrix result = matrix.inverse();
+                if (result != null)
+                {
+                    result.splitRows(); //prepare the matrix for receiving individual rows
+                    listBoxAnswers.Items.Add("Inverse:");
+                    while (result.hasNext()) //get next row untill the matrix end
+                    {
+                        listBoxAnswers.Items.Add(result.nextRow()); //add each row to answer listbox
+                    }
+                }
             }
             if (checkBoxTranspose.Checked) //find transpose
             {
-
+                Matrix result = matrix.transpose();
+                if (result != null)
+                {
+                    result.splitRows(); //prepare the matrix for receiving individual rows
+                    listBoxAnswers.Items.Add("Transpose:");
+                    while (result.hasNext()) //get next row untill the matrix end
+                    {
+                        listBoxAnswers.Items.Add(result.nextRow()); //add each row to answer listbox
+                    }
+                }
             }
-            if (checkBoxAdjoing.Checked) //find adjoint
+            if (checkBoxAdjoint.Checked) //find adjoint
             {
-
+                Matrix result = matrix.adjoint();
+                if (result != null)
+                {
+                    result.splitRows(); //prepare the matrix for receiving individual rows
+                    listBoxAnswers.Items.Add("Adjoint:");
+                    while (result.hasNext()) //get next row untill the matrix end
+                    {
+                        listBoxAnswers.Items.Add(result.nextRow()); //add each row to answer listbox
+                    }
+                }
             }
             if (checkBoxEigenvalues.Checked) //find eigenvalues
             {
@@ -385,6 +415,16 @@ namespace MyPocketCal2003
             {
 
             }
+            if (checkBoxRoots.Checked) //find roots
+            {
+                double[] result = matrix.gaussianElimination();
+                listBoxAnswers.Items.Add("Roots: ");
+                for (int i = 0; i < result.Length; ++i)
+                {
+                    listBoxAnswers.Items.Add(i + 1 + ". " + result[i]);
+                }
+            }
+            tabControl1.SelectedIndex = 2; //switch to answers tab
         }
     }
 }

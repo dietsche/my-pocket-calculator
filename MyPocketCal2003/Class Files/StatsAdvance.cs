@@ -26,8 +26,7 @@ namespace MyPocketCal2003
             statBasic = new StatsBasic(this.y);
             String yMean = statBasic.getAM();
 
-            double a = Double.Parse(yMean) - ((b)*(Double.Parse(xMean)));
-            Math.Round(a, 4);
+            double a = Math.Round(Double.Parse(yMean) - ((b)*(Double.Parse(xMean))),4);
 
             if(b<0)
                 return "y = " + a + "" + b + "x";

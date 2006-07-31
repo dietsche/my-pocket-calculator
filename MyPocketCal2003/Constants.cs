@@ -49,7 +49,7 @@ namespace MyPocketCal2003
         public const String LN = "ln";
         public const String X_FACTORIAL = "!";
         public const String TEN_X = "10";
-        public const String XY = "x^y";
+        //public const String XY = "x^y";
         public const String LOG = "log";
         public const String X_INVERSE = "1/";
         public const String X_POWER_Y = "^";

@@ -112,8 +112,7 @@ namespace MyPocketCal2003
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.nCrButton = new System.Windows.Forms.PictureBox();
             this.nPrButton = new System.Windows.Forms.PictureBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtOutput = new System.Windows.Forms.TextBox();
             this.inputBox = new System.Windows.Forms.TextBox();
             this.pictureBox113 = new System.Windows.Forms.PictureBox();
             this.pictureBox114 = new System.Windows.Forms.PictureBox();
@@ -144,6 +143,10 @@ namespace MyPocketCal2003
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox138 = new System.Windows.Forms.PictureBox();
             this.clearButton = new System.Windows.Forms.Button();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.txtFunctionInput = new System.Windows.Forms.TextBox();
+            this.labelFunction = new System.Windows.Forms.Label();
+            this.btnOK = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.basicButtonsPanel.SuspendLayout();
@@ -317,98 +320,80 @@ namespace MyPocketCal2003
             // 
             this.basicButtonsPanel.Location = new System.Drawing.Point(0, 244);
             // 
-            // undoButton
+            // equalButton
             // 
-            this.undoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.equalButton.Click += new System.EventHandler(this.equalButton_Click);
             // 
             // rightBracketButton
             // 
-            this.rightBracketButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rightBracketButton.Click += new System.EventHandler(this.rightBracketButton_Click);
             // 
             // nineButton
             // 
-            this.nineButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.nineButton.Click += new System.EventHandler(this.nineButton_Click);
             // 
             // multiplyButton
             // 
-            this.multiplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.multiplyButton.Click += new System.EventHandler(this.multiplyButton_Click);
             // 
             // commaButton
             // 
-            this.commaButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.commaButton.Click += new System.EventHandler(this.commaButton_Click);
             // 
             // eightButton
             // 
-            this.eightButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.eightButton.Click += new System.EventHandler(this.eightButton_Click);
             // 
             // sevenButton
             // 
-            this.sevenButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.sevenButton.Click += new System.EventHandler(this.sevenButton_Click);
             // 
             // leftBracketButton
             // 
-            this.leftBracketButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.leftBracketButton.Click += new System.EventHandler(this.leftBracketButton_Click);
             // 
             // divideButton
             // 
-            this.divideButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.divideButton.Click += new System.EventHandler(this.divideButton_Click);
             // 
             // minusButton
             // 
-            this.minusButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.minusButton.Click += new System.EventHandler(this.minusButton_Click);
             // 
             // plusButton
             // 
-            this.plusButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.plusButton.Click += new System.EventHandler(this.plusButton_Click);
             // 
             // fourButton
             // 
-            this.fourButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.fourButton.Click += new System.EventHandler(this.fourButton_Click);
             // 
             // fiveButton
             // 
-            this.fiveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.fiveButton.Click += new System.EventHandler(this.fiveButton_Click);
             // 
             // sixButton
             // 
-            this.sixButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.sixButton.Click += new System.EventHandler(this.sixButton_Click);
             // 
             // oneButton
             // 
-            this.oneButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.oneButton.Click += new System.EventHandler(this.oneButton_Click);
             // 
             // twoButton
             // 
-            this.twoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.twoButton.Click += new System.EventHandler(this.twoButton_Click);
             // 
             // threeButton
             // 
-            this.threeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.threeButton.Click += new System.EventHandler(this.threeButton_Click);
             // 
             // decimalButton
             // 
-            this.decimalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.decimalButton.Click += new System.EventHandler(this.decimalButton_Click);
             // 
             // zeroButton
             // 
-            this.zeroButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.zeroButton.Click += new System.EventHandler(this.zeroButton_Click);
             // 
             // pictureBox37
@@ -1117,32 +1102,22 @@ namespace MyPocketCal2003
             this.nPrButton.Size = new System.Drawing.Size(21, 21);
             this.nPrButton.Click += new System.EventHandler(this.nPrButton_Click);
             // 
-            // comboBox3
+            // txtOutput
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboBox3.Items.Add("Constants");
-            this.comboBox3.Location = new System.Drawing.Point(171, 32);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(69, 22);
-            this.comboBox3.TabIndex = 47;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(0, 57);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(240, 21);
-            this.textBox4.TabIndex = 46;
-            this.textBox4.Text = "=";
+            this.txtOutput.Location = new System.Drawing.Point(1, 75);
+            this.txtOutput.Name = "txtOutput";
+            this.txtOutput.ReadOnly = true;
+            this.txtOutput.Size = new System.Drawing.Size(236, 21);
+            this.txtOutput.TabIndex = 46;
+            this.txtOutput.Text = "=";
             // 
             // inputBox
             // 
             this.inputBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.inputBox.Location = new System.Drawing.Point(0, 3);
             this.inputBox.Name = "inputBox";
-            this.inputBox.ReadOnly = true;
             this.inputBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.inputBox.Size = new System.Drawing.Size(240, 21);
+            this.inputBox.Size = new System.Drawing.Size(187, 21);
             this.inputBox.TabIndex = 45;
             // 
             // pictureBox113
@@ -1249,6 +1224,7 @@ namespace MyPocketCal2003
             this.panel7.Location = new System.Drawing.Point(0, 126);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(138, 47);
+            this.panel7.Visible = false;
             // 
             // pictureBox135
             // 
@@ -1400,37 +1376,81 @@ namespace MyPocketCal2003
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(116, 33);
+            this.clearButton.Location = new System.Drawing.Point(193, 3);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(49, 21);
+            this.clearButton.Size = new System.Drawing.Size(43, 21);
             this.clearButton.TabIndex = 85;
             this.clearButton.Text = "Clear";
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboBox3.Items.Add("Constants");
+            this.comboBox3.Location = new System.Drawing.Point(167, 30);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(69, 22);
+            this.comboBox3.TabIndex = 47;
+            // 
+            // txtFunctionInput
+            // 
+            this.txtFunctionInput.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtFunctionInput.Location = new System.Drawing.Point(1, 50);
+            this.txtFunctionInput.Name = "txtFunctionInput";
+            this.txtFunctionInput.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.txtFunctionInput.Size = new System.Drawing.Size(111, 21);
+            this.txtFunctionInput.TabIndex = 89;
+            this.txtFunctionInput.Visible = false;
+            // 
+            // labelFunction
+            // 
+            this.labelFunction.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.labelFunction.Location = new System.Drawing.Point(1, 31);
+            this.labelFunction.Name = "labelFunction";
+            this.labelFunction.Size = new System.Drawing.Size(100, 15);
+            this.labelFunction.Text = "Function:";
+            this.labelFunction.Visible = false;
+            // 
+            // btnOK
+            // 
+            this.btnOK.Location = new System.Drawing.Point(116, 50);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(33, 21);
+            this.btnOK.TabIndex = 91;
+            this.btnOK.Text = "Ok";
+            this.btnOK.Visible = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // MainDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(240, 294);
+            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.labelFunction);
+            this.Controls.Add(this.txtFunctionInput);
             this.Controls.Add(this.inputBox);
-            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.clearButton);
+            this.Controls.Add(this.txtOutput);
             this.Name = "MainDisplay";
             this.Text = " ";
-            this.Controls.SetChildIndex(this.textBox4, 0);
+            this.Controls.SetChildIndex(this.txtOutput, 0);
+            this.Controls.SetChildIndex(this.clearButton, 0);
             this.Controls.SetChildIndex(this.comboBox3, 0);
-            this.Controls.SetChildIndex(this.basicButtonsPanel, 0);
             this.Controls.SetChildIndex(this.panel7, 0);
             this.Controls.SetChildIndex(this.panel8, 0);
             this.Controls.SetChildIndex(this.panel9, 0);
-            this.Controls.SetChildIndex(this.clearButton, 0);
             this.Controls.SetChildIndex(this.inputBox, 0);
+            this.Controls.SetChildIndex(this.basicButtonsPanel, 0);
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
+            this.Controls.SetChildIndex(this.txtFunctionInput, 0);
+            this.Controls.SetChildIndex(this.labelFunction, 0);
+            this.Controls.SetChildIndex(this.btnOK, 0);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.basicButtonsPanel.ResumeLayout(false);
@@ -1527,8 +1547,7 @@ namespace MyPocketCal2003
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtOutput;
         private System.Windows.Forms.TextBox inputBox;
         private System.Windows.Forms.PictureBox pictureBox113;
         private System.Windows.Forms.PictureBox pictureBox114;
@@ -1561,5 +1580,9 @@ namespace MyPocketCal2003
         private System.Windows.Forms.PictureBox pictureBox138;
         private System.Windows.Forms.PictureBox pictureBox139;
         private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox txtFunctionInput;
+        private System.Windows.Forms.Label labelFunction;
+        private System.Windows.Forms.Button btnOK;
     }
 }

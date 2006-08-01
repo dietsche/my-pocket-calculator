@@ -114,9 +114,7 @@ namespace MyPocketCal2003
         //clear pressed on the calculator
         private void clearButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text = "";
-            this.inputBoxText.Clear();
-            this.inputExpression.Clear();
+            this.clearRegisters();
         }
         //1 pressed on the calculator
         private void oneButton_Click(object sender, EventArgs e)
@@ -398,10 +396,27 @@ namespace MyPocketCal2003
 
         private void equalButton_Click(object sender, EventArgs e)
         {
-            BasicPostFix postFix = new BasicPostFix();
-            MessageBox.Show(inputExpression.toCompleteString());
-            String rpn = postFix.Convert(inputExpression.toCompleteString());
-            this.txtOutput.Text = postFix.Solve(rpn);
+            if (checkBoxRPN.Checked)
+            {
+                BasicPostFix postFix = new BasicPostFix();
+                //solve the rpn input
+                this.txtOutput.Text = postFix.solveRPN(inputExpression.toCompleteString());
+            }
+            else
+            {
+                BasicPostFix postFix = new BasicPostFix();
+                //convert to rpn
+                String rpn = postFix.Convert(inputExpression.toCompleteString());
+                //solve the rpn
+                this.txtOutput.Text = postFix.Solve(rpn);
+            }
+            this.clearRegisters(); //clear the input registers
+        }
+        private void clearRegisters()
+        {
+            this.inputBox.Text = "";
+            this.inputBoxText.Clear();
+            this.inputExpression.Clear();
         }
         private void btnOK_Click(object sender, EventArgs e)
         {

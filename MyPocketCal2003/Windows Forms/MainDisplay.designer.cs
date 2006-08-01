@@ -102,12 +102,6 @@ namespace MyPocketCal2003
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.nCrButton = new System.Windows.Forms.PictureBox();
@@ -122,7 +116,6 @@ namespace MyPocketCal2003
             this.pictureBox118 = new System.Windows.Forms.PictureBox();
             this.pictureBox119 = new System.Windows.Forms.PictureBox();
             this.pictureBox120 = new System.Windows.Forms.PictureBox();
-            this.pictureBox121 = new System.Windows.Forms.PictureBox();
             this.pictureBox122 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox135 = new System.Windows.Forms.PictureBox();
@@ -141,7 +134,8 @@ namespace MyPocketCal2003
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox139 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.pictureBox138 = new System.Windows.Forms.PictureBox();
+            this.checkBoxRPN = new System.Windows.Forms.CheckBox();
+            this.checkBoxDeg = new System.Windows.Forms.CheckBox();
             this.clearButton = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.txtFunctionInput = new System.Windows.Forms.TextBox();
@@ -194,7 +188,7 @@ namespace MyPocketCal2003
             // pictureBox86
             // 
             this.pictureBox86.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pictureBox86.Click += new System.EventHandler(this.xyButton_Click);
+            this.pictureBox86.Click += new System.EventHandler(this.x3Button_Click);
             // 
             // pictureBox87
             // 
@@ -323,6 +317,10 @@ namespace MyPocketCal2003
             // equalButton
             // 
             this.equalButton.Click += new System.EventHandler(this.equalButton_Click);
+            // 
+            // undoButton
+            // 
+            this.undoButton.Click += new System.EventHandler(this.undoButton_Click);
             // 
             // rightBracketButton
             // 
@@ -1020,54 +1018,6 @@ namespace MyPocketCal2003
             this.button1.TabIndex = 16;
             this.button1.Text = "Clear";
             // 
-            // checkBox6
-            // 
-            this.checkBox6.Location = new System.Drawing.Point(123, 150);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(56, 16);
-            this.checkBox6.TabIndex = 14;
-            this.checkBox6.Text = "Adj A";
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.Location = new System.Drawing.Point(123, 221);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(103, 16);
-            this.checkBox5.TabIndex = 13;
-            this.checkBox5.Text = "Eigenvector";
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.Location = new System.Drawing.Point(123, 199);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(103, 16);
-            this.checkBox4.TabIndex = 12;
-            this.checkBox4.Text = "Eigenvalues";
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.Location = new System.Drawing.Point(123, 175);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(69, 16);
-            this.checkBox3.TabIndex = 11;
-            this.checkBox3.Text = "Trans A";
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.Location = new System.Drawing.Point(67, 150);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(56, 16);
-            this.checkBox2.TabIndex = 10;
-            this.checkBox2.Text = "Inv A";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.Location = new System.Drawing.Point(3, 150);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(58, 16);
-            this.checkBox1.TabIndex = 9;
-            this.checkBox1.Text = "Det A";
-            // 
             // listBox1
             // 
             this.listBox1.Items.Add("Matrix A");
@@ -1089,7 +1039,7 @@ namespace MyPocketCal2003
             // nCrButton
             // 
             this.nCrButton.Image = ((System.Drawing.Image)(resources.GetObject("nCrButton.Image")));
-            this.nCrButton.Location = new System.Drawing.Point(2, 3);
+            this.nCrButton.Location = new System.Drawing.Point(1, 25);
             this.nCrButton.Name = "nCrButton";
             this.nCrButton.Size = new System.Drawing.Size(21, 21);
             this.nCrButton.Click += new System.EventHandler(this.nCrButton_Click);
@@ -1097,19 +1047,18 @@ namespace MyPocketCal2003
             // nPrButton
             // 
             this.nPrButton.Image = ((System.Drawing.Image)(resources.GetObject("nPrButton.Image")));
-            this.nPrButton.Location = new System.Drawing.Point(24, 3);
+            this.nPrButton.Location = new System.Drawing.Point(23, 25);
             this.nPrButton.Name = "nPrButton";
             this.nPrButton.Size = new System.Drawing.Size(21, 21);
             this.nPrButton.Click += new System.EventHandler(this.nPrButton_Click);
             // 
             // txtOutput
             // 
-            this.txtOutput.Location = new System.Drawing.Point(1, 75);
+            this.txtOutput.Location = new System.Drawing.Point(0, 30);
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.ReadOnly = true;
-            this.txtOutput.Size = new System.Drawing.Size(236, 21);
+            this.txtOutput.Size = new System.Drawing.Size(187, 21);
             this.txtOutput.TabIndex = 46;
-            this.txtOutput.Text = "=";
             // 
             // inputBox
             // 
@@ -1190,14 +1139,6 @@ namespace MyPocketCal2003
             this.pictureBox120.Name = "pictureBox120";
             this.pictureBox120.Size = new System.Drawing.Size(21, 21);
             this.pictureBox120.Click += new System.EventHandler(this.pictureBox120_Click);
-            // 
-            // pictureBox121
-            // 
-            this.pictureBox121.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox121.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox121.Image")));
-            this.pictureBox121.Location = new System.Drawing.Point(70, 26);
-            this.pictureBox121.Name = "pictureBox121";
-            this.pictureBox121.Size = new System.Drawing.Size(21, 21);
             // 
             // pictureBox122
             // 
@@ -1318,17 +1259,19 @@ namespace MyPocketCal2003
             // 
             this.pictureBox136.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox136.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox136.Image")));
-            this.pictureBox136.Location = new System.Drawing.Point(24, 26);
+            this.pictureBox136.Location = new System.Drawing.Point(23, 3);
             this.pictureBox136.Name = "pictureBox136";
             this.pictureBox136.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox136.Visible = false;
             // 
             // pictureBox137
             // 
             this.pictureBox137.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox137.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox137.Image")));
-            this.pictureBox137.Location = new System.Drawing.Point(1, 26);
+            this.pictureBox137.Location = new System.Drawing.Point(0, 3);
             this.pictureBox137.Name = "pictureBox137";
             this.pictureBox137.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox137.Visible = false;
             // 
             // panel8
             // 
@@ -1356,23 +1299,31 @@ namespace MyPocketCal2003
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.checkBoxRPN);
+            this.panel9.Controls.Add(this.checkBoxDeg);
             this.panel9.Controls.Add(this.pictureBox137);
-            this.panel9.Controls.Add(this.pictureBox138);
             this.panel9.Controls.Add(this.pictureBox136);
             this.panel9.Controls.Add(this.nPrButton);
             this.panel9.Controls.Add(this.nCrButton);
-            this.panel9.Controls.Add(this.pictureBox121);
             this.panel9.Location = new System.Drawing.Point(140, 125);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(100, 48);
             // 
-            // pictureBox138
+            // checkBoxRPN
             // 
-            this.pictureBox138.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox138.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox138.Image")));
-            this.pictureBox138.Location = new System.Drawing.Point(47, 27);
-            this.pictureBox138.Name = "pictureBox138";
-            this.pictureBox138.Size = new System.Drawing.Size(21, 21);
+            this.checkBoxRPN.Location = new System.Drawing.Point(47, 25);
+            this.checkBoxRPN.Name = "checkBoxRPN";
+            this.checkBoxRPN.Size = new System.Drawing.Size(50, 20);
+            this.checkBoxRPN.TabIndex = 6;
+            this.checkBoxRPN.Text = "RPN";
+            // 
+            // checkBoxDeg
+            // 
+            this.checkBoxDeg.Location = new System.Drawing.Point(47, 4);
+            this.checkBoxDeg.Name = "checkBoxDeg";
+            this.checkBoxDeg.Size = new System.Drawing.Size(50, 20);
+            this.checkBoxDeg.TabIndex = 5;
+            this.checkBoxDeg.Text = "Deg";
             // 
             // clearButton
             // 
@@ -1387,15 +1338,15 @@ namespace MyPocketCal2003
             // 
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.comboBox3.Items.Add("Constants");
-            this.comboBox3.Location = new System.Drawing.Point(167, 30);
+            this.comboBox3.Location = new System.Drawing.Point(190, 75);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(69, 22);
+            this.comboBox3.Size = new System.Drawing.Size(50, 22);
             this.comboBox3.TabIndex = 47;
             // 
             // txtFunctionInput
             // 
             this.txtFunctionInput.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtFunctionInput.Location = new System.Drawing.Point(1, 50);
+            this.txtFunctionInput.Location = new System.Drawing.Point(0, 76);
             this.txtFunctionInput.Name = "txtFunctionInput";
             this.txtFunctionInput.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtFunctionInput.Size = new System.Drawing.Size(111, 21);
@@ -1405,7 +1356,7 @@ namespace MyPocketCal2003
             // labelFunction
             // 
             this.labelFunction.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.labelFunction.Location = new System.Drawing.Point(1, 31);
+            this.labelFunction.Location = new System.Drawing.Point(0, 57);
             this.labelFunction.Name = "labelFunction";
             this.labelFunction.Size = new System.Drawing.Size(100, 15);
             this.labelFunction.Text = "Function:";
@@ -1413,7 +1364,7 @@ namespace MyPocketCal2003
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(116, 50);
+            this.btnOK.Location = new System.Drawing.Point(115, 76);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(33, 21);
             this.btnOK.TabIndex = 91;
@@ -1539,12 +1490,6 @@ namespace MyPocketCal2003
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox txtOutput;
@@ -1559,7 +1504,6 @@ namespace MyPocketCal2003
         private System.Windows.Forms.PictureBox pictureBox120;
         private System.Windows.Forms.PictureBox nCrButton;
         private System.Windows.Forms.PictureBox nPrButton;
-        private System.Windows.Forms.PictureBox pictureBox121;
         private System.Windows.Forms.PictureBox pictureBox122;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox132;
@@ -1577,12 +1521,13 @@ namespace MyPocketCal2003
         private System.Windows.Forms.PictureBox pictureBox133;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.PictureBox pictureBox138;
         private System.Windows.Forms.PictureBox pictureBox139;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.TextBox txtFunctionInput;
         private System.Windows.Forms.Label labelFunction;
         private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.CheckBox checkBoxRPN;
+        private System.Windows.Forms.CheckBox checkBoxDeg;
     }
 }

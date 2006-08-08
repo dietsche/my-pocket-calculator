@@ -83,8 +83,8 @@ namespace MyPocketCal2003
 
         private void pictureBox118_Click(object sender, EventArgs e)
         {
-            Differentiation d = new Differentiation();
-            d.Show();
+            Complex c = new Complex();
+            c.Show();
         }
 
         private void pictureBox119_Click(object sender, EventArgs e)
@@ -689,7 +689,7 @@ namespace MyPocketCal2003
                         double x = Double.Parse(xy[0]); //store x
                         double y = Double.Parse(xy[1]); //store y
                         //solve
-                        this.inputExpression.Add( "" + Math.Pow(x, (1.0 / y)));
+                        this.inputExpression.Add( "" + Math.Pow(x, (1.0 / y)));                        
                         inputBoxText.Add(x + Constants.X_POWER_Y + y);
                         inputBox.Text += inputBoxText.ToString();
                     }

@@ -291,7 +291,7 @@ namespace MyPocketCal2003
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button11);
             this.Name = "Vector";
-            this.Text = "Operation:";
+            this.Text = "Vector";
             this.Controls.SetChildIndex(this.button11, 0);
             this.Controls.SetChildIndex(this.button10, 0);
             this.Controls.SetChildIndex(this.vectorBox, 0);

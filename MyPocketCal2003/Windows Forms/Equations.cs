@@ -19,13 +19,13 @@ namespace MyPocketCal2003
         //a function which sets the activebox TextBox to the TextBox which has the focus
         private void setActiveInputBox()
         {
-            if (this.equationBox.Focused == true) //if equation textbox has the focus
+            if (this.txtInputBox.Focused == true) //if equation textbox has the focus
             {
-                this.activeBox = equationBox;
+                this.activeBox = txtInputBox;
             }
-            else if (this.coefficientBox.Focused == true) //if coefficient textbox has the focus
+            else if (this.txtInputBox.Focused == true) //if coefficient textbox has the focus
             {
-                this.activeBox = coefficientBox;
+                this.activeBox = txtInputBox;
             }
         }
         //zero pressed on the calculator
@@ -135,6 +135,14 @@ namespace MyPocketCal2003
         {
             this.setActiveInputBox();
             this.activeBox.Text += Constants.LEFT_BRACKET;
+        }
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtInputBox.Text = "";
+        }
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            PolynomialEquation polyEq = new PolynomialEquation(txtInputBox.Text);
         }
     }
 }

@@ -56,6 +56,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class Files\BasicPostFix.cs" />
+    <Compile Include="Class Files\ComplexPostFix.cs" />
+    <Compile Include="Class Files\ComplexNumber.cs" />
+    <Compile Include="Windows Forms\Complex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows Forms\Complex.Designer.cs">
+      <DependentUpon>Complex.cs</DependentUpon>
+    </Compile>
     <Compile Include="Constants.cs" />
     <Compile Include="Class Files\CurrencyConversion.cs" />
     <Compile Include="Class Files\NumberConversion.cs" />
@@ -65,6 +73,7 @@
     <Compile Include="Class Files\StatsAdvance.cs" />
     <Compile Include="Class Files\Matrix.cs" />
     <Compile Include="Class Files\MatrixPostFix.cs" />
+    <Compile Include="Class Files\PolynomialEquation.cs" />
     <Compile Include="Windows Forms\AddDeleteQuantity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,12 +109,6 @@
     </Compile>
     <Compile Include="Windows Forms\Differentiation.Designer.cs">
       <DependentUpon>Differentiation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows Forms\Integration.cs">
       <SubType>Form</SubType>
@@ -146,10 +149,6 @@
     <EmbeddedResource Include="Windows Forms\Differentiation.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Differentiation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows Forms\Integration.resx">
       <SubType>Designer</SubType>
@@ -197,6 +196,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Windows Forms\Complex.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Complex.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows Forms\AddDeleteQuantity.resx">
       <SubType>Designer</SubType>
       <DependentUpon>AddDeleteQuantity.cs</DependentUpon>

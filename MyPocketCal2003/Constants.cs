@@ -60,5 +60,7 @@ namespace MyPocketCal2003
         public const String X_UNDERROOT_2 = "^1/2";
         public const String NPR = "p";
         public const String NCR = "c";
+
+        public const String COMPLEX = "a+bi=";
     }
 }

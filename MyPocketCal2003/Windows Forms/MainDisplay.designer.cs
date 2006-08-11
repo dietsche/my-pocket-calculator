@@ -109,30 +109,11 @@ namespace MyPocketCal2003
             this.txtOutput = new System.Windows.Forms.TextBox();
             this.inputBox = new System.Windows.Forms.TextBox();
             this.pictureBox113 = new System.Windows.Forms.PictureBox();
-            this.pictureBox114 = new System.Windows.Forms.PictureBox();
             this.pictureBox115 = new System.Windows.Forms.PictureBox();
             this.pictureBox116 = new System.Windows.Forms.PictureBox();
             this.pictureBox117 = new System.Windows.Forms.PictureBox();
-            this.pictureBox118 = new System.Windows.Forms.PictureBox();
             this.pictureBox119 = new System.Windows.Forms.PictureBox();
-            this.pictureBox120 = new System.Windows.Forms.PictureBox();
-            this.pictureBox122 = new System.Windows.Forms.PictureBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox135 = new System.Windows.Forms.PictureBox();
-            this.pictureBox134 = new System.Windows.Forms.PictureBox();
-            this.pictureBox133 = new System.Windows.Forms.PictureBox();
-            this.pictureBox132 = new System.Windows.Forms.PictureBox();
-            this.pictureBox131 = new System.Windows.Forms.PictureBox();
-            this.pictureBox130 = new System.Windows.Forms.PictureBox();
-            this.pictureBox129 = new System.Windows.Forms.PictureBox();
-            this.pictureBox128 = new System.Windows.Forms.PictureBox();
-            this.pictureBox127 = new System.Windows.Forms.PictureBox();
-            this.pictureBox126 = new System.Windows.Forms.PictureBox();
-            this.pictureBox125 = new System.Windows.Forms.PictureBox();
-            this.pictureBox136 = new System.Windows.Forms.PictureBox();
-            this.pictureBox137 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.pictureBox139 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.checkBoxRPN = new System.Windows.Forms.CheckBox();
             this.checkBoxDeg = new System.Windows.Forms.CheckBox();
@@ -141,13 +122,13 @@ namespace MyPocketCal2003
             this.txtFunctionInput = new System.Windows.Forms.TextBox();
             this.labelFunction = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
+            this.iota = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.basicButtonsPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.SuspendLayout();
@@ -320,6 +301,7 @@ namespace MyPocketCal2003
             // 
             // undoButton
             // 
+            this.undoButton.DoubleClick += new System.EventHandler(this.undoButton_Click);
             this.undoButton.Click += new System.EventHandler(this.undoButton_Click);
             // 
             // rightBracketButton
@@ -376,10 +358,12 @@ namespace MyPocketCal2003
             // 
             // oneButton
             // 
+            this.oneButton.Location = new System.Drawing.Point(25, 26);
             this.oneButton.Click += new System.EventHandler(this.oneButton_Click);
             // 
             // twoButton
             // 
+            this.twoButton.Location = new System.Drawing.Point(48, 26);
             this.twoButton.Click += new System.EventHandler(this.twoButton_Click);
             // 
             // threeButton
@@ -388,10 +372,12 @@ namespace MyPocketCal2003
             // 
             // decimalButton
             // 
+            this.decimalButton.Location = new System.Drawing.Point(2, 3);
             this.decimalButton.Click += new System.EventHandler(this.decimalButton_Click);
             // 
             // zeroButton
             // 
+            this.zeroButton.Location = new System.Drawing.Point(2, 26);
             this.zeroButton.Click += new System.EventHandler(this.zeroButton_Click);
             // 
             // pictureBox37
@@ -1038,16 +1024,18 @@ namespace MyPocketCal2003
             // 
             // nCrButton
             // 
+            this.nCrButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.nCrButton.Image = ((System.Drawing.Image)(resources.GetObject("nCrButton.Image")));
-            this.nCrButton.Location = new System.Drawing.Point(1, 25);
+            this.nCrButton.Location = new System.Drawing.Point(2, 3);
             this.nCrButton.Name = "nCrButton";
             this.nCrButton.Size = new System.Drawing.Size(21, 21);
             this.nCrButton.Click += new System.EventHandler(this.nCrButton_Click);
             // 
             // nPrButton
             // 
+            this.nPrButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.nPrButton.Image = ((System.Drawing.Image)(resources.GetObject("nPrButton.Image")));
-            this.nPrButton.Location = new System.Drawing.Point(23, 25);
+            this.nPrButton.Location = new System.Drawing.Point(25, 3);
             this.nPrButton.Name = "nPrButton";
             this.nPrButton.Size = new System.Drawing.Size(21, 21);
             this.nPrButton.Click += new System.EventHandler(this.nPrButton_Click);
@@ -1073,24 +1061,16 @@ namespace MyPocketCal2003
             // 
             this.pictureBox113.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox113.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox113.Image")));
-            this.pictureBox113.Location = new System.Drawing.Point(210, 2);
+            this.pictureBox113.Location = new System.Drawing.Point(49, 2);
             this.pictureBox113.Name = "pictureBox113";
             this.pictureBox113.Size = new System.Drawing.Size(21, 21);
             this.pictureBox113.Click += new System.EventHandler(this.pictureBox113_Click);
-            // 
-            // pictureBox114
-            // 
-            this.pictureBox114.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox114.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox114.Image")));
-            this.pictureBox114.Location = new System.Drawing.Point(187, 2);
-            this.pictureBox114.Name = "pictureBox114";
-            this.pictureBox114.Size = new System.Drawing.Size(21, 21);
             // 
             // pictureBox115
             // 
             this.pictureBox115.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox115.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox115.Image")));
-            this.pictureBox115.Location = new System.Drawing.Point(164, 2);
+            this.pictureBox115.Location = new System.Drawing.Point(26, 2);
             this.pictureBox115.Name = "pictureBox115";
             this.pictureBox115.Size = new System.Drawing.Size(21, 21);
             this.pictureBox115.Click += new System.EventHandler(this.pictureBox115_Click);
@@ -1099,7 +1079,7 @@ namespace MyPocketCal2003
             // 
             this.pictureBox116.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox116.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox116.Image")));
-            this.pictureBox116.Location = new System.Drawing.Point(141, 2);
+            this.pictureBox116.Location = new System.Drawing.Point(3, 2);
             this.pictureBox116.Name = "pictureBox116";
             this.pictureBox116.Size = new System.Drawing.Size(21, 21);
             this.pictureBox116.Click += new System.EventHandler(this.pictureBox116_Click);
@@ -1108,210 +1088,47 @@ namespace MyPocketCal2003
             // 
             this.pictureBox117.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox117.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox117.Image")));
-            this.pictureBox117.Location = new System.Drawing.Point(71, 2);
+            this.pictureBox117.Location = new System.Drawing.Point(72, 2);
             this.pictureBox117.Name = "pictureBox117";
             this.pictureBox117.Size = new System.Drawing.Size(21, 21);
             this.pictureBox117.Click += new System.EventHandler(this.pictureBox117_Click);
-            // 
-            // pictureBox118
-            // 
-            this.pictureBox118.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox118.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox118.Image")));
-            this.pictureBox118.Location = new System.Drawing.Point(48, 3);
-            this.pictureBox118.Name = "pictureBox118";
-            this.pictureBox118.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox118.Click += new System.EventHandler(this.pictureBox118_Click);
             // 
             // pictureBox119
             // 
             this.pictureBox119.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox119.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox119.Image")));
-            this.pictureBox119.Location = new System.Drawing.Point(25, 3);
+            this.pictureBox119.Location = new System.Drawing.Point(71, 3);
             this.pictureBox119.Name = "pictureBox119";
             this.pictureBox119.Size = new System.Drawing.Size(21, 21);
             this.pictureBox119.Click += new System.EventHandler(this.pictureBox119_Click);
             // 
-            // pictureBox120
-            // 
-            this.pictureBox120.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox120.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox120.Image")));
-            this.pictureBox120.Location = new System.Drawing.Point(2, 3);
-            this.pictureBox120.Name = "pictureBox120";
-            this.pictureBox120.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox120.Click += new System.EventHandler(this.pictureBox120_Click);
-            // 
-            // pictureBox122
-            // 
-            this.pictureBox122.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox122.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox122.Image")));
-            this.pictureBox122.Location = new System.Drawing.Point(2, 24);
-            this.pictureBox122.Name = "pictureBox122";
-            this.pictureBox122.Size = new System.Drawing.Size(21, 21);
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.pictureBox135);
-            this.panel7.Controls.Add(this.pictureBox134);
-            this.panel7.Controls.Add(this.pictureBox133);
-            this.panel7.Controls.Add(this.pictureBox132);
-            this.panel7.Controls.Add(this.pictureBox131);
-            this.panel7.Controls.Add(this.pictureBox130);
-            this.panel7.Controls.Add(this.pictureBox129);
-            this.panel7.Controls.Add(this.pictureBox128);
-            this.panel7.Controls.Add(this.pictureBox127);
-            this.panel7.Controls.Add(this.pictureBox126);
-            this.panel7.Controls.Add(this.pictureBox125);
-            this.panel7.Controls.Add(this.pictureBox122);
-            this.panel7.Location = new System.Drawing.Point(0, 126);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(138, 47);
-            this.panel7.Visible = false;
-            // 
-            // pictureBox135
-            // 
-            this.pictureBox135.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox135.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox135.Image")));
-            this.pictureBox135.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox135.Name = "pictureBox135";
-            this.pictureBox135.Size = new System.Drawing.Size(21, 21);
-            // 
-            // pictureBox134
-            // 
-            this.pictureBox134.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox134.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox134.Image")));
-            this.pictureBox134.Location = new System.Drawing.Point(25, 2);
-            this.pictureBox134.Name = "pictureBox134";
-            this.pictureBox134.Size = new System.Drawing.Size(21, 21);
-            // 
-            // pictureBox133
-            // 
-            this.pictureBox133.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox133.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox133.Image")));
-            this.pictureBox133.Location = new System.Drawing.Point(48, 2);
-            this.pictureBox133.Name = "pictureBox133";
-            this.pictureBox133.Size = new System.Drawing.Size(21, 21);
-            // 
-            // pictureBox132
-            // 
-            this.pictureBox132.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox132.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox132.Image")));
-            this.pictureBox132.Location = new System.Drawing.Point(94, 2);
-            this.pictureBox132.Name = "pictureBox132";
-            this.pictureBox132.Size = new System.Drawing.Size(21, 21);
-            // 
-            // pictureBox131
-            // 
-            this.pictureBox131.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox131.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox131.Image")));
-            this.pictureBox131.Location = new System.Drawing.Point(117, 2);
-            this.pictureBox131.Name = "pictureBox131";
-            this.pictureBox131.Size = new System.Drawing.Size(21, 21);
-            // 
-            // pictureBox130
-            // 
-            this.pictureBox130.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox130.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox130.Image")));
-            this.pictureBox130.Location = new System.Drawing.Point(117, 24);
-            this.pictureBox130.Name = "pictureBox130";
-            this.pictureBox130.Size = new System.Drawing.Size(21, 21);
-            // 
-            // pictureBox129
-            // 
-            this.pictureBox129.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox129.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox129.Image")));
-            this.pictureBox129.Location = new System.Drawing.Point(94, 24);
-            this.pictureBox129.Name = "pictureBox129";
-            this.pictureBox129.Size = new System.Drawing.Size(21, 21);
-            // 
-            // pictureBox128
-            // 
-            this.pictureBox128.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox128.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox128.Image")));
-            this.pictureBox128.Location = new System.Drawing.Point(71, 24);
-            this.pictureBox128.Name = "pictureBox128";
-            this.pictureBox128.Size = new System.Drawing.Size(21, 21);
-            // 
-            // pictureBox127
-            // 
-            this.pictureBox127.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox127.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox127.Image")));
-            this.pictureBox127.Location = new System.Drawing.Point(48, 24);
-            this.pictureBox127.Name = "pictureBox127";
-            this.pictureBox127.Size = new System.Drawing.Size(21, 21);
-            // 
-            // pictureBox126
-            // 
-            this.pictureBox126.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox126.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox126.Image")));
-            this.pictureBox126.Location = new System.Drawing.Point(25, 24);
-            this.pictureBox126.Name = "pictureBox126";
-            this.pictureBox126.Size = new System.Drawing.Size(21, 21);
-            // 
-            // pictureBox125
-            // 
-            this.pictureBox125.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox125.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox125.Image")));
-            this.pictureBox125.Location = new System.Drawing.Point(71, 2);
-            this.pictureBox125.Name = "pictureBox125";
-            this.pictureBox125.Size = new System.Drawing.Size(21, 21);
-            // 
-            // pictureBox136
-            // 
-            this.pictureBox136.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox136.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox136.Image")));
-            this.pictureBox136.Location = new System.Drawing.Point(23, 3);
-            this.pictureBox136.Name = "pictureBox136";
-            this.pictureBox136.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox136.Visible = false;
-            // 
-            // pictureBox137
-            // 
-            this.pictureBox137.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox137.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox137.Image")));
-            this.pictureBox137.Location = new System.Drawing.Point(0, 3);
-            this.pictureBox137.Name = "pictureBox137";
-            this.pictureBox137.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox137.Visible = false;
-            // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.pictureBox139);
             this.panel8.Controls.Add(this.pictureBox115);
             this.panel8.Controls.Add(this.pictureBox116);
-            this.panel8.Controls.Add(this.pictureBox114);
             this.panel8.Controls.Add(this.pictureBox113);
-            this.panel8.Controls.Add(this.pictureBox118);
-            this.panel8.Controls.Add(this.pictureBox120);
-            this.panel8.Controls.Add(this.pictureBox119);
             this.panel8.Controls.Add(this.pictureBox117);
             this.panel8.Location = new System.Drawing.Point(0, 100);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(240, 26);
-            // 
-            // pictureBox139
-            // 
-            this.pictureBox139.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox139.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox139.Image")));
-            this.pictureBox139.Location = new System.Drawing.Point(94, 2);
-            this.pictureBox139.Name = "pictureBox139";
-            this.pictureBox139.Size = new System.Drawing.Size(44, 21);
-            this.pictureBox139.Click += new System.EventHandler(this.pictureBox139_Click);
+            this.panel8.Size = new System.Drawing.Size(95, 26);
             // 
             // panel9
             // 
+            this.panel9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel9.Controls.Add(this.iota);
             this.panel9.Controls.Add(this.checkBoxRPN);
             this.panel9.Controls.Add(this.checkBoxDeg);
-            this.panel9.Controls.Add(this.pictureBox137);
-            this.panel9.Controls.Add(this.pictureBox136);
+            this.panel9.Controls.Add(this.pictureBox119);
             this.panel9.Controls.Add(this.nPrButton);
             this.panel9.Controls.Add(this.nCrButton);
-            this.panel9.Location = new System.Drawing.Point(140, 125);
+            this.panel9.Location = new System.Drawing.Point(0, 151);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(100, 48);
+            this.panel9.Size = new System.Drawing.Size(240, 26);
             // 
             // checkBoxRPN
             // 
-            this.checkBoxRPN.Location = new System.Drawing.Point(47, 25);
+            this.checkBoxRPN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxRPN.Location = new System.Drawing.Point(186, 2);
             this.checkBoxRPN.Name = "checkBoxRPN";
             this.checkBoxRPN.Size = new System.Drawing.Size(50, 20);
             this.checkBoxRPN.TabIndex = 6;
@@ -1319,7 +1136,8 @@ namespace MyPocketCal2003
             // 
             // checkBoxDeg
             // 
-            this.checkBoxDeg.Location = new System.Drawing.Point(47, 4);
+            this.checkBoxDeg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxDeg.Location = new System.Drawing.Point(136, 2);
             this.checkBoxDeg.Name = "checkBoxDeg";
             this.checkBoxDeg.Size = new System.Drawing.Size(50, 20);
             this.checkBoxDeg.TabIndex = 5;
@@ -1338,10 +1156,11 @@ namespace MyPocketCal2003
             // 
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.comboBox3.Items.Add("Constants");
-            this.comboBox3.Location = new System.Drawing.Point(190, 75);
+            this.comboBox3.Location = new System.Drawing.Point(186, 75);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(50, 22);
             this.comboBox3.TabIndex = 47;
+            this.comboBox3.Visible = false;
             // 
             // txtFunctionInput
             // 
@@ -1358,7 +1177,7 @@ namespace MyPocketCal2003
             this.labelFunction.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.labelFunction.Location = new System.Drawing.Point(0, 57);
             this.labelFunction.Name = "labelFunction";
-            this.labelFunction.Size = new System.Drawing.Size(100, 15);
+            this.labelFunction.Size = new System.Drawing.Size(186, 15);
             this.labelFunction.Text = "Function:";
             this.labelFunction.Visible = false;
             // 
@@ -1372,6 +1191,15 @@ namespace MyPocketCal2003
             this.btnOK.Visible = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
+            // iota
+            // 
+            this.iota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.iota.Image = ((System.Drawing.Image)(resources.GetObject("iota.Image")));
+            this.iota.Location = new System.Drawing.Point(48, 3);
+            this.iota.Name = "iota";
+            this.iota.Size = new System.Drawing.Size(21, 21);
+            this.iota.Click += new System.EventHandler(this.iota_Click);
+            // 
             // MainDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1381,34 +1209,31 @@ namespace MyPocketCal2003
             this.Controls.Add(this.labelFunction);
             this.Controls.Add(this.txtFunctionInput);
             this.Controls.Add(this.inputBox);
-            this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.clearButton);
+            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.txtOutput);
+            this.Controls.Add(this.panel9);
             this.Name = "MainDisplay";
             this.Text = " ";
-            this.Controls.SetChildIndex(this.txtOutput, 0);
-            this.Controls.SetChildIndex(this.clearButton, 0);
-            this.Controls.SetChildIndex(this.comboBox3, 0);
-            this.Controls.SetChildIndex(this.panel7, 0);
-            this.Controls.SetChildIndex(this.panel8, 0);
             this.Controls.SetChildIndex(this.panel9, 0);
+            this.Controls.SetChildIndex(this.txtOutput, 0);
+            this.Controls.SetChildIndex(this.comboBox3, 0);
+            this.Controls.SetChildIndex(this.clearButton, 0);
+            this.Controls.SetChildIndex(this.panel8, 0);
             this.Controls.SetChildIndex(this.inputBox, 0);
-            this.Controls.SetChildIndex(this.basicButtonsPanel, 0);
-            this.Controls.SetChildIndex(this.panel4, 0);
-            this.Controls.SetChildIndex(this.panel5, 0);
             this.Controls.SetChildIndex(this.txtFunctionInput, 0);
+            this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.labelFunction, 0);
+            this.Controls.SetChildIndex(this.panel5, 0);
             this.Controls.SetChildIndex(this.btnOK, 0);
+            this.Controls.SetChildIndex(this.basicButtonsPanel, 0);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.basicButtonsPanel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -1495,33 +1320,14 @@ namespace MyPocketCal2003
         private System.Windows.Forms.TextBox txtOutput;
         private System.Windows.Forms.TextBox inputBox;
         private System.Windows.Forms.PictureBox pictureBox113;
-        private System.Windows.Forms.PictureBox pictureBox114;
         private System.Windows.Forms.PictureBox pictureBox115;
         private System.Windows.Forms.PictureBox pictureBox116;
         private System.Windows.Forms.PictureBox pictureBox117;
-        private System.Windows.Forms.PictureBox pictureBox118;
         private System.Windows.Forms.PictureBox pictureBox119;
-        private System.Windows.Forms.PictureBox pictureBox120;
         private System.Windows.Forms.PictureBox nCrButton;
         private System.Windows.Forms.PictureBox nPrButton;
-        private System.Windows.Forms.PictureBox pictureBox122;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.PictureBox pictureBox132;
-        private System.Windows.Forms.PictureBox pictureBox131;
-        private System.Windows.Forms.PictureBox pictureBox130;
-        private System.Windows.Forms.PictureBox pictureBox129;
-        private System.Windows.Forms.PictureBox pictureBox128;
-        private System.Windows.Forms.PictureBox pictureBox127;
-        private System.Windows.Forms.PictureBox pictureBox126;
-        private System.Windows.Forms.PictureBox pictureBox125;
-        private System.Windows.Forms.PictureBox pictureBox137;
-        private System.Windows.Forms.PictureBox pictureBox136;
-        private System.Windows.Forms.PictureBox pictureBox135;
-        private System.Windows.Forms.PictureBox pictureBox134;
-        private System.Windows.Forms.PictureBox pictureBox133;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.PictureBox pictureBox139;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.TextBox txtFunctionInput;
@@ -1529,5 +1335,6 @@ namespace MyPocketCal2003
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.CheckBox checkBoxRPN;
         private System.Windows.Forms.CheckBox checkBoxDeg;
+        private System.Windows.Forms.PictureBox iota;
     }
 }

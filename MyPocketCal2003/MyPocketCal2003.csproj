@@ -56,14 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class Files\BasicPostFix.cs" />
-    <Compile Include="Class Files\ComplexPostFix.cs" />
     <Compile Include="Class Files\ComplexNumber.cs" />
-    <Compile Include="Windows Forms\Complex.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Windows Forms\Complex.Designer.cs">
-      <DependentUpon>Complex.cs</DependentUpon>
-    </Compile>
     <Compile Include="Constants.cs" />
     <Compile Include="Class Files\CurrencyConversion.cs" />
     <Compile Include="Class Files\NumberConversion.cs" />
@@ -73,18 +66,11 @@
     <Compile Include="Class Files\StatsAdvance.cs" />
     <Compile Include="Class Files\Matrix.cs" />
     <Compile Include="Class Files\MatrixPostFix.cs" />
-    <Compile Include="Class Files\PolynomialEquation.cs" />
     <Compile Include="Windows Forms\AddDeleteQuantity.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Windows Forms\AddDeleteQuantity.Designer.cs">
       <DependentUpon>AddDeleteQuantity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Windows Forms\Equations.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Windows Forms\Equations.Designer.cs">
-      <DependentUpon>Equations.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows Forms\MainDisplay.cs">
       <SubType>Form</SubType>
@@ -104,36 +90,14 @@
     <Compile Include="Windows Forms\Unit.Designer.cs">
       <DependentUpon>Unit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows Forms\Differentiation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Windows Forms\Differentiation.Designer.cs">
-      <DependentUpon>Differentiation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Windows Forms\Integration.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Windows Forms\Integration.Designer.cs">
-      <DependentUpon>Integration.cs</DependentUpon>
-    </Compile>
     <Compile Include="Windows Forms\MatrixForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Windows Forms\MatrixForm.Designer.cs">
       <DependentUpon>MatrixForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows Forms\Plot.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Windows Forms\Plot.Designer.cs">
-      <DependentUpon>Plot.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Windows Forms\Equations.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Equations.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Windows Forms\MainDisplay.resx">
       <DependentUpon>MainDisplay.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -146,21 +110,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>Unit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows Forms\Differentiation.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Differentiation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Windows Forms\Integration.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Integration.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Windows Forms\MatrixForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>MatrixForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Windows Forms\Plot.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Plot.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -196,10 +148,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Windows Forms\Complex.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Complex.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Windows Forms\AddDeleteQuantity.resx">
       <SubType>Designer</SubType>
       <DependentUpon>AddDeleteQuantity.cs</DependentUpon>

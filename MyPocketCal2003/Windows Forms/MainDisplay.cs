@@ -74,19 +74,6 @@ namespace MyPocketCal2003
             Unit c = new Unit();
             c.Show();
         }
-
-        private void pictureBox120_Click(object sender, EventArgs e)
-        {
-            Plot p = new Plot();
-            p.Show();
-        }
-
-        private void pictureBox118_Click(object sender, EventArgs e)
-        {
-            Complex c = new Complex();
-            c.Show();
-        }
-
         private void pictureBox119_Click(object sender, EventArgs e)
         {
             this.functionClickHandler(Constants.COMPLEX);
@@ -98,14 +85,6 @@ namespace MyPocketCal2003
             Vector v = new Vector();
             v.Show();
         }
-
-        private void pictureBox139_Click(object sender, EventArgs e)
-        {
-            Equations ee = new Equations();
-            ee.Show();
-        }
-
-
         //zero pressed on the calculator
         private void zeroButton_Click(object sender, EventArgs e)
         {
@@ -396,21 +375,32 @@ namespace MyPocketCal2003
 
         private void equalButton_Click(object sender, EventArgs e)
         {
-            if (checkBoxRPN.Checked)
+            if (inputBoxText.Count == 0) //user pressing = for fun :) i.e. no input in the inputbox
+                return;
+            try
             {
-                BasicPostFix postFix = new BasicPostFix();
-                //solve the rpn input
-                this.txtOutput.Text = postFix.solveRPN(inputExpression.toCompleteString());
+                if (checkBoxRPN.Checked)
+                {
+                    BasicPostFix postFix = new BasicPostFix();
+                    //solve the rpn input
+                    this.txtOutput.Text = postFix.solveRPN(inputExpression.toCompleteString());
+                }
+                else
+                {
+                    BasicPostFix postFix = new BasicPostFix();
+                    //convert to rpn
+                    //MessageBox.Show(inputExpression.toCompleteString());
+                    String rpn = postFix.Convert(inputExpression.toCompleteString());
+                    //MessageBox.Show(rpn);
+                    //solve the rpn
+                    this.txtOutput.Text = postFix.Solve(rpn);
+                }
+                this.clearRegisters(); //clear the input registers
             }
-            else
+            catch (Exception ex)
             {
-                BasicPostFix postFix = new BasicPostFix();
-                //convert to rpn
-                String rpn = postFix.Convert(inputExpression.toCompleteString());
-                //solve the rpn
-                this.txtOutput.Text = postFix.Solve(rpn);
+                this.txtOutput.Text = ex.Message;
             }
-            this.clearRegisters(); //clear the input registers
         }
         private void clearRegisters()
         {
@@ -420,6 +410,11 @@ namespace MyPocketCal2003
         }
         private void btnOK_Click(object sender, EventArgs e)
         {
+            if (txtFunctionInput.Text.Length == 0)
+            {
+                setFunctionControl(false);
+                return;
+            }
 
             //if the last entry is a numeral from 0-9 or ) then that means the user wants to multiply
             //the selected function with the last entry so we do:
@@ -431,376 +426,357 @@ namespace MyPocketCal2003
                     inputBoxText.Add("x");
                     inputBox.Text += inputBoxText.ToString();
                 }
-
-            //throughout the following code inside each if condition the following steps are performed:
-            //1. calculating sin value and adding it to the internal string
-            //2. add the token to Arraylist
-            //3. set the ArrayList to inputboxtext 
-            if(this.funtionSelected.Equals(Constants.SIN))
-            {
-                if (checkBoxDeg.Checked)
-                    this.inputExpression.Add("" + (Math.Sin(Double.Parse(txtFunctionInput.Text) * (Math.PI / 180))));
-                else
-                    this.inputExpression.Add("" + (Math.Sin(Double.Parse(txtFunctionInput.Text))));
-                inputBoxText.Add(Constants.SIN + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.COMPLEX))
+            
+            //if the user wants to input a complex number
+            if (this.funtionSelected.Equals(Constants.COMPLEX))
             {
                 //if its a complex number the function is gonna return my own created representation of a complex number
                 string returnValue = ComplexNumber.convertToComplex(txtFunctionInput.Text.ToString());
-                if(returnValue != null)
+                if (returnValue != null)
                 {
                     inputBoxText.Add("(" + txtFunctionInput.Text.ToString() + ")");
                     inputBox.Text += inputBoxText.ToString();
                     this.inputExpression.Add(returnValue);
                 }
             }
-            else if (this.funtionSelected.Equals(Constants.COS))
+            else //otherwise there is a need to evaluate a function
             {
-                if (checkBoxDeg.Checked)
-                    this.inputExpression.Add("" + (Math.Cos(Double.Parse(txtFunctionInput.Text) * (Math.PI / 180))));
-                else
-                    this.inputExpression.Add("" + (Math.Cos(Double.Parse(txtFunctionInput.Text))));
-                inputBoxText.Add(Constants.COS + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.TAN))
-            {
-                if (checkBoxDeg.Checked)
-                    this.inputExpression.Add("" + (Math.Tan(Double.Parse(txtFunctionInput.Text) * (Math.PI / 180))));
-                else
-                    this.inputExpression.Add("" + (Math.Tan(Double.Parse(txtFunctionInput.Text))));
-                inputBoxText.Add(Constants.TAN + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.CSC))
-            {
-                if (checkBoxDeg.Checked)
-                    this.inputExpression.Add("" + 1 / (Math.Sin(Double.Parse(txtFunctionInput.Text) * (Math.PI / 180))));
-                else
-                    this.inputExpression.Add("" + 1 / (Math.Sin(Double.Parse(txtFunctionInput.Text))));
-                inputBoxText.Add(Constants.CSC + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.SEC))
-            {
-                if (checkBoxDeg.Checked)
-                    this.inputExpression.Add("" + (1 / (Math.Cos(Double.Parse(txtFunctionInput.Text) * (Math.PI / 180)))));
-                else
-                    this.inputExpression.Add("" + 1 / (Math.Cos(Double.Parse(txtFunctionInput.Text))));
-                inputBoxText.Add(Constants.SEC + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.COT))
-            {
-                if (checkBoxDeg.Checked)
-                    this.inputExpression.Add("" + (1 / (Math.Tan(Double.Parse(txtFunctionInput.Text) * (Math.PI / 180)))));
-                else
-                    this.inputExpression.Add("" + 1 / (Math.Tan(Double.Parse(txtFunctionInput.Text))));
-                inputBoxText.Add(Constants.COT + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.ARCSIN))
-            {
-                if (checkBoxDeg.Checked)
-                    this.inputExpression.Add("" + (Math.Asin(Double.Parse(txtFunctionInput.Text)) * (180 / Math.PI)));
-                else
-                    this.inputExpression.Add("" + (Math.Asin(Double.Parse(txtFunctionInput.Text))));
-                inputBoxText.Add(Constants.ARCSIN + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.ARCCOS))
-            {
-                if (checkBoxDeg.Checked)
-                    this.inputExpression.Add("" + (Math.Acos(Double.Parse(txtFunctionInput.Text)) * (180 / Math.PI)));
-                else
-                    this.inputExpression.Add("" + (Math.Acos(Double.Parse(txtFunctionInput.Text))));
-                inputBoxText.Add(Constants.ARCCOS + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.ARCTAN))
-            {
-                if (checkBoxDeg.Checked)
-                    this.inputExpression.Add("" + (Math.Atan(Double.Parse(txtFunctionInput.Text)) * (180 / Math.PI)));
-                else
-                    this.inputExpression.Add("" + (Math.Atan(Double.Parse(txtFunctionInput.Text))));
-                inputBoxText.Add(Constants.ARCTAN + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.ARCCSC))
-            {
-                if (checkBoxDeg.Checked)
-                    this.inputExpression.Add("" + (Math.Asin(1 / Double.Parse(txtFunctionInput.Text)) * (180 / Math.PI)));
-                else
-                    this.inputExpression.Add("" + (Math.Asin(1 / Double.Parse(txtFunctionInput.Text))));
-                inputBoxText.Add(Constants.ARCCSC + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.ARCSEC))
-            {
-                if (checkBoxDeg.Checked)
-                    this.inputExpression.Add("" + (Math.Acos(1 / Double.Parse(txtFunctionInput.Text)) * (180 / Math.PI)));
-                else
-                    this.inputExpression.Add("" + (Math.Acos(1 / Double.Parse(txtFunctionInput.Text))));
-                inputBoxText.Add(Constants.ARCSEC + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.ARCCOT))
-            {
-                if (checkBoxDeg.Checked)
-                    this.inputExpression.Add("" + (1.570796327 - Math.Atan(Double.Parse(txtFunctionInput.Text))) * (180 / Math.PI));
-                else
-                    this.inputExpression.Add("" + (1.570796327 - Math.Atan(Double.Parse(txtFunctionInput.Text))));
-                inputBoxText.Add(Constants.ARCCOT + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.SINH))
-            {
-                this.inputExpression.Add("" + (Math.Sinh(Double.Parse(txtFunctionInput.Text))));
-                inputBoxText.Add(Constants.SINH + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.COSH))
-            {
-                this.inputExpression.Add("" + (Math.Cosh(Double.Parse(txtFunctionInput.Text))));
-                inputBoxText.Add(Constants.COSH + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.TANH))
-            {
-                this.inputExpression.Add("" + (Math.Tanh(Double.Parse(txtFunctionInput.Text))));
-                inputBoxText.Add(Constants.TANH + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.CSCH))
-            {
-                this.inputExpression.Add("" + 1 / (Math.Sinh(Double.Parse(txtFunctionInput.Text))));
-                inputBoxText.Add(Constants.CSCH + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.SECH))
-            {
-                this.inputExpression.Add("" + 1 / (Math.Cosh(Double.Parse(txtFunctionInput.Text))));
-                inputBoxText.Add(Constants.SECH + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.COTH))
-            {
-                this.inputExpression.Add("" + 1 / (Math.Tanh(Double.Parse(txtFunctionInput.Text))));
-                inputBoxText.Add(Constants.TANH + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.EX))
-            {
-                this.inputExpression.Add("" + Math.Pow((Math.E), Double.Parse(txtFunctionInput.Text)));
-                inputBoxText.Add(Constants.EX + "^" + txtFunctionInput.Text);
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.LN))
-            {
-                this.inputExpression.Add("" + Math.Log(Double.Parse(txtFunctionInput.Text)));
-                inputBoxText.Add(Constants.LN + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.X_FACTORIAL))
-            {
+                Double answer = 0.0;
                 try
                 {
-                    if (int.Parse(txtFunctionInput.Text) > 0)
-                    {
-                        this.inputExpression.Add("" + factorial(int.Parse(txtFunctionInput.Text)));
-                        inputBoxText.Add(txtFunctionInput.Text + Constants.X_FACTORIAL);
-                        inputBox.Text += inputBoxText.ToString();
-                    }
-                    else
-                        throw new MyFormatException("Negative number is not allowed");
+                    answer = Math.Round(this.evaluateFunctionInput(),7);
                 }
-                catch (FormatException ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                     //if a x was appended to the input then the following condition would be true
-                    if (Regex.IsMatch(inputBox.Text.ToString(), @"[\d)]"))
-                    {
-                        //we need to remove the x appended at the end of the input data structures
-                        this.undo();
-                    }
+                    input = inputBox.Text.ToString();
+                    if (input.Length != 0)
+                        if (Regex.IsMatch(input[input.Length - 1] + "", @"[\d)]"))
+                        {
+                            //we need to remove the x appended at the end of the input data structures
+                            this.undo();
+                        }
                     txtFunctionInput.Focus();
                     return;
                 }
-            }
-            else if (this.funtionSelected.Equals(Constants.TEN_X))
-            {
-                this.inputExpression.Add("" + Math.Pow(10.0, Double.Parse(txtFunctionInput.Text)));
-                inputBoxText.Add(Constants.TEN_X + "^" + txtFunctionInput.Text);
+                //MessageBox.Show(answer+"");
+                this.inputExpression.Add(answer+"");
                 inputBox.Text += inputBoxText.ToString();
             }
-            else if (this.funtionSelected.Equals(Constants.LOG))
-            {
-                this.inputExpression.Add("" + Math.Log10(Double.Parse(txtFunctionInput.Text)));
-                inputBoxText.Add(Constants.LOG + "(" + txtFunctionInput.Text + ")");
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.X_INVERSE))
-            {
-                this.inputExpression.Add("" + 1.0 / Double.Parse(txtFunctionInput.Text));
-                inputBoxText.Add(Constants.X_INVERSE + txtFunctionInput.Text);
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.X_POWER_Y))
-            {
-                //split at , to get x & y out of x,y
-                String[] xy = txtFunctionInput.Text.ToString().Split(',');
-                try
-                {
-                    if (xy.Length == 2)
-                    {
-                        double x = Double.Parse(xy[0]); //store x
-                        double y = Double.Parse(xy[1]); //store y
-                        //solve
-                        this.inputExpression.Add("" + Math.Pow(x, y));
-                        inputBoxText.Add(x + Constants.X_POWER_Y + y);
-                        inputBox.Text += inputBoxText.ToString();
-                    }
-                    else
-                        throw new MyFormatException("There is a syntax error, the correct format is x,y");
-                }
-                catch (FormatException fe)
-                {
-                    MessageBox.Show(fe.Message);
-                    //if a x was appended to the input then the following condition would be true
-                    if (Regex.IsMatch(inputBox.Text.ToString(), @"[\d)]"))
-                    {
-                        //we need to remove the x appended at the end of the input data structures
-                        this.undo();
-                    }
-                    txtFunctionInput.Focus();
-                    return;
-                }
-            }
-            else if (this.funtionSelected.Equals(Constants.X_POWER_3))
-            {
-                this.inputExpression.Add("" + Math.Pow(Double.Parse(txtFunctionInput.Text), 3.0));
-                inputBoxText.Add(txtFunctionInput.Text + Constants.X_POWER_3);
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.X_POWER_2))
-            {
-                this.inputExpression.Add("" + Math.Pow(Double.Parse(txtFunctionInput.Text), 2.0));
-                inputBoxText.Add(txtFunctionInput.Text + Constants.X_POWER_2);
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.X_UNDERROOT_Y))
-            {
-                //split at , to get x & y out of x,y
-                String[] xy = txtFunctionInput.Text.ToString().Split(',');
-
-                try
-                {
-                    if (xy.Length == 2)
-                    {
-                        double x = Double.Parse(xy[0]); //store x
-                        double y = Double.Parse(xy[1]); //store y
-                        //solve
-                        this.inputExpression.Add("" + Math.Pow(x, (1.0 / y)));
-                        inputBoxText.Add(x + Constants.X_POWER_Y + y);
-                        inputBox.Text += inputBoxText.ToString();
-                    }
-                    else
-                        throw new MyFormatException("There is a syntax error, the correct format is x,y");
-                }
-                catch (FormatException fe)
-                {
-                    MessageBox.Show(fe.Message);
-                    //if a x was appended to the input then the following condition would be true
-                    if (Regex.IsMatch(inputBox.Text.ToString(), @"[\d)]"))
-                    {
-                        //we need to remove the x appended at the end of the input data structures
-                        this.undo();
-                    }
-                    txtFunctionInput.Focus();
-                    return;
-                }
-
-            }
-            else if (this.funtionSelected.Equals(Constants.X_UNDERROOT_3))
-            {
-                this.inputExpression.Add("" + Math.Pow(Double.Parse(txtFunctionInput.Text), (1.0 / 3.0)));
-                inputBoxText.Add(txtFunctionInput.Text + Constants.X_UNDERROOT_3);
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.X_UNDERROOT_2))
-            {
-                this.inputExpression.Add("" + Math.Pow(Double.Parse(txtFunctionInput.Text), (1.0 / 2.0)));
-                inputBoxText.Add(txtFunctionInput.Text + Constants.X_UNDERROOT_2);
-                inputBox.Text += inputBoxText.ToString();
-            }
-            else if (this.funtionSelected.Equals(Constants.NPR))
-            {
-                //split at , to get n & r out of n,r
-                String[] nr = txtFunctionInput.Text.ToString().Split(',');
-                try
-                {
-                    if (nr.Length == 2)
-                    {
-                        int n = int.Parse(nr[0]); //store n
-                        int r = int.Parse(nr[1]); //store r
-                        if (n < r) throw new MyFormatException("n cannot be less then r");
-                        //solve
-                        this.inputExpression.Add("" + factorial(n) / factorial(n - r));
-                        inputBoxText.Add(n + Constants.NPR + r);
-                        inputBox.Text += inputBoxText.ToString();
-                    }
-                    else
-                        throw new MyFormatException("There is a syntax error, the correct format is n,r");
-                }
-                catch (FormatException fe)
-                {
-                    MessageBox.Show(fe.Message);
-                    //if a x was appended to the input then the following condition would be true
-                    if (Regex.IsMatch(inputBox.Text.ToString(), @"[\d)]"))
-                    {
-                        //we need to remove the x appended at the end of the input data structures
-                        this.undo();
-                    }
-                    txtFunctionInput.Focus();
-                    return;
-                }
-            }
-            else if (this.funtionSelected.Equals(Constants.NCR))
-            {
-                //split at , to get n & r out of n,r
-                String[] nr = txtFunctionInput.Text.ToString().Split(',');
-                try
-                {
-                    if (nr.Length == 2)
-                    {
-                        int n = int.Parse(nr[0]); //store n
-                        int r = int.Parse(nr[1]); //store r
-                        if (n < r) throw new MyFormatException("n cannot be less then r");
-                        //solve
-                        this.inputExpression.Add("" + factorial(n) / (factorial(r) * factorial(n - r)));
-                        inputBoxText.Add(n + Constants.NCR + r);
-                        inputBox.Text += inputBoxText.ToString();
-                    }
-                    else
-                        throw new MyFormatException("There is a syntax error, the correct format is n,r");
-                }
-                catch (FormatException fe)
-                {
-                    MessageBox.Show(fe.Message);
-                    //if a x was appended to the input then the following condition would be true
-                    if (Regex.IsMatch(inputBox.Text.ToString(), @"[\d)]"))
-                    {
-                        //we need to remove the x appended at the end of the input data structures
-                        this.undo();
-                    }
-                    txtFunctionInput.Focus();
-                    return;
-                }
-            }
-
             setFunctionControl(false);
+        }
+        public Double evaluateFunctionInput()
+        {
+            //the case statement follows the following sequence:
+            // 1. add the expression to the ArrayList which holds user input
+            // 2. evaluate the value of the function
+            switch (this.funtionSelected)
+                {
+                    case Constants.SIN:
+                        {
+                            inputBoxText.Add(Constants.SIN + "(" + txtFunctionInput.Text + ")");
+                            if (checkBoxDeg.Checked)
+                                return Math.Sin(Double.Parse(txtFunctionInput.Text) * (Math.PI / 180));
+                            else
+                                return Math.Sin(Double.Parse(txtFunctionInput.Text));
+                        }
+                    case Constants.COS:
+                        {
+                            inputBoxText.Add(Constants.COS + "(" + txtFunctionInput.Text + ")");
+                            if (checkBoxDeg.Checked)
+                                return Math.Cos(Double.Parse(txtFunctionInput.Text) * (Math.PI / 180));
+                            else
+                                return Math.Cos(Double.Parse(txtFunctionInput.Text));
+                        }
+                    case Constants.TAN:
+                        {
+                            inputBoxText.Add(Constants.TAN + "(" + txtFunctionInput.Text + ")");
+                            //if (checkBoxDeg.Checked)
+                            //    return Math.Tan(Double.Parse(txtFunctionInput.Text) * (Math.PI / 180));
+                            //else
+                            //    return Math.Tan(Double.Parse(txtFunctionInput.Text));
+
+                            return Math.Tan(Double.Parse(txtFunctionInput.Text) * (Math.PI / 180));
+                        }
+                    case Constants.CSC:
+                        {
+                            inputBoxText.Add(Constants.CSC + "(" + txtFunctionInput.Text + ")");
+                            if (checkBoxDeg.Checked)
+                                return (1.0 / (Math.Sin(Double.Parse(txtFunctionInput.Text) * (Math.PI / 180))));
+                            else
+                                return (1.0 / (Math.Sin(Double.Parse(txtFunctionInput.Text))));                            
+                        }
+                    case Constants.SEC:
+                        {
+                            inputBoxText.Add(Constants.SEC + "(" + txtFunctionInput.Text + ")");
+                            if (checkBoxDeg.Checked)
+                                return (1.0 / (Math.Cos(Double.Parse(txtFunctionInput.Text) * (Math.PI / 180))));
+                            else
+                                return (1.0 / (Math.Cos(Double.Parse(txtFunctionInput.Text))));
+                        }
+                    case Constants.COT:
+                        {
+                            inputBoxText.Add(Constants.COT + "(" + txtFunctionInput.Text + ")");
+                            if (checkBoxDeg.Checked)
+                                return (1.0 / (Math.Tan(Double.Parse(txtFunctionInput.Text) * (Math.PI / 180))));
+                            else
+                                return (1.0 / (Math.Tan(Double.Parse(txtFunctionInput.Text))));
+                        }
+                    case Constants.ARCSIN:
+                        {
+                            inputBoxText.Add(Constants.ARCSIN + "(" + txtFunctionInput.Text + ")");
+                            if (checkBoxDeg.Checked)
+                                return (Math.Asin(Double.Parse(txtFunctionInput.Text)) * (180 / Math.PI));
+                            else
+                                return (Math.Asin(Double.Parse(txtFunctionInput.Text)));
+                        }
+                    case Constants.ARCCOS:
+                        {
+                            inputBoxText.Add(Constants.ARCCOS + "(" + txtFunctionInput.Text + ")");
+                            if (checkBoxDeg.Checked)
+                                return (Math.Acos(Double.Parse(txtFunctionInput.Text)) * (180 / Math.PI));
+                            else
+                                return (Math.Acos(Double.Parse(txtFunctionInput.Text)));
+                        }
+                    case Constants.ARCTAN:
+                        {
+                            inputBoxText.Add(Constants.ARCTAN + "(" + txtFunctionInput.Text + ")");
+                            if (checkBoxDeg.Checked)
+                                return (Math.Atan(Double.Parse(txtFunctionInput.Text)) * (180 / Math.PI));
+                            else
+                                return (Math.Atan(Double.Parse(txtFunctionInput.Text)));
+                        }
+                    case Constants.ARCCSC:
+                        {
+                            inputBoxText.Add(Constants.ARCCSC + "(" + txtFunctionInput.Text + ")");
+                            if (checkBoxDeg.Checked)
+                                return (Math.Asin(1.0 / Double.Parse(txtFunctionInput.Text)) * (180 / Math.PI));
+                            else
+                                return (Math.Asin(1.0 / Double.Parse(txtFunctionInput.Text)));
+                        }
+                    case Constants.ARCSEC:
+                        {
+                            inputBoxText.Add(Constants.ARCSEC + "(" + txtFunctionInput.Text + ")");
+                            if (checkBoxDeg.Checked)
+                                return (Math.Acos(1.0 / Double.Parse(txtFunctionInput.Text)) * (180 / Math.PI));
+                            else
+                                return (Math.Acos(1.0 / Double.Parse(txtFunctionInput.Text)));
+                        }
+                    case Constants.ARCCOT:
+                        {
+                            inputBoxText.Add(Constants.ARCCOT + "(" + txtFunctionInput.Text + ")");
+                            if (checkBoxDeg.Checked)
+                                return (1.570796327 - Math.Atan(Double.Parse(txtFunctionInput.Text))) * (180 / Math.PI);
+                            else
+                                return (1.570796327 - Math.Atan(Double.Parse(txtFunctionInput.Text)));
+                        }
+                    case Constants.SINH:
+                        {
+                            inputBoxText.Add(Constants.SINH + "(" + txtFunctionInput.Text + ")");
+                            return (Math.Sinh(Double.Parse(txtFunctionInput.Text)));
+                        }
+                    case Constants.COSH:
+                        {
+                            inputBoxText.Add(Constants.COSH + "(" + txtFunctionInput.Text + ")");
+                            return (Math.Cosh(Double.Parse(txtFunctionInput.Text)));
+                        }
+                    case Constants.TANH:
+                        {
+                            inputBoxText.Add(Constants.TANH + "(" + txtFunctionInput.Text + ")");
+                            return (Math.Tanh(Double.Parse(txtFunctionInput.Text)));
+                        }
+                    case Constants.CSCH:
+                        {
+                            inputBoxText.Add(Constants.CSCH + "(" + txtFunctionInput.Text + ")");
+                            return 1.0 / (Math.Sinh(Double.Parse(txtFunctionInput.Text)));
+                        }
+                    case Constants.SECH:
+                        {
+                            inputBoxText.Add(Constants.SECH + "(" + txtFunctionInput.Text + ")");
+                            return 1.0 / (Math.Cosh(Double.Parse(txtFunctionInput.Text)));
+                        }
+                    case Constants.COTH:
+                        {
+                            inputBoxText.Add(Constants.TANH + "(" + txtFunctionInput.Text + ")");
+                            return 1.0 / (Math.Tanh(Double.Parse(txtFunctionInput.Text)));
+                        }
+                    case Constants.EX:
+                        {
+                            if (this.doubleParameter(txtFunctionInput.Text))
+                            {
+                                inputBoxText.Add(Constants.EX + "^" + txtFunctionInput.Text);
+                                return Math.Pow((Math.E), Double.Parse(txtFunctionInput.Text));
+                            }
+                            else
+                                throw new MyFormatException("Syntax Error");
+                        }
+                    case Constants.LN:
+                        {
+                            inputBoxText.Add(Constants.LN + "(" + txtFunctionInput.Text + ")");
+                            return Math.Log(Double.Parse(txtFunctionInput.Text));
+                        }
+                    case Constants.X_FACTORIAL:
+                        {
+                            try
+                            {
+                                if (Int64.Parse(txtFunctionInput.Text) > 0)
+                                {
+                                    inputBoxText.Add(txtFunctionInput.Text + Constants.X_FACTORIAL);
+                                    return factorial(Int64.Parse(txtFunctionInput.Text));
+                                }
+                                else
+                                    throw new MyFormatException("Negative number is not allowed");
+                            }
+                            catch (FormatException ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                                //if a x was appended to the input then the following condition would be true
+                                if (Regex.IsMatch(inputBox.Text.ToString(), @"[\d)]"))
+                                {
+                                    //we need to remove the x appended at the end of the input data structures
+                                    this.undo();
+                                }
+                                txtFunctionInput.Focus();
+                            }
+                            break;
+                        }
+                    case Constants.TEN_X:
+                        {
+                            inputBoxText.Add(Constants.TEN_X + "^" + txtFunctionInput.Text);
+                            return Math.Pow(10.0, Double.Parse(txtFunctionInput.Text));
+                        }
+                    case Constants.LOG:
+                        {
+                            inputBoxText.Add(Constants.LOG + "(" + txtFunctionInput.Text + ")");
+                            return Math.Log10(Double.Parse(txtFunctionInput.Text));
+                        }
+                    case Constants.X_INVERSE:
+                        {
+                            inputBoxText.Add(Constants.X_INVERSE + txtFunctionInput.Text);
+                            return 1.0 / Double.Parse(txtFunctionInput.Text);
+                        }
+                    case Constants.X_POWER_Y:
+                        {
+                            //split at , to get x & y out of x,y
+                            String[] xy = txtFunctionInput.Text.ToString().Split(',');
+                            try
+                            {
+                                if (xy.Length == 2)
+                                {
+                                    double x = Double.Parse(xy[0]); //store x
+                                    double y = Double.Parse(xy[1]); //store y
+                                    //solve
+                                    inputBoxText.Add(x + Constants.X_POWER_Y + y);
+                                    return Math.Pow(x, y);
+                                }
+                                else
+                                    throw new MyFormatException("There is a syntax error, the correct format is x,y");
+                            }
+                            catch (FormatException fe)
+                            {
+                                MessageBox.Show(fe.Message);
+                                //if a x was appended to the input then the following condition would be true
+                                if (Regex.IsMatch(inputBox.Text.ToString(), @"[\d)]"))
+                                {
+                                    //we need to remove the x appended at the end of the input data structures
+                                    this.undo();
+                                }
+                                txtFunctionInput.Focus();
+                            }
+                            break;
+                        }
+                    case Constants.X_POWER_3:
+                        {
+                            inputBoxText.Add(txtFunctionInput.Text + Constants.X_POWER_3);
+                            return Math.Pow(Double.Parse(txtFunctionInput.Text), 3.0);
+                        }
+                    case Constants.X_POWER_2:
+                        {
+                            inputBoxText.Add(txtFunctionInput.Text + Constants.X_POWER_2);
+                            return Math.Pow(Double.Parse(txtFunctionInput.Text), 2.0);
+                        }
+                    case Constants.X_UNDERROOT_Y:
+                        {
+                            //split at , to get x & y out of x,y
+                            String[] xy = txtFunctionInput.Text.ToString().Split(',');
+
+                            try
+                            {
+                                if (xy.Length == 2)
+                                {
+                                    double x = Double.Parse(xy[0]); //store x
+                                    double y = Double.Parse(xy[1]); //store y
+                                    //solve
+                                    inputBoxText.Add(x + Constants.X_UNDERROOT_Y + y);
+                                    return Math.Pow(x, (1.0 / y));
+                                }
+                                else
+                                    throw new MyFormatException("There is a syntax error, the correct format is x,y");
+                            }
+                            catch (FormatException fe)
+                            {
+                                MessageBox.Show(fe.Message);
+                                //if a x was appended to the input then the following condition would be true
+                                if (Regex.IsMatch(inputBox.Text.ToString(), @"[\d)]"))
+                                {
+                                    //we need to remove the x appended at the end of the input data structures
+                                    this.undo();
+                                }
+                                txtFunctionInput.Focus();
+                            }
+                            break;
+                        }
+                    case Constants.X_UNDERROOT_3:
+                        {
+                            inputBoxText.Add(txtFunctionInput.Text + Constants.X_UNDERROOT_3);
+                            return (Math.Pow(Double.Parse(txtFunctionInput.Text), (1.0 / 3.0)));
+                        }
+                    case Constants.X_UNDERROOT_2:
+                        {
+                            inputBoxText.Add(txtFunctionInput.Text + Constants.X_UNDERROOT_2);
+                            return (Math.Pow(Double.Parse(txtFunctionInput.Text), (1.0 / 2.0)));
+                        }
+                    case Constants.NPR:
+                        {
+                            //if input is correct in the form of x,y where x & y are integers
+                            if (this.twoIntParameters(txtFunctionInput.Text.ToString()))
+                            {
+                                //split at , to get n & r out of n,r
+                                String[] nr = txtFunctionInput.Text.ToString().Split(',');
+
+                                Int64 n = Int64.Parse(nr[0]); //store n
+                                Int64 r = Int64.Parse(nr[1]); //store r
+                                if (n < r) throw new MyFormatException("n cannot be less then r");
+                                //solve
+                                inputBoxText.Add(n + Constants.NPR + r);
+                                return (factorial(n) / factorial(n - r));
+                            }
+                            else
+                                throw new MyFormatException("There is a syntax error, the correct format is n,r");
+                        }
+                    case Constants.NCR:
+                        {
+                                //if input is correct in the form of x,y where x & y are integers
+                                if (this.twoIntParameters(txtFunctionInput.Text.ToString()))
+                                {
+                                    //split at , to get n & r out of n,r
+                                    String[] nr = txtFunctionInput.Text.ToString().Split(',');
+
+                                    Int64 n = Int64.Parse(nr[0]); //store n
+                                    Int64 r = Int64.Parse(nr[1]); //store r
+
+                                    //if n < r
+                                    if (n < r) throw new MyFormatException("n cannot be less then r");
+                                    //solve
+                                    inputBoxText.Add(n + Constants.NCR + r);
+                                    return (factorial(n) / (factorial(r) * factorial(n - r)));
+                                }
+                                else
+                                    throw new MyFormatException("There is a syntax error, the correct format is n,r");
+                        }
+                }            
+            return -99.9999; //should never come here
         }
         //remove the x sign from the end of  3 data structures used in input
         private void undo()
@@ -862,7 +838,7 @@ namespace MyPocketCal2003
             setFunctionControl(true); //make the 3 controls visible which are required for input
             txtFunctionInput.Focus();
         }
-        public static int factorial(int number)
+        public static Int64 factorial(Int64 number)
         {
             if (number == 0)
                 return 1;
@@ -872,6 +848,32 @@ namespace MyPocketCal2003
         private void undoButton_Click(object sender, EventArgs e)
         {
             this.undo();
+        }
+
+        private void iota_Click(object sender, EventArgs e)
+        {
+            this.addAsInput("i");
+        }
+        private bool twoIntParameters(string input)
+        {
+            //an input of the form x,y where x & y can only be integers
+            if(Regex.IsMatch(input,@"^\d+,\d+$")) 
+                return true;
+            return false;
+        }
+        private bool twoDoubleParameters(string input)
+        {
+            //an input of the form x,y where x & y can be integer or double
+            if (Regex.IsMatch(input, @"^\d+(\.\d+)?,\d+(\.\d+)?$")) 
+                return true;
+            return false;
+        }
+        private bool doubleParameter(string input)
+        {
+            //an input of the form x,y where x & y can be integer or double
+            if (Regex.IsMatch(input, @"^\d+(\.\d+)?$"))
+                return true;
+            return false;
         }
     }
     public class MyArrayList : ArrayList

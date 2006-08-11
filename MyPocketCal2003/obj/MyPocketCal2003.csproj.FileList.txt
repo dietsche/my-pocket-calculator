@@ -22,13 +22,9 @@ bin\Release\BaseFormLibrary.dll
 bin\Release\BaseFormLibrary.pdb
 obj\Release\ResolveAssemblyReference.cache
 obj\Release\MyPocketCal2003.QuantitiesUnits.xml
-obj\Release\MyPocketCal2003.Equations.resources
 obj\Release\MyPocketCal2003.MainDisplay.resources
 obj\Release\MyPocketCal2003.Statistic.resources
 obj\Release\MyPocketCal2003.Unit.resources
-obj\Release\MyPocketCal2003.Differentiation.resources
-obj\Release\MyPocketCal2003.Integration.resources
-obj\Release\MyPocketCal2003.Plot.resources
 obj\Release\MyPocketCal2003.Properties.Resources.resources
 obj\Release\MyPocketCal2003.Vector.resources
 obj\Release\MyPocketCal2003.csproj.GenerateResource.Cache
@@ -38,5 +34,4 @@ obj\Debug\MyPocketCal2003.AddDeleteQuantity.resources
 obj\Debug\MyPocketCal2003.MatrixForm.resources
 obj\Debug\MyPocketCal2003.Complex.resources
 obj\Release\MyPocketCal2003.MatrixForm.resources
-obj\Release\MyPocketCal2003.Complex.resources
 obj\Release\MyPocketCal2003.AddDeleteQuantity.resources

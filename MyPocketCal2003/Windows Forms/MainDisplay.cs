@@ -19,7 +19,8 @@ namespace MyPocketCal2003
         MyArrayList inputExpression;
         //the ArrayList which will hold the inputbox text
         MyArrayList inputBoxText;
-
+        bool equalButtonPressed; //marked as true when equal button is pressed
+        bool imaginaryNumber; //marked as true when a negative under root was encountered
 
         public MainDisplay()
         {
@@ -27,6 +28,8 @@ namespace MyPocketCal2003
             inputBoxText = new MyArrayList();
             inputExpression = new MyArrayList();
             checkBoxDeg.Enabled = false;
+            equalButtonPressed = false;
+            imaginaryNumber = false;
         }
         private void button5_Click(object sender, EventArgs e)
         {
@@ -395,7 +398,8 @@ namespace MyPocketCal2003
                     //solve the rpn
                     this.txtOutput.Text = postFix.Solve(rpn);
                 }
-                this.clearRegisters(); //clear the input registers
+                this.equalButtonPressed = true;
+                //this.clearRegisters(); //clear the input registers
             }
             catch (Exception ex)
             {
@@ -444,7 +448,20 @@ namespace MyPocketCal2003
                 Double answer = 0.0;
                 try
                 {
-                    answer = Math.Round(this.evaluateFunctionInput(),7);
+                    answer = this.evaluateFunctionInput(); //round upto 10 digits
+                    if ((answer + "").Equals("NaN") || (answer + "").Equals("Infinity"))
+                        throw new Exception("Function not defined for this value");
+                    //MessageBox.Show(answer+"");
+                    if (this.imaginaryNumber == true)
+                    {
+                        this.inputExpression.Add("0a"+answer + "i");
+                        this.imaginaryNumber = false;
+                    }
+                    else
+                        this.inputExpression.Add(answer + "");
+                    
+                    inputBox.Text += inputBoxText.ToString();
+                    setFunctionControl(false);
                 }
                 catch (Exception ex)
                 {
@@ -460,11 +477,7 @@ namespace MyPocketCal2003
                     txtFunctionInput.Focus();
                     return;
                 }
-                //MessageBox.Show(answer+"");
-                this.inputExpression.Add(answer+"");
-                inputBox.Text += inputBoxText.ToString();
             }
-            setFunctionControl(false);
         }
         public Double evaluateFunctionInput()
         {
@@ -492,18 +505,16 @@ namespace MyPocketCal2003
                     case Constants.TAN:
                         {
                             inputBoxText.Add(Constants.TAN + "(" + txtFunctionInput.Text + ")");
-                            //if (checkBoxDeg.Checked)
-                            //    return Math.Tan(Double.Parse(txtFunctionInput.Text) * (Math.PI / 180));
-                            //else
-                            //    return Math.Tan(Double.Parse(txtFunctionInput.Text));
-
-                            return Math.Tan(Double.Parse(txtFunctionInput.Text) * (Math.PI / 180));
+                            if (checkBoxDeg.Checked)
+                                return Math.Tan(Double.Parse(txtFunctionInput.Text) * (Math.PI / 180));
+                            else
+                                return Math.Tan(Double.Parse(txtFunctionInput.Text));
                         }
                     case Constants.CSC:
                         {
                             inputBoxText.Add(Constants.CSC + "(" + txtFunctionInput.Text + ")");
                             if (checkBoxDeg.Checked)
-                                return (1.0 / (Math.Sin(Double.Parse(txtFunctionInput.Text) * (Math.PI / 180))));
+                                return (1.0 / (Math.Sin(Double.Parse(txtFunctionInput.Text) * (Math.PI / 180.0))));
                             else
                                 return (1.0 / (Math.Sin(Double.Parse(txtFunctionInput.Text))));                            
                         }
@@ -598,18 +609,13 @@ namespace MyPocketCal2003
                         }
                     case Constants.COTH:
                         {
-                            inputBoxText.Add(Constants.TANH + "(" + txtFunctionInput.Text + ")");
+                            inputBoxText.Add(Constants.COTH + "(" + txtFunctionInput.Text + ")");
                             return 1.0 / (Math.Tanh(Double.Parse(txtFunctionInput.Text)));
                         }
                     case Constants.EX:
                         {
-                            if (this.doubleParameter(txtFunctionInput.Text))
-                            {
-                                inputBoxText.Add(Constants.EX + "^" + txtFunctionInput.Text);
-                                return Math.Pow((Math.E), Double.Parse(txtFunctionInput.Text));
-                            }
-                            else
-                                throw new MyFormatException("Syntax Error");
+                            inputBoxText.Add(Constants.EX + "^" + txtFunctionInput.Text);
+                            return Math.Pow((Math.E), Double.Parse(txtFunctionInput.Text));
                         }
                     case Constants.LN:
                         {
@@ -618,28 +624,19 @@ namespace MyPocketCal2003
                         }
                     case Constants.X_FACTORIAL:
                         {
-                            try
+                            if (this.intParameter(txtFunctionInput.Text))
                             {
-                                if (Int64.Parse(txtFunctionInput.Text) > 0)
+                                Double n = Double.Parse(txtFunctionInput.Text);
+                                if (n < 0)
+                                    throw new Exception("x cannot be negative");
+                                else
                                 {
                                     inputBoxText.Add(txtFunctionInput.Text + Constants.X_FACTORIAL);
-                                    return factorial(Int64.Parse(txtFunctionInput.Text));
+                                    return factorial(n);
                                 }
-                                else
-                                    throw new MyFormatException("Negative number is not allowed");
                             }
-                            catch (FormatException ex)
-                            {
-                                MessageBox.Show(ex.Message);
-                                //if a x was appended to the input then the following condition would be true
-                                if (Regex.IsMatch(inputBox.Text.ToString(), @"[\d)]"))
-                                {
-                                    //we need to remove the x appended at the end of the input data structures
-                                    this.undo();
-                                }
-                                txtFunctionInput.Focus();
-                            }
-                            break;
+                            else
+                                throw new MyFormatException("Syntax Error");
                         }
                     case Constants.TEN_X:
                         {
@@ -658,33 +655,20 @@ namespace MyPocketCal2003
                         }
                     case Constants.X_POWER_Y:
                         {
-                            //split at , to get x & y out of x,y
-                            String[] xy = txtFunctionInput.Text.ToString().Split(',');
-                            try
+                            if(this.twoDoubleParameters(txtFunctionInput.Text))
                             {
-                                if (xy.Length == 2)
-                                {
-                                    double x = Double.Parse(xy[0]); //store x
-                                    double y = Double.Parse(xy[1]); //store y
-                                    //solve
-                                    inputBoxText.Add(x + Constants.X_POWER_Y + y);
-                                    return Math.Pow(x, y);
-                                }
-                                else
-                                    throw new MyFormatException("There is a syntax error, the correct format is x,y");
+                                //split at , to get x & y out of x,y
+                                String[] xy = txtFunctionInput.Text.ToString().Split(',');
+                                
+                                double x = Double.Parse(xy[0]); //store x
+                                double y = Double.Parse(xy[1]); //store y
+
+                                //solve
+                                inputBoxText.Add(x + Constants.X_POWER_Y + y);
+                                return Math.Pow(x, y);   
                             }
-                            catch (FormatException fe)
-                            {
-                                MessageBox.Show(fe.Message);
-                                //if a x was appended to the input then the following condition would be true
-                                if (Regex.IsMatch(inputBox.Text.ToString(), @"[\d)]"))
-                                {
-                                    //we need to remove the x appended at the end of the input data structures
-                                    this.undo();
-                                }
-                                txtFunctionInput.Focus();
-                            }
-                            break;
+                            else
+                                throw new Exception("Syntax Error. The correct format is x,y");
                         }
                     case Constants.X_POWER_3:
                         {
@@ -698,44 +682,55 @@ namespace MyPocketCal2003
                         }
                     case Constants.X_UNDERROOT_Y:
                         {
-                            //split at , to get x & y out of x,y
-                            String[] xy = txtFunctionInput.Text.ToString().Split(',');
-
-                            try
+                            if(this.twoDoubleParameters(txtFunctionInput.Text))
                             {
-                                if (xy.Length == 2)
+                                //split at , to get x & y out of x,y
+                                String[] xy = txtFunctionInput.Text.ToString().Split(',');
+
+                                double x = Double.Parse(xy[0]); //store x
+                                double y = Double.Parse(xy[1]); //store y
+
+                                if (x < 0 && y == 2) //x is negative & y is 2
                                 {
-                                    double x = Double.Parse(xy[0]); //store x
-                                    double y = Double.Parse(xy[1]); //store y
-                                    //solve
+                                    inputBoxText.Add(x + Constants.X_UNDERROOT_Y + y);
+                                    x = -1.0 * x;
+                                    this.imaginaryNumber = true;
+                                    return Math.Pow(x, (1.0 / y));
+                                }
+                                else if (x < 0 && (y % 2 != 0)) //x is negative and y is odd
+                                {
+                                    inputBoxText.Add(x + Constants.X_UNDERROOT_Y + y);
+                                    return -1.0*Math.Pow(-1.0*x, (1.0 / y));
+                                }
+                                else //x is positive, y is positive
+                                {
                                     inputBoxText.Add(x + Constants.X_UNDERROOT_Y + y);
                                     return Math.Pow(x, (1.0 / y));
                                 }
-                                else
-                                    throw new MyFormatException("There is a syntax error, the correct format is x,y");
-                            }
-                            catch (FormatException fe)
-                            {
-                                MessageBox.Show(fe.Message);
-                                //if a x was appended to the input then the following condition would be true
-                                if (Regex.IsMatch(inputBox.Text.ToString(), @"[\d)]"))
-                                {
-                                    //we need to remove the x appended at the end of the input data structures
-                                    this.undo();
-                                }
-                                txtFunctionInput.Focus();
-                            }
-                            break;
+                             }
+                             else
+                                throw new MyFormatException("Syntax error, the correct format is x,y");
                         }
                     case Constants.X_UNDERROOT_3:
                         {
+                            Double number = Double.Parse(txtFunctionInput.Text);
                             inputBoxText.Add(txtFunctionInput.Text + Constants.X_UNDERROOT_3);
-                            return (Math.Pow(Double.Parse(txtFunctionInput.Text), (1.0 / 3.0)));
+
+                            if(number<0)
+                                return -1.0*(Math.Pow(-1.0*number, (1.0 / 3.0)));
+                            else
+                                return (Math.Pow(number, (1.0 / 3.0)));
                         }
                     case Constants.X_UNDERROOT_2:
                         {
+                            Double number = Double.Parse(txtFunctionInput.Text);
+                            if (number < 0)
+                            {
+                                number = -1.0 * number;
+                                this.imaginaryNumber = true;
+                            }   
                             inputBoxText.Add(txtFunctionInput.Text + Constants.X_UNDERROOT_2);
-                            return (Math.Pow(Double.Parse(txtFunctionInput.Text), (1.0 / 2.0)));
+                            return (Math.Pow(number, (1.0 / 2.0)));
                         }
                     case Constants.NPR:
                         {
@@ -777,6 +772,15 @@ namespace MyPocketCal2003
                         }
                 }            
             return -99.9999; //should never come here
+        }
+        //evaluates when to clear the inputbox or not
+        private void handleClearingRegister()
+        {
+            if (this.equalButtonPressed == true)
+            {
+                this.clearRegisters();
+                equalButtonPressed = false;
+            }
         }
         //remove the x sign from the end of  3 data structures used in input
         private void undo()
@@ -820,6 +824,7 @@ namespace MyPocketCal2003
         //to add the passed string to input data structures
         private void addAsInput(String input)
         {
+            this.handleClearingRegister(); //if the inputbox needs to be cleared, clear it
             if (txtFunctionInput.Visible == true && txtFunctionInput.Focused == true)
             {
                 this.txtFunctionInput.Text += input;
@@ -837,8 +842,9 @@ namespace MyPocketCal2003
             labelFunction.Text = input;
             setFunctionControl(true); //make the 3 controls visible which are required for input
             txtFunctionInput.Focus();
+            this.handleClearingRegister(); //if the inputbox needs to be cleared, clear it
         }
-        public static Int64 factorial(Int64 number)
+        public static Double factorial(Double number)
         {
             if (number == 0)
                 return 1;
@@ -854,24 +860,31 @@ namespace MyPocketCal2003
         {
             this.addAsInput("i");
         }
+        private bool intParameter(string input)
+        {
+            //an input of the form x where x can be an integer
+            if (Regex.IsMatch(input, @"^-?\d+$"))
+                return true;
+            return false;
+        }
         private bool twoIntParameters(string input)
         {
             //an input of the form x,y where x & y can only be integers
-            if(Regex.IsMatch(input,@"^\d+,\d+$")) 
+            if(Regex.IsMatch(input,@"^-?\d+,-?\d+$")) 
                 return true;
             return false;
         }
         private bool twoDoubleParameters(string input)
         {
             //an input of the form x,y where x & y can be integer or double
-            if (Regex.IsMatch(input, @"^\d+(\.\d+)?,\d+(\.\d+)?$")) 
+            if (Regex.IsMatch(input, @"^-?\d*(\.\d+)?([E][+-]\d+)?,-?\d*(\.\d+)?([E][+-]\d+)?$")) 
                 return true;
             return false;
         }
         private bool doubleParameter(string input)
         {
-            //an input of the form x,y where x & y can be integer or double
-            if (Regex.IsMatch(input, @"^\d+(\.\d+)?$"))
+            //an input of the form x where x can be a double
+            if (Regex.IsMatch(input, @"^-?\d*(\.\d+)?([E][+-]\d+)?$"))
                 return true;
             return false;
         }

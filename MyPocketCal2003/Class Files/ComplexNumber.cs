@@ -184,16 +184,18 @@ namespace MyPocketCal2003
         //converting to a normal complex number returned as string object
         public String toMathString()
         {
-            //if (this.real.ToString().Equals("NaN"))
-              // return Convert.ToString(Double.NaN);
-
             String complexStr = "";
-            if (this.imaginary < 0) //negative imaginary
+            if (this.imaginary < 0)         //negative imaginary
                 complexStr = this.real + "" + this.imaginary + "i";
-            else if (this.imaginary == 0)
+            else if (this.imaginary == 0)   //zero imaginary
                 complexStr = this.real + "";
-            else                    //positive imaginary
-                complexStr = this.real + "+" + this.imaginary + "i";
+            else                            //positive imaginary
+            {
+                if(this.real == 0) //if real part is 0
+                    complexStr = this.imaginary + "i";
+                else //otherwise if real part is not 0 neither is imaginary part 0
+                    complexStr = this.real + "+" + this.imaginary + "i";
+            }
             return complexStr;
         }
     }

@@ -23,99 +23,108 @@ namespace MyPocketCal2003
         //zero pressed on the calculator
         private void zeroButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.ZERO;
+            this.addAsInput(Constants.ZERO);
         }
         //1 pressed on the calculator
         private void oneButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.ONE;
+            this.addAsInput(Constants.ONE);
         }
         //2 pressed on the calculator
         private void twoButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.TWO;
+            this.addAsInput(Constants.TWO);
         }
         //3 pressed on the calculator
         private void threeButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.THREE;
+            this.addAsInput(Constants.THREE);
         }
         //4 pressed on the calculator
         private void fourButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.FOUR;
+            this.addAsInput(Constants.FOUR);
         }
         //5 pressed on the calculator
         private void fiveButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.FIVE;
+            this.addAsInput(Constants.FIVE);
         }
         //6 pressed on the calculator
         private void sixButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.SIX;
+            this.addAsInput(Constants.SIX);
         }
         //7 pressed on the calculator
         private void sevenButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.SEVEN;
+            this.addAsInput(Constants.SEVEN);
         }
         //8 pressed on the calculator
         private void eightButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.EIGHT;
+            this.addAsInput(Constants.EIGHT);
         }
         //9 pressed on the calculator
         private void nineButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.NINE;
+            this.addAsInput(Constants.NINE);
         }
         //, pressed on the calculator
         private void commaButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.COMMA;
+            this.addAsInput(Constants.COMMA);
         }
         //+ pressed on the calculator
         private void plusButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.PLUS;
+            this.addAsInput(Constants.PLUS);
         }
         //- pressed on the calculator
         private void minusButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.MINUS;
+            this.addAsInput(Constants.MINUS);
         }
         //x pressed on the calculator
         private void multiplyButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.MULTIPLY;
+            this.addAsInput(Constants.MULTIPLY);
         }
         //division pressed on the calculator
         private void divideButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.DIVIDE;
+            this.addAsInput(Constants.DIVIDE);
         }
         //. pressed on the calculator
         private void decimalButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.DECIMAL;
+            this.addAsInput(Constants.DECIMAL);
         }
         //( pressed on the calculator
         private void leftBracketButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.RIGHT_BRACKET;
+            this.addAsInput(Constants.RIGHT_BRACKET);
         }
         //) pressed on the calculator
         private void rightBracketButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.LEFT_BRACKET;
+            this.addAsInput(Constants.LEFT_BRACKET);
         }
-
-        private void btnClearRow_Click(object sender, EventArgs e)
+        private void addAsInput(string input)
         {
-            inputBox.Text = "";
+            if (this.txtColumnDim.Focus())
+            {
+                this.txtColumnDim.Text += input;
+            }
+            else if (this.txtRowDim.Focus())
+            {
+                this.txtRowDim.Text += input;
+            }
+            else
+            {
+                this.inputBox.Text += input;
+            }
         }
-
         private void btnSaveRow_Click(object sender, EventArgs e)
         {
             //if dimension have not been provided yet
@@ -177,13 +186,6 @@ namespace MyPocketCal2003
 
         private void btnSaveMatrix_Click(object sender, EventArgs e)
         {
-            txtMatrixName.Text = txtMatrixName.Text.Trim(); //remove white spaces
-            if (txtMatrixName.Text.Length == 0)
-            {
-                MessageBox.Show("Enter a name for the Matrix");
-                txtMatrixName.Focus(); //set data name text box focus
-                return;
-            }
             if (listBoxMatrix.Items.Count == 0)
             {
                 MessageBox.Show("Enter data for Matrix");
@@ -197,8 +199,14 @@ namespace MyPocketCal2003
                 return;
             }
 
+            string dataName = "";
+            if (comboBoxDataNames.SelectedItem != null)
+                dataName = comboBoxDataNames.SelectedItem.ToString();
+            else
+                return;
+
             //if data name already present
-            if (dataMap.Contains(txtMatrixName.Text))
+            if (dataMap.Contains(dataName))
             {
                 //yesno dialog box
                 DialogResult result = MessageBox.Show("This name is already present in the list. Yes to overwrite, No to choose another name", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
@@ -206,30 +214,26 @@ namespace MyPocketCal2003
                 if (result == DialogResult.Yes) //yes overwrite
                 {
                     //create a Matrix with the passed dimension and data
-                    Matrix matrixOver = new Matrix(listBoxMatrix.Items, listBoxMatrix.Items.Count, this.columnDim,txtMatrixName.Text);
-                    dataMap[txtMatrixName.Text] = matrixOver; //set the existing key to new value 
+                    Matrix matrixOver = new Matrix(listBoxMatrix.Items, listBoxMatrix.Items.Count, this.columnDim, dataName);
+                    dataMap[dataName] = matrixOver; //set the existing key to new value 
                     ////clear matrix list box
                     listBoxMatrix.Items.Clear();
-                    ////clear matrix name listbox
-                    txtMatrixName.Text = "";
                 }
                 else if (result == DialogResult.No) //no choose another name
                 {
-                    txtMatrixName.Focus(); //set data name text box focus
+                    comboBoxDataNames.Focus(); //set data name text box focus
                 }
                 return;
             }
 
             //create a Matrix with the passed dimension,data,name
-            Matrix matrix = new Matrix(listBoxMatrix.Items, listBoxMatrix.Items.Count, this.columnDim, txtMatrixName.Text);
+            Matrix matrix = new Matrix(listBoxMatrix.Items, listBoxMatrix.Items.Count, this.columnDim, dataName);
             
-            dataMap.Add(txtMatrixName.Text, matrix); //add dataname & data to hashtable
-            listBoxMatrixName.Items.Add(txtMatrixName.Text); //add matrix name to listbox
+            dataMap.Add(dataName, matrix); //add dataname & data to hashtable
+            listBoxMatrixName.Items.Add(dataName); //add matrix name to listbox
 
             //clear valueslist box
             listBoxMatrix.Items.Clear();
-            //clear dataname listbox
-            txtMatrixName.Text = "";
         }
 
         private void btnDeleteRow_Click(object sender, EventArgs e)
@@ -294,11 +298,8 @@ namespace MyPocketCal2003
 
         private void listBoxMatrixName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBoxMatrixName.Items.Count != 0) //if count==0 then there is nothing to display so an exceptiion would occur
+            if (listBoxMatrixName.SelectedItem != null) //if count==0 then there is nothing to display so an exceptiion would occur
             {
-                //set the matrix name
-                txtMatrixName.Text = listBoxMatrixName.SelectedItem.ToString();
-
                 //get matrix against specified data name
                 Matrix matrix = (Matrix)dataMap[listBoxMatrixName.SelectedItem.ToString()];
                 listBoxMatrix.Items.Clear(); //clear any previous entries
@@ -314,10 +315,7 @@ namespace MyPocketCal2003
                 txtColumnDim.Text = Convert.ToString(matrix.getColumns()); //set column dimension
             }
             else
-            {
-                txtMatrixName.Text = "";
                 listBoxMatrix.Items.Clear();
-            }
         }
         private void comboOperationMatrix_GotFocus(object sender, EventArgs e)
         {

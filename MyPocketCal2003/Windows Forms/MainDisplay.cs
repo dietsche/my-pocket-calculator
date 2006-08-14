@@ -31,43 +31,29 @@ namespace MyPocketCal2003
             equalButtonPressed = false;
             imaginaryNumber = false;
         }
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Form oldWindow = Program.activeWindow; // the old window
-            oldWindow.Hide(); // hide the window
-
-            Program.activeWindow = new MatrixForm(); // make the form
-            Program.activeWindow.Show(); // show the form
-            //oldWindow.Dispose();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Form oldWindow = Program.activeWindow; // the old window
-            oldWindow.Hide(); // hide the window
-
-            Program.activeWindow = new Statistic(); // make the form
-            Program.activeWindow.Show(); // show the form
-           //oldWindow.Dispose();
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Form oldWindow = Program.activeWindow; // the old window
-            oldWindow.Hide(); // hide the window
-
-            Program.activeWindow = new Unit(); // make the form
-            Program.activeWindow.Show(); // show the form
-            //oldWindow.Dispose();
-        }
         private void pictureBox115_Click(object sender, EventArgs e)
         {
-            MatrixForm m = new MatrixForm();
-            m.Show();
+            //Form oldWindow = Program.activeWindow; // the old window
+            //oldWindow.Hide(); 
+            //Program.activeWindow = new MatrixForm();
+            //Program.activeWindow.Show();
+            //oldWindow.Dispose();
+
+            MatrixForm mf = new MatrixForm();
+            mf.Show();
         }
 
         private void pictureBox116_Click(object sender, EventArgs e)
         {
+            //Form oldWindow = Program.activeWindow; // the old window
+            //oldWindow.Hide();
+
+            //Program.activeWindow.Hide();
+            //Program.activeWindow = new Statistic();
+            //Program.activeWindow.Show();
+            
+            //oldWindow.Dispose();
+
             Statistic s = new Statistic();
             s.Show();
         }

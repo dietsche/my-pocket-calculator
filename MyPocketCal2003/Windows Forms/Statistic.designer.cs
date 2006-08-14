@@ -32,7 +32,7 @@ namespace MyPocketCal2003
             this.btnCalculateBasic = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.DataTabPage = new System.Windows.Forms.TabPage();
-            this.txtDataName = new System.Windows.Forms.TextBox();
+            this.comboBoxDataNames = new System.Windows.Forms.ComboBox();
             this.deleteButton = new System.Windows.Forms.Button();
             this.addValueButton = new System.Windows.Forms.Button();
             this.newDataButton = new System.Windows.Forms.Button();
@@ -43,10 +43,12 @@ namespace MyPocketCal2003
             this.dataListBox = new System.Windows.Forms.ListBox();
             this.lbNoOfValues = new System.Windows.Forms.Label();
             this.basicTabPage = new System.Windows.Forms.TabPage();
+            this.checkBoxPVar = new System.Windows.Forms.CheckBox();
+            this.checkBoxPSD = new System.Windows.Forms.CheckBox();
             this.dataComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBoxSD = new System.Windows.Forms.CheckBox();
-            this.checkBoxVar = new System.Windows.Forms.CheckBox();
+            this.checkBoxSSD = new System.Windows.Forms.CheckBox();
+            this.checkBoxSVar = new System.Windows.Forms.CheckBox();
             this.checkBoxHMean = new System.Windows.Forms.CheckBox();
             this.checkBoxAMean = new System.Windows.Forms.CheckBox();
             this.checkBoxGMean = new System.Windows.Forms.CheckBox();
@@ -101,14 +103,18 @@ namespace MyPocketCal2003
             // equalButton
             // 
             this.equalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.equalButton.Visible = false;
             // 
             // undoButton
             // 
             this.undoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.undoButton.DoubleClick += new System.EventHandler(this.undoButton_Click);
+            this.undoButton.Click += new System.EventHandler(this.undoButton_Click);
             // 
             // rightBracketButton
             // 
             this.rightBracketButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rightBracketButton.Visible = false;
             this.rightBracketButton.Click += new System.EventHandler(this.rightBracketButton_Click);
             // 
             // nineButton
@@ -119,11 +125,13 @@ namespace MyPocketCal2003
             // multiplyButton
             // 
             this.multiplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.multiplyButton.Visible = false;
             this.multiplyButton.Click += new System.EventHandler(this.multiplyButton_Click);
             // 
             // commaButton
             // 
             this.commaButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.commaButton.Visible = false;
             this.commaButton.Click += new System.EventHandler(this.commaButton_Click);
             // 
             // eightButton
@@ -139,21 +147,25 @@ namespace MyPocketCal2003
             // leftBracketButton
             // 
             this.leftBracketButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.leftBracketButton.Visible = false;
             this.leftBracketButton.Click += new System.EventHandler(this.leftBracketButton_Click);
             // 
             // divideButton
             // 
             this.divideButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.divideButton.Visible = false;
             this.divideButton.Click += new System.EventHandler(this.divideButton_Click);
             // 
             // minusButton
             // 
             this.minusButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.minusButton.Visible = false;
             this.minusButton.Click += new System.EventHandler(this.minusButton_Click);
             // 
             // plusButton
             // 
             this.plusButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.plusButton.Visible = false;
             this.plusButton.Click += new System.EventHandler(this.plusButton_Click);
             // 
             // fourButton
@@ -219,7 +231,7 @@ namespace MyPocketCal2003
             // 
             // DataTabPage
             // 
-            this.DataTabPage.Controls.Add(this.txtDataName);
+            this.DataTabPage.Controls.Add(this.comboBoxDataNames);
             this.DataTabPage.Controls.Add(this.deleteButton);
             this.DataTabPage.Controls.Add(this.addValueButton);
             this.DataTabPage.Controls.Add(this.newDataButton);
@@ -234,12 +246,17 @@ namespace MyPocketCal2003
             this.DataTabPage.Size = new System.Drawing.Size(240, 218);
             this.DataTabPage.Text = "Data";
             // 
-            // txtDataName
+            // comboBoxDataNames
             // 
-            this.txtDataName.Location = new System.Drawing.Point(84, 7);
-            this.txtDataName.Name = "txtDataName";
-            this.txtDataName.Size = new System.Drawing.Size(70, 21);
-            this.txtDataName.TabIndex = 72;
+            this.comboBoxDataNames.Items.Add("Set 1");
+            this.comboBoxDataNames.Items.Add("Set 2");
+            this.comboBoxDataNames.Items.Add("Set 3");
+            this.comboBoxDataNames.Items.Add("Set 4");
+            this.comboBoxDataNames.Items.Add("Set 5");
+            this.comboBoxDataNames.Location = new System.Drawing.Point(164, 7);
+            this.comboBoxDataNames.Name = "comboBoxDataNames";
+            this.comboBoxDataNames.Size = new System.Drawing.Size(68, 22);
+            this.comboBoxDataNames.TabIndex = 74;
             // 
             // deleteButton
             // 
@@ -279,11 +296,11 @@ namespace MyPocketCal2003
             // saveDataButton
             // 
             this.saveDataButton.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.saveDataButton.Location = new System.Drawing.Point(160, 7);
+            this.saveDataButton.Location = new System.Drawing.Point(83, 7);
             this.saveDataButton.Name = "saveDataButton";
             this.saveDataButton.Size = new System.Drawing.Size(72, 21);
             this.saveDataButton.TabIndex = 65;
-            this.saveDataButton.Text = "Save Data";
+            this.saveDataButton.Text = "Save As";
             this.saveDataButton.Click += new System.EventHandler(this.saveDataButton_Click);
             // 
             // inputBox
@@ -320,11 +337,13 @@ namespace MyPocketCal2003
             // 
             // basicTabPage
             // 
+            this.basicTabPage.Controls.Add(this.checkBoxPVar);
+            this.basicTabPage.Controls.Add(this.checkBoxPSD);
             this.basicTabPage.Controls.Add(this.dataComboBox);
             this.basicTabPage.Controls.Add(this.btnCalculateBasic);
             this.basicTabPage.Controls.Add(this.label1);
-            this.basicTabPage.Controls.Add(this.checkBoxSD);
-            this.basicTabPage.Controls.Add(this.checkBoxVar);
+            this.basicTabPage.Controls.Add(this.checkBoxSSD);
+            this.basicTabPage.Controls.Add(this.checkBoxSVar);
             this.basicTabPage.Controls.Add(this.checkBoxHMean);
             this.basicTabPage.Controls.Add(this.checkBoxAMean);
             this.basicTabPage.Controls.Add(this.checkBoxGMean);
@@ -337,6 +356,22 @@ namespace MyPocketCal2003
             this.basicTabPage.Name = "basicTabPage";
             this.basicTabPage.Size = new System.Drawing.Size(232, 215);
             this.basicTabPage.Text = "Basic";
+            // 
+            // checkBoxPVar
+            // 
+            this.checkBoxPVar.Location = new System.Drawing.Point(7, 134);
+            this.checkBoxPVar.Name = "checkBoxPVar";
+            this.checkBoxPVar.Size = new System.Drawing.Size(61, 21);
+            this.checkBoxPVar.TabIndex = 76;
+            this.checkBoxPVar.Text = "P. Var";
+            // 
+            // checkBoxPSD
+            // 
+            this.checkBoxPSD.Location = new System.Drawing.Point(89, 134);
+            this.checkBoxPSD.Name = "checkBoxPSD";
+            this.checkBoxPSD.Size = new System.Drawing.Size(57, 21);
+            this.checkBoxPSD.TabIndex = 75;
+            this.checkBoxPSD.Text = "P. SD";
             // 
             // dataComboBox
             // 
@@ -354,21 +389,21 @@ namespace MyPocketCal2003
             this.label1.Size = new System.Drawing.Size(62, 18);
             this.label1.Text = "Data:";
             // 
-            // checkBoxSD
+            // checkBoxSSD
             // 
-            this.checkBoxSD.Location = new System.Drawing.Point(89, 104);
-            this.checkBoxSD.Name = "checkBoxSD";
-            this.checkBoxSD.Size = new System.Drawing.Size(43, 21);
-            this.checkBoxSD.TabIndex = 71;
-            this.checkBoxSD.Text = "SD";
+            this.checkBoxSSD.Location = new System.Drawing.Point(89, 104);
+            this.checkBoxSSD.Name = "checkBoxSSD";
+            this.checkBoxSSD.Size = new System.Drawing.Size(65, 21);
+            this.checkBoxSSD.TabIndex = 71;
+            this.checkBoxSSD.Text = "S. SD";
             // 
-            // checkBoxVar
+            // checkBoxSVar
             // 
-            this.checkBoxVar.Location = new System.Drawing.Point(7, 104);
-            this.checkBoxVar.Name = "checkBoxVar";
-            this.checkBoxVar.Size = new System.Drawing.Size(46, 21);
-            this.checkBoxVar.TabIndex = 70;
-            this.checkBoxVar.Text = "Var";
+            this.checkBoxSVar.Location = new System.Drawing.Point(7, 104);
+            this.checkBoxSVar.Name = "checkBoxSVar";
+            this.checkBoxSVar.Size = new System.Drawing.Size(63, 21);
+            this.checkBoxSVar.TabIndex = 70;
+            this.checkBoxSVar.Text = "S. Var";
             // 
             // checkBoxHMean
             // 
@@ -721,8 +756,8 @@ namespace MyPocketCal2003
         private System.Windows.Forms.TextBox inputBox;
         private System.Windows.Forms.Button deleteValueButton;
         private System.Windows.Forms.TabPage basicTabPage;
-        private System.Windows.Forms.CheckBox checkBoxSD;
-        private System.Windows.Forms.CheckBox checkBoxVar;
+        private System.Windows.Forms.CheckBox checkBoxSSD;
+        private System.Windows.Forms.CheckBox checkBoxSVar;
         private System.Windows.Forms.CheckBox checkBoxHMean;
         private System.Windows.Forms.CheckBox checkBoxAMean;
         private System.Windows.Forms.CheckBox checkBoxGMean;
@@ -756,7 +791,6 @@ namespace MyPocketCal2003
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.TabPage answersTabPage;
         private System.Windows.Forms.Label lbNoOfValues;
-        private System.Windows.Forms.TextBox txtDataName;
         private System.Windows.Forms.ListBox listBoxAnswers;
         private System.Windows.Forms.TabPage advanceTabPage;
         private System.Windows.Forms.Button btnCalculateAdvance;
@@ -768,5 +802,8 @@ namespace MyPocketCal2003
         private System.Windows.Forms.CheckBox checkBoxCorrelationCoefficient;
         private System.Windows.Forms.CheckBox checkBoxLinearRegression;
         private System.Windows.Forms.ListBox dataListBox;
+        private System.Windows.Forms.CheckBox checkBoxPVar;
+        private System.Windows.Forms.CheckBox checkBoxPSD;
+        private System.Windows.Forms.ComboBox comboBoxDataNames;
     }
 }

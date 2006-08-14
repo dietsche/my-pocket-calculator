@@ -138,23 +138,48 @@ namespace MyPocketCal2003
             return Convert.ToString(sum/Convert.ToDouble(data.Count)); //calculating mean & returning
         }
         //return Variance
-        public String getVar()
+        public String getPopulationVar()
         {
             //sqauring SD & returning
-            return Convert.ToString(Math.Pow(Double.Parse(getSD()), 2));
+            return Math.Pow(Double.Parse(getPopulationSD()) , 2)+"";
+        }
+        //return Variance
+        public String getSampleVar()
+        {
+            //sqauring SD & returning
+            return Math.Pow(Double.Parse(getSampleSD()), 2)+"";
         }
         //return SD
-        public String getSD()
+        public String getPopulationSD()
         {
-            double mean = Double.Parse(getAM());
+            double SumX = 0.0;
+            double SumXSquare = 0.0;
+            for (int i = 0; i < data.Count; ++i)
+            {
+                double num = Convert.ToDouble(data[i]);
+                SumX += num;
+                SumXSquare += Math.Pow(num, 2);
+            }
+            
+            //calculating SD
+            double sd = (SumXSquare - (Math.Pow((SumX), 2) / data.Count))/data.Count;
+            //returning SD
+            return sd+"";
+        }
+        //return SD
+        public String getSampleSD()
+        {
+            double mean = Double.Parse(getAM());            
+
             double devSum = 0.0;
             for (int i = 0; i < data.Count; ++i)
             {
                 double num = Convert.ToDouble(data[i]);
-                devSum += Math.Pow((num - mean),2); //summing up squared deviation
+                //MessageBox.Show("num: " + num);
+                devSum += Math.Pow((num - mean), 2); //summing up squared deviation
             }
             //calculating SD
-            devSum = Math.Pow((devSum / Convert.ToDouble(data.Count - 1)),0.5);
+            devSum = Math.Pow((devSum / Convert.ToDouble(data.Count - 1)), 0.5);
             //returning SD
             return Convert.ToString(devSum);
         }

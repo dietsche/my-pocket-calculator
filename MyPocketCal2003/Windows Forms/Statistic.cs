@@ -12,12 +12,10 @@ namespace MyPocketCal2003
     public partial class Statistic : BaseFormLibrary.BasicButtonForm
     {
         private Hashtable dataMap; //hashtable to hold data lists
-        bool existingDataSelected;
         public Statistic()
         {
             InitializeComponent();
             dataMap = new Hashtable();
-            this.existingDataSelected = false;
         }
         //zero pressed on the calculator
         private void zeroButton_Click(object sender, EventArgs e)
@@ -120,11 +118,6 @@ namespace MyPocketCal2003
                 return;
             }
 
-            if (this.existingDataSelected == true)
-            {
-                MessageBox.Show("You are making changes to an existing data, make sure to save it before switching tabs");
-                this.existingDataSelected = false;
-            }
             valuesListBox.Items.Add(inputBox.Text);
             inputBox.Text = "";   
             
@@ -136,7 +129,6 @@ namespace MyPocketCal2003
         private void newDataButton_Click(object sender, EventArgs e)
         {
             valuesListBox.Items.Clear(); //clear the values listbox
-            txtDataName.Text = ""; //clear the data name textbox
             //# of values 
             lbNoOfValues.Text = "Count: " + Convert.ToString(valuesListBox.Items.Count);
         }
@@ -150,39 +142,36 @@ namespace MyPocketCal2003
 
         private void saveDataButton_Click(object sender, EventArgs e)
         {
-            txtDataName.Text = txtDataName.Text.Trim(); //remove white spaces
-            if (txtDataName.Text.Length == 0)
-            {
-                MessageBox.Show("Enter a name for the data");
-                txtDataName.Focus(); //set data name text box focus
-                return;
-            }
             if (valuesListBox.Items.Count == 0)
             {
                 MessageBox.Show("Enter values to store as Data");
                 inputBox.Focus(); //set inputbox focus
                 return;
             }
-            
+
+            string dataName = "";
+            if (comboBoxDataNames.SelectedItem != null)
+                dataName = comboBoxDataNames.SelectedItem.ToString();
+            else
+                return;
+
             //if data name already present
-            if (dataMap.Contains(txtDataName.Text))
+            if (dataMap.Contains(dataName))
             {
                 //yesno dialog box
-                DialogResult result = MessageBox.Show("This name is already present in the list. Yes to overwrite, No to choose another name", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                DialogResult result = MessageBox.Show("Yes to overwrite, No to choose another name", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                 
                 if (result == DialogResult.Yes) //yes overwrite
                 {
                     ArrayList dataOver = new ArrayList();
                     dataOver.AddRange(valuesListBox.Items); //convert to ArrayList
-                    dataMap[txtDataName.Text] = dataOver; //set the existing key to new value 
+                    dataMap[dataName] = dataOver; //set the existing key to new value 
                     //clear valueslist box
                     valuesListBox.Items.Clear();
-                    //clear dataname listbox
-                    txtDataName.Text = "";
                 }
                 else if (result == DialogResult.No) //no choose another name
                 {
-                    txtDataName.Focus(); //set data name text box focus
+                    comboBoxDataNames.Focus(); //set data name text box focus
                 }
                 return;
             }
@@ -190,21 +179,19 @@ namespace MyPocketCal2003
             ArrayList data = new ArrayList();
             data.AddRange(valuesListBox.Items); //convert to ArrayList
 
-            dataMap.Add(txtDataName.Text, data); //add dataname & data to hashtable as Arraylist
-            dataListBox.Items.Add(txtDataName.Text); //add dataname to listbox
+            dataMap.Add(dataName, data); //add dataname & data to hashtable as Arraylist
+            dataListBox.Items.Add(dataName); //add dataname to listbox
 
             //clear valueslist box
             valuesListBox.Items.Clear();
-            //clear dataname listbox
-            txtDataName.Text = "";
         }
-
         private void deleteButton_Click(object sender, EventArgs e)
         {
             if (dataListBox.SelectedItem != null)
             {
                 dataMap.Remove(dataListBox.SelectedItem.ToString()); //remove from hashtable
                 dataListBox.Items.Remove(dataListBox.SelectedItem.ToString()); //remove from listbox
+                this.lbNoOfValues.Text = "Count: 0";
             }
         }
         private void independentComboBox_GotFocus_1(object sender, EventArgs e)
@@ -274,37 +261,37 @@ namespace MyPocketCal2003
             {
                 listBoxAnswers.Items.Add("H. Mean = " + statsAnswers.getHM());
             }
-            if (checkBoxVar.Checked) //variance
+            if (checkBoxSVar.Checked) //sample variance
             {
-                listBoxAnswers.Items.Add("Variance = " + statsAnswers.getVar());
+                listBoxAnswers.Items.Add("S. Variance = " + statsAnswers.getSampleVar());
             }
-            if (checkBoxSD.Checked) // sd
+            if (checkBoxPVar.Checked) //population variance
             {
-                listBoxAnswers.Items.Add("S.D. = " + statsAnswers.getSD());
+                listBoxAnswers.Items.Add("P. Variance = " + statsAnswers.getPopulationVar());
+            }
+            if (checkBoxSSD.Checked) // sample sd
+            {
+                listBoxAnswers.Items.Add("S. S.D. = " + statsAnswers.getSampleSD());
+            }
+            if (checkBoxPSD.Checked) //population sd
+            {
+                listBoxAnswers.Items.Add("P. S.D. = " + statsAnswers.getPopulationSD());
             }
         }
         private void dataListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (dataListBox.Items.Count != 0) //if count==0 then there is nothing to display so an exceptiion would occur
+            //get values arraylist against specified data name
+            if (dataListBox.SelectedItem != null) //when the user deletes a data name the selected item is null
             {
-                //set the data name
-                txtDataName.Text = dataListBox.SelectedItem.ToString();
-
-                //get values arraylist against specified data name
                 ArrayList values = (ArrayList)dataMap[dataListBox.SelectedItem.ToString()];
                 valuesListBox.Items.Clear(); //clear any previous entries
                 foreach (String value in values)
                 {
                     valuesListBox.Items.Add(value); //add each value to listbox
                 }
-                //to flag that some data was selected 
-                this.existingDataSelected = true;
             }
             else
-            {
-                txtDataName.Text = "";
                 valuesListBox.Items.Clear();
-            }
         }
 
         private void independentComboBox_GotFocus(object sender, EventArgs e)
@@ -356,6 +343,7 @@ namespace MyPocketCal2003
             {
                 MessageBox.Show("Choose equal size data");
                 independentComboBox.Focus();
+                return;
             }
             StatsAdvance statAdvance = new StatsAdvance(independentData, dependentData);
 
@@ -370,6 +358,15 @@ namespace MyPocketCal2003
             if (checkBoxLinearRegression.Checked)
             {
                 listBoxAnswers.Items.Add(statAdvance.linearFit());
+            }
+        }
+
+        private void undoButton_Click(object sender, EventArgs e)
+        {
+            if (inputBox.Text.Length != 0)
+            {
+                string input = inputBox.Text.ToString();
+                inputBox.Text = input.Remove(input.Length - 1, 1);
             }
         }
     }

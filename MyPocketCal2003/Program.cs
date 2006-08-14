@@ -14,6 +14,7 @@ namespace MyPocketCal2003
         static void Main()
         {
             activeWindow = new MainDisplay();
+            
             Application.Run(activeWindow);
         }
     }

@@ -17,8 +17,8 @@ namespace MyPocketCal2003
         }
         public String linearFit()
         {
-            double b = ssxy() / ssxx();
-            Math.Round(b, 4);
+            double b = Math.Round(ssxy() / ssxx(),7);
+            //Math.Round(b, 4);
             
             StatsBasic statBasic = new StatsBasic(this.x);
             String xMean = statBasic.getAM();
@@ -26,7 +26,7 @@ namespace MyPocketCal2003
             statBasic = new StatsBasic(this.y);
             String yMean = statBasic.getAM();
 
-            double a = Math.Round(Double.Parse(yMean) - ((b)*(Double.Parse(xMean))),4);
+            double a = Math.Round(Double.Parse(yMean) - ((b)*(Double.Parse(xMean))),7);
 
             if(b<0)
                 return "y = " + a + "" + b + "x";

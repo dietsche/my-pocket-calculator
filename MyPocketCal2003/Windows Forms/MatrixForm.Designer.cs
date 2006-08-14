@@ -36,7 +36,6 @@ namespace MyPocketCal2003
             this.txtColumnDim = new System.Windows.Forms.TextBox();
             this.txtRowDim = new System.Windows.Forms.TextBox();
             this.btnDeleteRow = new System.Windows.Forms.Button();
-            this.txtMatrixName = new System.Windows.Forms.TextBox();
             this.btnDeleteMatrix = new System.Windows.Forms.Button();
             this.btnNewMatrix = new System.Windows.Forms.Button();
             this.listBoxMatrix = new System.Windows.Forms.ListBox();
@@ -46,6 +45,7 @@ namespace MyPocketCal2003
             this.btnAddRow = new System.Windows.Forms.Button();
             this.listBoxMatrixName = new System.Windows.Forms.ListBox();
             this.tabPageCalculation = new System.Windows.Forms.TabPage();
+            this.checkBoxRoots = new System.Windows.Forms.CheckBox();
             this.btnAnswer = new System.Windows.Forms.Button();
             this.comboOperationMatrix = new System.Windows.Forms.ComboBox();
             this.txtOperation = new System.Windows.Forms.TextBox();
@@ -60,7 +60,7 @@ namespace MyPocketCal2003
             this.checkBoxDeterminant = new System.Windows.Forms.CheckBox();
             this.tabPageAnswers = new System.Windows.Forms.TabPage();
             this.listBoxAnswers = new System.Windows.Forms.ListBox();
-            this.checkBoxRoots = new System.Windows.Forms.CheckBox();
+            this.comboBoxDataNames = new System.Windows.Forms.ComboBox();
             this.basicButtonsPanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageData.SuspendLayout();
@@ -75,6 +75,7 @@ namespace MyPocketCal2003
             // equalButton
             // 
             this.equalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.equalButton.Visible = false;
             // 
             // undoButton
             // 
@@ -93,11 +94,13 @@ namespace MyPocketCal2003
             // multiplyButton
             // 
             this.multiplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.multiplyButton.Visible = false;
             this.multiplyButton.Click += new System.EventHandler(this.multiplyButton_Click);
             // 
             // commaButton
             // 
             this.commaButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.commaButton.Visible = false;
             this.commaButton.Click += new System.EventHandler(this.commaButton_Click);
             // 
             // eightButton
@@ -118,16 +121,19 @@ namespace MyPocketCal2003
             // divideButton
             // 
             this.divideButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.divideButton.Visible = false;
             this.divideButton.Click += new System.EventHandler(this.divideButton_Click);
             // 
             // minusButton
             // 
             this.minusButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.minusButton.Visible = false;
             this.minusButton.Click += new System.EventHandler(this.minusButton_Click);
             // 
             // plusButton
             // 
             this.plusButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.plusButton.Visible = false;
             this.plusButton.Click += new System.EventHandler(this.plusButton_Click);
             // 
             // fourButton
@@ -192,12 +198,12 @@ namespace MyPocketCal2003
             // 
             // tabPageData
             // 
+            this.tabPageData.Controls.Add(this.comboBoxDataNames);
             this.tabPageData.Controls.Add(this.btnStoreDim);
             this.tabPageData.Controls.Add(this.label4);
             this.tabPageData.Controls.Add(this.txtColumnDim);
             this.tabPageData.Controls.Add(this.txtRowDim);
             this.tabPageData.Controls.Add(this.btnDeleteRow);
-            this.tabPageData.Controls.Add(this.txtMatrixName);
             this.tabPageData.Controls.Add(this.btnDeleteMatrix);
             this.tabPageData.Controls.Add(this.btnNewMatrix);
             this.tabPageData.Controls.Add(this.listBoxMatrix);
@@ -251,13 +257,6 @@ namespace MyPocketCal2003
             this.btnDeleteRow.Text = "Delete Row";
             this.btnDeleteRow.Click += new System.EventHandler(this.btnDeleteRow_Click);
             // 
-            // txtMatrixName
-            // 
-            this.txtMatrixName.Location = new System.Drawing.Point(73, 38);
-            this.txtMatrixName.Name = "txtMatrixName";
-            this.txtMatrixName.Size = new System.Drawing.Size(103, 21);
-            this.txtMatrixName.TabIndex = 68;
-            // 
             // btnDeleteMatrix
             // 
             this.btnDeleteMatrix.Location = new System.Drawing.Point(182, 168);
@@ -285,11 +284,11 @@ namespace MyPocketCal2003
             // 
             // btnSaveMatrix
             // 
-            this.btnSaveMatrix.Location = new System.Drawing.Point(179, 38);
+            this.btnSaveMatrix.Location = new System.Drawing.Point(95, 36);
             this.btnSaveMatrix.Name = "btnSaveMatrix";
             this.btnSaveMatrix.Size = new System.Drawing.Size(54, 21);
             this.btnSaveMatrix.TabIndex = 62;
-            this.btnSaveMatrix.Text = "Save [ ]";
+            this.btnSaveMatrix.Text = "Save As";
             this.btnSaveMatrix.Click += new System.EventHandler(this.btnSaveMatrix_Click);
             // 
             // label1
@@ -344,6 +343,14 @@ namespace MyPocketCal2003
             this.tabPageCalculation.Name = "tabPageCalculation";
             this.tabPageCalculation.Size = new System.Drawing.Size(240, 218);
             this.tabPageCalculation.Text = "Calculations";
+            // 
+            // checkBoxRoots
+            // 
+            this.checkBoxRoots.Location = new System.Drawing.Point(3, 172);
+            this.checkBoxRoots.Name = "checkBoxRoots";
+            this.checkBoxRoots.Size = new System.Drawing.Size(103, 15);
+            this.checkBoxRoots.TabIndex = 122;
+            this.checkBoxRoots.Text = "Roots";
             // 
             // btnAnswer
             // 
@@ -417,7 +424,7 @@ namespace MyPocketCal2003
             // 
             this.checkBoxEigenvector.Location = new System.Drawing.Point(3, 149);
             this.checkBoxEigenvector.Name = "checkBoxEigenvector";
-            this.checkBoxEigenvector.Size = new System.Drawing.Size(91, 15);
+            this.checkBoxEigenvector.Size = new System.Drawing.Size(91, 17);
             this.checkBoxEigenvector.TabIndex = 55;
             this.checkBoxEigenvector.Text = "Eigenvector";
             // 
@@ -425,7 +432,7 @@ namespace MyPocketCal2003
             // 
             this.checkBoxEigenvalues.Location = new System.Drawing.Point(118, 149);
             this.checkBoxEigenvalues.Name = "checkBoxEigenvalues";
-            this.checkBoxEigenvalues.Size = new System.Drawing.Size(103, 15);
+            this.checkBoxEigenvalues.Size = new System.Drawing.Size(103, 21);
             this.checkBoxEigenvalues.TabIndex = 54;
             this.checkBoxEigenvalues.Text = "Eigenvalues";
             // 
@@ -450,7 +457,7 @@ namespace MyPocketCal2003
             this.tabPageAnswers.Controls.Add(this.listBoxAnswers);
             this.tabPageAnswers.Location = new System.Drawing.Point(0, 0);
             this.tabPageAnswers.Name = "tabPageAnswers";
-            this.tabPageAnswers.Size = new System.Drawing.Size(240, 218);
+            this.tabPageAnswers.Size = new System.Drawing.Size(232, 215);
             this.tabPageAnswers.Text = "Answers";
             // 
             // listBoxAnswers
@@ -460,13 +467,18 @@ namespace MyPocketCal2003
             this.listBoxAnswers.Size = new System.Drawing.Size(201, 198);
             this.listBoxAnswers.TabIndex = 0;
             // 
-            // checkBoxRoots
+            // comboBoxDataNames
             // 
-            this.checkBoxRoots.Location = new System.Drawing.Point(3, 170);
-            this.checkBoxRoots.Name = "checkBoxRoots";
-            this.checkBoxRoots.Size = new System.Drawing.Size(103, 15);
-            this.checkBoxRoots.TabIndex = 122;
-            this.checkBoxRoots.Text = "Roots";
+            this.comboBoxDataNames.Items.Add("A");
+            this.comboBoxDataNames.Items.Add("B");
+            this.comboBoxDataNames.Items.Add("C");
+            this.comboBoxDataNames.Items.Add("D");
+            this.comboBoxDataNames.Items.Add("E");
+            this.comboBoxDataNames.Items.Add("F");
+            this.comboBoxDataNames.Location = new System.Drawing.Point(164, 35);
+            this.comboBoxDataNames.Name = "comboBoxDataNames";
+            this.comboBoxDataNames.Size = new System.Drawing.Size(67, 22);
+            this.comboBoxDataNames.TabIndex = 77;
             // 
             // MatrixForm
             // 
@@ -509,7 +521,6 @@ namespace MyPocketCal2003
         private System.Windows.Forms.ComboBox comboMatrix;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnDeleteMatrix;
-        private System.Windows.Forms.TextBox txtMatrixName;
         private System.Windows.Forms.Button btnDeleteRow;
         private System.Windows.Forms.TextBox txtColumnDim;
         private System.Windows.Forms.TextBox txtRowDim;
@@ -522,5 +533,6 @@ namespace MyPocketCal2003
         private System.Windows.Forms.TabPage tabPageAnswers;
         private System.Windows.Forms.ListBox listBoxAnswers;
         private System.Windows.Forms.CheckBox checkBoxRoots;
+        private System.Windows.Forms.ComboBox comboBoxDataNames;
     }
 }

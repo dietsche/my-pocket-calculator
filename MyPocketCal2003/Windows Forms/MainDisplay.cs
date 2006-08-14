@@ -33,29 +33,18 @@ namespace MyPocketCal2003
         }
         private void pictureBox115_Click(object sender, EventArgs e)
         {
-            //Form oldWindow = Program.activeWindow; // the old window
-            //oldWindow.Hide(); 
-            //Program.activeWindow = new MatrixForm();
-            //Program.activeWindow.Show();
-            //oldWindow.Dispose();
-
-            MatrixForm mf = new MatrixForm();
-            mf.Show();
+            MatrixForm mf = new MatrixForm(); //new matrix form
+            mf.ControlBox = true;
+            mf.MinimizeBox = false;
+            mf.Show(); //show the form
         }
 
         private void pictureBox116_Click(object sender, EventArgs e)
         {
-            //Form oldWindow = Program.activeWindow; // the old window
-            //oldWindow.Hide();
-
-            //Program.activeWindow.Hide();
-            //Program.activeWindow = new Statistic();
-            //Program.activeWindow.Show();
-            
-            //oldWindow.Dispose();
-
-            Statistic s = new Statistic();
-            s.Show();
+            Statistic statistic = new Statistic(); //new Statistic form
+            statistic.ControlBox = true;
+            statistic.MinimizeBox = false;
+            statistic.Show(); //show the form
         }
 
         private void pictureBox113_Click(object sender, EventArgs e)
@@ -873,6 +862,33 @@ namespace MyPocketCal2003
             if (Regex.IsMatch(input, @"^-?\d*(\.\d+)?([E][+-]\d+)?$"))
                 return true;
             return false;
+        }
+
+        private void MainDisplay_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == System.Windows.Forms.Keys.Up))
+            {
+                // Rocker Up
+                // Up
+            }
+            if ((e.KeyCode == System.Windows.Forms.Keys.Down))
+            {
+                // Rocker Down
+                // Down
+            }
+            if ((e.KeyCode == System.Windows.Forms.Keys.Left))
+            {
+                // Left
+            }
+            if ((e.KeyCode == System.Windows.Forms.Keys.Right))
+            {
+                // Right
+            }
+            if ((e.KeyCode == System.Windows.Forms.Keys.Enter))
+            {
+                // Enter
+            }
+
         }
     }
     public class MyArrayList : ArrayList

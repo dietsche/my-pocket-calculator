@@ -13,6 +13,7 @@ namespace MyPocketCal2003
     {
         Hashtable dataMap;
         int columnDim;
+
         public MatrixForm()
         {
             InitializeComponent();

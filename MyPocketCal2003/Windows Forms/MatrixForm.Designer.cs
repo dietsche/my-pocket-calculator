@@ -31,6 +31,7 @@ namespace MyPocketCal2003
             this.btnCalculate = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageData = new System.Windows.Forms.TabPage();
+            this.comboBoxDataNames = new System.Windows.Forms.ComboBox();
             this.btnStoreDim = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtColumnDim = new System.Windows.Forms.TextBox();
@@ -60,7 +61,6 @@ namespace MyPocketCal2003
             this.checkBoxDeterminant = new System.Windows.Forms.CheckBox();
             this.tabPageAnswers = new System.Windows.Forms.TabPage();
             this.listBoxAnswers = new System.Windows.Forms.ListBox();
-            this.comboBoxDataNames = new System.Windows.Forms.ComboBox();
             this.basicButtonsPanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageData.SuspendLayout();
@@ -94,7 +94,6 @@ namespace MyPocketCal2003
             // multiplyButton
             // 
             this.multiplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.multiplyButton.Visible = false;
             this.multiplyButton.Click += new System.EventHandler(this.multiplyButton_Click);
             // 
             // commaButton
@@ -127,13 +126,11 @@ namespace MyPocketCal2003
             // minusButton
             // 
             this.minusButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.minusButton.Visible = false;
             this.minusButton.Click += new System.EventHandler(this.minusButton_Click);
             // 
             // plusButton
             // 
             this.plusButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.plusButton.Visible = false;
             this.plusButton.Click += new System.EventHandler(this.plusButton_Click);
             // 
             // fourButton
@@ -216,6 +213,19 @@ namespace MyPocketCal2003
             this.tabPageData.Name = "tabPageData";
             this.tabPageData.Size = new System.Drawing.Size(240, 218);
             this.tabPageData.Text = "Data";
+            // 
+            // comboBoxDataNames
+            // 
+            this.comboBoxDataNames.Items.Add("A");
+            this.comboBoxDataNames.Items.Add("B");
+            this.comboBoxDataNames.Items.Add("C");
+            this.comboBoxDataNames.Items.Add("D");
+            this.comboBoxDataNames.Items.Add("E");
+            this.comboBoxDataNames.Items.Add("F");
+            this.comboBoxDataNames.Location = new System.Drawing.Point(164, 35);
+            this.comboBoxDataNames.Name = "comboBoxDataNames";
+            this.comboBoxDataNames.Size = new System.Drawing.Size(67, 22);
+            this.comboBoxDataNames.TabIndex = 77;
             // 
             // btnStoreDim
             // 
@@ -341,7 +351,7 @@ namespace MyPocketCal2003
             this.tabPageCalculation.Controls.Add(this.btnCalculate);
             this.tabPageCalculation.Location = new System.Drawing.Point(0, 0);
             this.tabPageCalculation.Name = "tabPageCalculation";
-            this.tabPageCalculation.Size = new System.Drawing.Size(240, 218);
+            this.tabPageCalculation.Size = new System.Drawing.Size(232, 215);
             this.tabPageCalculation.Text = "Calculations";
             // 
             // checkBoxRoots
@@ -466,19 +476,6 @@ namespace MyPocketCal2003
             this.listBoxAnswers.Name = "listBoxAnswers";
             this.listBoxAnswers.Size = new System.Drawing.Size(201, 198);
             this.listBoxAnswers.TabIndex = 0;
-            // 
-            // comboBoxDataNames
-            // 
-            this.comboBoxDataNames.Items.Add("A");
-            this.comboBoxDataNames.Items.Add("B");
-            this.comboBoxDataNames.Items.Add("C");
-            this.comboBoxDataNames.Items.Add("D");
-            this.comboBoxDataNames.Items.Add("E");
-            this.comboBoxDataNames.Items.Add("F");
-            this.comboBoxDataNames.Location = new System.Drawing.Point(164, 35);
-            this.comboBoxDataNames.Name = "comboBoxDataNames";
-            this.comboBoxDataNames.Size = new System.Drawing.Size(67, 22);
-            this.comboBoxDataNames.TabIndex = 77;
             // 
             // MatrixForm
             // 

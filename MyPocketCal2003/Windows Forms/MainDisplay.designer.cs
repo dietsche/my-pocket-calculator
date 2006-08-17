@@ -115,6 +115,7 @@ namespace MyPocketCal2003
             this.pictureBoxComplex = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBoxE = new System.Windows.Forms.PictureBox();
             this.iota = new System.Windows.Forms.PictureBox();
             this.checkBoxRPN = new System.Windows.Forms.CheckBox();
             this.checkBoxDeg = new System.Windows.Forms.CheckBox();
@@ -1116,6 +1117,7 @@ namespace MyPocketCal2003
             // panel9
             // 
             this.panel9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel9.Controls.Add(this.pictureBoxE);
             this.panel9.Controls.Add(this.iota);
             this.panel9.Controls.Add(this.checkBoxRPN);
             this.panel9.Controls.Add(this.checkBoxDeg);
@@ -1126,9 +1128,19 @@ namespace MyPocketCal2003
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(240, 26);
             // 
+            // pictureBoxE
+            // 
+            this.pictureBoxE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBoxE.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxE.Image")));
+            this.pictureBoxE.Location = new System.Drawing.Point(94, 3);
+            this.pictureBoxE.Name = "pictureBoxE";
+            this.pictureBoxE.Size = new System.Drawing.Size(21, 21);
+            this.pictureBoxE.Click += new System.EventHandler(this.pictureBoxE_Click);
+            // 
             // iota
             // 
             this.iota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.iota.Enabled = false;
             this.iota.Image = ((System.Drawing.Image)(resources.GetObject("iota.Image")));
             this.iota.Location = new System.Drawing.Point(48, 3);
             this.iota.Name = "iota";
@@ -1218,7 +1230,6 @@ namespace MyPocketCal2003
             this.KeyPreview = true;
             this.Name = "MainDisplay";
             this.Text = " ";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainDisplay_KeyDown);
             this.Controls.SetChildIndex(this.panel9, 0);
             this.Controls.SetChildIndex(this.txtOutput, 0);
             this.Controls.SetChildIndex(this.comboBox3, 0);
@@ -1339,5 +1350,6 @@ namespace MyPocketCal2003
         private System.Windows.Forms.CheckBox checkBoxRPN;
         private System.Windows.Forms.CheckBox checkBoxDeg;
         private System.Windows.Forms.PictureBox iota;
+        private System.Windows.Forms.PictureBox pictureBoxE;
     }
 }

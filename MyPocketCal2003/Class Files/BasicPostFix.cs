@@ -111,7 +111,7 @@ namespace MyPocketCal2003
 			} 
             catch (Exception ex) 
             {
-                MessageBox.Show(ex.StackTrace);
+                //MessageBox.Show(ex.StackTrace);
                 throw ex;
 			}			
 		}
@@ -233,9 +233,9 @@ namespace MyPocketCal2003
                 ComplexNumber answer = new ComplexNumber(st.Pop().ToString());
                 return answer.toMathString();
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.StackTrace);
+                //MessageBox.Show(ex.StackTrace);
                 throw new Exception("Error");
             }
         }

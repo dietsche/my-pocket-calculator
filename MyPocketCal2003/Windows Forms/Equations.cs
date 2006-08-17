@@ -142,7 +142,7 @@ namespace MyPocketCal2003
         }
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            PolynomialEquation polyEq = new PolynomialEquation(txtInputBox.Text);
+            //PolynomialEquation polyEq = new PolynomialEquation(txtInputBox.Text);
         }
     }
 }

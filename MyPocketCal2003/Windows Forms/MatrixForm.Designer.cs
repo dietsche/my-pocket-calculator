@@ -80,6 +80,8 @@ namespace MyPocketCal2003
             // undoButton
             // 
             this.undoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.undoButton.DoubleClick += new System.EventHandler(this.undoButton_Click);
+            this.undoButton.Click += new System.EventHandler(this.undoButton_Click);
             // 
             // rightBracketButton
             // 
@@ -351,12 +353,12 @@ namespace MyPocketCal2003
             this.tabPageCalculation.Controls.Add(this.btnCalculate);
             this.tabPageCalculation.Location = new System.Drawing.Point(0, 0);
             this.tabPageCalculation.Name = "tabPageCalculation";
-            this.tabPageCalculation.Size = new System.Drawing.Size(232, 215);
+            this.tabPageCalculation.Size = new System.Drawing.Size(240, 218);
             this.tabPageCalculation.Text = "Calculations";
             // 
             // checkBoxRoots
             // 
-            this.checkBoxRoots.Location = new System.Drawing.Point(3, 172);
+            this.checkBoxRoots.Location = new System.Drawing.Point(3, 149);
             this.checkBoxRoots.Name = "checkBoxRoots";
             this.checkBoxRoots.Size = new System.Drawing.Size(103, 15);
             this.checkBoxRoots.TabIndex = 122;
@@ -432,11 +434,12 @@ namespace MyPocketCal2003
             // 
             // checkBoxEigenvector
             // 
-            this.checkBoxEigenvector.Location = new System.Drawing.Point(3, 149);
+            this.checkBoxEigenvector.Location = new System.Drawing.Point(3, 170);
             this.checkBoxEigenvector.Name = "checkBoxEigenvector";
             this.checkBoxEigenvector.Size = new System.Drawing.Size(91, 17);
             this.checkBoxEigenvector.TabIndex = 55;
             this.checkBoxEigenvector.Text = "Eigenvector";
+            this.checkBoxEigenvector.Visible = false;
             // 
             // checkBoxEigenvalues
             // 
@@ -445,6 +448,7 @@ namespace MyPocketCal2003
             this.checkBoxEigenvalues.Size = new System.Drawing.Size(103, 21);
             this.checkBoxEigenvalues.TabIndex = 54;
             this.checkBoxEigenvalues.Text = "Eigenvalues";
+            this.checkBoxEigenvalues.Visible = false;
             // 
             // checkBoxInverse
             // 
@@ -467,14 +471,14 @@ namespace MyPocketCal2003
             this.tabPageAnswers.Controls.Add(this.listBoxAnswers);
             this.tabPageAnswers.Location = new System.Drawing.Point(0, 0);
             this.tabPageAnswers.Name = "tabPageAnswers";
-            this.tabPageAnswers.Size = new System.Drawing.Size(232, 215);
+            this.tabPageAnswers.Size = new System.Drawing.Size(240, 218);
             this.tabPageAnswers.Text = "Answers";
             // 
             // listBoxAnswers
             // 
             this.listBoxAnswers.Location = new System.Drawing.Point(7, 7);
             this.listBoxAnswers.Name = "listBoxAnswers";
-            this.listBoxAnswers.Size = new System.Drawing.Size(201, 198);
+            this.listBoxAnswers.Size = new System.Drawing.Size(224, 198);
             this.listBoxAnswers.TabIndex = 0;
             // 
             // MatrixForm

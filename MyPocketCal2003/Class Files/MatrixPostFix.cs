@@ -20,17 +20,17 @@ namespace MyPocketCal2003
 			ht.Add("(",9);
 			ht.Add(")",9);
 			ht.Add("^",7);
-			ht.Add("*",5);
+			ht.Add("x",5);
 			ht.Add("/",5);
 			ht.Add("%",5);
 			ht.Add("+",3);
 			ht.Add("-",3);
 			
 			// configure good number
-			goodWord = @"\w+";
+            goodWord = @"^[ABCDEF]$";
 			
 			// configure good chars
-			goodChr=" ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+-/*()";
+			goodChr=" ABCDEF+-/x()";
 		}
 		
 		
@@ -97,11 +97,11 @@ namespace MyPocketCal2003
 			} 
 			catch (PostfixException pex) 
 			{
-				return pex.Message;				
+				throw pex;				
 			} 
 			catch (Exception ex) 
 			{
-				return ex.Message;
+				throw ex;
 			}			
 		}
 		
@@ -178,6 +178,7 @@ namespace MyPocketCal2003
                 String rightMatrixName;
 
                 string[] tok = p.Split(' ');
+
                 for (int i = 0; i < tok.Length; i++)
                 {
                     tok[i] = tok[i].Trim();
@@ -212,7 +213,7 @@ namespace MyPocketCal2003
                             case "-":
                                 result = left.subtract(left, right);
                                 break;
-                            case "*":
+                            case "x":
                                 result = left.multiply(left, right);
                                 break;
                             default:
@@ -228,12 +229,10 @@ namespace MyPocketCal2003
                 //return the resultant Matrix
                 return (Matrix)tempStorage[st.Pop().ToString()];
             }
-            catch(Exception e)
+            catch
             {
-                MessageBox.Show(e.Message);
-                MessageBox.Show(e.StackTrace);
+                throw new Exception("Error");
             }
-            return null;
         }
 	}
 

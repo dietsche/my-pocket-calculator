@@ -169,7 +169,7 @@ namespace MyPocketCal2003
             }
             else
             {
-                throw new MatrixIncompatibleException("Cannot Multiply " + left.name + " & " + right.name + " :Incompatible Matrices");
+                throw new MatrixIncompatibleException("Cannot Multiply " + left.name + " & " + right.name + " :Incompatible");
             }
             return result;
         }
@@ -207,36 +207,87 @@ namespace MyPocketCal2003
             return false;
         }
 
-        //determinant
         public double determinant()
         {
-            double determinent = 0;
-
-            if (this.rows != this.columns)
-                throw new MatrixIncompatibleException("Attempt to find the determinent of a non square matrix");
-            //return 0;
-
-            //get the determinent of a 2x2 matrix
-            if (this.rows == 2 && this.columns == 2)
+            //a new matrix to copy the current matrix to
+            double[][] matrixFactored = new double[this.rows][];
+            for (int rowNo = 0; rowNo < rows; ++rowNo)
             {
-                determinent = (this.matrix[0][0] * this.matrix[1][1]) - (this.matrix[0][1] * this.matrix[1][0]);
-                return determinent;
+                matrixFactored[rowNo] = new double[this.columns];
+                for (int colNo = 0; colNo < columns; ++colNo)
+                {
+                    //store the individual value at the correct place
+                    matrixFactored[rowNo][colNo] = this.matrix[rowNo][colNo];
+                }
             }
 
-            Matrix tempMtx = new Matrix(this.rows - 1, this.columns - 1);
-
-            //find the determinent with respect to the first row
-            for (int j = 0; j < this.columns; j++)
+            for (int p = 0; p < rows - 1; ++p) //start upper triangularization
             {
+                for (int k = p + 1; k < rows; ++k)
+                {
+                    if (matrixFactored[k][p] > matrixFactored[p][p])
+                    {
+                        //copy pth row to temp
+                        double[] temp = new double[this.columns];
+                        matrixFactored[p].CopyTo(temp, 0);
 
-                tempMtx = this.minor(0, j);
+                        //copy kth row to pth row
+                        matrixFactored[k].CopyTo(matrixFactored[p], 0);
 
-                //recursively add the determinents
-                determinent += (int)Math.Pow(-1, j) * this.matrix[0][j] * tempMtx.determinant();
+                        //copy the temp to kth row
+                        temp.CopyTo(matrixFactored[k], 0);
+                    }
+                }
+                if (matrixFactored[p][p] == 0)
+                    throw new MatrixIncompatibleException("Determinant: The matrix is singular.");
 
+                for (int k = p + 1; k < rows; ++k) //elementary row operations
+                {
+                    double m = matrixFactored[k][p] / matrixFactored[p][p];
+                    for (int c = p; c < rows; ++c)
+                    {
+                        matrixFactored[k][c] = matrixFactored[k][c] - m * matrixFactored[p][c];
+                    }
+                }
             }
-            return determinent;
+
+            if (matrixFactored[rows - 1][rows - 1] == 0)
+                throw new MatrixIncompatibleException("Determinant: The Matrix is singular");
+
+            double determinant = 1.0;
+            for (int d = 0; d < rows; ++d)
+                determinant *= matrixFactored[d][d];
+
+            return determinant;
         }
+        ////determinant
+        //public double determinant()
+        //{
+        //    double determinent = 0;
+
+        //    if (this.rows != this.columns)
+        //        throw new MatrixIncompatibleException("Non-Square Matrix. Cannot Find Determinant");
+
+        //    //get the determinent of a 2x2 matrix
+        //    if (this.rows == 2 && this.columns == 2)
+        //    {
+        //        determinent = (this.matrix[0][0] * this.matrix[1][1]) - (this.matrix[0][1] * this.matrix[1][0]);
+        //        return determinent;
+        //    }
+
+        //    Matrix tempMtx = new Matrix(this.rows - 1, this.columns - 1);
+
+        //    //find the determinent with respect to the first row
+        //    for (int j = 0; j < this.columns; j++)
+        //    {
+        //        tempMtx = this.minor(0, j);
+
+        //        //recursively add the determinents
+        //        determinent += (int)Math.Pow(-1, j) * this.matrix[0][j] * tempMtx.determinant();
+
+        //    }
+        //    return determinent;
+        //}
 
         //returns a minor of a matrix with respect to an element
         public Matrix minor(int row, int column)
@@ -267,6 +318,7 @@ namespace MyPocketCal2003
             }
             return minorMtx;
         }
+
         //transpose
         public Matrix transpose()
         {
@@ -281,6 +333,7 @@ namespace MyPocketCal2003
             }
             return result;
         }
+
         //adjoint matrix
         public Matrix adjoint()
         {
@@ -372,6 +425,8 @@ namespace MyPocketCal2003
             if (matrixFactored[rows-1][rows-1] == 0)
                 throw new MatrixIncompatibleException("The Matrix is singular");
 
+
+            //back substitution
             double[] solutions = new double[rows];
 
             solutions[rows - 1] = matrixFactored[rows - 1][rows] / matrixFactored[rows - 1][rows - 1];

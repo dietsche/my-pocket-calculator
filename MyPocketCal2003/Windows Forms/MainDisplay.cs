@@ -49,13 +49,15 @@ namespace MyPocketCal2003
 
         private void pictureBox113_Click(object sender, EventArgs e)
         {
-            Unit c = new Unit();
-            c.Show();
+            Unit unit = new Unit();
+            unit.ControlBox = true;
+            unit.MinimizeBox = false;
+            unit.Show();
         }
         private void pictureBox119_Click(object sender, EventArgs e)
         {
-            this.functionClickHandler(Constants.COMPLEX);
             this.funtionSelected = Constants.COMPLEX;
+            this.functionClickHandler(Constants.COMPLEX);
         }
 
         private void pictureBox117_Click(object sender, EventArgs e)
@@ -373,13 +375,13 @@ namespace MyPocketCal2003
                     //solve the rpn
                     this.txtOutput.Text = postFix.Solve(rpn);
                 }
-                this.equalButtonPressed = true;
                 //this.clearRegisters(); //clear the input registers
             }
             catch (Exception ex)
             {
                 this.txtOutput.Text = ex.Message;
             }
+            this.equalButtonPressed = true;
         }
         private void clearRegisters()
         {
@@ -416,7 +418,11 @@ namespace MyPocketCal2003
                     inputBoxText.Add("(" + txtFunctionInput.Text.ToString() + ")");
                     inputBox.Text += inputBoxText.ToString();
                     this.inputExpression.Add(returnValue);
+                    setFunctionControl(false);
+                    this.iota.Enabled = false;
                 }
+                else
+                    txtFunctionInput.Focus();
             }
             else //otherwise there is a need to evaluate a function
             {
@@ -795,6 +801,10 @@ namespace MyPocketCal2003
                 checkBoxDeg.Enabled = true;
             else if (value == false)
                 checkBoxDeg.Enabled = false;
+            
+            if(this.funtionSelected!=null) //if user has opted to do a complex number entry then enable the iota
+                if (this.funtionSelected.Equals(Constants.COMPLEX)) //enable iota input
+                    this.iota.Enabled = true;
         }
         //to add the passed string to input data structures
         private void addAsInput(String input)
@@ -806,6 +816,17 @@ namespace MyPocketCal2003
             }
             else
             {
+                //if the last entry is a ) then that means the user wants to multiply
+                //the selected input with the last entry so we do:
+                string input2 = inputBox.Text.ToString();
+                if (input2.Length != 0)
+                    if(!Regex.IsMatch(input,@"^[+-/x]$"))
+                        if ((input2[input2.Length - 1] + "").Equals(")"))
+                        {
+                            this.inputExpression.Add("x");
+                            inputBoxText.Add("x");
+                            inputBox.Text += inputBoxText.ToString();
+                        }
                 this.inputBoxText.Add(input);
                 this.inputBox.Text += this.inputBoxText.ToString();
                 this.inputExpression.Add(input);
@@ -829,6 +850,7 @@ namespace MyPocketCal2003
         private void undoButton_Click(object sender, EventArgs e)
         {
             this.undo();
+            this.equalButtonPressed = false;
         }
 
         private void iota_Click(object sender, EventArgs e)
@@ -863,32 +885,9 @@ namespace MyPocketCal2003
                 return true;
             return false;
         }
-
-        private void MainDisplay_KeyDown(object sender, KeyEventArgs e)
+        private void pictureBoxE_Click(object sender, EventArgs e)
         {
-            if ((e.KeyCode == System.Windows.Forms.Keys.Up))
-            {
-                // Rocker Up
-                // Up
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Down))
-            {
-                // Rocker Down
-                // Down
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Left))
-            {
-                // Left
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Right))
-            {
-                // Right
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Enter))
-            {
-                // Enter
-            }
-
+            this.addAsInput(Constants.E);
         }
     }
     public class MyArrayList : ArrayList

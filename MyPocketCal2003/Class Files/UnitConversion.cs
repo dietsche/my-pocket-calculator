@@ -10,8 +10,10 @@ namespace MyPocketCal2003
     {
         public String convert(String input, String quantityName, String inputUnit, String outputUnit, XmlDocument docXmlFile)
         {
+            if (input.Length == 0)
+                return "";
             if(inputUnit.Equals(outputUnit)) //if same unit conversion
-                return Convert.ToString(input);
+                return Convert.ToString(input) + " " + outputUnit;
 
             //get the respective quantity node
             XmlNode quantityNode = docXmlFile.SelectSingleNode("/Quantities/Quantity[Name='" + quantityName + "']");
@@ -46,12 +48,10 @@ namespace MyPocketCal2003
             }
 
             //converting input to base unit then converting base unit to output unit
-            return Convert.ToString((Convert.ToDouble(input)*inputToBaseRatio)*baseToOutputRatio);
+            return Convert.ToString((Convert.ToDouble(input)*inputToBaseRatio)*baseToOutputRatio) + " " + outputUnit;
         }
     }
 }
-
-
 
 /*public String convert(String input, String quantityName, String inputUnit, String outputUnit, XmlDocument docXmlFile)
         {

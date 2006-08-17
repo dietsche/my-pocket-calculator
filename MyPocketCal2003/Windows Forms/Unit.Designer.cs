@@ -119,6 +119,7 @@ namespace MyPocketCal2003
             // undoButton
             // 
             this.undoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.undoButton.Click += new System.EventHandler(this.undoButton_Click);
             // 
             // basicButtonsPanel
             // 

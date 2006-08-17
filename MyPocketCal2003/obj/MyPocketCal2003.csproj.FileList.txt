@@ -35,3 +35,6 @@ obj\Debug\MyPocketCal2003.MatrixForm.resources
 obj\Debug\MyPocketCal2003.Complex.resources
 obj\Release\MyPocketCal2003.MatrixForm.resources
 obj\Release\MyPocketCal2003.AddDeleteQuantity.resources
+obj\Release\MyPocketCal2003.Differentiation.resources
+obj\Release\MyPocketCal2003.Equations.resources
+obj\Release\MyPocketCal2003.Integration.resources

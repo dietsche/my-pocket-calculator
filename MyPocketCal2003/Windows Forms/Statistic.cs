@@ -213,9 +213,6 @@ namespace MyPocketCal2003
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            listBoxAnswers.Items.Clear(); //clear any previous entries
-            tabControl1.SelectedIndex = 3; //display the answers tabpage
-            
             if (dataComboBox.SelectedItem == null)
             {
                 MessageBox.Show("Choose a data from dropdown box");
@@ -223,6 +220,9 @@ namespace MyPocketCal2003
                 dataComboBox.Focus();
                 return;
             }
+
+            listBoxAnswers.Items.Clear(); //clear any previous entries
+            tabControl1.SelectedIndex = 3; //display the answers tabpage
 
             //get data from hashtable
             ArrayList data = (ArrayList)this.dataMap[dataComboBox.SelectedItem.ToString()];
@@ -314,9 +314,6 @@ namespace MyPocketCal2003
 
         private void btnCalculateAdvance_Click(object sender, EventArgs e)
         {
-            listBoxAnswers.Items.Clear(); //clear any previous entries
-            tabControl1.SelectedIndex = 3; //display the answers tabpage
-
             if (independentComboBox.SelectedItem == null) //if no independent data selected
             {
                 MessageBox.Show("Choose an independent data");
@@ -324,6 +321,10 @@ namespace MyPocketCal2003
                 independentComboBox.Focus();
                 return;
             }
+
+            listBoxAnswers.Items.Clear(); //clear any previous entries
+            tabControl1.SelectedIndex = 3; //display the answers tabpage
+
             if (dependentComboBox.SelectedItem == null) //if no dependent data selected
             {
                 MessageBox.Show("Choose a dependent data");

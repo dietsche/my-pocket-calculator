@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace MyPocketCal2003
@@ -113,13 +114,17 @@ namespace MyPocketCal2003
         }
         private void addAsInput(string input)
         {
-            if (this.txtColumnDim.Focus())
+            if (this.txtColumnDim.Focused)
             {
                 this.txtColumnDim.Text += input;
             }
-            else if (this.txtRowDim.Focus())
+            else if (this.txtRowDim.Focused)
             {
                 this.txtRowDim.Text += input;
+            }
+            else if (this.txtOperation.Focused)
+            {
+                this.txtOperation.Text += input;
             }
             else
             {
@@ -154,7 +159,7 @@ namespace MyPocketCal2003
                 //check if the input is in correct formats
                 foreach (String token in tokens)
                 {
-                    int i = Int32.Parse(token);
+                    double d = Double.Parse(token);
                 }
             }
             catch (Exception ex) //if the user does not enter input in correct format
@@ -328,24 +333,36 @@ namespace MyPocketCal2003
         }
         private void comboOperationMatrix_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (txtOperation.Text.Length > 0)
+            {
+                string operationInput = txtOperation.Text.ToString();
+                operationInput = operationInput[operationInput.Length-1] +"";
+                if (Regex.IsMatch(operationInput,"^[ABCDEF)]$"))
+                    txtOperation.Text += "x";
+            }
             txtOperation.Text += comboOperationMatrix.SelectedItem.ToString();
+            txtOperation.Focus(); //give focus to the operation texbox
         }
         private void btnAnswer_Click(object sender, EventArgs e)
         {
-            MatrixPostFix postFix = new MatrixPostFix();
-            String rpn = postFix.Convert(txtOperation.Text); //convert the expression to RPN Notation
-            Matrix result = postFix.Solve(rpn,dataMap); //solve the RPN expression
-            if (result != null)
+            if (txtOperation.Text.Length == 0)
+                return;
+            try
             {
-                listBoxAnswers.Items.Clear(); //clear any previous entries
+                MatrixPostFix postFix = new MatrixPostFix();
+                listBoxAnswers.Items.Clear(); //clear any previous entries on the answer listbox
+                String rpn = postFix.Convert(txtOperation.Text); //convert the expression to RPN Notation
+                Matrix result = postFix.Solve(rpn,dataMap); //solve the RPN expression
                 result.splitRows(); //prepare the matrix for receiving individual rows
                 while (result.hasNext()) //get next row untill the matrix end
                 {
                     listBoxAnswers.Items.Add(result.nextRow()); //add each row to answer listbox
                 }
             }
-            else
-                MessageBox.Show("Result is null"); //88888888888888888888888888888888888888888888888888888888
+            catch(Exception ex)
+            {
+                listBoxAnswers.Items.Add(ex.Message);
+            }
             tabControl1.SelectedIndex = 2; //show the answers tabpage
         }
 
@@ -360,70 +377,114 @@ namespace MyPocketCal2003
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
+            if (comboMatrix.SelectedItem == null)
+            {
+                MessageBox.Show("Choose a Matrix from the drop down box");
+                return;
+            }
             Matrix matrix = (Matrix)dataMap[comboMatrix.SelectedItem.ToString()];
             listBoxAnswers.Items.Clear(); //clear any previous entries
 
-            if (checkBoxDeterminant.Checked) //find determinant
+            try
             {
-                listBoxAnswers.Items.Add("Determinant: " + Convert.ToString(matrix.determinant()));
-            }
-            if (checkBoxInverse.Checked) //find inverse
-            {
-                Matrix result = matrix.inverse();
-                if (result != null)
+                if (checkBoxDeterminant.Checked) //find determinant
                 {
-                    result.splitRows(); //prepare the matrix for receiving individual rows
-                    listBoxAnswers.Items.Add("Inverse:");
-                    while (result.hasNext()) //get next row untill the matrix end
+                    listBoxAnswers.Items.Add("Determinant: " + Convert.ToString(matrix.determinant()));
+                }
+                if (checkBoxInverse.Checked) //find inverse
+                {
+                    Matrix result = matrix.inverse();
+                    if (result != null)
                     {
-                        listBoxAnswers.Items.Add(result.nextRow()); //add each row to answer listbox
+                        result.splitRows(); //prepare the matrix for receiving individual rows
+                        listBoxAnswers.Items.Add("Inverse:");
+                        while (result.hasNext()) //get next row untill the matrix end
+                        {
+                            listBoxAnswers.Items.Add(result.nextRow()); //add each row to answer listbox
+                        }
                     }
                 }
-            }
-            if (checkBoxTranspose.Checked) //find transpose
-            {
-                Matrix result = matrix.transpose();
-                if (result != null)
+                if (checkBoxTranspose.Checked) //find transpose
                 {
-                    result.splitRows(); //prepare the matrix for receiving individual rows
-                    listBoxAnswers.Items.Add("Transpose:");
-                    while (result.hasNext()) //get next row untill the matrix end
+                    Matrix result = matrix.transpose();
+                    if (result != null)
                     {
-                        listBoxAnswers.Items.Add(result.nextRow()); //add each row to answer listbox
+                        result.splitRows(); //prepare the matrix for receiving individual rows
+                        listBoxAnswers.Items.Add("Transpose:");
+                        while (result.hasNext()) //get next row untill the matrix end
+                        {
+                            listBoxAnswers.Items.Add(result.nextRow()); //add each row to answer listbox
+                        }
                     }
                 }
-            }
-            if (checkBoxAdjoint.Checked) //find adjoint
-            {
-                Matrix result = matrix.adjoint();
-                if (result != null)
+                if (checkBoxAdjoint.Checked) //find adjoint
                 {
-                    result.splitRows(); //prepare the matrix for receiving individual rows
-                    listBoxAnswers.Items.Add("Adjoint:");
-                    while (result.hasNext()) //get next row untill the matrix end
+                    Matrix result = matrix.adjoint();
+                    if (result != null)
                     {
-                        listBoxAnswers.Items.Add(result.nextRow()); //add each row to answer listbox
+                        result.splitRows(); //prepare the matrix for receiving individual rows
+                        listBoxAnswers.Items.Add("Adjoint:");
+                        while (result.hasNext()) //get next row untill the matrix end
+                        {
+                            listBoxAnswers.Items.Add(result.nextRow()); //add each row to answer listbox
+                        }
                     }
                 }
-            }
-            if (checkBoxEigenvalues.Checked) //find eigenvalues
-            {
+                if (checkBoxRoots.Checked) //find roots
+                {
+                    double[] result = matrix.gaussianElimination();
+                    listBoxAnswers.Items.Add("Roots: ");
+                    for (int i = 0; i < result.Length; ++i)
+                    {
+                        listBoxAnswers.Items.Add(i + 1 + ". " + result[i]);
+                    }
+                }
+                if (checkBoxEigenvalues.Checked) //find eigenvalues
+                {
 
-            }
-            if (checkBoxEigenvector.Checked) //find eigenvector
-            {
-
-            }
-            if (checkBoxRoots.Checked) //find roots
-            {
-                double[] result = matrix.gaussianElimination();
-                listBoxAnswers.Items.Add("Roots: ");
-                for (int i = 0; i < result.Length; ++i)
-                {
-                    listBoxAnswers.Items.Add(i + 1 + ". " + result[i]);
                 }
+                if (checkBoxEigenvector.Checked) //find eigenvector
+                {
+
+                }
+            }
+            catch (Exception ex)
+            {
+                listBoxAnswers.Items.Add(ex.Message);
             }
             tabControl1.SelectedIndex = 2; //switch to answers tab
+        }
+
+        private void undoButton_Click(object sender, EventArgs e)
+        {
+            if (inputBox.Focused)
+            {
+                if (inputBox.Text.Length > 0)
+                {
+                    inputBox.Text = inputBox.Text.ToString().Remove(inputBox.Text.Length - 1, 1);
+                }
+            }
+            else if (txtColumnDim.Focused && txtColumnDim.Enabled==true)
+            {
+                if (txtColumnDim.Text.Length > 0)
+                {
+                    txtColumnDim.Text = txtColumnDim.Text.ToString().Remove(txtColumnDim.Text.Length - 1, 1);
+                }
+            }
+            else if (txtRowDim.Focused && txtRowDim.Enabled==true)
+            {
+                if (txtRowDim.Text.Length > 0)
+                {
+                    txtRowDim.Text = txtRowDim.Text.ToString().Remove(txtRowDim.Text.Length - 1, 1);
+                }
+            }
+            else if (txtOperation.Focused)
+            {
+                if (txtOperation.Text.Length > 0)
+                {
+                    txtOperation.Text = txtOperation.Text.ToString().Remove(txtOperation.Text.Length - 1, 1);
+                }
+            }
         }
     }
 }

@@ -180,5 +180,13 @@ namespace MyPocketCal2003
             AddDeleteQuantity addQuantity = new AddDeleteQuantity(this.docXMLFile, this.quantitiesListBox.Items);
             addQuantity.Show();
         }
+
+        private void undoButton_Click(object sender, EventArgs e)
+        {
+            if (inputBox.Text.Length > 0)
+            {
+                inputBox.Text = inputBox.Text.ToString().Remove(inputBox.Text.Length - 1, 1);
+            }
+        }
     }
 }

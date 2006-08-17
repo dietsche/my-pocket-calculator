@@ -62,5 +62,6 @@ namespace MyPocketCal2003
         public const String NCR = "c";
 
         public const String COMPLEX = "a+bi=";
+        public const String E = "E";
     }
 }

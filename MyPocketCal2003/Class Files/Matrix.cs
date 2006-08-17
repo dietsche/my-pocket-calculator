@@ -209,6 +209,9 @@ namespace MyPocketCal2003
 
         public double determinant()
         {
+            if (this.rows != this.columns)
+                throw new MatrixIncompatibleException("Non-Square Matrix");
+
             //a new matrix to copy the current matrix to
             double[][] matrixFactored = new double[this.rows][];
             for (int rowNo = 0; rowNo < rows; ++rowNo)
@@ -239,7 +242,7 @@ namespace MyPocketCal2003
                     }
                 }
                 if (matrixFactored[p][p] == 0)
-                    throw new MatrixIncompatibleException("Determinant: The matrix is singular.");
+                    throw new MatrixIncompatibleException("The matrix is singular.");
 
                 for (int k = p + 1; k < rows; ++k) //elementary row operations
                 {
@@ -252,7 +255,9 @@ namespace MyPocketCal2003
             }
 
             if (matrixFactored[rows - 1][rows - 1] == 0)
-                throw new MatrixIncompatibleException("Determinant: The Matrix is singular");
+            {
+                throw new MatrixIncompatibleException("The Matrix is singular");
+            }
 
             double determinant = 1.0;
             for (int d = 0; d < rows; ++d)
@@ -355,6 +360,7 @@ namespace MyPocketCal2003
             }
             return adjMtx;
         }
+        
         //inverse
         public Matrix inverse()
         {
@@ -372,7 +378,7 @@ namespace MyPocketCal2003
                 tempMtx.matrix[1][0] = -this.matrix[1][0];
                 tempMtx.matrix[1][1] = this.matrix[0][0];
 
-                return tempMtx.divide(tempMtx,this.determinant());
+                return tempMtx.divide(tempMtx, this.determinant());
             }
             Matrix result = adjoint(); //get adjoint
             double det = this.determinant(); //get determinant
@@ -380,6 +386,9 @@ namespace MyPocketCal2003
         }
         public double[] gaussianElimination()
         {
+            if (rows + 1 != columns)
+                throw new Exception("Augmented Matrix Required");
+
             //a new matrix to copy the current matrix to
             double[][] matrixFactored = new double[this.rows][];
             for (int rowNo = 0; rowNo<rows; ++rowNo)

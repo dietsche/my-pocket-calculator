@@ -391,6 +391,14 @@ namespace MyPocketCal2003
                 {
                     listBoxAnswers.Items.Add("Determinant: " + Convert.ToString(matrix.determinant()));
                 }
+            }
+            catch(Exception ex)
+            {
+                listBoxAnswers.Items.Add("Determinant: " + ex.Message);
+            }
+
+            try
+            {
                 if (checkBoxInverse.Checked) //find inverse
                 {
                     Matrix result = matrix.inverse();
@@ -404,6 +412,13 @@ namespace MyPocketCal2003
                         }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                listBoxAnswers.Items.Add("Inverse: " + ex.Message);
+            }
+            try
+            {
                 if (checkBoxTranspose.Checked) //find transpose
                 {
                     Matrix result = matrix.transpose();
@@ -417,6 +432,13 @@ namespace MyPocketCal2003
                         }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                listBoxAnswers.Items.Add("Transpose: " + ex.Message);
+            }
+            try
+            {
                 if (checkBoxAdjoint.Checked) //find adjoint
                 {
                     Matrix result = matrix.adjoint();
@@ -430,27 +452,26 @@ namespace MyPocketCal2003
                         }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                listBoxAnswers.Items.Add("Adjoint: " + ex.Message);
+            }
+            try
+            {
                 if (checkBoxRoots.Checked) //find roots
                 {
                     double[] result = matrix.gaussianElimination();
                     listBoxAnswers.Items.Add("Roots: ");
                     for (int i = 0; i < result.Length; ++i)
                     {
-                        listBoxAnswers.Items.Add(i + 1 + ". " + result[i]);
+                        listBoxAnswers.Items.Add(i + 1 + ".   " + result[i]);
                     }
-                }
-                if (checkBoxEigenvalues.Checked) //find eigenvalues
-                {
-
-                }
-                if (checkBoxEigenvector.Checked) //find eigenvector
-                {
-
                 }
             }
             catch (Exception ex)
             {
-                listBoxAnswers.Items.Add(ex.Message);
+                listBoxAnswers.Items.Add("Roots: " + ex.Message);
             }
             tabControl1.SelectedIndex = 2; //switch to answers tab
         }

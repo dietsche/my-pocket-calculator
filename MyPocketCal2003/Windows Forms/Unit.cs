@@ -14,8 +14,13 @@ namespace MyPocketCal2003
 {
     public partial class Unit : BaseFormLibrary.BasicButtonForm
     {
-        public static string path = @"E:\SOC\MyPocketCal2003\MyPocketCal2003\QuantitiesUnits.xml";
-        //public static string path = @"\Program Files\MyPocketCal2003\QuantitiesUnits.xml";
+        //to read xml file from desktop
+        //public static string path = @"E:\SOC\MyPocketCal2003\MyPocketCal2003\QuantitiesUnits.xml";
+        
+        //to read xml file from Pocket PC
+        public static string path = @"\Program Files\MyPocketCal2003\QuantitiesUnits.xml";
+        
+        
         XmlDocument docXMLFile; //the XmlDocument object which reads all the Quantities and their respective units from an xml file
         String inputUnit; //the string to hold the user input unit choice
         String outputUnit;  //the string to hold the user output unit choice

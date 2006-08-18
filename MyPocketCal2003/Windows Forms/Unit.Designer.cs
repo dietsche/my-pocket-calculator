@@ -85,41 +85,6 @@ namespace MyPocketCal2003
             this.fourButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.fourButton.Click += new System.EventHandler(this.fourButton_Click);
             // 
-            // AButton
-            // 
-            this.AButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.AButton.Visible = false;
-            // 
-            // BButton
-            // 
-            this.BButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.BButton.Visible = false;
-            // 
-            // DButton
-            // 
-            this.DButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DButton.Visible = false;
-            // 
-            // FButton
-            // 
-            this.FButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.FButton.Visible = false;
-            // 
-            // sevenButton
-            // 
-            this.sevenButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.sevenButton.Click += new System.EventHandler(this.sevenButton_Click);
-            // 
-            // eightButton
-            // 
-            this.eightButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.eightButton.Click += new System.EventHandler(this.eightButton_Click);
-            // 
-            // CButton
-            // 
-            this.CButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.CButton.Visible = false;
-            // 
             // nineButton
             // 
             this.nineButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -129,12 +94,6 @@ namespace MyPocketCal2003
             // 
             this.rightBracketButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rightBracketButton.Visible = false;
-            // 
-            // EButton
-            // 
-            this.EButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.EButton.Visible = false;
-            // 
             // undoButton
             // 
             this.undoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));

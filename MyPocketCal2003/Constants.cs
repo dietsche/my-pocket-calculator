@@ -62,6 +62,32 @@ namespace MyPocketCal2003
         public const String NCR = "c";
 
         public const String COMPLEX = "a+bi=";
+
+        public const String A = "A";
+        public const String B = "B";
+        public const String C = "C";
+        public const String D = "D";
         public const String E = "E";
+        public const String F = "F";
+        public const String G = "G";
+        public const String H = "H";
+        public const String I = "I";
+        public const String J = "J";
+        public const String K = "K";
+        public const String L = "L";
+        public const String M = "M";
+        public const String N = "N";
+        public const String O = "O";
+        public const String P = "P";
+        public const String Q = "Q";
+        public const String R = "R";
+        public const String S = "S";
+        public const String T = "T";
+        public const String U = "U";
+        public const String V = "V";
+        public const String W = "W";
+        public const String X = "X";
+        public const String Y = "Y";
+        public const String Z = "Z";
     }
 }

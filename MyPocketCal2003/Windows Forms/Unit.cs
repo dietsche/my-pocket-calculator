@@ -12,7 +12,7 @@ using System.IO;
 
 namespace MyPocketCal2003
 {
-    public partial class Unit : BaseFormLibrary.AlphaNumeric
+    public partial class Unit : BaseFormLibrary.BasicButtonForm
     {
         public static string path = @"E:\SOC\MyPocketCal2003\MyPocketCal2003\QuantitiesUnits.xml";
         //public static string path = @"\Program Files\MyPocketCal2003\QuantitiesUnits.xml";

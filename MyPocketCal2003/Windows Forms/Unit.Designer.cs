@@ -43,82 +43,102 @@ namespace MyPocketCal2003
             // zeroButton
             // 
             this.zeroButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.zeroButton.Click += new System.EventHandler(this.zeroButton_Click);
             // 
             // decimalButton
             // 
             this.decimalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.decimalButton.Click += new System.EventHandler(this.decimalButton_Click);
             // 
             // equalButton
             // 
             this.equalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.equalButton.Visible = false;
             // 
             // threeButton
             // 
             this.threeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.threeButton.Click += new System.EventHandler(this.threeButton_Click);
             // 
             // twoButton
             // 
             this.twoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.twoButton.Click += new System.EventHandler(this.twoButton_Click);
             // 
             // oneButton
             // 
             this.oneButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.oneButton.Click += new System.EventHandler(this.oneButton_Click);
             // 
             // sixButton
             // 
             this.sixButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sixButton.Click += new System.EventHandler(this.sixButton_Click);
             // 
             // fiveButton
             // 
             this.fiveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.fiveButton.Click += new System.EventHandler(this.fiveButton_Click);
             // 
             // fourButton
             // 
             this.fourButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.fourButton.Click += new System.EventHandler(this.fourButton_Click);
             // 
             // AButton
             // 
             this.AButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.AButton.Visible = false;
             // 
             // BButton
             // 
             this.BButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BButton.Visible = false;
             // 
             // DButton
             // 
             this.DButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DButton.Visible = false;
             // 
             // FButton
             // 
             this.FButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.FButton.Visible = false;
             // 
             // sevenButton
             // 
             this.sevenButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sevenButton.Click += new System.EventHandler(this.sevenButton_Click);
             // 
             // eightButton
             // 
             this.eightButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.eightButton.Click += new System.EventHandler(this.eightButton_Click);
             // 
             // CButton
             // 
             this.CButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.CButton.Visible = false;
             // 
             // nineButton
             // 
             this.nineButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.nineButton.Click += new System.EventHandler(this.nineButton_Click);
             // 
             // rightBracketButton
             // 
             this.rightBracketButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rightBracketButton.Visible = false;
             // 
             // EButton
             // 
             this.EButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.EButton.Visible = false;
             // 
             // undoButton
             // 
             this.undoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.undoButton.DoubleClick += new System.EventHandler(this.undoButton_Click);
             this.undoButton.Click += new System.EventHandler(this.undoButton_Click);
             // 
             // basicButtonsPanel

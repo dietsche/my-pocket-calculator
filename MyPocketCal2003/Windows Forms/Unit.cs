@@ -14,8 +14,8 @@ namespace MyPocketCal2003
 {
     public partial class Unit : BaseFormLibrary.AlphaNumeric
     {
-        //public static string path = @"E:\SOC\MyPocketCal2003\MyPocketCal2003\QuantitiesUnits.xml";
-        public static string path = @"\Program Files\MyPocketCal2003\QuantitiesUnits.xml";
+        public static string path = @"E:\SOC\MyPocketCal2003\MyPocketCal2003\QuantitiesUnits.xml";
+        //public static string path = @"\Program Files\MyPocketCal2003\QuantitiesUnits.xml";
         XmlDocument docXMLFile; //the XmlDocument object which reads all the Quantities and their respective units from an xml file
         String inputUnit; //the string to hold the user input unit choice
         String outputUnit;  //the string to hold the user output unit choice
@@ -32,57 +32,62 @@ namespace MyPocketCal2003
         //zero pressed on the calculator
         private void zeroButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.ZERO;
+            addAsInput(Constants.ZERO);
         }
         //1 pressed on the calculator
         private void oneButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.ONE;
+            addAsInput(Constants.ONE);
         }
         //2 pressed on the calculator
         private void twoButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.TWO;
+            addAsInput(Constants.TWO);
         }
         //3 pressed on the calculator
         private void threeButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.THREE;
+            addAsInput(Constants.THREE);
         }
         //4 pressed on the calculator
         private void fourButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.FOUR;
+            addAsInput(Constants.FOUR);
         }
         //5 pressed on the calculator
         private void fiveButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.FIVE;
+            addAsInput(Constants.FIVE);
         }
         //6 pressed on the calculator
         private void sixButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.SIX;
+            addAsInput(Constants.SIX);
         }
         //7 pressed on the calculator
         private void sevenButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.SEVEN;
+            addAsInput(Constants.SEVEN);
         }
         //8 pressed on the calculator
         private void eightButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.EIGHT;
+            addAsInput(Constants.EIGHT);
         }
         //9 pressed on the calculator
         private void nineButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.NINE;
+            addAsInput(Constants.NINE);
         }
         //. pressed on the calculator
         private void decimalButton_Click(object sender, EventArgs e)
         {
-            this.inputBox.Text += Constants.DECIMAL;
+            addAsInput(Constants.DECIMAL);
+        }
+
+        private void addAsInput(string input)
+        {
+            this.inputBox.Text += input;
         }
         //event handler for the quantity listbox called whenever a user select an item in the listbox
         private void quantitiesListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -150,6 +155,16 @@ namespace MyPocketCal2003
         //event handler for the convertTo combobox called whenever the user selects an item out of the combo box
         private void convertToComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try
+            {
+                Double.Parse(inputBox.Text);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                inputBox.Focus();
+                return;
+            }
             outputUnit = convertToComboBox.SelectedItem.ToString(); //user output unit choice
             if (this.ratioQuantity(quantityName)) //if ratios required for conversion
             {

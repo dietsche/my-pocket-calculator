@@ -15,12 +15,14 @@ namespace MyPocketCal2003
         String _name; //quantity name
         String _baseUnit; //quantity baseunit
         Hashtable _conversionRatios; //conversion ratios key=unitname value=ratio
-        
-        public QuantityNode()
+        XmlDocument doc;
+
+        public QuantityNode(XmlDocument doc)
         {
             _conversionRatios = new Hashtable();
+            this.doc = doc;
         }
-        public void addTo(XmlDocument doc)
+        public void add()
         {
             XmlElement quantityElement = doc.CreateElement("Quantity");
             
@@ -36,6 +38,11 @@ namespace MyPocketCal2003
 
             //Units Element
             XmlElement unitsElement = doc.CreateElement("Units");
+
+            //append base unit to units element which is append to the quantity node after the loop
+            element = doc.CreateElement("Unit");
+            element.InnerText = _baseUnit;
+            unitsElement.AppendChild(element);
 
             //Conversion Ratios Nodes
             foreach (String unit in _conversionRatios.Keys) //for each unit value stored as key
@@ -60,7 +67,6 @@ namespace MyPocketCal2003
                 quantityElement.AppendChild(conversionElement);
 
                 //append each unit element to units element which is append to the
-                //quantity node after the loop
                 element = doc.CreateElement("Unit");
                 element.InnerText = unit;
                 unitsElement.AppendChild(element);
@@ -71,11 +77,14 @@ namespace MyPocketCal2003
 
             XmlNode root = doc.DocumentElement;
             root.AppendChild(quantityElement);
-            Assembly thisAssembly = Assembly.GetExecutingAssembly();
-            doc.Save(thisAssembly.GetManifestResourceStream("MyPocketCal2003.QuantitiesUnits.xml"));
+               
+            //Assembly thisAssembly = Assembly.GetExecutingAssembly();
+            //doc.Save(thisAssembly.GetManifestResourceStream("MyPocketCal2003.QuantitiesUnits.xml"));
             //XmlTextWriter xmlWriter = new XmlTextWriter(thisAssembly.GetManifestResourceStream("MyPocketCal2003.QuantitiesUnits.xml"),null);
-            //doc.Save(xmlWriter);
-            
+        }
+        public void writeToFile()
+        {
+            doc.Save(Unit.path);
         }
         //getter & setter for _name
         public String name

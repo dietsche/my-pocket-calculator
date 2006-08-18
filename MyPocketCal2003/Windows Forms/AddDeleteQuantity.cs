@@ -14,7 +14,7 @@ namespace MyPocketCal2003
         {
             InitializeComponent();
             this.docXMLFile = docXmlFile;
-            this.quantityNode = new QuantityNode(); //initialize a QuantityNode
+            this.quantityNode = new QuantityNode(docXMLFile); //initialize a QuantityNode
         }
         private void button1_Click(object sender, System.EventArgs e)
         {
@@ -54,10 +54,18 @@ namespace MyPocketCal2003
         }
         private void addUnitButton_Click(object sender, System.EventArgs e)
         {
-            unitsListBox.Items.Add(unitTextBox.Text); //adding to the list box
-            quantityNode.conversionRatios.Add(unitTextBox.Text, unitRatioTextBox.Text); //add unit name & conversion ratio to the hashtable
-            unitTextBox.Text = "";
-            unitRatioTextBox.Text = "";
+            try
+            {
+                Double.Parse(unitRatioTextBox.Text);
+                unitsListBox.Items.Add(unitTextBox.Text); //adding to the list box
+                quantityNode.conversionRatios.Add(unitTextBox.Text, unitRatioTextBox.Text); //add unit name & conversion ratio to the hashtable
+                unitTextBox.Text = "";
+                unitRatioTextBox.Text = "";
+            }
+            catch
+            {
+                MessageBox.Show("Ratio can only be a number");
+            }
         }
         private void deleteUnitButton_Click(object sender, EventArgs e)
         {
@@ -70,7 +78,39 @@ namespace MyPocketCal2003
         private void saveQuantityButton_Click(object sender, EventArgs e)
         {
             //add the quantity node to the XmlDocument object
-            this.quantityNode.addTo(this.docXMLFile);
+            this.quantityNode.add();
+        }
+
+        private void deleteQuantityButton_Click(object sender, EventArgs e)
+        {
+            if (this.deleteQuantityComboBox.SelectedItem != null)
+            {
+                string quantityName = this.deleteQuantityComboBox.SelectedItem.ToString();
+                //get the respective quantity node
+                XmlNode quantityNode = docXMLFile.SelectSingleNode("/Quantities/Quantity[Name='" + quantityName + "']");
+
+                XmlNode root = this.docXMLFile.DocumentElement;
+
+                if (quantityNode != null)
+                {
+                    root.RemoveChild(quantityNode); //deleted the selected node
+                    MessageBox.Show(quantityName + " deleted");
+                }
+            }
+        }
+        private void deleteQuantityComboBox_GotFocus(object sender, EventArgs e)
+        {
+            XmlNodeList nodeList;
+            //get the Name of all the quantities
+            nodeList = docXMLFile.SelectNodes("/Quantities/descendant::Name");
+            foreach (XmlNode node in nodeList)
+            {
+                this.deleteQuantityComboBox.Items.Add(node.InnerText); //adding quantity name of the listbox
+            }
+        }
+        private void AddDeleteQuantity_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            this.quantityNode.writeToFile();
         }
     }
 }

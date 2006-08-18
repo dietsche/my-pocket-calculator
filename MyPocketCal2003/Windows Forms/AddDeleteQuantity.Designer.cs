@@ -52,86 +52,107 @@ namespace MyPocketCal2003
             // zeroButton
             // 
             this.zeroButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.zeroButton.Location = new System.Drawing.Point(3, 53);
             // 
             // decimalButton
             // 
             this.decimalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.decimalButton.Location = new System.Drawing.Point(3, 30);
             // 
             // equalButton
             // 
             this.equalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.equalButton.Location = new System.Drawing.Point(210, 30);
             // 
             // threeButton
             // 
             this.threeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.threeButton.Location = new System.Drawing.Point(72, 53);
             // 
             // twoButton
             // 
             this.twoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.twoButton.Location = new System.Drawing.Point(49, 53);
             // 
             // oneButton
             // 
             this.oneButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.oneButton.Location = new System.Drawing.Point(26, 53);
             // 
             // sixButton
             // 
             this.sixButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sixButton.Location = new System.Drawing.Point(141, 53);
             // 
             // fiveButton
             // 
             this.fiveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.fiveButton.Location = new System.Drawing.Point(118, 53);
             // 
             // fourButton
             // 
             this.fourButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.fourButton.Location = new System.Drawing.Point(95, 53);
             // 
             // AButton
             // 
             this.AButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.AButton.Location = new System.Drawing.Point(25, 30);
             // 
             // BButton
             // 
             this.BButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BButton.Location = new System.Drawing.Point(48, 30);
             // 
             // DButton
             // 
             this.DButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DButton.Location = new System.Drawing.Point(95, 30);
             // 
             // FButton
             // 
             this.FButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.FButton.Location = new System.Drawing.Point(141, 30);
             // 
             // sevenButton
             // 
             this.sevenButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sevenButton.Location = new System.Drawing.Point(164, 53);
             // 
             // eightButton
             // 
             this.eightButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.eightButton.Location = new System.Drawing.Point(187, 53);
             // 
             // CButton
             // 
             this.CButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.CButton.Location = new System.Drawing.Point(72, 30);
             // 
             // nineButton
             // 
             this.nineButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.nineButton.Location = new System.Drawing.Point(210, 53);
             // 
             // rightBracketButton
             // 
             this.rightBracketButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rightBracketButton.Location = new System.Drawing.Point(164, 30);
             // 
             // EButton
             // 
             this.EButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.EButton.Location = new System.Drawing.Point(118, 30);
             // 
             // undoButton
             // 
             this.undoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.undoButton.Location = new System.Drawing.Point(187, 30);
             // 
             // basicButtonsPanel
             // 
-            this.basicButtonsPanel.Location = new System.Drawing.Point(0, 244);
+            this.basicButtonsPanel.Location = new System.Drawing.Point(0, 217);
+            this.basicButtonsPanel.Size = new System.Drawing.Size(240, 77);
             // 
             // registerBaseButton
             // 
@@ -240,6 +261,7 @@ namespace MyPocketCal2003
             this.deleteQuantityComboBox.Name = "deleteQuantityComboBox";
             this.deleteQuantityComboBox.Size = new System.Drawing.Size(103, 22);
             this.deleteQuantityComboBox.TabIndex = 63;
+            this.deleteQuantityComboBox.GotFocus += new System.EventHandler(this.deleteQuantityComboBox_GotFocus);
             // 
             // deleteQuantityButton
             // 
@@ -248,6 +270,7 @@ namespace MyPocketCal2003
             this.deleteQuantityButton.Size = new System.Drawing.Size(105, 20);
             this.deleteQuantityButton.TabIndex = 64;
             this.deleteQuantityButton.Text = "Delete Quantity";
+            this.deleteQuantityButton.Click += new System.EventHandler(this.deleteQuantityButton_Click);
             // 
             // registerHelpButton
             // 
@@ -286,7 +309,7 @@ namespace MyPocketCal2003
             this.unitLabel.Text = "Unit:";
             this.unitLabel.Visible = false;
             // 
-            // AddQuantity
+            // AddDeleteQuantity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -309,8 +332,9 @@ namespace MyPocketCal2003
             this.Controls.Add(this.label1);
             this.Controls.Add(this.quantityNameTextBox);
             this.Controls.Add(this.oneLabel);
-            this.Name = "AddQuantity";
+            this.Name = "AddDeleteQuantity";
             this.Text = "AddDeleteQuantity";
+            this.Closing += new System.ComponentModel.CancelEventHandler(this.AddDeleteQuantity_Closing);
             this.Controls.SetChildIndex(this.oneLabel, 0);
             this.Controls.SetChildIndex(this.quantityNameTextBox, 0);
             this.Controls.SetChildIndex(this.label1, 0);

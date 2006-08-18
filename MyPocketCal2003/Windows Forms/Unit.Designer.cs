@@ -197,7 +197,6 @@ namespace MyPocketCal2003
             this.button1.Size = new System.Drawing.Size(136, 20);
             this.button1.TabIndex = 29;
             this.button1.Text = "Add/Delete Quantity";
-            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Unit
@@ -215,6 +214,7 @@ namespace MyPocketCal2003
             this.Controls.Add(this.label1);
             this.Name = "Unit";
             this.Text = "MyPocketCal - Unit & Conversion";
+            this.Activated += new System.EventHandler(this.Unit_Activated);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.quantitiesListBox, 0);
             this.Controls.SetChildIndex(this.outputBox, 0);
